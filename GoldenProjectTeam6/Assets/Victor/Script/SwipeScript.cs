@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SwipeScript : MonoBehaviour
 {
+    bool touched = false;
     //ROTATION//
     public float maxRotation = 20f;
     public float rotateSpeed;
@@ -12,6 +13,9 @@ public class SwipeScript : MonoBehaviour
     public bool reRotate=false;
     private float touchOffSet;
     private float touchRef;
+    private Vector2 originalPos;
+    private Vector3 distance;
+    public LayerMask mask;
 
     //Canvas//
     public GameObject panel;
@@ -19,13 +23,16 @@ public class SwipeScript : MonoBehaviour
     public Transform imagePos;
     private Image imgColor;
 
+
     public Text leftText;
     public Text rightText;
+
 
     // Start is called before the first frame update
     void Start()
     {
         imgColor = img.GetComponent<Image>();
+        originalPos = transform.position;
     }
 
     // Update is called once per frame
@@ -44,7 +51,7 @@ public class SwipeScript : MonoBehaviour
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation)));
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
-       
+
 
         //Debug.Log(((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40));
         
@@ -55,48 +62,66 @@ public class SwipeScript : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            //RaycastHit2D hit = Physics2D.Raycast(touch.position, Vector2.left);
 
-            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+           if(touched)
+           {
+                if (touch.phase == TouchPhase.Began)
+                {
+                    touchRef = touch.position.x;
+                    distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    //transform.position = touchPosition;
+
+
+                    Vector2 pos_move = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
+                    transform.position = new Vector2(pos_move.x - distance.x, pos_move.y-distance.y);
+
+
+                    touchOffSet = touch.position.x - touchRef;
+                    Vector3 rotationZ = new Vector3(0, 0, 0);
+                    rotationZ.z = touchOffSet * rotateSpeed * Time.deltaTime;
+
+
+                    //rotationZ = Quaternion.Euler(0f, 0f, -touchPosition.x * rotateSpeed);
+
+                    transform.Rotate(-rotationZ);
+
+                    transform.eulerAngles = new Vector3(0, 0, ClampAngle(transform.eulerAngles.z, -maxRotation, maxRotation)); ;
+
+
+                    touchRef = touch.position.x;
+
+                }
+
+                else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+                {
+                    touched = false;
+                    reRotate = true;
+
+                }
+           }
            
-            if (touch.phase==TouchPhase.Began)
-            {
-                touchRef = touch.position.x;
-            }
-            else if ( touch.phase == TouchPhase.Moved)
-            {
-
-                touchOffSet = touch.position.x- touchRef;
-                Vector3 rotationZ = new Vector3(0, 0, 0);
-                rotationZ.z = touchOffSet*rotateSpeed*Time.deltaTime;
-
-
-                //rotationZ = Quaternion.Euler(0f, 0f, -touchPosition.x * rotateSpeed);
-
-                transform.Rotate(-rotationZ);
                 
-                transform.eulerAngles = new Vector3(0, 0,ClampAngle(transform.eulerAngles.z,-maxRotation,maxRotation));;
-                
-               
-                touchRef = touch.position.x;
-               
-            }
 
-            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-            {
-                reRotate = true;
-               
-            }
-
+            
         }
 
-        if(reRotate)
+
+
+           
+
+
+        if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 1f)
+            if (Vector3.Distance(transform.eulerAngles, to) > 1f||Vector2.Distance(transform.position,originalPos)!=0)
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-
+                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*rotateSpeed*Time.deltaTime);
                 
                 if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
@@ -113,6 +138,21 @@ public class SwipeScript : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 reRotate = false;
+            }
+        }
+    }
+  
+       
+
+    
+    private void OnMouseOver()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                touched = true;
             }
         }
     }
