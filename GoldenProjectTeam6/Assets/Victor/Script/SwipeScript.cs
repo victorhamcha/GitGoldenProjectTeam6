@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwipeScript : MonoBehaviour
 {
@@ -16,20 +17,39 @@ public class SwipeScript : MonoBehaviour
     public GameObject panel;
     public GameObject img;
     public Transform imagePos;
+    private Image imgColor;
 
-
+    public Text leftText;
+    public Text rightText;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        imgColor = img.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        panel.transform.eulerAngles = transform.eulerAngles;
 
+        if(transform.eulerAngles.z-180>0)
+        {
+            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
+            rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / maxRotation)));
+            leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
+        }
+        else if(transform.eulerAngles.z - 180 < 0)
+        {
+            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40) / 255f);
+            leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation)));
+            rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
+        }
+       
+
+        //Debug.Log(((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40));
+        
+
+        panel.transform.eulerAngles = transform.eulerAngles;
         img.transform.eulerAngles = new Vector3(0, 0, 0);
         panel.transform.position = imagePos.position;
         if (Input.touchCount > 0)
@@ -80,11 +100,11 @@ public class SwipeScript : MonoBehaviour
                 
                 if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
-                    transform.Rotate(0, 0, Time.deltaTime * 150);
+                    transform.Rotate(0, 0, Time.deltaTime * 15);
                 }
                 else
                 {
-                    transform.Rotate(0, 0, Time.deltaTime * -150);
+                    transform.Rotate(0, 0, Time.deltaTime * -15);
                 }
                 
 
