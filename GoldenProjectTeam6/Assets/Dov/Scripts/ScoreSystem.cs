@@ -6,24 +6,20 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
     public int score = 0;
+    public bool[] sucess;
     public Text scoreText;
-    private bool successTest = false;
-    private Touch touch;
 
     void Update()
     {
         scoreText.text = score.ToString();
-        score += Mathf.RoundToInt(Time.deltaTime);
 
         if (score == 10)
         {
-            successTest = true;
-            Debug.Log(successTest);
+            sucess[0] = true;
         }
         if (score == 20)
         {
-            successTest = false;
-            Debug.Log(successTest);
+            sucess[1] = true;
         }
     }
 
@@ -36,6 +32,7 @@ public class ScoreSystem : MonoBehaviour
     {
         PlayerData data = SaveSystem.LoadPlayer();
         score = data.scoreData;
+        sucess = data.sucessData;
 
         Vector3 position;
         position.x = data.position[0];

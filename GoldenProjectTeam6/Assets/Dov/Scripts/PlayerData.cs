@@ -6,11 +6,13 @@ using UnityEngine;
 public class PlayerData
 {
     public int scoreData;
+    public bool[] sucessData;
     public float[] position;
 
     public PlayerData (ScoreSystem score)
     {
         scoreData = score.score;
+        sucessData = score.sucess;
 
         position = new float[3];
         position[0] = score.transform.position.x;
