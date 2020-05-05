@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class SwipeScript : MonoBehaviour
@@ -20,9 +21,9 @@ public class SwipeScript : MonoBehaviour
     //Canvas//
     public GameObject img;
     private Image imgColor;
-    public Text leftText;
-    public Text rightText;
-    public Text upText;
+    public TextMeshProUGUI leftText;
+    public TextMeshProUGUI rightText;
+    public TextMeshProUGUI upText;
 
     //EFFECT//
     Material material;
@@ -109,6 +110,7 @@ public class SwipeScript : MonoBehaviour
                     if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z-360 ==-maxRotation||(transform.position.y>=4.5f&&canGoUp))
                     {
                         disolve = true;
+                        GetComponent<CardValuesWithScriptable>().IsSwiping();
                     }
                     else
                     {

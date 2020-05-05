@@ -41,10 +41,13 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public string _enumDirectpionSwipeString;
     [HideInInspector] public string _enumPlaceString;
 
-    [HideInInspector] public int _numberLine;
-    [HideInInspector] public List<int> _conditionObjetListForCardManager;
+    //[HideInInspector] public List<int> _conditionObjetListForCardManager;
 
     [HideInInspector] public Color _colorInspector = Color.red;
+
+
+    [HideInInspector] public List<int> _conditionsObjectList = new List<int>();
+
 
 
 }
@@ -57,7 +60,9 @@ public class CardScriptableObject_Editor : Editor
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirection;
     [HideInInspector] public EnumPlaceGame._enumPlace _placeEnum;
 
-    [HideInInspector] public List <int> _conditionsObjectList = new List<int>();
+    int _lineSize;
+
+
 
     public override void OnInspectorGUI()
     {
@@ -80,15 +85,13 @@ public class CardScriptableObject_Editor : Editor
         if (!script._isDeadCard) // if bool is true, show other fields
         {
             EditorGUILayout.Space(10);
-            EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
-            EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
-            EditorGUILayout.Space(-20);
+            //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
+            //EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
 
             script._isNextCardRight = EditorGUILayout.ObjectField("Next Card By Sliding RIGHT", script._isNextCardRight, typeof(CardScriptableObject), true) as CardScriptableObject;
             script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
             EditorGUILayout.Space(10);
-            EditorGUILayout.SelectableLabel("LEFT", myStyleBold);
-            EditorGUILayout.Space(-20);
+            //EditorGUILayout.SelectableLabel("LEFT", myStyleBold);
             
 
             script._isNextCardLeft = EditorGUILayout.ObjectField("Next Card By Sliding LEFT", script._isNextCardLeft, typeof(CardScriptableObject), true) as CardScriptableObject;
@@ -104,8 +107,7 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._isSuccess)
             {
-                EditorGUILayout.SelectableLabel("Success To Unlock", myStyleBold);
-                EditorGUILayout.Space(-20);
+                //EditorGUILayout.SelectableLabel("Success To Unlock", myStyleBold);
                 _enumSuccess = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", _enumSuccess);
                 script._enumSuccessString = _enumSuccess.ToString();
                 EditorGUILayout.Space(20);
@@ -118,8 +120,7 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._isUnlockingObject)
             {
-                EditorGUILayout.SelectableLabel("Object To Unlock", myStyleBold);
-                EditorGUILayout.Space(-20);
+                //EditorGUILayout.SelectableLabel("Object To Unlock", myStyleBold);
                 _swipeDirection = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction to unlock Object", _swipeDirection);
                 script._enumDirectpionSwipeString = _enumSuccess.ToString();
                 script._findObjectInListToggle = EditorGUILayout.IntField("Number In List", script._findObjectInListToggle);
@@ -132,32 +133,33 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._canSlideUp)
             {
-                EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
-                EditorGUILayout.Space(-20);
+                //EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
                 script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
                 script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
-                script._numberLine = EditorGUILayout.IntField("Conditions numbers size", script._numberLine);
-
-                if(script._numberLine != _conditionsObjectList.Count)
+                if(_lineSize == 0 && script._conditionsObjectList.Count != 0)
                 {
-                    if(script._numberLine < _conditionsObjectList.Count)
+                    _lineSize = script._conditionsObjectList.Count;
+                }
+                _lineSize = EditorGUILayout.IntField("Conditions numbers size", _lineSize);
+
+                if(_lineSize != script._conditionsObjectList.Count)
+                {
+                    if(_lineSize < script._conditionsObjectList.Count)
                     {
-                        _conditionsObjectList.RemoveAt(_conditionsObjectList.Count - 1);
+                        script._conditionsObjectList.RemoveAt(script._conditionsObjectList.Count - 1);
                     }
-                    else if(script._numberLine > _conditionsObjectList.Count)
+                    else if(_lineSize > script._conditionsObjectList.Count)
                     {
-                        for (int i = 0; i < script._numberLine- _conditionsObjectList.Count; i++)
+                        for (int i = 0; i < _lineSize - script._conditionsObjectList.Count; i++)
                         {
-                            _conditionsObjectList.Add(0);
+                            script._conditionsObjectList.Add(0);
                         }
                     }
                 }
-                for (int i = 0; i < _conditionsObjectList.Count; i++)
+                for (int i = 0; i < script._conditionsObjectList.Count; i++)
                 {
-                    _conditionsObjectList[i] = EditorGUILayout.IntField("Element " + i, _conditionsObjectList[i]);
+                    script._conditionsObjectList[i] = EditorGUILayout.IntField("Element " + i, script._conditionsObjectList[i]);
                 }
-                //script._conditionObjetListForCardManager = _conditionsObjectList;
-                EditorGUILayout.Space(20);
             }
 
         }
