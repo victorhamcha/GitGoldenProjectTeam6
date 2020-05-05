@@ -12,18 +12,13 @@ public class CardValuesWithScriptable : MonoBehaviour
     public Image _imageCard;
     public TextMeshProUGUI _titleCard, _descriptionCard;
 
-    CardScriptableObject _nextCardLeft;
-    CardScriptableObject _nextCardRight;
-    CardScriptableObject _nextCardUp;
+    CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
+    
+    bool _isUnlockingSuccess, _canSlideUp, _isUnlockingObject, _isADeadCard;
 
-    bool _isADeadCard;
+    [HideInInspector]public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject;
 
-    bool _isUnlockingSuccess;
-    bool _canSlideUp;
-    bool _isUnlockingObject;
-
-    [HideInInspector]public string _enumSuccess;
-    [HideInInspector]public string _enumDirectionOfSwipeToUnlockObject;
+    string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;
 
     int _numberInList;
 
@@ -47,6 +42,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         //if it's a death card, the script stop here
         if (!_isADeadCard)
         {
+            Debug.Log(_firstCardScriptable._isSwipingRightDescription);
             _nextCardLeft = _firstCardScriptable._isNextCardLeft;
             _nextCardRight = _firstCardScriptable._isNextCardRight;
             _nextCardUp = _firstCardScriptable._isNextCardUp;
@@ -69,7 +65,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 _nextCardUp = _firstCardScriptable._isNextCardUp;
                 _conditionNumberList = _firstCardScriptable._conditionObjetListForCardManager;
                 Debug.Log(_conditionNumberList.Count);
-                Debug.Log(_conditionNumberList[_conditionNumberList.Count-1]);
+                Debug.Log(_conditionNumberList[_conditionNumberList.Count - 1]);
             }
         }
     }
