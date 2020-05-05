@@ -11,9 +11,11 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class CardScriptableObject : ScriptableObject
 {
-    [Header("Visuel")]
+    [Header("VISUEL")]
     [TextArea(1, 1)] public string _title;
+    [Space(10)]
     public Sprite _image;
+    [Space(10)]
     [TextArea(5, 1)] public string _description;
 
 
@@ -23,9 +25,12 @@ public class CardScriptableObject : ScriptableObject
 
     [HideInInspector] public bool _canSlideUp;
     [HideInInspector] public CardScriptableObject _isNextCardUp;
+    [TextArea(5, 1)] [HideInInspector] public string _isSwipingUpDescription;
 
     [HideInInspector] public CardScriptableObject _isNextCardRight;
+    [HideInInspector] public string _isSwipingRightDescription;
     [HideInInspector] public CardScriptableObject _isNextCardLeft;
+    [HideInInspector] public string _isSwipingLeftDescription;
     [Space(10)]
     [HideInInspector] public bool _isSuccess;
     [Space(10)]
@@ -34,6 +39,7 @@ public class CardScriptableObject : ScriptableObject
 
     [HideInInspector] public string _enumSuccessString;
     [HideInInspector] public string _enumDirectpionSwipeString;
+    [HideInInspector] public string _enumPlaceString;
 
     [HideInInspector] public int _numberLine;
     [HideInInspector] public List<int> _conditionObjetListForCardManager;
@@ -49,27 +55,48 @@ public class CardScriptableObject_Editor : Editor
 {
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccess;
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirection;
+    [HideInInspector] public EnumPlaceGame._enumPlace _placeEnum;
 
     [HideInInspector] public List <int> _conditionsObjectList = new List<int>();
 
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector(); // for other non-HideInInspector fields
+        GUIStyle myStyleBold = new GUIStyle();
+        myStyleBold.fontStyle = FontStyle.Bold;
+
+        DrawDefaultInspector();
 
         CardScriptableObject script = (CardScriptableObject)target;
-        //script._colorInspector = EditorGUILayout.ColorField("Color of the background Toggle", script._colorInspector);
 
-        // draw checkbox for the bool
+        _placeEnum = (EnumPlaceGame._enumPlace)EditorGUILayout.EnumPopup("Place of the card", _placeEnum);
+        script._enumPlaceString = _placeEnum.ToString();
+
         GUI.backgroundColor = script._colorInspector;
-        script._isDeadCard = EditorGUILayout.Toggle("Is Dead Card", script._isDeadCard);
+        script._isDeadCard = EditorGUILayout.Toggle("Is a Death card", script._isDeadCard);
+
         GUI.backgroundColor = Color.white;
 
 
         if (!script._isDeadCard) // if bool is true, show other fields
         {
-            script._isNextCardRight = EditorGUILayout.ObjectField("Next Card By Sliding RIGHT", script._isNextCardRight, typeof(CardScriptableObject), true) as CardScriptableObject;
-            script._isNextCardLeft = EditorGUILayout.ObjectField("Next Card By Sliding LEFT", script._isNextCardLeft, typeof(CardScriptableObject), true) as CardScriptableObject;
+            EditorGUILayout.Space(10);
+            EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
+            EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
+            EditorGUILayout.Space(-20);
 
+            script._isNextCardRight = EditorGUILayout.ObjectField("Next Card By Sliding RIGHT", script._isNextCardRight, typeof(CardScriptableObject), true) as CardScriptableObject;
+            script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
+            EditorGUILayout.Space(10);
+            EditorGUILayout.SelectableLabel("LEFT", myStyleBold);
+            EditorGUILayout.Space(-20);
+            
+
+            script._isNextCardLeft = EditorGUILayout.ObjectField("Next Card By Sliding LEFT", script._isNextCardLeft, typeof(CardScriptableObject), true) as CardScriptableObject;
+            script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
+
+            EditorGUILayout.Space(20);
+
+            EditorGUILayout.Space(10);
             GUI.backgroundColor = script._colorInspector;
             script._isSuccess = EditorGUILayout.Toggle("Unlock Success", script._isSuccess);
             GUI.backgroundColor = Color.white;
@@ -77,8 +104,11 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._isSuccess)
             {
+                EditorGUILayout.SelectableLabel("Success To Unlock", myStyleBold);
+                EditorGUILayout.Space(-20);
                 _enumSuccess = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", _enumSuccess);
                 script._enumSuccessString = _enumSuccess.ToString();
+                EditorGUILayout.Space(20);
             }
 
 
@@ -88,9 +118,12 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._isUnlockingObject)
             {
+                EditorGUILayout.SelectableLabel("Object To Unlock", myStyleBold);
+                EditorGUILayout.Space(-20);
                 _swipeDirection = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction to unlock Object", _swipeDirection);
                 script._enumDirectpionSwipeString = _enumSuccess.ToString();
                 script._findObjectInListToggle = EditorGUILayout.IntField("Number In List", script._findObjectInListToggle);
+                EditorGUILayout.Space(20);
             }
 
             GUI.backgroundColor = script._colorInspector;
@@ -99,8 +132,11 @@ public class CardScriptableObject_Editor : Editor
 
             if (script._canSlideUp)
             {
+                EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
+                EditorGUILayout.Space(-20);
                 script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
-                script._numberLine = EditorGUILayout.IntField("Conditions numbers", script._numberLine);
+                script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
+                script._numberLine = EditorGUILayout.IntField("Conditions numbers size", script._numberLine);
 
                 if(script._numberLine != _conditionsObjectList.Count)
                 {
@@ -120,7 +156,8 @@ public class CardScriptableObject_Editor : Editor
                 {
                     _conditionsObjectList[i] = EditorGUILayout.IntField("Element " + i, _conditionsObjectList[i]);
                 }
-                script._conditionObjetListForCardManager = _conditionsObjectList;
+                //script._conditionObjetListForCardManager = _conditionsObjectList;
+                EditorGUILayout.Space(20);
             }
 
         }

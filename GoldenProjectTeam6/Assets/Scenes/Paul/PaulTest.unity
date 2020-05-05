@@ -439,7 +439,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 264
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -768,6 +768,8 @@ MonoBehaviour:
   _titleCard: {fileID: 185583074}
   _descriptionCard: {fileID: 199479309}
   _enumSuccess: 
+  _enumDirectionOfSwipeToUnlockObject: 
+  _conditionNumberList: 
 --- !u!1 &923077997
 GameObject:
   m_ObjectHideFlags: 0
