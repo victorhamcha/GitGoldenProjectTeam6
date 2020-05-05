@@ -39,25 +39,20 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(transform.eulerAngles.z-180>0)
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y + 0.911047f) / (0.911047f + 3.5f));
+        if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / maxRotation)));
-            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y+0.911047f ) / (0.911047f + 3.5f))));
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
         else if(transform.eulerAngles.z - 180 < 0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40) / 255f);
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation)));
-            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y + 0.911047f) / (0.911047f + 3.5f*2))));
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
-        else if(transform.eulerAngles.z==0)
-        {
-            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y + 0.911047f) / (0.911047f + 3.5f))));
-        }
+     
 
 
         //Debug.Log(((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40));
