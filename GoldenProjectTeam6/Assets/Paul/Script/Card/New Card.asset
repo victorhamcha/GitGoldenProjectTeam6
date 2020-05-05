@@ -12,13 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: New Card
   m_EditorClassIdentifier: 
-  _title: 
+  _title: I'm the 1st card's title
   _image: {fileID: 0}
-  _description: 
+  _description: I'm the first card's description
   _isDeadCard: 0
+  _canSlideUp: 1
+  _isNextCardUp: {fileID: 0}
   _isNextCardRight: {fileID: 0}
   _isNextCardLeft: {fileID: 0}
-  _isSuccess: 0
-  _isUnlockingObject: 0
-  _successEnum: {fileID: 0}
+  _isSuccess: 1
+  _isUnlockingObject: 1
   _findObjectInListToggle: 0
+  _enumSuccessString: aaa
+  _enumDirectpionSwipeString: aaa
+  _numberLine: 2
+  _conditionObjetListForCardManager: 000000002d000000
+  _colorInspector: {r: 0.5, g: 0.5, b: 0.5, a: 1}
