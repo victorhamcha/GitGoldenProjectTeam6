@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -716,7 +716,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
@@ -852,9 +852,9 @@ MonoBehaviour:
     m_Bits: 0
   canGoUp: 0
   img: {fileID: 2043671559}
-  leftText: {fileID: 225626813}
-  rightText: {fileID: 527163565}
-  upText: {fileID: 288059071}
+  leftText: {fileID: 0}
+  rightText: {fileID: 0}
+  upText: {fileID: 0}
   fade: 1
   disolve: 0
 --- !u!50 &1703871119
