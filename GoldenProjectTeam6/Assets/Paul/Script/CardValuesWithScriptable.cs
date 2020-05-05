@@ -17,7 +17,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     
     bool _isUnlockingSuccess, _isUnlockingObject, _isADeadCard;
     [HideInInspector]public bool _canSlideUp;
-    [HideInInspector]public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject;
+    [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace;
 
     string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;
 
@@ -40,7 +40,8 @@ public class CardValuesWithScriptable : MonoBehaviour
 
 
         _isADeadCard = _firstCardScriptable._isDeadCard;
-        
+
+        _enumPlace = _firstCardScriptable._enumPlaceString;
 
         //if it's a death card, the script stop here
         if (!_isADeadCard)
