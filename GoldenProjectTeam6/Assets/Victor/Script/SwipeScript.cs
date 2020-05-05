@@ -16,19 +16,18 @@ public class SwipeScript : MonoBehaviour
     private Vector2 originalPos;
     private Vector3 distance;
     public LayerMask mask;
-
+    public bool canGoUp;
     //Canvas//
-    public GameObject panel;
     public GameObject img;
-    public Transform imagePos;
     private Image imgColor;
     public Text leftText;
     public Text rightText;
+    public Text upText;
 
     //EFFECT//
     Material material;
-    float fade = 1f;
-    bool disolve = false;
+    public float fade = 1f;
+    public bool disolve = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,22 +44,28 @@ public class SwipeScript : MonoBehaviour
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / maxRotation)));
+            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y+0.911047f ) / (0.911047f + 3.5f))));
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
         else if(transform.eulerAngles.z - 180 < 0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40) / 255f);
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation)));
+            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y + 0.911047f) / (0.911047f + 3.5f*2))));
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
+        }
+        else if(transform.eulerAngles.z==0)
+        {
+            upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.position.y + 0.911047f) / (0.911047f + 3.5f))));
         }
 
 
         //Debug.Log(((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40));
         
 
-        panel.transform.eulerAngles = transform.eulerAngles;
+        
         img.transform.eulerAngles = new Vector3(0, 0, 0);
-        panel.transform.position = imagePos.position;
+       
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -101,7 +106,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z ==-maxRotation)
+                    if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z-360 ==-maxRotation||(transform.position.y>=4.5f&&canGoUp))
                     {
                         disolve = true;
                     }
@@ -124,8 +129,8 @@ public class SwipeScript : MonoBehaviour
         if(disolve)
         {
             //GetComponent<Collider2D>().isTrigger = true;
-
-            fade -= Time.deltaTime;
+            img.SetActive(false);
+            fade -= Time.deltaTime*2;
 
             if(fade<=0f)
             {
@@ -133,7 +138,7 @@ public class SwipeScript : MonoBehaviour
                 disolve = false;
             }
 
-            material.SetFloat("Fade", fade);
+            material.SetFloat("_Fade", fade);
         }
         else if (reRotate)
         {
