@@ -22,15 +22,17 @@ public class SwipeScript : MonoBehaviour
     public GameObject img;
     public Transform imagePos;
     private Image imgColor;
-
-
     public Text leftText;
     public Text rightText;
 
-
+    //EFFECT//
+    Material material;
+    float fade = 1f;
+    bool disolve = false;
     // Start is called before the first frame update
     void Start()
     {
+        material = GetComponent<SpriteRenderer>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
     }
@@ -99,7 +101,15 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    reRotate = true;
+                    if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z ==-maxRotation)
+                    {
+                        disolve = true;
+                    }
+                    else
+                    {
+                        reRotate = true;
+                    }
+                   
 
                 }
            }
@@ -111,10 +121,21 @@ public class SwipeScript : MonoBehaviour
 
 
 
-           
+        if(disolve)
+        {
+            //GetComponent<Collider2D>().isTrigger = true;
 
+            fade -= Time.deltaTime;
 
-        if (reRotate)
+            if(fade<=0f)
+            {
+                fade = 0f;
+                disolve = false;
+            }
+
+            material.SetFloat("Fade", fade);
+        }
+        else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
             if (Vector3.Distance(transform.eulerAngles, to) > 1f||Vector2.Distance(transform.position,originalPos)!=0)
