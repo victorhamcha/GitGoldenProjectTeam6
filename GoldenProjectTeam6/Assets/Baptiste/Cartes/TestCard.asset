@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: TestCard
   m_EditorClassIdentifier: 
-  _title: 
+  _title: La bite
   _image: {fileID: 0}
   _description: 
   _isDeadCard: 0
@@ -23,8 +23,8 @@ MonoBehaviour:
   _isSuccess: 0
   _isUnlockingObject: 0
   _findObjectInListToggle: 0
-  _enumSuccessString: 
-  _enumDirectpionSwipeString: 
-  _numberLine: 0
-  _conditionObjetListForCardManager: 
+  _enumSuccessString: aaa
+  _enumDirectpionSwipeString: aaa
+  _numberLine: 2
+  _conditionObjetListForCardManager: 0500000006000000
   _colorInspector: {r: 1, g: 0, b: 0, a: 1}
