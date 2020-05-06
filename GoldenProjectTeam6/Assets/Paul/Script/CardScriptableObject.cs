@@ -18,9 +18,7 @@ public class CardScriptableObject : ScriptableObject
     [Space(10)]
     [TextArea(5, 1)] public string _description;
 
-
-    [HideInInspector] // HideInInspector makes sure the default inspector won't show other variables
-    public bool _isDeadCard;
+    
 
 
     [HideInInspector] public bool _canSlideUp;
@@ -53,9 +51,17 @@ public class CardScriptableObject : ScriptableObject
 
 
     [HideInInspector] public List<EnumListObject._objectList> _conditionsObjectList = new List<EnumListObject._objectList>();
-    [HideInInspector] public List<EnumListObject._objectList> _enumObjectConditionListPublic;
     
     [HideInInspector] public EnumListObject._objectList _enumObjectToUnlock;
+
+    public EnumPlaceGame._enumPlace _placeEnum;
+
+    public bool _isDeadCard;
+
+    [Space(20)]
+    public List<EnumListObject._objectList> _enumObjectConditionList;
+
+
 
 }
 
@@ -66,13 +72,9 @@ public class CardScriptableObject_Editor : Editor
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccess;
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionObject;
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
-    [HideInInspector] public EnumPlaceGame._enumPlace _placeEnum;
-    [HideInInspector] public List<EnumListObject._objectList> _enumObjectConditionList;
     [HideInInspector] public EnumListObject._objectList _enumObjectCondition;
 
     int _lineSize;
-
-
 
     public override void OnInspectorGUI()
     {
@@ -82,18 +84,50 @@ public class CardScriptableObject_Editor : Editor
         DrawDefaultInspector();
 
         CardScriptableObject script = (CardScriptableObject)target;
-
-        _placeEnum = (EnumPlaceGame._enumPlace)EditorGUILayout.EnumPopup("Place of the card", _placeEnum);
-        script._enumPlaceString = _placeEnum.ToString();
-
-        GUI.backgroundColor = script._colorInspector;
-        script._isDeadCard = EditorGUILayout.Toggle("Is a Death card", script._isDeadCard);
-
-        GUI.backgroundColor = Color.white;
+        
 
 
         if (!script._isDeadCard) // if bool is true, show other fields
         {
+            GUI.backgroundColor = script._colorInspector;
+            script._canSlideUp = EditorGUILayout.Toggle("Unlock Card Slide Up", script._canSlideUp);
+            GUI.backgroundColor = Color.white;
+
+            if (script._canSlideUp)
+            {
+                //EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
+                script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
+                script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
+                /*if(_lineSize == 0 && script._conditionsObjectList.Count != 0)
+                {
+                    _lineSize = script._conditionsObjectList.Count;
+                }
+                _lineSize = EditorGUILayout.IntField("Conditions numbers size", _lineSize);
+
+                if(_lineSize != script._conditionsObjectList.Count)
+                {
+                    if(_lineSize < script._conditionsObjectList.Count)
+                    {
+                        script._conditionsObjectList.RemoveAt(script._conditionsObjectList.Count - 1);
+                    }
+                    else if(_lineSize > script._conditionsObjectList.Count)
+                    {
+                        for (int i = 0; i < _lineSize - script._conditionsObjectList.Count; i++)
+                        {
+                            script._conditionsObjectList.Add(0);
+                        }
+                    }
+                }
+                for (int i = 0; i < script._conditionsObjectList.Count; i++)
+                {
+                    _enumObjectCondition = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Condition " + i, _enumObjectCondition);
+                    //_enumObjectConditionList[i] = _enumObjectCondition;
+                }
+
+                //script._enumObjectConditionListPublic = _enumObjectConditionList;*/
+                EditorGUILayout.Space(20);
+
+            }
             EditorGUILayout.Space(10);
             //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
             //EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
@@ -137,59 +171,23 @@ public class CardScriptableObject_Editor : Editor
                 EditorGUILayout.Space(20);
             }
 
+
             GUI.backgroundColor = script._colorInspector;
-            script._canSlideUp = EditorGUILayout.Toggle("Unlock Card Slide Up", script._canSlideUp);
+            script._isEndingEvent = EditorGUILayout.Toggle("This Card Finish an Event", script._isEndingEvent);
             GUI.backgroundColor = Color.white;
 
-            if (script._canSlideUp)
+            if (script._isEndingEvent)
             {
-                //EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
-                script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
-                script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
-                if(_lineSize == 0 && script._conditionsObjectList.Count != 0)
-                {
-                    _lineSize = script._conditionsObjectList.Count;
-                }
-                _lineSize = EditorGUILayout.IntField("Conditions numbers size", _lineSize);
-
-                if(_lineSize != script._conditionsObjectList.Count)
-                {
-                    if(_lineSize < script._conditionsObjectList.Count)
-                    {
-                        script._conditionsObjectList.RemoveAt(script._conditionsObjectList.Count - 1);
-                    }
-                    else if(_lineSize > script._conditionsObjectList.Count)
-                    {
-                        for (int i = 0; i < _lineSize - script._conditionsObjectList.Count; i++)
-                        {
-                            script._conditionsObjectList.Add(0);
-                        }
-                    }
-                }
-                for (int i = 0; i < script._conditionsObjectList.Count; i++)
-                {
-                    _enumObjectCondition = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Condition " + i, _enumObjectCondition);
-                    //_enumObjectConditionList[i] = _enumObjectCondition;
-                }
-
-                //script._enumObjectConditionListPublic = _enumObjectConditionList;
+                script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
+                _swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction end event    ", _swipeDirectionEnd);
+                script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
                 EditorGUILayout.Space(20);
-
             }
 
+            
 
-        }
 
-        GUI.backgroundColor = script._colorInspector;
-        script._isEndingEvent = EditorGUILayout.Toggle("This Card Finish an Event", script._isEndingEvent);
-        GUI.backgroundColor = Color.white;
 
-        if (script._isEndingEvent)
-        {
-            script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
-            _swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction end event    ", _swipeDirectionEnd);
-            script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
-            EditorGUILayout.Space(20);
         }
     }
 }

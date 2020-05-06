@@ -16,7 +16,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
     
     bool _isUnlockingSuccess, _isUnlockingObject, _isADeadCard;
-    [HideInInspector]public bool _canSlideUp;
+    [HideInInspector]public bool _unlockSlideUp;
     [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace, _enumObjectToUnlock;
 
     string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;
@@ -25,7 +25,9 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     [HideInInspector] public List<int> _conditionNumberList;
 
-    int _unlockSlideUp;
+    int _unlockSlideUpInt;
+
+    [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
 
     void Start()
     {
@@ -35,7 +37,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void LoadValueFromScriptableObject()
     {
-        _unlockSlideUp = 0;
+        _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
         _titleCard.text = _firstCardScriptable._title;
         _descriptionCard.text = _firstCardScriptable._description;
@@ -70,12 +72,14 @@ public class CardValuesWithScriptable : MonoBehaviour
                 _enumObjectToUnlock = _firstCardScriptable._enumObjectToUnlock.ToString();
             }
             
-            _canSlideUp = _firstCardScriptable._canSlideUp;
+            _unlockSlideUp = _firstCardScriptable._canSlideUp;
 
-            if (_canSlideUp)
+            if (_unlockSlideUp)
             {
                 _nextCardUp = _firstCardScriptable._isNextCardUp;
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
+                _enumConditionListObject = _firstCardScriptable._enumObjectConditionList;
+                VerifyIfCanSlideUp();
             }
         }
         else
@@ -105,7 +109,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeLeft" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
-                CanSlideUp();
+                VerifyIfCanSlideUp();
             }
         }
         if (!_isADeadCard)
@@ -120,7 +124,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeRight" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
-                CanSlideUp();
+                VerifyIfCanSlideUp();
             }
         }
         if (!_isADeadCard)
@@ -135,32 +139,39 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeUp" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
-                CanSlideUp();
+                VerifyIfCanSlideUp();
             }
         }
         if(!_isADeadCard)
             LoadValueFromScriptableObject();
     }
 
-
-    // If player unlocks object
-    public void CanSlideUp()
+    
+    public void VerifyIfCanSlideUp()
     {
-        foreach (SingletonInventory singletonInventory in FindObjectOfType<InventoryList>()._inventory)
+        foreach (EnumListObject._objectList objectToVerify in _enumConditionListObject)
         {
-            Debug.Log(singletonInventory._objectList.ToString());
-            for (int i = 0; i < _firstCardScriptable._enumObjectConditionListPublic.Count-1; i++)
+            for (int i = 0; i < FindObjectOfType<InventoryList>()._inventory.Count; i++)
             {
-                if (singletonInventory._objectList.ToString() == _firstCardScriptable._enumObjectString[i])
+                if (FindObjectOfType<InventoryList>()._inventory[i]._objectList == objectToVerify)
                 {
-                    _unlockSlideUp++;
+                    if (FindObjectOfType<InventoryList>()._inventory[i]._hasThisObject)
+                    {
+                        _unlockSlideUpInt++;
+                    }
                 }
             }
-
         }
-        Debug.Log("unlock slide = " + _unlockSlideUp);
+        if(_unlockSlideUpInt == _enumConditionListObject.Count)
+        {
+            ICanSlideUp();
+        }
+        
+    }
 
-        Debug.Log("I unlock " + _numberInList);
+    void ICanSlideUp()
+    {
+        Debug.Log("Je slide Up");
     }
 
     void UnlockObject()
@@ -181,5 +192,4 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
 
     }
-
 }
