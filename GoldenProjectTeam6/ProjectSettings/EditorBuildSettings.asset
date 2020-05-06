@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Dov/Dov_Scene.unity
+    guid: 9fe02a0c3066f4e49b827ba42caafd0e
   m_configObjects: {}
