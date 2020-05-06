@@ -18,10 +18,10 @@ public class CardValuesWithScriptable : MonoBehaviour
     bool _isUnlockingSuccessRight;
     bool _isUnlockingSuccessLeft;
     bool _isUnlockingSuccessUp;
-    
+    bool _unlockSlideUp;
 
-    bool _isADeadCard;
-    [HideInInspector]public bool _unlockSlideUp;
+    
+    [HideInInspector] public bool canSlideUp, _isADeadCard;
     [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace, _enumObjectToUnlock;
 
     string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;
@@ -34,8 +34,11 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
 
+    EventManager eventManager;
+
     void Start()
     {
+        eventManager = FindObjectOfType<EventManager>();
         LoadValueFromScriptableObject();
     }
 
@@ -107,16 +110,30 @@ public class CardValuesWithScriptable : MonoBehaviour
                 UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
             }
         }
-        
+
+       
+
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        {
+         
+            if (_firstCardScriptable._eventCanBePlayOne)
+            {
+                eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+            }
+            _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
+        }
+
+        _firstCardScriptable = _nextCardLeft;
         if (!_isADeadCard)
             LoadValueFromScriptableObject();
+
         else
         {
             Death();
         }
 
-        _firstCardScriptable = _nextCardLeft;
-        
+        canSlideUp = false;
+
     }
 
 
@@ -135,15 +152,32 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
         }
 
+      
+        // Debug.Log(_isADeadCard);
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeRight" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        {
+            
+            if (_firstCardScriptable._eventCanBePlayOne)
+            {
+                eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+            }
+            _nextCardRight = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
+        }
+
+        _firstCardScriptable = _nextCardRight;
+
         if (!_isADeadCard)
+        {
             LoadValueFromScriptableObject();
+            // Debug.Log("gotRight");
+        }
         else
         {
             Death();
         }
 
-        _firstCardScriptable = _nextCardRight;
-        
+        canSlideUp = false;
+
     }
 
     public void VerifyIfCanSlideUp()
@@ -163,13 +197,16 @@ public class CardValuesWithScriptable : MonoBehaviour
         }
         if (_unlockSlideUpInt == _enumConditionListObject.Count)
         {
-            GoUp();
+            canSlideUp = true;
+            
         }
+        
 
     }
 
-    void GoUp()
+    public void GoUp()
     {
+        
         if (_firstCardScriptable._canSlideUp)
         {
             if (_firstCardScriptable._enumObjectToUnlockUp.ToString() != "none")
@@ -182,17 +219,31 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
         }
 
+      
+
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeUp" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        {
+           
+            if (_firstCardScriptable._eventCanBePlayOne)
+            {
+                eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+            }
+            _nextCardUp = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
+        }
+
+        _firstCardScriptable = _nextCardUp;
+
         if (!_isADeadCard)
             LoadValueFromScriptableObject();
+
         else
         {
             Death();
         }
-
-        _firstCardScriptable = _nextCardUp;
+        canSlideUp = false;
     }
 
-
+    
 
     void UnlockObject(EnumListObject._objectList _objectToUnlock)
     {

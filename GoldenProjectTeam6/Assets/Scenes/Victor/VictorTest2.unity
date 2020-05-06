@@ -890,11 +890,14 @@ MonoBehaviour:
   _descriptionLeftSwipe: {fileID: 124972427}
   _descriptionRightSwipe: {fileID: 523414601}
   _descriptionUpSwipe: {fileID: 398862303}
-  _canSlideUp: 0
+  canSlideUp: 0
+  _isADeadCard: 0
   _enumSuccess: 
   _enumDirectionOfSwipeToUnlockObject: 
   _enumPlace: 
+  _enumObjectToUnlock: 
   _conditionNumberList: 
+  _enumConditionListObject: 
 --- !u!114 &480049677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,3 +1496,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547096671}
   m_CullTransparentMesh: 0
+--- !u!1 &1818919453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818919455}
+  - component: {fileID: 1818919454}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1818919454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818919453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbcb395e85cbb4d8ce8f1ffdb7734a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 480049676}
+  cirqueEvents:
+  - {fileID: 11400000, guid: 9b1154a9145e8b642a0f4d45378adf77, type: 2}
+  - {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
+  place2Events: []
+  place3Events: []
+  place4Events: []
+--- !u!4 &1818919455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818919453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34671855, y: -0.5275686, z: 47.355156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1999819461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999819463}
+  - component: {fileID: 1999819462}
+  m_Layer: 0
+  m_Name: ObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1999819462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999819461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a95502d278d3e49b7d6220fd4796a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventory:
+  - _objectList: 1
+    _hasThisObject: 0
+  - _objectList: 2
+    _hasThisObject: 1
+  - _objectList: 3
+    _hasThisObject: 0
+--- !u!4 &1999819463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999819461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0721551, y: -0.55098975, z: 69.08476}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

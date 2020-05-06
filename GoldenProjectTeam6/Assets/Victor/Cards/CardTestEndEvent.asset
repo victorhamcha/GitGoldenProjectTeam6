@@ -10,36 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: CardTest
+  m_Name: CardTestEndEvent
   m_EditorClassIdentifier: 
-  _title: Carte Test 1
+  _title: EndCardLeft
   _image: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b, type: 3}
-  _description: "C'est la premi\xE8re carte que je fais pour \nvoire si tout marche"
-  _canSlideUp: 1
+  _description: C'est une carte qui finie un event quand on tourne a gauche
+  _canSlideUp: 0
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
-  _isNextCardUp: {fileID: 11400000, guid: a645dc692320e8f4ba4a1050b0efa4e9, type: 2}
-  _isSwipingUpDescription: canGoUp
+  _isNextCardUp: {fileID: 0}
+  _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 79e4121bbc7168b4c82549526ea4c478, type: 2}
-  _isSwipingRightDescription: SlideRight
+  _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000, guid: 6f5948d68cbeeaa4f8df35eef3433dc2, type: 2}
-  _isSwipingLeftDescription: SlideLeft
-  _firstCardOfEvent: {fileID: 0}
+  _isSwipingLeftDescription: 
+  _firstCardOfEvent: {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
   _isSuccess: 0
-  _isEndingEvent: 0
+  _isEndingEvent: 1
   _eventCanBePlayOne: 0
-  _enumSuccessString: aaa
+  _enumSuccessString: 
   _enumDirectpionSwipeString: _swipeLeft
-  _enumPlaceString: _circus
+  _enumPlaceString: 
   _enumObjectString: []
   _colorInspector: {r: 1, g: 0, b: 0, a: 1}
   _conditionsObjectList: 
-  _enumObjectToUnlockRight: 3
+  _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
   _isDeadCard: 0
-  _enumObjectConditionList: 01000000
+  _enumObjectConditionList: 

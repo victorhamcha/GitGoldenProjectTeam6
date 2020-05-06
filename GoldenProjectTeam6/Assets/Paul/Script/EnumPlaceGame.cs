@@ -9,6 +9,7 @@ public class EnumPlaceGame : MonoBehaviour
         _circus,
         _place2,
         _place3,
+        _place4,
 
     }
 }

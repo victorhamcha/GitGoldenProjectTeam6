@@ -182,6 +182,7 @@ public class CardScriptableObject_Editor : Editor
             {
                 script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
                 _swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction end event    ", _swipeDirectionEnd);
+                script._enumDirectpionSwipeString = _swipeDirectionEnd.ToString();
                 script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
                 EditorGUILayout.Space(20);
             }
