@@ -44,7 +44,7 @@ public class SwipeScript : MonoBehaviour
     void Update()
     {
       
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y + 0.911047f) / (0.911047f + 3.5f));
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
