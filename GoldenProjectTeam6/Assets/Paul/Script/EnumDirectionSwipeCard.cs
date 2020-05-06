@@ -9,7 +9,6 @@ public class EnumDirectionSwipeCard : ScriptableObject
         _swipeLeft,
         _swipeRight,
         _swipeUp,
-        _none,
         _whatever,
     }
 }
