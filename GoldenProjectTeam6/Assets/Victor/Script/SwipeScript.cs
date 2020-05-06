@@ -106,7 +106,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.83) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.83) ||(transform.position.y>=4.5f&& card._canSlideUp))
+                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card._canSlideUp))
                     {
                         disolve = true;
                         GetComponent<CardValuesWithScriptable>().IsSwiping();
