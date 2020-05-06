@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: New Card
+  m_Name: Right
   m_EditorClassIdentifier: 
-  _title: I'm the 1st card's title
+  _title: Right
   _image: {fileID: 0}
-  _description: I'm the first card's description
-  _canSlideUp: 1
+  _description: Right
+  _canSlideUp: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: cd537af95eb0a1349b1286921621cb0c, type: 2}
+  _isNextCardRight: {fileID: 0}
   _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 11400000, guid: cd537af95eb0a1349b1286921621cb0c, type: 2}
+  _isNextCardLeft: {fileID: 0}
   _isSwipingLeftDescription: 
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
-  _isUnlockingObject: 1
+  _isUnlockingObject: 0
   _findObjectInListToggle: 0
   _isEndingEvent: 0
   _eventCanBePlayOne: 0
-  _enumSuccessString: aaa
-  _enumDirectpionSwipeString: aaa
+  _enumSuccessString: 
+  _enumDirectpionSwipeString: 
   _enumPlaceString: _circus
   _enumObjectString: []
-  _colorInspector: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _colorInspector: {r: 1, g: 0, b: 0, a: 1}
   _conditionsObjectList: 
-  _enumObjectToUnlock: 1
+  _enumObjectToUnlock: 0
   _placeEnum: 0
-  _isDeadCard: 0
-  _enumObjectConditionList: 0000000001000000
+  _isDeadCard: 1
+  _enumObjectConditionList: 

@@ -14,8 +14,13 @@ public class CardValuesWithScriptable : MonoBehaviour
     public TextMeshProUGUI _titleCard, _descriptionCard, _descriptionLeftSwipe, _descriptionRightSwipe, _descriptionUpSwipe;
 
     CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
+
+    bool _isUnlockingSuccessRight;
+    bool _isUnlockingSuccessLeft;
+    bool _isUnlockingSuccessUp;
     
-    bool _isUnlockingSuccess, _isUnlockingObject, _isADeadCard;
+
+    bool _isADeadCard;
     [HideInInspector]public bool _unlockSlideUp;
     [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace, _enumObjectToUnlock;
 
@@ -32,7 +37,6 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Start()
     {
         LoadValueFromScriptableObject();
-        UnlockObject();
     }
 
     void LoadValueFromScriptableObject()
@@ -40,6 +44,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
         _titleCard.text = _firstCardScriptable._title;
+
         _descriptionCard.text = _firstCardScriptable._description;
         _descriptionLeftSwipe.text = _firstCardScriptable._isSwipingLeftDescription;
         _descriptionRightSwipe.text = _firstCardScriptable._isSwipingRightDescription;
@@ -48,29 +53,20 @@ public class CardValuesWithScriptable : MonoBehaviour
         _isADeadCard = _firstCardScriptable._isDeadCard;
 
         _enumPlace = _firstCardScriptable._enumPlaceString;
-
-        //if it's a death card, the script stop here
+        
         if (!_isADeadCard)
         {
             _nextCardLeft = _firstCardScriptable._isNextCardLeft;
             _nextCardRight = _firstCardScriptable._isNextCardRight;
             _nextCardUp = _firstCardScriptable._isNextCardUp;
 
-            _isUnlockingSuccess = _firstCardScriptable._isSuccess;
+            _isUnlockingSuccessRight = _firstCardScriptable._isSuccess;
 
-            if (_isUnlockingSuccess)
+            if (_isUnlockingSuccessRight)
             {
                 _enumSuccess = _firstCardScriptable._enumSuccessString;
             }
-
-            _isUnlockingObject = _firstCardScriptable._isUnlockingObject;
-
-            if (_isUnlockingObject)
-            {
-                _enumDirectionOfSwipeToUnlockObject = _firstCardScriptable._enumDirectpionSwipeString;
-                _numberInList = _firstCardScriptable._findObjectInListToggle;
-                _enumObjectToUnlock = _firstCardScriptable._enumObjectToUnlock.ToString();
-            }
+            
             
             _unlockSlideUp = _firstCardScriptable._canSlideUp;
 
@@ -91,21 +87,27 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Update()
     {
     }
-
-    public void IsSwiping()
-    {
-        if (_isADeadCard)
-        {
-            Death();
-        }
-    }
+    
 
 
     // When player swipes left
     public void GoLeft()
     {
+        if (_firstCardScriptable._canSlideLeft)
+        {
+            if(_firstCardScriptable._enumObjectToUnlockLeft.ToString() != "none")
+            {
+                UnlockObject(_firstCardScriptable._enumObjectToUnlockLeft);
+            }
+            if(_firstCardScriptable._enumSuccessLeft.ToString() != "none")
+            {
+                UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
+            }
+        }
         _firstCardScriptable = _nextCardLeft;
-        if (_isUnlockingObject)
+
+
+        //if (_isUnlockingObjectRight)
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeLeft" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
@@ -114,13 +116,18 @@ public class CardValuesWithScriptable : MonoBehaviour
         }
         if (!_isADeadCard)
             LoadValueFromScriptableObject();
+        else
+        {
+            Death();
+        }
     }
 
 
     // When player swipes right
     public void GoRight()
     {
-        _firstCardScriptable = _nextCardRight; if (_isUnlockingObject)
+        _firstCardScriptable = _nextCardRight;
+        //if (_isUnlockingObjectRight)
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeRight" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
@@ -129,13 +136,17 @@ public class CardValuesWithScriptable : MonoBehaviour
         }
         if (!_isADeadCard)
             LoadValueFromScriptableObject();
+        else
+        {
+            Death();
+        }
     }
 
 
     // When player swipes up
     public void GoUp()
     {
-        _firstCardScriptable = _nextCardUp; if (_isUnlockingObject)
+        //_firstCardScriptable = _nextCardUp; if (_isUnlockingObjectRight)
         {
             if (_enumDirectionOfSwipeToUnlockObject == "_swipeUp" || _enumDirectionOfSwipeToUnlockObject == "_wathever")
             {
@@ -144,6 +155,10 @@ public class CardValuesWithScriptable : MonoBehaviour
         }
         if(!_isADeadCard)
             LoadValueFromScriptableObject();
+        else
+        {
+            Death();
+        }
     }
 
     
@@ -174,22 +189,30 @@ public class CardValuesWithScriptable : MonoBehaviour
         Debug.Log("Je slide Up");
     }
 
-    void UnlockObject()
+    void UnlockObject(EnumListObject._objectList _objectToUnlock)
     {
-        if (_isUnlockingObject)
-        {
             foreach (SingletonInventory singletonInventory in FindObjectOfType<InventoryList>()._inventory)
             {
-                if (singletonInventory._objectList.ToString() == _enumObjectToUnlock)
+                if (singletonInventory._objectList.ToString() == _objectToUnlock.ToString())
                 {
                     singletonInventory._hasThisObject = true;
                 }
+            }
+    }
+
+    void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
+    {
+        foreach (SingletonInventory singletonInventory in FindObjectOfType<InventoryList>()._inventory)
+        {
+            if (singletonInventory._objectList.ToString() == _successToUnlock.ToString())
+            {
+                singletonInventory._hasThisObject = true;
             }
         }
     }
 
     void Death()
     {
-
+        Debug.Log("Death go to achievement");
     }
 }

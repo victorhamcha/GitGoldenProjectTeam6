@@ -47,13 +47,13 @@ public class SwipeScript : MonoBehaviour
         upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
         if (transform.eulerAngles.z-180>0)
         {
-            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
+            //imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / maxRotation)));
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
         else if(transform.eulerAngles.z - 180 < 0)
         {
-            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40) / 255f);
+            //imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40) / 255f);
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z) / maxRotation)));
             rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
@@ -109,7 +109,14 @@ public class SwipeScript : MonoBehaviour
                     if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card._unlockSlideUp))
                     {
                         disolve = true;
-                        GetComponent<CardValuesWithScriptable>().IsSwiping();
+                        if(transform.position.x < 0)
+                        {
+                            FindObjectOfType<CardValuesWithScriptable>().GoLeft();
+                        }
+                        else if (transform.position.x > 0)
+                        {
+                            FindObjectOfType<CardValuesWithScriptable>().GoRight();
+                        }
                     }
                     else
                     {
