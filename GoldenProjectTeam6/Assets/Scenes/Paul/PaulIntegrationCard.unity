@@ -153,7 +153,7 @@ MonoBehaviour:
   _inventory:
   - _objectList: 0
     _hasThisObject: 0
-  - _objectList: 0
+  - _objectList: 1
     _hasThisObject: 0
 --- !u!4 &252802634
 Transform:
@@ -975,9 +975,6 @@ MonoBehaviour:
   rotateSpeed: 1
   zRotation: 0
   reRotate: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 0
   canGoUp: 0
   img: {fileID: 2043671559}
   leftText: {fileID: 1221216281}
@@ -1026,8 +1023,11 @@ MonoBehaviour:
   _descriptionLeftSwipe: {fileID: 1221216281}
   _descriptionRightSwipe: {fileID: 1959578100}
   _descriptionUpSwipe: {fileID: 2066371799}
+  _canSlideUp: 0
   _enumSuccess: 
   _enumDirectionOfSwipeToUnlockObject: 
+  _enumPlace: 
+  _enumObjectToUnlock: 
   _conditionNumberList: 
 --- !u!1 &1959578097
 GameObject:

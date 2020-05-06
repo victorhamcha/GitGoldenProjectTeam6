@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class InventoryList : MonoBehaviour
 {
-    public SingletonInventory[] _inventory;
+    public List<SingletonInventory> _inventory;
 }
