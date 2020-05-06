@@ -5,5 +5,4 @@ using UnityEngine;
 public class InventorySystem : MonoBehaviour
 {
     private bool[] item;
-
 }
