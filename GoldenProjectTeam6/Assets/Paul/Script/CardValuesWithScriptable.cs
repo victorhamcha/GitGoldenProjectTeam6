@@ -15,9 +15,9 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
     
-    bool _isUnlockingSuccess, _canSlideUp, _isUnlockingObject, _isADeadCard;
-
-    [HideInInspector]public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject;
+    bool _isUnlockingSuccess, _isUnlockingObject, _isADeadCard;
+    [HideInInspector]public bool _canSlideUp;
+    [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace;
 
     string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;
 
@@ -40,7 +40,8 @@ public class CardValuesWithScriptable : MonoBehaviour
 
 
         _isADeadCard = _firstCardScriptable._isDeadCard;
-        
+
+        _enumPlace = _firstCardScriptable._enumPlaceString;
 
         //if it's a death card, the script stop here
         if (!_isADeadCard)
@@ -72,6 +73,10 @@ public class CardValuesWithScriptable : MonoBehaviour
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
             }
         }
+        else
+        {
+            _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
+        }
     }
 
     void Update()
@@ -98,7 +103,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                 UnlockObject();
             }
         }
-        LoadValueFromScriptableObject();
+        if (!_isADeadCard)
+            LoadValueFromScriptableObject();
     }
 
 
@@ -112,7 +118,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                 UnlockObject();
             }
         }
-        LoadValueFromScriptableObject();
+        if (!_isADeadCard)
+            LoadValueFromScriptableObject();
     }
 
 
@@ -126,7 +133,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                 UnlockObject();
             }
         }
-        LoadValueFromScriptableObject();
+        if(!_isADeadCard)
+            LoadValueFromScriptableObject();
     }
 
 

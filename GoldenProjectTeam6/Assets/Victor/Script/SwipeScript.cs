@@ -16,7 +16,6 @@ public class SwipeScript : MonoBehaviour
     private float touchRef;
     private Vector2 originalPos;
     private Vector3 distance;
-    public LayerMask mask;
     public bool canGoUp;
     //Canvas//
     public GameObject img;
@@ -29,10 +28,14 @@ public class SwipeScript : MonoBehaviour
     Material material;
     public float fade = 1f;
     public bool disolve = false;
+
+    //Changement//
+    private CardValuesWithScriptable card;
     // Start is called before the first frame update
     void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;
+        card = GetComponent<CardValuesWithScriptable>();
+        material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
     }
@@ -40,7 +43,8 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y + 0.911047f) / (0.911047f + 3.5f));
+      
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
@@ -55,8 +59,8 @@ public class SwipeScript : MonoBehaviour
         }
      
 
-
-        //Debug.Log(((Mathf.Abs(transform.eulerAngles.z) / maxRotation) * 40));
+        
+     
         
 
         
@@ -65,7 +69,7 @@ public class SwipeScript : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            //RaycastHit2D hit = Physics2D.Raycast(touch.position, Vector2.left);
+          
 
            if(touched)
            {
@@ -76,7 +80,7 @@ public class SwipeScript : MonoBehaviour
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                    //transform.position = touchPosition;
+                   
 
 
                     Vector2 pos_move = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
@@ -88,7 +92,7 @@ public class SwipeScript : MonoBehaviour
                     rotationZ.z = touchOffSet * rotateSpeed * Time.deltaTime;
 
 
-                    //rotationZ = Quaternion.Euler(0f, 0f, -touchPosition.x * rotateSpeed);
+                  
 
                     transform.Rotate(-rotationZ);
 
@@ -102,7 +106,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z-360 ==-maxRotation||(transform.position.y>=4.5f&&canGoUp))
+                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card._canSlideUp))
                     {
                         disolve = true;
                         GetComponent<CardValuesWithScriptable>().IsSwiping();
@@ -125,13 +129,29 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-            //GetComponent<Collider2D>().isTrigger = true;
+           
             img.SetActive(false);
             fade -= Time.deltaTime*2;
 
             if(fade<=0f)
             {
-                fade = 0f;
+                if (transform.eulerAngles.z == maxRotation)
+                {
+                    card.GoLeft();
+                }
+                else if ( transform.eulerAngles.z - 360 == -maxRotation)
+                {
+                    card.GoRight();
+                }
+                else if (transform.position.y >= 4.5f && card._canSlideUp)
+                {
+                    card.GoUp();
+                }
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.position = originalPos;
+                fade = 1f;
+                img.SetActive(true);
+
                 disolve = false;
             }
 
