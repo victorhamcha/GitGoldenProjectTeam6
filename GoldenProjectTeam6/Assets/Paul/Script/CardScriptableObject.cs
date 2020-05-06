@@ -31,22 +31,28 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public string _isSwipingRightDescription;
     [HideInInspector] public CardScriptableObject _isNextCardLeft;
     [HideInInspector] public string _isSwipingLeftDescription;
+    [HideInInspector] public CardScriptableObject _isNextCardAfterEvent;
     [Space(10)]
     [HideInInspector] public bool _isSuccess;
     [Space(10)]
     [HideInInspector] public bool _isUnlockingObject;
     [HideInInspector] public int _findObjectInListToggle;
 
+    [HideInInspector] public bool _isEndingEvent;
+
+    [HideInInspector] public bool _eventCanBePlayOne;
+
     [HideInInspector] public string _enumSuccessString;
     [HideInInspector] public string _enumDirectpionSwipeString;
     [HideInInspector] public string _enumPlaceString;
+    [HideInInspector] public List<string> _enumObjectString;
 
     //[HideInInspector] public List<int> _conditionObjetListForCardManager;
 
     [HideInInspector] public Color _colorInspector = Color.red;
 
 
-    [HideInInspector] public List<int> _conditionsObjectList = new List<int>();
+    [HideInInspector] public List<EnumListObject._objectList> _conditionsObjectList = new List<EnumListObject._objectList>();
 
 
 
@@ -57,8 +63,10 @@ public class CardScriptableObject : ScriptableObject
 public class CardScriptableObject_Editor : Editor
 {
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccess;
-    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirection;
+    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionObject;
+    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
     [HideInInspector] public EnumPlaceGame._enumPlace _placeEnum;
+    [HideInInspector] public EnumListObject._objectList _enumObjectList;
 
     int _lineSize;
 
@@ -121,9 +129,9 @@ public class CardScriptableObject_Editor : Editor
             if (script._isUnlockingObject)
             {
                 //EditorGUILayout.SelectableLabel("Object To Unlock", myStyleBold);
-                _swipeDirection = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction to unlock Object", _swipeDirection);
+                _swipeDirectionObject = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction to unlock Object", _swipeDirectionObject);
                 script._enumDirectpionSwipeString = _enumSuccess.ToString();
-                script._findObjectInListToggle = EditorGUILayout.IntField("Number In List", script._findObjectInListToggle);
+                _enumObjectList = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock", _enumObjectList);
                 EditorGUILayout.Space(20);
             }
 
@@ -158,10 +166,24 @@ public class CardScriptableObject_Editor : Editor
                 }
                 for (int i = 0; i < script._conditionsObjectList.Count; i++)
                 {
-                    script._conditionsObjectList[i] = EditorGUILayout.IntField("Element " + i, script._conditionsObjectList[i]);
+                    _enumObjectList = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Condition " + i, _enumObjectList);
                 }
+                EditorGUILayout.Space(20);
+
             }
 
+        }
+
+        GUI.backgroundColor = script._colorInspector;
+        script._isEndingEvent = EditorGUILayout.Toggle("This Card Finish an Event", script._isEndingEvent);
+        GUI.backgroundColor = Color.white;
+
+        if (script._isEndingEvent)
+        {
+            script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
+            _swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction end event    ", _swipeDirectionEnd);
+            script._isNextCardAfterEvent = EditorGUILayout.ObjectField("Next Card By Sliding After Ending Event", script._isNextCardAfterEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
+            EditorGUILayout.Space(20);
         }
     }
 
