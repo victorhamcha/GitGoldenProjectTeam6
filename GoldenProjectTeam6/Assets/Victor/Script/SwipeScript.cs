@@ -35,7 +35,7 @@ public class SwipeScript : MonoBehaviour
     void Start()
     {
         card = GetComponent<CardValuesWithScriptable>();
-        material = GetComponent<SpriteRenderer>().material;
+        material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
     }
@@ -43,6 +43,7 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y + 0.911047f) / (0.911047f + 3.5f));
         if (transform.eulerAngles.z-180>0)
         {
