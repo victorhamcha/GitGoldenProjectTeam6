@@ -152,7 +152,7 @@ public class SwipeScript : MonoBehaviour
                 }
                 else if (transform.position.y >= 4.5f && card._unlockSlideUp)
                 {
-                    card.GoUp();
+                    card.VerifyIfCanSlideUp();
                 }
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;

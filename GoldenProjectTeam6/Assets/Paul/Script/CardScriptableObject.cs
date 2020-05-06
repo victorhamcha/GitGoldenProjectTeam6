@@ -97,7 +97,7 @@ public class CardScriptableObject_Editor : Editor
         if (!script._isDeadCard) // if bool is true, show other fields
         {
             GUI.backgroundColor = script._colorInspector;
-            script._canSlideUp = EditorGUILayout.Toggle("Unlock Card Slide Up", script._canSlideUp);
+            script._canSlideUp = EditorGUILayout.Toggle("Can Slide Up", script._canSlideUp);
             GUI.backgroundColor = Color.white;
 
             if (script._canSlideUp)
@@ -139,7 +139,6 @@ public class CardScriptableObject_Editor : Editor
                 }
 
                 //script._enumObjectConditionListPublic = _enumObjectConditionList;*/
-                EditorGUILayout.Space(20);
 
             }
             //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
