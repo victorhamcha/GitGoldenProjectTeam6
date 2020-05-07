@@ -18,10 +18,10 @@ public class CardValuesWithScriptable : MonoBehaviour
     bool _isUnlockingSuccessRight;
     bool _isUnlockingSuccessLeft;
     bool _isUnlockingSuccessUp;
-    bool _unlockSlideUp;
+   
 
     
-    [HideInInspector] public bool canSlideUp, _isADeadCard;
+    [HideInInspector] public bool canSlideUp, _isADeadCard, _unlockSlideUp;
     [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace, _enumObjectToUnlock;
 
     string _descriptionBySlidingLeft, _descriptionBySlidingRight, _descriptionBySlidingUp;

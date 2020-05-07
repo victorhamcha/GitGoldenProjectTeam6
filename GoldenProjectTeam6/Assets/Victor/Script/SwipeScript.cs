@@ -17,6 +17,8 @@ public class SwipeScript : MonoBehaviour
     private Vector2 originalPos;
     private Vector3 distance;
     public bool canGoUp;
+    public float maxX = 265;
+    public float maxY = 425;
     //Canvas//
     public GameObject img;
     private Image imgColor;
@@ -29,22 +31,25 @@ public class SwipeScript : MonoBehaviour
     public float fade = 1f;
     public bool disolve = false;
 
+    public bool canslidup;
     //Changement//
     private CardValuesWithScriptable card;
     // Start is called before the first frame update
     void Start()
     {
+        
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
+        material.SetFloat("_Fade", 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
+       canslidup=card.canSlideUp;
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (maxY));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
@@ -119,7 +124,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card.canSlideUp))
+                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -maxX) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
                     {
                         disolve = true;
                     }
@@ -147,17 +152,17 @@ public class SwipeScript : MonoBehaviour
 
             if(fade<=0f)
             {
-                if (transform.eulerAngles.z == maxRotation && transform.position.x <= -2.2)
+                if (transform.eulerAngles.z == maxRotation && transform.position.x <= -maxX)
                 {
                     card.GoLeft();
                    
                 }
-                else if ( transform.eulerAngles.z - 360 == -maxRotation && transform.position.x >= 2.2)
+                else if ( transform.eulerAngles.z - 360 == -maxRotation && transform.position.x >= maxX)
                 {
                     card.GoRight();
                    
                 }
-                else if (transform.position.y >= 4.5f && card.canSlideUp)
+                else if (transform.position.y >= maxY && card.canSlideUp)
                 {
                     card.VerifyIfCanSlideUp();
                   
@@ -211,7 +216,10 @@ public class SwipeScript : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                card.VerifyIfCanSlideUp();
+               if(card._unlockSlideUp)
+               {
+                    card.VerifyIfCanSlideUp();
+               }
                 touched = true;
             }
         }
