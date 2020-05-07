@@ -258,7 +258,10 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
     {
-        
+        if(_successToUnlock.ToString() != "none")
+        {
+
+        }
     }
 
     void Death()
