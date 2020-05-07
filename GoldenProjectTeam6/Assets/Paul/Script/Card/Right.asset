@@ -16,6 +16,12 @@ MonoBehaviour:
   _image: {fileID: 0}
   _description: Right
   _canSlideUp: 0
+  _canSlideRight: 0
+  _canSlideLeft: 0
+  _enumSuccessRight: 0
+  _enumSuccessLeft: 0
+  _enumSuccessUp: 0
+  _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 0}
@@ -24,17 +30,17 @@ MonoBehaviour:
   _isSwipingLeftDescription: 
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
-  _isUnlockingObject: 0
-  _findObjectInListToggle: 0
   _isEndingEvent: 0
   _eventCanBePlayOne: 0
   _enumSuccessString: 
-  _enumDirectpionSwipeString: 
+  _enumDirectpionSwipeString: _swipeLeft
   _enumPlaceString: _circus
   _enumObjectString: []
   _colorInspector: {r: 1, g: 0, b: 0, a: 1}
   _conditionsObjectList: 
-  _enumObjectToUnlock: 0
+  _enumObjectToUnlockRight: 0
+  _enumObjectToUnlockLeft: 0
+  _enumObjectToUnlockUp: 0
   _placeEnum: 0
-  _isDeadCard: 1
+  _isDeadCard: 0
   _enumObjectConditionList: 

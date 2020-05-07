@@ -144,7 +144,7 @@ public class CardScriptableObject_Editor : Editor
             }
             //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
             //EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
-
+            EditorGUILayout.Space(10);
             GUI.backgroundColor = script._colorInspector;
             script._canSlideRight = EditorGUILayout.Toggle("Can Slide Right", script._canSlideRight);
             GUI.backgroundColor = Color.white;
@@ -159,7 +159,7 @@ public class CardScriptableObject_Editor : Editor
                 script._enumSuccessRight = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock RIGHT", script._enumSuccessRight);
                 EditorGUILayout.Space(20);
             }
-
+            EditorGUILayout.Space(10);
             GUI.backgroundColor = script._colorInspector;
             script._canSlideLeft = EditorGUILayout.Toggle("Can Slide Left", script._canSlideLeft);
             GUI.backgroundColor = Color.white;
@@ -174,7 +174,7 @@ public class CardScriptableObject_Editor : Editor
                 script._enumSuccessLeft = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._enumSuccessLeft);
                 EditorGUILayout.Space(20);
             }
-
+            EditorGUILayout.Space(10);
             GUI.backgroundColor = script._colorInspector;
             script._isEndingEvent = EditorGUILayout.Toggle("This Card Finish an Event", script._isEndingEvent);
             GUI.backgroundColor = Color.white;
