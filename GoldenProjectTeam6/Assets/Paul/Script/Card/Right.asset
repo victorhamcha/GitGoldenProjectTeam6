@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Right
   m_EditorClassIdentifier: 
   _title: Right
-  _image: {fileID: 0}
+  _image: {fileID: 21300000, guid: 84ce81c3e64753b40b92d44a2a38c88b, type: 3}
   _description: Right
+  _cardAlreadyDraw: 1
   _canSlideUp: 0
   _canSlideRight: 0
   _canSlideLeft: 0
