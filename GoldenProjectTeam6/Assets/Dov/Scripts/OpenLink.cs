@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class OpenLink : MonoBehaviour
 {
-    public void OpenChannel()
+    public void OpenChannel(string link)
     {
-        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        Application.OpenURL(link);
     }
+
 }

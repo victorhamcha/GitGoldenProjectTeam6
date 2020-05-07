@@ -22,9 +22,9 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void LoadTutorial()
+    public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Menu");
     }
 }
