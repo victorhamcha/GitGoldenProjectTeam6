@@ -40,7 +40,8 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public CardScriptableObject _firstCardOfEvent;
     [Space(10)]
     [HideInInspector] public bool _isSuccess;
-    
+    [HideInInspector] public bool _hasSpecialVFX;
+
 
     [HideInInspector] public bool _isEndingEvent;
 
@@ -71,6 +72,8 @@ public class CardScriptableObject : ScriptableObject
     public List<EnumListObject._objectList> _enumObjectConditionList;
 
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
+
+    [HideInInspector] public GameObject _specialVFX;
 
 
 }
@@ -184,16 +187,28 @@ public class CardScriptableObject_Editor : Editor
                 script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
                 script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
                 script._swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._swipeDirectionEnd);
-
-
                 EditorGUILayout.Space(20);
             }
+
+
         }
         else
         {
             EditorGUILayout.Space(20);
             script._enumSuccessDeath = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock when you die", script._enumSuccessDeath);
 
+        }
+
+
+        EditorGUILayout.Space(10);
+        GUI.backgroundColor = script._colorInspector;
+        script._hasSpecialVFX = EditorGUILayout.Toggle("This Card has a special VFX", script._hasSpecialVFX);
+        GUI.backgroundColor = Color.white;
+
+        if (script._hasSpecialVFX)
+        {
+            script._specialVFX = EditorGUILayout.ObjectField("Special VFX GameObject", script._specialVFX, typeof(GameObject), true) as GameObject;
+            EditorGUILayout.Space(20);
         }
     }
 }
