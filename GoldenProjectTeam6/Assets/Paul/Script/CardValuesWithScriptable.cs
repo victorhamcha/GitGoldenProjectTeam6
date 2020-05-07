@@ -221,7 +221,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
       
 
-        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeUp" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        /*if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeUp" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
         {
            
             if (_firstCardScriptable._eventCanBePlayOne)
@@ -229,7 +229,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
             }
             _nextCardUp = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
-        }
+        }*/
 
         _firstCardScriptable = _nextCardUp;
 
@@ -238,6 +238,10 @@ public class CardValuesWithScriptable : MonoBehaviour
 
         else
         {
+            if (_firstCardScriptable._enumSuccessDeath.ToString() != "none")
+            {
+                UnlockSuccess(_firstCardScriptable._enumSuccessUp);
+            }
             Death();
         }
         canSlideUp = false;

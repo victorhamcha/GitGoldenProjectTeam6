@@ -28,6 +28,7 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessRight;
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessLeft;
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessUp;
+    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessDeath;
 
     [HideInInspector] public CardScriptableObject _isNextCardUp;
     [TextArea(5, 1)] [HideInInspector] public string _isSwipingUpDescription;
@@ -106,9 +107,9 @@ public class CardScriptableObject_Editor : Editor
                 script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
                 script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
                 
-                script._enumObjectToUnlockUp = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock", script._enumObjectToUnlockUp);
+                script._enumObjectToUnlockUp = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock UP", script._enumObjectToUnlockUp);
 
-                script._enumSuccessUp = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", script._enumSuccessUp);
+                script._enumSuccessUp = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock UP", script._enumSuccessUp);
                 EditorGUILayout.Space(20);
                 
                 
@@ -155,7 +156,7 @@ public class CardScriptableObject_Editor : Editor
                 script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
                 script._enumObjectToUnlockRight = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock RIGHT", script._enumObjectToUnlockRight);
 
-                script._enumSuccessRight = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", script._enumSuccessRight);
+                script._enumSuccessRight = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock RIGHT", script._enumSuccessRight);
                 EditorGUILayout.Space(20);
             }
 
@@ -170,7 +171,7 @@ public class CardScriptableObject_Editor : Editor
                 script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
                 script._enumObjectToUnlockLeft = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock LEFT", script._enumObjectToUnlockLeft);
 
-                script._enumSuccessLeft = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", script._enumSuccessLeft);
+                script._enumSuccessLeft = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._enumSuccessLeft);
                 EditorGUILayout.Space(20);
             }
 
@@ -186,6 +187,12 @@ public class CardScriptableObject_Editor : Editor
                 script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
                 EditorGUILayout.Space(20);
             }
+        }
+        else
+        {
+            EditorGUILayout.Space(20);
+            script._enumSuccessDeath = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock when you die", script._enumSuccessDeath);
+
         }
     }
 }
