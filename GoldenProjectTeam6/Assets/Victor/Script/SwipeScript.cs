@@ -180,11 +180,11 @@ public class SwipeScript : MonoBehaviour
         else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 1f||Vector2.Distance(transform.position,originalPos)!=0)
+            if (Vector3.Distance(transform.eulerAngles, to) > 2f||Vector2.Distance(transform.position,originalPos)>0.05)
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*rotateSpeed*Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*Time.deltaTime);
                 
                 if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
@@ -194,12 +194,14 @@ public class SwipeScript : MonoBehaviour
                 {
                     transform.Rotate(0, 0, Time.deltaTime * -15);
                 }
-                
+                Debug.Log(Vector3.Distance(transform.eulerAngles, to));
+                Debug.Log(Vector2.Distance(transform.position, originalPos));
 
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.position = originalPos;
                 reRotate = false;
             }
         }
