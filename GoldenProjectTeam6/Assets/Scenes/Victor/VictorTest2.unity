@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95744d6d228be54387db246ebd29c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstCardScriptable: {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3,
+  _firstCardScriptable: {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51,
     type: 2}
   _imageCard: {fileID: 480049673}
   _titleCard: {fileID: 430237590}
@@ -1529,7 +1529,8 @@ MonoBehaviour:
   cirqueEvents:
   - {fileID: 11400000, guid: 9b1154a9145e8b642a0f4d45378adf77, type: 2}
   - {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
-  place2Events: []
+  place2Events:
+  - {fileID: 11400000, guid: 1610f4769d9d73a43a06d9411900e2cb, type: 2}
   place3Events: []
   place4Events: []
 --- !u!4 &1818919455

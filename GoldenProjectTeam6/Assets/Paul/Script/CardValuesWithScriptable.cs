@@ -121,6 +121,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
             }
             _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
+            //Debug.Log(_firstCardScriptable._placeEnum.ToString());
         }
 
         _firstCardScriptable = _nextCardLeft;

@@ -33,15 +33,15 @@ public class EventManager : MonoBehaviour
         {
             eventPlace = cirqueEvents;
         }
-        else if (place == "Place2")
+        else if (place == "_place2")
         {
             eventPlace = place2Events;
         }
-        else if (place == "Place3")
+        else if (place == "_place3")
         {
             eventPlace = place3Events;
         }
-        else if (place == "Place4")
+        else if (place == "_place4")
         {
             eventPlace = place4Events;
         }

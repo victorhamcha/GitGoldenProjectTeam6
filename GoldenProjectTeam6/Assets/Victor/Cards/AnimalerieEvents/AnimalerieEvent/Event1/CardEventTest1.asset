@@ -10,24 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: "J'aitourn\xE9adroie"
+  m_Name: CardEventTest1
   m_EditorClassIdentifier: 
-  _title: a droite
+  _title: 'CardTest
+
+    CardTestAnimalerie'
   _image: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b, type: 3}
-  _description: "j'ai tourn\xE9e a droite"
-  _isDeadCard: 1
+  _description: Anim
   _canSlideUp: 0
+  _canSlideRight: 0
+  _canSlideLeft: 0
+  _enumSuccessRight: 0
+  _enumSuccessLeft: 0
+  _enumSuccessUp: 0
+  _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 0}
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 0}
   _isSwipingLeftDescription: 
+  _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
-  _isUnlockingObject: 0
-  _findObjectInListToggle: 0
+  _isEndingEvent: 0
+  _eventCanBePlayOne: 0
   _enumSuccessString: 
   _enumDirectpionSwipeString: 
-  _enumPlaceString: _circus
+  _enumPlaceString: 
+  _enumObjectString: []
   _colorInspector: {r: 1, g: 0, b: 0, a: 1}
   _conditionsObjectList: 
+  _enumObjectToUnlockRight: 0
+  _enumObjectToUnlockLeft: 0
+  _enumObjectToUnlockUp: 0
+  _placeEnum: 1
+  _isDeadCard: 0
+  _enumObjectConditionList: 
