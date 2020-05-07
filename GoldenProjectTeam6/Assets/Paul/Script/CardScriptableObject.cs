@@ -70,6 +70,7 @@ public class CardScriptableObject : ScriptableObject
     [Space(20)]
     public List<EnumListObject._objectList> _enumObjectConditionList;
 
+    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
 
 
 }
@@ -79,7 +80,6 @@ public class CardScriptableObject : ScriptableObject
 public class CardScriptableObject_Editor : Editor
 {
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionObject;
-    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
     [HideInInspector] public EnumListObject._objectList _enumObjectCondition;
 
     int _lineSize;
@@ -182,9 +182,10 @@ public class CardScriptableObject_Editor : Editor
             if (script._isEndingEvent)
             {
                 script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
-                _swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction end event    ", _swipeDirectionEnd);
-                script._enumDirectpionSwipeString = _swipeDirectionEnd.ToString();
                 script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
+                script._swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._swipeDirectionEnd);
+
+
                 EditorGUILayout.Space(20);
             }
         }
