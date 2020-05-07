@@ -18,9 +18,10 @@ public class CardScriptableObject : ScriptableObject
     [Space(10)]
     [TextArea(5, 1)] public string _description;
 
-    
 
 
+
+    [HideInInspector] public bool _cardAlreadyDraw;
     [HideInInspector] public bool _canSlideUp;
     [HideInInspector] public bool _canSlideRight;
     [HideInInspector] public bool _canSlideLeft;
