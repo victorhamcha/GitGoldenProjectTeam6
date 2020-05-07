@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRotation: 3
-  rotateSpeed: 0.1
+  rotateSpeed: 0.5
   zRotation: 0
   reRotate: 0
   canGoUp: 0
