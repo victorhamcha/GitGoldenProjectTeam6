@@ -9,9 +9,9 @@ public class EventManager : MonoBehaviour
     public enum place { LOL,BOB};
     //only the fist car of ish event taht are on this places//////////////////////////
     public List<CardScriptableObject> cirqueEvents = new List<CardScriptableObject>();
-    public List<CardScriptableObject> place2Events = new List<CardScriptableObject>();
-    public List<CardScriptableObject> place3Events = new List<CardScriptableObject>();
-    public List<CardScriptableObject> place4Events = new List<CardScriptableObject>();
+    public List<CardScriptableObject> baladeEvents = new List<CardScriptableObject>();
+    public List<CardScriptableObject> restaurantEvents = new List<CardScriptableObject>();
+    public List<CardScriptableObject> animalerieEvents = new List<CardScriptableObject>();
     place _place;
     // Start is called before the first frame update
     void Start()
@@ -35,15 +35,15 @@ public class EventManager : MonoBehaviour
         }
         else if (place == "_balade")
         {
-            eventPlace = place2Events;
+            eventPlace = baladeEvents;
         }
         else if (place == "_restaurant")
         {
-            eventPlace = place3Events;
+            eventPlace = restaurantEvents;
         }
         else if (place == "_animalerie")
         {
-            eventPlace = place4Events;
+            eventPlace = animalerieEvents;
         }
         return eventPlace;
     }
@@ -86,15 +86,15 @@ public class EventManager : MonoBehaviour
                 }
                 else if (place == "_balade")
                 {
-                    place2Events.Remove(removedCard);
+                    baladeEvents.Remove(removedCard);
                 }
                 else if (place == "_restaurant")
                 {
-                    place3Events.Remove(removedCard);
+                    restaurantEvents.Remove(removedCard);
                 }
                 else if (place == "_animalerie")
                 {
-                    place4Events.Remove(removedCard);
+                    animalerieEvents.Remove(removedCard);
                 }
                
                 break;

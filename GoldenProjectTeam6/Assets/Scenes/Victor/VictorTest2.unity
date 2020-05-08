@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1692,12 +1692,10 @@ MonoBehaviour:
   cirqueEvents:
   - {fileID: 11400000, guid: 9b1154a9145e8b642a0f4d45378adf77, type: 2}
   - {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
-  place2Events:
-  - {fileID: 11400000, guid: 1610f4769d9d73a43a06d9411900e2cb, type: 2}
-  place3Events:
-  - {fileID: 11400000, guid: b7eb7663bc0b7464c9d3b941b6542d18, type: 2}
-  place4Events:
-  - {fileID: 11400000, guid: 71e78eb2b29fe744aa6a0b15d7ffdfab, type: 2}
+  baladeEvents:
+  - {fileID: 11400000, guid: d076c957b1a2dc14393d93d3c97bf724, type: 2}
+  restaurantEvents: []
+  animalerieEvents: []
 --- !u!4 &1818919455
 Transform:
   m_ObjectHideFlags: 0
