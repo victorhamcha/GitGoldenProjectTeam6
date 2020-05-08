@@ -888,12 +888,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea16d02013ed8374184499fbe3501a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotation: 5
-  rotateSpeed: 1
+  maxRotation: 7
+  rotateSpeed: 1.4
   zRotation: 0
   reRotate: 0
   canGoUp: 0
-  maxX: 2.7
+  maxX: 2
   maxY: 4.5
   img: {fileID: 1975569509}
   leftText: {fileID: 1565307207}
