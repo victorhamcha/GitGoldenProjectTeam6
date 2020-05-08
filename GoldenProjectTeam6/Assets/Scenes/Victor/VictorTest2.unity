@@ -893,7 +893,7 @@ MonoBehaviour:
   zRotation: 0
   reRotate: 0
   canGoUp: 0
-  maxX: 2
+  maxX: 1.7
   maxY: 4.5
   img: {fileID: 1975569509}
   leftText: {fileID: 1565307207}
@@ -1690,12 +1690,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 1169474635}
   cirqueEvents:
-  - {fileID: 11400000, guid: 9b1154a9145e8b642a0f4d45378adf77, type: 2}
-  - {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
+  - {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51, type: 2}
   baladeEvents:
   - {fileID: 11400000, guid: d076c957b1a2dc14393d93d3c97bf724, type: 2}
-  restaurantEvents: []
-  animalerieEvents: []
+  - {fileID: 11400000, guid: 7293a00ee41d8b74eacae92fe757d628, type: 2}
+  restaurantEvents:
+  - {fileID: 11400000, guid: 2bab622dca6014348b94a2cd147166b9, type: 2}
+  animalerieEvents:
+  - {fileID: 11400000, guid: b3ad4e9ce38d15c48a2a08e53f8d4ff0, type: 2}
 --- !u!4 &1818919455
 Transform:
   m_ObjectHideFlags: 0

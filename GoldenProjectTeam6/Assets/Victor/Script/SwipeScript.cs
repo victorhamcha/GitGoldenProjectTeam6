@@ -49,11 +49,11 @@ public class SwipeScript : MonoBehaviour
     void Update()
     {
        canslidup=card.canSlideUp;
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (maxY));
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y)-2 / (maxY/1.5f));
         if (transform.eulerAngles.z-180>0)
         {
-            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
-            rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / maxRotation)));
+            imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / (maxRotation/2)) * 40) / 255f);
+            rightText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, ((Mathf.Abs(transform.eulerAngles.z - 360) / (maxRotation / 2))));
             leftText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0);
         }
         else if(transform.eulerAngles.z - 180 < 0)
