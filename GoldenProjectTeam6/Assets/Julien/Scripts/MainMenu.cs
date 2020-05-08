@@ -4,8 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject achiev_EasyOnes;
+    public GameObject achiev_Locked;
+    public GameObject achiev_Unlocked;
+    public GameObject UI_Achiev;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
     public void Achievements()
     {
-
+        UI_Achiev.SetActive(true);
     }
 
     public void Credits()
@@ -41,4 +48,32 @@ public class MainMenu : MonoBehaviour
                         Application.Quit();
         #endif
     }
+
+    public void Achievements_EasyOnes()
+    { 
+        achiev_EasyOnes.SetActive(true);
+        achiev_Locked.SetActive(false);
+        achiev_Unlocked.SetActive(false);
+    }
+
+    public void Achievements_Locked()
+    {
+        achiev_EasyOnes.SetActive(false);
+        achiev_Locked.SetActive(true);
+        achiev_Unlocked.SetActive(false);
+    }
+
+    public void Achievements_Unlocked()
+    {
+        achiev_EasyOnes.SetActive(false);
+        achiev_Locked.SetActive(false);
+        achiev_Unlocked.SetActive(true);
+    }
+
+    public void Achievements_Quit()
+    {
+        UI_Achiev.SetActive(false);
+    }
+
+
 }

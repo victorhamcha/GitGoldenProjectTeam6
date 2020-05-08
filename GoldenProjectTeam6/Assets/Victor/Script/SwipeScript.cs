@@ -35,7 +35,7 @@ public class SwipeScript : MonoBehaviour
     void Start()
     {
         card = GetComponent<CardValuesWithScriptable>();
-        material = GetComponent<SpriteRenderer>().material;
+        material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
     }
@@ -43,7 +43,8 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y + 0.911047f) / (0.911047f + 3.5f));
+      
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
@@ -105,7 +106,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if(transform.eulerAngles.z==maxRotation|| transform.eulerAngles.z-360 ==-maxRotation||(transform.position.y>=4.5f&& card._canSlideUp))
+                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card._canSlideUp))
                     {
                         disolve = true;
                         GetComponent<CardValuesWithScriptable>().IsSwiping();
