@@ -44,7 +44,7 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
-  _isDeadCard: 1
+  _isDeadCard: 0
   _enumObjectConditionList: 
   _swipeDirectionEnd: 0
   _specialVFX: {fileID: 0}
