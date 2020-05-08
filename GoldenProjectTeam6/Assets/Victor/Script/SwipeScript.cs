@@ -153,12 +153,12 @@ public class SwipeScript : MonoBehaviour
 
             if(fade<=0f)
             {
-                if (transform.eulerAngles.z == maxRotation && transform.position.x <= -maxX)
+                if ((transform.eulerAngles.z >= maxRotation - 0.1f && transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x) >= maxX))
                 {
                     card.GoLeft();
                    
                 }
-                else if ( transform.eulerAngles.z - 360 == -maxRotation && transform.position.x >= maxX)
+                else if (transform.eulerAngles.z - 360 >= -maxRotation - 0.1f && transform.eulerAngles.z - 360 <= -maxRotation + 0.1f && transform.position.x >= maxX)
                 {
                     card.GoRight();
                    
