@@ -110,12 +110,13 @@ public class CardValuesWithScriptable : MonoBehaviour
                 UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
             }
         }
-
+        Debug.Log(_firstCardScriptable._isEndingEvent);
+        Debug.Log(_firstCardScriptable._enumDirectpionSwipeString);
        
 
-        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == ""))
         {
-         
+            Debug.Log("enterTheWay");
             if (_firstCardScriptable._eventCanBePlayOne)
             {
                 eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
@@ -155,7 +156,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
       
         // Debug.Log(_isADeadCard);
-        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeRight" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeRight" || _firstCardScriptable._enumDirectpionSwipeString == ""))
         {
             
             if (_firstCardScriptable._eventCanBePlayOne)
@@ -220,17 +221,17 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
         }
 
-      
 
-        /*if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeUp" || _firstCardScriptable._enumDirectpionSwipeString == "_whatever"))
+
+        if (_firstCardScriptable._isEndingEvent && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeUp" || _firstCardScriptable._enumDirectpionSwipeString == ""))
         {
-           
+
             if (_firstCardScriptable._eventCanBePlayOne)
             {
                 eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
             }
             _nextCardUp = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
-        }*/
+        }
 
         _firstCardScriptable = _nextCardUp;
 
