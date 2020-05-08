@@ -33,15 +33,15 @@ public class EventManager : MonoBehaviour
         {
             eventPlace = cirqueEvents;
         }
-        else if (place == "_place2")
+        else if (place == "_balade")
         {
             eventPlace = place2Events;
         }
-        else if (place == "_place3")
+        else if (place == "_restaurant")
         {
             eventPlace = place3Events;
         }
-        else if (place == "_place4")
+        else if (place == "_animalerie")
         {
             eventPlace = place4Events;
         }
@@ -84,15 +84,15 @@ public class EventManager : MonoBehaviour
                     cirqueEvents.Remove(removedCard);
                    
                 }
-                else if (place == "_place2")
+                else if (place == "_balade")
                 {
                     place2Events.Remove(removedCard);
                 }
-                else if (place == "_place3")
+                else if (place == "_restaurant")
                 {
                     place3Events.Remove(removedCard);
                 }
-                else if (place == "_place4")
+                else if (place == "_animalerie")
                 {
                     place4Events.Remove(removedCard);
                 }

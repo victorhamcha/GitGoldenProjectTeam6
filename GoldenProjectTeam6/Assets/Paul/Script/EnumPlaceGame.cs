@@ -7,9 +7,9 @@ public class EnumPlaceGame : MonoBehaviour
     public enum _enumPlace
     {
         _circus,
-        _place2,
-        _place3,
-        _place4,
+        _balade,
+        _restaurant,
+        _animalerie,
 
     }
 }
