@@ -8,13 +8,15 @@ public class ImageArborescence : MonoBehaviour
 {
     [HideInInspector] public Image _image;
     [HideInInspector] public TextMeshProUGUI _title;
-    [HideInInspector] public List<GameObject> _lineRendererGO;
+     public List<GameObject> _lineRendererGO;
     [HideInInspector] public GameObject _lineRendererShowNext;
     [HideInInspector] public GameObject _emptyParent;
 
     //EFFECT
-    Material _material;
-    public float _timeToRevealCard = 1f;
+    public Material _materialImg;
+
+
+    public float _timeToRevealCard = 0f;
     public bool _disolve = false;
     public bool _alreadyInTree;
 
@@ -27,14 +29,13 @@ public class ImageArborescence : MonoBehaviour
 
     void Start()
     {
-        _material = GetComponent<Image>().material;
-        _material.SetFloat("_Disolve", 0);
-        _image.enabled = false;
+        
         CheckIfAlreadyDraw();
     }
 
     private void Update()
     {
+        
         IsSpawning();
     }
 
@@ -43,19 +44,24 @@ public class ImageArborescence : MonoBehaviour
     {
         if (_disolve)
         {
-            
             //_image.gameObject.SetActive(true);
-            _timeToRevealCard -= Time.deltaTime * 2;
-            Debug.Log(_timeToRevealCard);
+            _timeToRevealCard += Time.deltaTime;
 
-            if (_timeToRevealCard <= 0f)
+            if (_timeToRevealCard >= 1f)
             {
                 _timeToRevealCard = 1f;
                 //_image.gameObject.SetActive(false);
 
                 _disolve = false;
+                Assigner();
+                _image.material = null;
+                Assigner();
+                DrawLineAuto();
             }
-            _material.SetFloat("_Disolve", _timeToRevealCard);
+            else
+            {
+                _image.material.SetFloat("_Dissolve", _timeToRevealCard);
+            }
 
         }
     }
@@ -153,9 +159,26 @@ public class ImageArborescence : MonoBehaviour
 
     IEnumerator ShowUp()
     {
-        yield return new WaitForSeconds(1);
+        _image.material = _materialImg;
+        _image.material.SetFloat("_Dissolve", 0);
+        _image.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        _image.material.SetFloat("_Dissolve", 0);
+        _image.sprite = _cardID._image;
+        _image.material.SetTexture("_MainTexture", _image.sprite.texture);
         _disolve = true;
         _alreadyInTree = true;
-        CheckIfAlreadyDraw();
+        _image.enabled = true;
+        _title.enabled = true;
+        _title.gameObject.SetActive(true);
+        ChangeLineMaterial();
+    }
+
+    void ChangeLineMaterial()
+    {
+        for (int i = 0; i < _lineRendererGO.Count; i++)
+        {
+            _lineRendererGO[i].GetComponent<LineRenderer>().material = _materialImg;
+        }
     }
 }

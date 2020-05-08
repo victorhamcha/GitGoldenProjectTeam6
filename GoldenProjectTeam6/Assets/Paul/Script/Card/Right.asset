@@ -17,7 +17,7 @@ MonoBehaviour:
   _description: Right
   _cardAlreadyDraw: 1
   _canSlideUp: 0
-  _canSlideRight: 0
+  _canSlideRight: 1
   _canSlideLeft: 0
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
+  _isNextCardRight: {fileID: 11400000, guid: 7749ecfc7ad330a44a1f0520b4067ef7, type: 2}
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 0}
   _isSwipingLeftDescription: 
@@ -44,7 +44,7 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
-  _isDeadCard: 1
+  _isDeadCard: 0
   _enumObjectConditionList: 
   _swipeDirectionEnd: 0
   _specialVFX: {fileID: 0}
