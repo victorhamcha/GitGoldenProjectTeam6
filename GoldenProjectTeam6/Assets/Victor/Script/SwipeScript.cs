@@ -118,13 +118,14 @@ public class SwipeScript : MonoBehaviour
 
 
                     touchRef = touch.position.x;
+                  
 
                 }
 
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -maxX) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
+                    if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
                     {
                         disolve = true;
                     }
@@ -188,14 +189,13 @@ public class SwipeScript : MonoBehaviour
                 
                 if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
-                    transform.Rotate(0, 0, Time.deltaTime * 15);
+                    transform.Rotate(0, 0, Time.deltaTime * rotateSpeed*40);
                 }
                 else
                 {
-                    transform.Rotate(0, 0, Time.deltaTime * -15);
+                    transform.Rotate(0, 0, Time.deltaTime * -rotateSpeed*40);
                 }
-                Debug.Log(Vector3.Distance(transform.eulerAngles, to));
-                Debug.Log(Vector2.Distance(transform.position, originalPos));
+               
 
             }
             else
