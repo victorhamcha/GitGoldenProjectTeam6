@@ -17,6 +17,8 @@ public class SwipeScript : MonoBehaviour
     private Vector2 originalPos;
     private Vector3 distance;
     public bool canGoUp;
+    public float maxX = 265;
+    public float maxY = 425;
     //Canvas//
     public GameObject img;
     private Image imgColor;
@@ -29,22 +31,25 @@ public class SwipeScript : MonoBehaviour
     public float fade = 1f;
     public bool disolve = false;
 
+    public bool canslidup;
     //Changement//
     private CardValuesWithScriptable card;
     // Start is called before the first frame update
     void Start()
     {
+        
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
+        material.SetFloat("_Fade", 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (0.911047f + 3.5f));
+       canslidup=card.canSlideUp;
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y) / (maxY));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / maxRotation) * 40) / 255f);
@@ -60,7 +65,19 @@ public class SwipeScript : MonoBehaviour
      
 
         
-     
+        if(!card.canSlideUp)
+        {
+           
+                upText.text= "";
+            
+        }
+        
+        if (card._isADeadCard)
+        {
+            upText.text = "You are dead";
+            rightText.text = "well done";
+            leftText.text = "you should be so proud!";
+        }
         
 
         
@@ -73,6 +90,7 @@ public class SwipeScript : MonoBehaviour
 
            if(touched)
            {
+               
                 if (touch.phase == TouchPhase.Began)
                 {
                     touchRef = touch.position.x;
@@ -106,10 +124,9 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     touched = false;
-                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -2.2) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= 2.2) ||(transform.position.y>=4.5f&& card._canSlideUp))
+                    if((transform.eulerAngles.z==maxRotation && transform.position.x <= -maxX) || (transform.eulerAngles.z-360 ==-maxRotation&& transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
                     {
                         disolve = true;
-                        GetComponent<CardValuesWithScriptable>().IsSwiping();
                     }
                     else
                     {
@@ -135,17 +152,20 @@ public class SwipeScript : MonoBehaviour
 
             if(fade<=0f)
             {
-                if (transform.eulerAngles.z == maxRotation)
+                if (transform.eulerAngles.z == maxRotation && transform.position.x <= -maxX)
                 {
                     card.GoLeft();
+                   
                 }
-                else if ( transform.eulerAngles.z - 360 == -maxRotation)
+                else if ( transform.eulerAngles.z - 360 == -maxRotation && transform.position.x >= maxX)
                 {
                     card.GoRight();
+                   
                 }
-                else if (transform.position.y >= 4.5f && card._canSlideUp)
+                else if (transform.position.y >= maxY && card.canSlideUp)
                 {
-                    card.GoUp();
+                    card.VerifyIfCanSlideUp();
+                  
                 }
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
@@ -160,11 +180,11 @@ public class SwipeScript : MonoBehaviour
         else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 1f||Vector2.Distance(transform.position,originalPos)!=0)
+            if (Vector3.Distance(transform.eulerAngles, to) > 2f||Vector2.Distance(transform.position,originalPos)>0.05)
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*rotateSpeed*Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*Time.deltaTime);
                 
                 if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
@@ -174,12 +194,14 @@ public class SwipeScript : MonoBehaviour
                 {
                     transform.Rotate(0, 0, Time.deltaTime * -15);
                 }
-                
+                Debug.Log(Vector3.Distance(transform.eulerAngles, to));
+                Debug.Log(Vector2.Distance(transform.position, originalPos));
 
             }
             else
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.position = originalPos;
                 reRotate = false;
             }
         }
@@ -192,9 +214,14 @@ public class SwipeScript : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
+
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
+               if(card._unlockSlideUp)
+               {
+                    card.VerifyIfCanSlideUp();
+               }
                 touched = true;
             }
         }

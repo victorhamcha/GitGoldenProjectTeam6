@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CardScriptableObjectPresetEndTest
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _title
+    value: EndCardLeft
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _image
+    value: 
+    objectReference: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _description
+    value: C'est une carte qui finie un event quand on tourne a gauche
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _canSlideUp
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _canSlideRight
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _canSlideLeft
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumSuccessRight
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumSuccessLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumSuccessUp
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isNextCardUp
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isSwipingUpDescription
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isNextCardRight
+    value: 
+    objectReference: {fileID: 11400000, guid: 79e4121bbc7168b4c82549526ea4c478, type: 2}
+  - target: {fileID: 0}
+    propertyPath: _isSwipingRightDescription
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isNextCardLeft
+    value: 
+    objectReference: {fileID: 11400000, guid: 6f5948d68cbeeaa4f8df35eef3433dc2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: _isSwipingLeftDescription
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _firstCardOfEvent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
+  - target: {fileID: 0}
+    propertyPath: _isSuccess
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isEndingEvent
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _eventCanBePlayOne
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumSuccessString
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumDirectpionSwipeString
+    value: _swipeLeft
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumPlaceString
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumObjectString.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _colorInspector.r
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _colorInspector.g
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _colorInspector.b
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _colorInspector.a
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _conditionsObjectList.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumObjectToUnlockRight
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumObjectToUnlockLeft
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumObjectToUnlockUp
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _placeEnum
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _isDeadCard
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _enumObjectConditionList.Array.size
+    value: 0
+    objectReference: {fileID: 0}

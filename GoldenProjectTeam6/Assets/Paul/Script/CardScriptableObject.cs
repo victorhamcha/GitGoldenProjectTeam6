@@ -19,11 +19,18 @@ public class CardScriptableObject : ScriptableObject
     [TextArea(5, 1)] public string _description;
 
 
-    [HideInInspector] // HideInInspector makes sure the default inspector won't show other variables
-    public bool _isDeadCard;
 
 
+    [HideInInspector] public bool _cardAlreadyDraw;
     [HideInInspector] public bool _canSlideUp;
+    [HideInInspector] public bool _canSlideRight;
+    [HideInInspector] public bool _canSlideLeft;
+    
+    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessRight;
+    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessLeft;
+    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessUp;
+    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessDeath;
+
     [HideInInspector] public CardScriptableObject _isNextCardUp;
     [TextArea(5, 1)] [HideInInspector] public string _isSwipingUpDescription;
 
@@ -31,23 +38,43 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public string _isSwipingRightDescription;
     [HideInInspector] public CardScriptableObject _isNextCardLeft;
     [HideInInspector] public string _isSwipingLeftDescription;
+    [HideInInspector] public CardScriptableObject _firstCardOfEvent;
     [Space(10)]
     [HideInInspector] public bool _isSuccess;
-    [Space(10)]
-    [HideInInspector] public bool _isUnlockingObject;
-    [HideInInspector] public int _findObjectInListToggle;
+    [HideInInspector] public bool _hasSpecialVFX;
+
+
+    [HideInInspector] public bool _isEndingEvent;
+
+    [HideInInspector] public bool _eventCanBePlayOne;
 
     [HideInInspector] public string _enumSuccessString;
     [HideInInspector] public string _enumDirectpionSwipeString;
     [HideInInspector] public string _enumPlaceString;
+    [HideInInspector] public List<string> _enumObjectString;
 
     //[HideInInspector] public List<int> _conditionObjetListForCardManager;
 
     [HideInInspector] public Color _colorInspector = Color.red;
 
 
-    [HideInInspector] public List<int> _conditionsObjectList = new List<int>();
+    [HideInInspector] public List<EnumListObject._objectList> _conditionsObjectList = new List<EnumListObject._objectList>();
+    
+    [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockRight;
+    [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockLeft;
+    [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockUp;
+    
 
+    public EnumPlaceGame._enumPlace _placeEnum;
+
+    public bool _isDeadCard;
+
+    [Space(20)]
+    public List<EnumListObject._objectList> _enumObjectConditionList;
+
+    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionEnd;
+
+    [HideInInspector] public GameObject _specialVFX;
 
 
 }
@@ -56,13 +83,10 @@ public class CardScriptableObject : ScriptableObject
 [CustomEditor(typeof(CardScriptableObject))]
 public class CardScriptableObject_Editor : Editor
 {
-    [HideInInspector] public EnumSuccess._enumSuccess _enumSuccess;
-    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirection;
-    [HideInInspector] public EnumPlaceGame._enumPlace _placeEnum;
+    [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionObject;
+    [HideInInspector] public EnumListObject._objectList _enumObjectCondition;
 
     int _lineSize;
-
-
 
     public override void OnInspectorGUI()
     {
@@ -72,63 +96,13 @@ public class CardScriptableObject_Editor : Editor
         DrawDefaultInspector();
 
         CardScriptableObject script = (CardScriptableObject)target;
-
-        _placeEnum = (EnumPlaceGame._enumPlace)EditorGUILayout.EnumPopup("Place of the card", _placeEnum);
-        script._enumPlaceString = _placeEnum.ToString();
-
-        GUI.backgroundColor = script._colorInspector;
-        script._isDeadCard = EditorGUILayout.Toggle("Is a Death card", script._isDeadCard);
-
-        GUI.backgroundColor = Color.white;
+        
 
 
         if (!script._isDeadCard) // if bool is true, show other fields
         {
-            EditorGUILayout.Space(10);
-            //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
-            //EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
-
-            script._isNextCardRight = EditorGUILayout.ObjectField("Next Card By Sliding RIGHT", script._isNextCardRight, typeof(CardScriptableObject), true) as CardScriptableObject;
-            script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
-            EditorGUILayout.Space(10);
-            //EditorGUILayout.SelectableLabel("LEFT", myStyleBold);
-            
-
-            script._isNextCardLeft = EditorGUILayout.ObjectField("Next Card By Sliding LEFT", script._isNextCardLeft, typeof(CardScriptableObject), true) as CardScriptableObject;
-            script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
-
-            EditorGUILayout.Space(20);
-
-            EditorGUILayout.Space(10);
             GUI.backgroundColor = script._colorInspector;
-            script._isSuccess = EditorGUILayout.Toggle("Unlock Success", script._isSuccess);
-            GUI.backgroundColor = Color.white;
-
-
-            if (script._isSuccess)
-            {
-                //EditorGUILayout.SelectableLabel("Success To Unlock", myStyleBold);
-                _enumSuccess = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock", _enumSuccess);
-                script._enumSuccessString = _enumSuccess.ToString();
-                EditorGUILayout.Space(20);
-            }
-
-
-            GUI.backgroundColor = script._colorInspector;
-            script._isUnlockingObject = EditorGUILayout.Toggle("Unlock Object", script._isUnlockingObject);
-            GUI.backgroundColor = Color.white;
-
-            if (script._isUnlockingObject)
-            {
-                //EditorGUILayout.SelectableLabel("Object To Unlock", myStyleBold);
-                _swipeDirection = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Direction to unlock Object", _swipeDirection);
-                script._enumDirectpionSwipeString = _enumSuccess.ToString();
-                script._findObjectInListToggle = EditorGUILayout.IntField("Number In List", script._findObjectInListToggle);
-                EditorGUILayout.Space(20);
-            }
-
-            GUI.backgroundColor = script._colorInspector;
-            script._canSlideUp = EditorGUILayout.Toggle("Unlock Card Slide Up", script._canSlideUp);
+            script._canSlideUp = EditorGUILayout.Toggle("Can Slide Up", script._canSlideUp);
             GUI.backgroundColor = Color.white;
 
             if (script._canSlideUp)
@@ -136,7 +110,14 @@ public class CardScriptableObject_Editor : Editor
                 //EditorGUILayout.SelectableLabel("If the card can Slide Up", myStyleBold);
                 script._isNextCardUp = EditorGUILayout.ObjectField("Next Card By Sliding UP", script._isNextCardUp, typeof(CardScriptableObject), true) as CardScriptableObject;
                 script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
-                if(_lineSize == 0 && script._conditionsObjectList.Count != 0)
+                
+                script._enumObjectToUnlockUp = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock UP", script._enumObjectToUnlockUp);
+
+                script._enumSuccessUp = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock UP", script._enumSuccessUp);
+                EditorGUILayout.Space(20);
+                
+                
+                /*if(_lineSize == 0 && script._conditionsObjectList.Count != 0)
                 {
                     _lineSize = script._conditionsObjectList.Count;
                 }
@@ -158,13 +139,78 @@ public class CardScriptableObject_Editor : Editor
                 }
                 for (int i = 0; i < script._conditionsObjectList.Count; i++)
                 {
-                    script._conditionsObjectList[i] = EditorGUILayout.IntField("Element " + i, script._conditionsObjectList[i]);
+                    _enumObjectCondition = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Condition " + i, _enumObjectCondition);
+                    //_enumObjectConditionList[i] = _enumObjectCondition;
                 }
+
+                //script._enumObjectConditionListPublic = _enumObjectConditionList;*/
+
+            }
+            //EditorGUILayout.SelectableLabel("SWIPE", myStyleBold);
+            //EditorGUILayout.SelectableLabel("RIGHT", myStyleBold);
+            EditorGUILayout.Space(10);
+            GUI.backgroundColor = script._colorInspector;
+            script._canSlideRight = EditorGUILayout.Toggle("Can Slide Right", script._canSlideRight);
+            GUI.backgroundColor = Color.white;
+
+
+            if (script._canSlideRight)
+            {
+                script._isNextCardRight = EditorGUILayout.ObjectField("Next Card By Sliding RIGHT", script._isNextCardRight, typeof(CardScriptableObject), true) as CardScriptableObject;
+                script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
+                script._enumObjectToUnlockRight = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock RIGHT", script._enumObjectToUnlockRight);
+
+                script._enumSuccessRight = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock RIGHT", script._enumSuccessRight);
+                EditorGUILayout.Space(20);
+            }
+            EditorGUILayout.Space(10);
+            GUI.backgroundColor = script._colorInspector;
+            script._canSlideLeft = EditorGUILayout.Toggle("Can Slide Left", script._canSlideLeft);
+            GUI.backgroundColor = Color.white;
+
+
+            if (script._canSlideLeft)
+            {
+                script._isNextCardLeft = EditorGUILayout.ObjectField("Next Card By Sliding LEFT", script._isNextCardLeft, typeof(CardScriptableObject), true) as CardScriptableObject;
+                script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
+                script._enumObjectToUnlockLeft = (EnumListObject._objectList)EditorGUILayout.EnumPopup("Object to unlock LEFT", script._enumObjectToUnlockLeft);
+
+                script._enumSuccessLeft = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._enumSuccessLeft);
+                EditorGUILayout.Space(20);
+            }
+            EditorGUILayout.Space(10);
+            GUI.backgroundColor = script._colorInspector;
+            script._isEndingEvent = EditorGUILayout.Toggle("This Card Finish an Event", script._isEndingEvent);
+            GUI.backgroundColor = Color.white;
+
+            if (script._isEndingEvent)
+            {
+                script._eventCanBePlayOne = EditorGUILayout.Toggle("This Card Can Be Play Once", script._eventCanBePlayOne);
+                script._firstCardOfEvent = EditorGUILayout.ObjectField("First card of this event", script._firstCardOfEvent, typeof(CardScriptableObject), true) as CardScriptableObject;
+                script._swipeDirectionEnd = (EnumDirectionSwipeCard._swipeDirection)EditorGUILayout.EnumPopup("Success to Unlock LEFT", script._swipeDirectionEnd);
+                EditorGUILayout.Space(20);
             }
 
+
+        }
+        else
+        {
+            EditorGUILayout.Space(20);
+            script._enumSuccessDeath = (EnumSuccess._enumSuccess)EditorGUILayout.EnumPopup("Success to Unlock when you die", script._enumSuccessDeath);
+
+        }
+
+
+        EditorGUILayout.Space(10);
+        GUI.backgroundColor = script._colorInspector;
+        script._hasSpecialVFX = EditorGUILayout.Toggle("This Card has a special VFX", script._hasSpecialVFX);
+        GUI.backgroundColor = Color.white;
+
+        if (script._hasSpecialVFX)
+        {
+            script._specialVFX = EditorGUILayout.ObjectField("Special VFX GameObject", script._specialVFX, typeof(GameObject), true) as GameObject;
+            EditorGUILayout.Space(20);
         }
     }
-
-    
 }
 #endif

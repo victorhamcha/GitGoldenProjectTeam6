@@ -6,6 +6,7 @@ public class EnumSuccess : ScriptableObject
 {
     public enum _enumSuccess
     {
+        none,
         aaa,
         bbb,
         ccc,
