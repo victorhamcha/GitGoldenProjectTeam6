@@ -12,16 +12,54 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public GameObject _lineRendererShowNext;
     [HideInInspector] public GameObject _emptyParent;
 
+    //EFFECT
+    Material _material;
+    public float _timeToRevealCard = 1f;
+    public bool _disolve = false;
+    public bool _alreadyInTree;
+
     Transform _positionLeft, _positionRight, _positionUp;
 
     public CardScriptableObject _cardID;
+    
     
 
 
     void Start()
     {
+        _material = GetComponent<Image>().material;
+        _material.SetFloat("_Disolve", 0);
+        _image.enabled = false;
         CheckIfAlreadyDraw();
     }
+
+    private void Update()
+    {
+        IsSpawning();
+    }
+
+
+    void IsSpawning()
+    {
+        if (_disolve)
+        {
+            
+            //_image.gameObject.SetActive(true);
+            _timeToRevealCard -= Time.deltaTime * 2;
+            Debug.Log(_timeToRevealCard);
+
+            if (_timeToRevealCard <= 0f)
+            {
+                _timeToRevealCard = 1f;
+                //_image.gameObject.SetActive(false);
+
+                _disolve = false;
+            }
+            _material.SetFloat("_Disolve", _timeToRevealCard);
+
+        }
+    }
+
 
     void DrawLineAuto()
     {
@@ -81,21 +119,43 @@ public class ImageArborescence : MonoBehaviour
     void Assigner()
     {
         _title.text = _cardID._title;
+        _image.enabled = true;
         _image.sprite = _cardID._image;
     }
 
     void CheckIfAlreadyDraw()
     {
-        //PASSER LA LIGNE SUIVANTE EN !_cardID._cardAlreadyDraw
-        if (!_cardID._cardAlreadyDraw)
+        //CHANGE NECT LINE TO !_cardID._cardAlreadyDraw
+        
+        if (!_cardID._cardAlreadyDraw) // Card never draw
         {
             _image.enabled = false;
             _title.enabled = false;
         }
-        else
+        else // Card already draw
         {
-            Assigner();
-            DrawLineAuto();
+            if (_alreadyInTree) //Card already shows in tree so don't play anim
+            {
+                _image.enabled = true;
+                _title.enabled = true;
+                Assigner();
+                DrawLineAuto();
+                _title.gameObject.SetActive(true);
+            }
+            else //Card never shows in tree so play animation
+            {
+                //_image.enabled = false;
+                _title.enabled = false;
+                StartCoroutine(ShowUp());
+            }
         }
+    }
+
+    IEnumerator ShowUp()
+    {
+        yield return new WaitForSeconds(1);
+        _disolve = true;
+        _alreadyInTree = true;
+        CheckIfAlreadyDraw();
     }
 }
