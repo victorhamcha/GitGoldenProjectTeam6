@@ -1691,6 +1691,8 @@ MonoBehaviour:
   card: {fileID: 1169474635}
   cirqueEvents:
   - {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51, type: 2}
+  - {fileID: 11400000, guid: 101d3a7522612614c9366e2c8cec48cd, type: 2}
+  - {fileID: 11400000, guid: fe343b8867ee34247bcef281c5a5b30d, type: 2}
   baladeEvents:
   - {fileID: 11400000, guid: d076c957b1a2dc14393d93d3c97bf724, type: 2}
   - {fileID: 11400000, guid: 7293a00ee41d8b74eacae92fe757d628, type: 2}
