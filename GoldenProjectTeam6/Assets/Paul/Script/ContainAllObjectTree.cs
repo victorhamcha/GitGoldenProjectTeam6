@@ -34,6 +34,11 @@ public class ContainAllObjectTree : MonoBehaviour
             _imageTreeChilds.Clear();
             Attribution();
         }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            FindObjectOfType<SaveAndLoad>().SavePlayer();
+            FindObjectOfType<SaveAndLoad>().LoadPlayer();
+        }
     }
 
     void Attribution()
@@ -64,5 +69,8 @@ public class ContainAllObjectTree : MonoBehaviour
                 }
             }
         }
+        
+        FindObjectOfType<SaveAndLoad>().SavePlayer();
+        
     }
 }

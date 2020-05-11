@@ -16,8 +16,9 @@ public class PlayerData
 
     public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw)
     {
-        
+
         imageTreeData = objectTree._imageTreeChildAlreadyInTree;
+
 
         savingDrawCardCardData = cardsAlreadyDraw._savingDrawCardCard;
         savingDrawCardBoolData = cardsAlreadyDraw._savingDrawCardBool;

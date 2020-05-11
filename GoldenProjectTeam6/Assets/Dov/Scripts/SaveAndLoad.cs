@@ -17,13 +17,13 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawBool = FindObjectOfType<GameManager>()._savingDrawCardBool;
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
 
-        SavePlayer();
     }
+
 
     public void SavePlayer()
     {
-        SaveSystem.SaveScore(tree, manage);
         Debug.Log(alreadyDrawBool.Count);
+        SaveSystem.SaveScore(tree, manage);
     }
 
     public void LoadPlayer()
@@ -33,6 +33,7 @@ public class SaveAndLoad : MonoBehaviour
 
         alreadyDrawBool = data.savingDrawCardBoolData;
         alreadyDrawCards = data.savingDrawCardCardData;
+
 
         Debug.Log("load");
 

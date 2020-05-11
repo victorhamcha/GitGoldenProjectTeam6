@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1556,6 +1556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944759642}
   - component: {fileID: 944759641}
+  - component: {fileID: 944759643}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1577,11 +1578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
-  _savingDrawCardCard:
-  - {fileID: 11400000, guid: cd537af95eb0a1349b1286921621cb0c, type: 2}
-  - {fileID: 11400000, guid: 334617b7dac8b7a4dbcbefbb0ca25d8a, type: 2}
-  - {fileID: 11400000, guid: 0646e40a2b7cebc4c9fddcc01f75584d, type: 2}
-  _savingDrawCardBool: 010000
+  _savingDrawCardCard: []
+  _savingDrawCardBool: 
 --- !u!4 &944759642
 Transform:
   m_ObjectHideFlags: 0
@@ -1596,6 +1594,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944759643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944759640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectInTree: 
+  alreadyDrawBool: 
+  alreadyDrawCards: []
+  tree: {fileID: 938254282}
+  manage: {fileID: 944759641}
 --- !u!1 &1491549167
 GameObject:
   m_ObjectHideFlags: 0

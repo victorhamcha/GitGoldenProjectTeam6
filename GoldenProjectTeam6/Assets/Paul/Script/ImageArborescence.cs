@@ -74,7 +74,6 @@ public class ImageArborescence : MonoBehaviour
             Assigner();
             _image.material = null;
             Assigner();
-            FindObjectOfType<SaveAndLoad>().SavePlayer();
         }
         else
         {
