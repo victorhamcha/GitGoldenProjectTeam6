@@ -35,8 +35,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
 
     EventManager eventManager;
-
-    [HideInInspector] public SavingDrawCard _savingDrawCard;
+    
 
     void Start()
     {
@@ -53,12 +52,11 @@ public class CardValuesWithScriptable : MonoBehaviour
         _descriptionCard.text = _firstCardScriptable._description;
 
         //SAVE
-
-        _savingDrawCard._cardScriptableObject = _firstCardScriptable;
-        _savingDrawCard._isAlreadyDraw = true;
-        if (!FindObjectOfType<GameManager>()._savingDrawCard.Contains(_savingDrawCard))
+        
+        if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable))
         {
-            FindObjectOfType<GameManager>()._savingDrawCard.Add(_savingDrawCard);
+            FindObjectOfType<GameManager>()._savingDrawCardCard.Add(_firstCardScriptable);
+            FindObjectOfType<GameManager>()._savingDrawCardBool.Add(true);
         }
 
         if (_firstCardScriptable._canSlideLeft)

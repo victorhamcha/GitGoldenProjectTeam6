@@ -36,12 +36,12 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
     [HideInInspector] public GameObject _cardZoom;
 
+     public bool _alreadyDraw;
+
     
 
     void Start()
     {
-        Debug.Log("Is in tree : " + _alreadyInTree);
-        Debug.Log("Has been draw : " + _cardID._cardAlreadyDraw);
         if (_alreadyInTree)
         {
             _image.material = null;

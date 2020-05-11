@@ -9,6 +9,7 @@ public class ContainAllObjectTree : MonoBehaviour
      public List<bool> _imageTreeChildAlreadyInTree;
 
     public List<GameObject> _cardToReset;
+    
 
     void Start()
     {
@@ -50,7 +51,18 @@ public class ContainAllObjectTree : MonoBehaviour
         for (int i = 0; i < _imageTreeChilds.Count; i++)
         {
             _imageTreeChilds[i].GetComponent<ImageArborescence>()._idInParent = i;
-            //FindObjectOfType<GameManager>()._savingDrawCard;
+            for (int j = 0; j < FindObjectOfType<GameManager>()._savingDrawCardCard.Count; j++)
+            {
+                if (FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_imageTreeChilds[i].GetComponent<ImageArborescence>()._cardID))
+                {
+                    Debug.Log("Bool " + j + " = " + FindObjectOfType<GameManager>()._savingDrawCardBool[j]);
+                    _imageTreeChilds[i].GetComponent<ImageArborescence>()._alreadyDraw = FindObjectOfType<GameManager>()._savingDrawCardBool[j];
+                }
+                else
+                {
+                    Debug.Log("Je contiens pas");
+                }
+            }
         }
     }
 }
