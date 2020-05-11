@@ -17,9 +17,9 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public Material _materialLine;
 
 
-    [HideInInspector]  public float _timeToRevealCard = 0f;
-    [HideInInspector]  public bool _disolve = false;
-    [HideInInspector]  public bool _alreadyInTree;
+    [HideInInspector] public float _timeToRevealCard = 0f;
+    [HideInInspector] public bool _disolve = false;
+    [HideInInspector] public bool _alreadyInTree;
 
     Transform _positionLeft, _positionRight, _positionUp;
 
@@ -36,9 +36,9 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
     [HideInInspector] public GameObject _cardZoom;
 
-     public bool _alreadyDraw;
+    public bool _alreadyDraw;
 
-    
+
 
     void Start()
     {
@@ -46,13 +46,13 @@ public class ImageArborescence : MonoBehaviour
         {
             _image.material = null;
         }
-        
+
         CheckIfAlreadyDraw();
     }
 
     private void Update()
     {
-        
+
         IsSpawning();
     }
 
@@ -63,21 +63,22 @@ public class ImageArborescence : MonoBehaviour
         {
             //_image.gameObject.SetActive(true);
             _timeToRevealCard += Time.deltaTime;
-            }
+        }
 
-                if (_timeToRevealCard >= 1f)
-            {
-                _timeToRevealCard = 1f;
-                //_image.gameObject.SetActive(false);
+        if (_timeToRevealCard >= 1f)
+        {
+            _timeToRevealCard = 1f;
+            //_image.gameObject.SetActive(false);
 
-                _disolve = false;
-                Assigner();
-                _image.material = null;
-                Assigner();
-            }
-            else
-            {
-                _image.material.SetFloat("_Dissolve", _timeToRevealCard);
+            _disolve = false;
+            Assigner();
+            _image.material = null;
+            Assigner();
+            FindObjectOfType<SaveAndLoad>().SavePlayer();
+        }
+        else
+        {
+            _image.material.SetFloat("_Dissolve", _timeToRevealCard);
             for (int i = 0; i < _lineRendererGO.Count; i++)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().material.SetFloat("_Dissolve", _timeToRevealCard);
@@ -136,7 +137,7 @@ public class ImageArborescence : MonoBehaviour
             }
         }
 
-            
+
 
 
         for (int i = 0; i < _lineRendererGO.Count; i++)
@@ -144,7 +145,7 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
-            if(i == 0)
+            if (i == 0)
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
             else if (i == 1)
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionRight.position);
@@ -164,7 +165,7 @@ public class ImageArborescence : MonoBehaviour
     void CheckIfAlreadyDraw()
     {
         //CHANGE NECT LINE TO !_cardID._cardAlreadyDraw
-        
+
         if (!_cardID._cardAlreadyDraw) // Card never draw
         {
             _image.enabled = false;

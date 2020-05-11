@@ -13,6 +13,7 @@ public class ContainAllObjectTree : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<SaveAndLoad>().LoadPlayer();
         Attribution();
     }
 
@@ -53,7 +54,7 @@ public class ContainAllObjectTree : MonoBehaviour
             _imageTreeChilds[i].GetComponent<ImageArborescence>()._idInParent = i;
             for (int j = 0; j < FindObjectOfType<GameManager>()._savingDrawCardCard.Count; j++)
             {
-                if (FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_imageTreeChilds[i].GetComponent<ImageArborescence>()._cardID))
+                if (FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_imageTreeChilds[i].GetComponent<ImageArborescence>()._cardID._title))
                 {
                     Debug.Log("Bool " + j + " = " + FindObjectOfType<GameManager>()._savingDrawCardBool[j]);
                     _imageTreeChilds[i].GetComponent<ImageArborescence>()._alreadyDraw = FindObjectOfType<GameManager>()._savingDrawCardBool[j];
