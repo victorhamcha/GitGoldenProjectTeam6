@@ -36,6 +36,8 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     EventManager eventManager;
 
+    [HideInInspector] public SavingDrawCard _savingDrawCard;
+
     void Start()
     {
         eventManager = FindObjectOfType<EventManager>();
@@ -50,7 +52,14 @@ public class CardValuesWithScriptable : MonoBehaviour
 
         _descriptionCard.text = _firstCardScriptable._description;
 
+        //SAVE
 
+        _savingDrawCard._cardScriptableObject = _firstCardScriptable;
+        _savingDrawCard._isAlreadyDraw = true;
+        if (!FindObjectOfType<GameManager>()._savingDrawCard.Contains(_savingDrawCard))
+        {
+            FindObjectOfType<GameManager>()._savingDrawCard.Add(_savingDrawCard);
+        }
 
         if (_firstCardScriptable._canSlideLeft)
             _descriptionLeftSwipe.text = _firstCardScriptable._isSwipingLeftDescription;

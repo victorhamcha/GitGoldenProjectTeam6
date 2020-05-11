@@ -50,6 +50,7 @@ public class ContainAllObjectTree : MonoBehaviour
         for (int i = 0; i < _imageTreeChilds.Count; i++)
         {
             _imageTreeChilds[i].GetComponent<ImageArborescence>()._idInParent = i;
+            //FindObjectOfType<GameManager>()._savingDrawCard;
         }
     }
 }
