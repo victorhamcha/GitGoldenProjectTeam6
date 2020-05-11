@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [HideInInspector] public Toggle _censuredToggle;
     [HideInInspector] public bool _isCensuredMod;
+    public List<SavingDrawCard> _savingDrawCard;
 
     public void ChangeToggle()
     {

@@ -50,6 +50,8 @@ public class CardValuesWithScriptable : MonoBehaviour
 
         _descriptionCard.text = _firstCardScriptable._description;
 
+
+
         if (_firstCardScriptable._canSlideLeft)
             _descriptionLeftSwipe.text = _firstCardScriptable._isSwipingLeftDescription;
 

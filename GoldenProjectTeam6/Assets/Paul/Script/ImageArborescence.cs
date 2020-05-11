@@ -40,6 +40,8 @@ public class ImageArborescence : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Is in tree : " + _alreadyInTree);
+        Debug.Log("Has been draw : " + _cardID._cardAlreadyDraw);
         if (_alreadyInTree)
         {
             _image.material = null;

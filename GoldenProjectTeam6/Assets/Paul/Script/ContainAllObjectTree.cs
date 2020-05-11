@@ -4,11 +4,38 @@ using UnityEngine;
 
 public class ContainAllObjectTree : MonoBehaviour
 {
-    [HideInInspector] public List<GameObject> _imageTreeChilds;
+     public List<GameObject> _imageTreeChilds;
     //Save the following variable (_imageTreeChildAlreadyInTree)
-    public List<bool> _imageTreeChildAlreadyInTree;
+     public List<bool> _imageTreeChildAlreadyInTree;
+
+    public List<GameObject> _cardToReset;
 
     void Start()
+    {
+        Attribution();
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.T))
+        {
+            _cardToReset = _imageTreeChilds;
+            for (int i = 0; i < _cardToReset.Count; i++)
+            {
+                _cardToReset[i].GetComponent<ImageArborescence>()._cardID._cardAlreadyDraw = false;
+                Debug.Log(_cardToReset[i].GetComponent<ImageArborescence>()._cardID + " = " + _cardToReset[i].GetComponent<ImageArborescence>()._cardID._cardAlreadyDraw);
+                _cardToReset[i].GetComponent<ImageArborescence>()._alreadyInTree = false;
+                Debug.Log(_cardToReset[i].GetComponent<ImageArborescence>().name + " = " + _cardToReset[i].GetComponent<ImageArborescence>()._alreadyInTree);
+
+            }
+            Debug.Log("J'ai reset");
+            _imageTreeChildAlreadyInTree.Clear();
+            _imageTreeChilds.Clear();
+            Attribution();
+        }
+    }
+
+    void Attribution()
     {
         foreach (Transform child in transform)
         {
@@ -24,6 +51,5 @@ public class ContainAllObjectTree : MonoBehaviour
         {
             _imageTreeChilds[i].GetComponent<ImageArborescence>()._idInParent = i;
         }
-
     }
 }
