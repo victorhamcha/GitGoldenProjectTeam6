@@ -697,6 +697,7 @@ MonoBehaviour:
   _titleZoomCard: {fileID: 1491549169}
   _descriptionZoomCard: {fileID: 475158189}
   _cardZoom: {fileID: 662079836}
+  _alreadyDraw: 0
 --- !u!114 &652673973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,6 +1201,7 @@ MonoBehaviour:
   _titleZoomCard: {fileID: 1491549169}
   _descriptionZoomCard: {fileID: 475158189}
   _cardZoom: {fileID: 662079836}
+  _alreadyDraw: 0
 --- !u!114 &905269189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,8 +1577,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
-  _savingDrawCardCard: []
-  _savingDrawCardBool: 
+  _savingDrawCardCard:
+  - {fileID: 11400000, guid: cd537af95eb0a1349b1286921621cb0c, type: 2}
+  - {fileID: 11400000, guid: 334617b7dac8b7a4dbcbefbb0ca25d8a, type: 2}
+  - {fileID: 11400000, guid: 0646e40a2b7cebc4c9fddcc01f75584d, type: 2}
+  _savingDrawCardBool: 010000
 --- !u!4 &944759642
 Transform:
   m_ObjectHideFlags: 0
