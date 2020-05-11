@@ -619,9 +619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  sucess: 0000
-  scoreText: {fileID: 190530439}
+  objectInTree: 000000
+  alreadyDrawBool: 
+  alreadyDrawCards: []
+  tree: {fileID: 1748896917}
+  manage: {fileID: 1795114463}
 --- !u!114 &123300285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,7 +4076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1015507426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6035,7 +6037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1559297663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6411,6 +6413,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1748896916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748896918}
+  - component: {fileID: 1748896917}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1748896917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748896916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0655f6e6f2b2c8647aaa5c7486c261b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageTreeChilds: []
+  _imageTreeChildAlreadyInTree: 
+  _cardToReset: []
+--- !u!4 &1748896918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748896916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 80.43613, y: -35.58556, z: -913.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775690880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6582,6 +6630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
+  _savingDrawCardCard: []
+  _savingDrawCardBool: 
 --- !u!4 &1795114464
 Transform:
   m_ObjectHideFlags: 0
