@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool _isCensuredMod;
     public List<string> _savingDrawCardCard;
     public List<bool> _savingDrawCardBool;
+
+    private void Start()
+    {
+        FindObjectOfType<SaveAndLoad>().LoadPlayer();
+    }
 
     public void ChangeToggle()
     {
@@ -20,5 +26,10 @@ public class GameManager : MonoBehaviour
         {
             _isCensuredMod = false;
         }
+    }
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }

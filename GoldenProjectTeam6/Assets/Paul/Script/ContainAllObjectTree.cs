@@ -13,7 +13,6 @@ public class ContainAllObjectTree : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<SaveAndLoad>().LoadPlayer();
         Attribution();
     }
 

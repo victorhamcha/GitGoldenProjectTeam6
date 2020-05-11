@@ -23,7 +23,7 @@ public class SaveAndLoad : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SaveScore(tree, manage);
-        Debug.Log("save");
+        Debug.Log(alreadyDrawBool.Count);
     }
 
     public void LoadPlayer()

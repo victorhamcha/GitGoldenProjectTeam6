@@ -40,7 +40,6 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Start()
     {
         eventManager = FindObjectOfType<EventManager>();
-        FindObjectOfType<SaveAndLoad>().LoadPlayer();
         LoadValueFromScriptableObject();
     }
 
