@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Dov/Dov_Scene.unity
-    guid: 9fe02a0c3066f4e49b827ba42caafd0e
   - enabled: 1
     path: Assets/Scenes/Victor/VictorTest2.unity
     guid: 1e8bb66b970962a4aac780bd79c9081d
+  - enabled: 1
+    path: Assets/Scenes/Dov/Dov_Scene.unity
+    guid: 9fe02a0c3066f4e49b827ba42caafd0e
   m_configObjects: {}

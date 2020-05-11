@@ -1696,6 +1696,9 @@ MonoBehaviour:
   baladeEvents:
   - {fileID: 11400000, guid: d076c957b1a2dc14393d93d3c97bf724, type: 2}
   - {fileID: 11400000, guid: 7293a00ee41d8b74eacae92fe757d628, type: 2}
+  - {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51, type: 2}
+  - {fileID: 11400000, guid: b3ad4e9ce38d15c48a2a08e53f8d4ff0, type: 2}
+  - {fileID: 11400000, guid: 2bab622dca6014348b94a2cd147166b9, type: 2}
   restaurantEvents:
   - {fileID: 11400000, guid: 2bab622dca6014348b94a2cd147166b9, type: 2}
   animalerieEvents:
