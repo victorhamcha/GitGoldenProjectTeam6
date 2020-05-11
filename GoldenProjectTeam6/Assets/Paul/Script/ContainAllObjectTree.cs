@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ContainAllObjectTree : MonoBehaviour
 {
-    [HideInInspector] public List<GameObject> _imageTreeChilds;
+     public List<GameObject> _imageTreeChilds;
     //Save the following variable (_imageTreeChildAlreadyInTree)
-    [HideInInspector] public List<bool> _imageTreeChildAlreadyInTree;
+     public List<bool> _imageTreeChildAlreadyInTree;
 
-    [HideInInspector] public List<GameObject> _cardToReset;
+     public List<GameObject> _cardToReset;
     
 
     void Start()
@@ -18,7 +18,7 @@ public class ContainAllObjectTree : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.E) && Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.T))
+        if ( Input.GetMouseButtonDown(0))
         {
             _cardToReset = _imageTreeChilds;
             for (int i = 0; i < _cardToReset.Count; i++)
@@ -27,17 +27,12 @@ public class ContainAllObjectTree : MonoBehaviour
                 Debug.Log(_cardToReset[i].GetComponent<ImageArborescence>()._cardID + " = " + _cardToReset[i].GetComponent<ImageArborescence>()._cardID._cardAlreadyDraw);
                 _cardToReset[i].GetComponent<ImageArborescence>()._alreadyInTree = false;
                 Debug.Log(_cardToReset[i].GetComponent<ImageArborescence>().name + " = " + _cardToReset[i].GetComponent<ImageArborescence>()._alreadyInTree);
-
             }
             Debug.Log("J'ai reset");
             _imageTreeChildAlreadyInTree.Clear();
             _imageTreeChilds.Clear();
             Attribution();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            FindObjectOfType<SaveAndLoad>().SavePlayer();
-            FindObjectOfType<SaveAndLoad>().LoadPlayer();
+            
         }
     }
 
@@ -46,12 +41,9 @@ public class ContainAllObjectTree : MonoBehaviour
         foreach (Transform child in transform)
         {
             _imageTreeChilds.Add(child.gameObject);
+        }
+        
 
-        }
-        foreach (Transform child in transform)
-        {
-            _imageTreeChildAlreadyInTree.Add(child.gameObject.GetComponent<ImageArborescence>()._alreadyInTree);
-        }
 
         for (int i = 0; i < _imageTreeChilds.Count; i++)
         {
