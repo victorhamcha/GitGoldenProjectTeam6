@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ContainAllObjectTree : MonoBehaviour
 {
-     public List<GameObject> _imageTreeChilds;
+    [HideInInspector] public List<GameObject> _imageTreeChilds;
     //Save the following variable (_imageTreeChildAlreadyInTree)
-     public List<bool> _imageTreeChildAlreadyInTree;
+    [HideInInspector] public List<bool> _imageTreeChildAlreadyInTree;
 
-    public List<GameObject> _cardToReset;
+    [HideInInspector] public List<GameObject> _cardToReset;
     
 
     void Start()

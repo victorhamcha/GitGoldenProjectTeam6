@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [HideInInspector] public Toggle _censuredToggle;
     [HideInInspector] public bool _isCensuredMod;
-    public List<string> _savingDrawCardCard;
-    public List<bool> _savingDrawCardBool;
+    [HideInInspector] public List<string> _savingDrawCardCard;
+    [HideInInspector] public List<bool> _savingDrawCardBool;
 
     private void Awake()
     {
@@ -51,9 +51,7 @@ public class GameManager : MonoBehaviour
     public void LoadScene(int scene)
     {
         FindObjectOfType<SaveAndLoad>().SavePlayer();
-        Debug.Log("save " + FindObjectOfType<SaveAndLoad>().alreadyDrawBool.Count);
         SceneManager.LoadScene(scene);
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
-        Debug.Log("LOOOOOOOO0OOOAd ");
     }
 }
