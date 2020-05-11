@@ -88,26 +88,7 @@ public class UpdateCards : ScriptableObject
                 else
                 {
 
-                    //change._enumObjectConditionList.Clear();
-
-                    //if (card.unlockUpNbrObject > 0)
-                    //{
-
-
-                    //    for (int i = 0; i < card.unlockUpNbrObject; i++)
-                    //    {
-                    //        Debug.Log("change");
-                    //        if (i == 0)
-                    //        {
-                    //            change._enumObjectConditionList.Add((EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.firstObject));
-                    //        }
-                    //        else
-                    //        {
-                    //            change._enumObjectConditionList.Add((EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.secondObject));
-                    //        }
-
-                    //    }
-                    //}
+                   
 
 
 
