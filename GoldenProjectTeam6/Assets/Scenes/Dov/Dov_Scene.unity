@@ -599,7 +599,6 @@ GameObject:
   - component: {fileID: 123300287}
   - component: {fileID: 123300286}
   - component: {fileID: 123300285}
-  - component: {fileID: 123300284}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -607,23 +606,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &123300284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123300283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectInTree: 000000
-  alreadyDrawBool: 
-  alreadyDrawCards: []
-  tree: {fileID: 1748896917}
-  manage: {fileID: 1795114463}
 --- !u!114 &123300285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5257,7 +5239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 123300284}
+      - m_Target: {fileID: 0}
         m_MethodName: SavePlayer
         m_Mode: 1
         m_Arguments:
@@ -5971,7 +5953,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 123300284}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadPlayer
         m_Mode: 1
         m_Arguments:
@@ -6609,6 +6591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795114464}
   - component: {fileID: 1795114463}
+  - component: {fileID: 1795114465}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6646,6 +6629,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1795114465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795114462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectInTree: 
+  alreadyDrawBool: 
+  alreadyDrawCards: []
+  tree: {fileID: 1748896917}
+  manage: {fileID: 1795114463}
 --- !u!1 &1860353016
 GameObject:
   m_ObjectHideFlags: 0

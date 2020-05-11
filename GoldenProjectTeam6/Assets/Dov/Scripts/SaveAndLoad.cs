@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    public List<bool> objectInTree;
-    public List<bool> alreadyDrawBool;
-    public List<string> alreadyDrawCards;
+    [HideInInspector] public List<bool> objectInTree;
+    [HideInInspector] public List<bool> alreadyDrawBool;
+    [HideInInspector] public List<string> alreadyDrawCards;
 
     public ContainAllObjectTree tree;
     public GameManager manage;
@@ -16,14 +16,12 @@ public class SaveAndLoad : MonoBehaviour
         objectInTree = FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree;
         alreadyDrawBool = FindObjectOfType<GameManager>()._savingDrawCardBool;
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
-
-        SavePlayer();
     }
+
 
     public void SavePlayer()
     {
         SaveSystem.SaveScore(tree, manage);
-        Debug.Log(alreadyDrawBool.Count);
     }
 
     public void LoadPlayer()
@@ -34,7 +32,6 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawBool = data.savingDrawCardBoolData;
         alreadyDrawCards = data.savingDrawCardCardData;
 
-        Debug.Log("load");
 
         Vector3 position;
         position.x = data.position2[0];
