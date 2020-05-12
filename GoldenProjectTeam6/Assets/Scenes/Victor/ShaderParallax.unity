@@ -378,6 +378,116 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247225496}
   m_CullTransparentMesh: 0
+--- !u!1 &462703400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462703402}
+  - component: {fileID: 462703401}
+  - component: {fileID: 462703403}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &462703401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462703400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf60ef93c226294bbc8e6d3bbe0aeee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _censuredToggle: {fileID: 0}
+  _isCensuredMod: 0
+  _savingDrawCardCard: []
+--- !u!4 &462703402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462703400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7946451, y: 1.217269, z: 41.990997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &462703403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462703400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectInTree: []
+  alreadyDrawCards: []
+  unlockSinceLastTime: []
+  tree: {fileID: 469668825}
+  manage: {fileID: 462703401}
+--- !u!1 &469668824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469668826}
+  - component: {fileID: 469668825}
+  m_Layer: 0
+  m_Name: TreeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469668825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469668824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0655f6e6f2b2c8647aaa5c7486c261b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageTreeChilds: []
+  _imageTreeChildAlreadyInTree: []
+  _imageTreeUnlockSinceLastTime: []
+--- !u!4 &469668826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469668824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7946451, y: 1.217269, z: 41.990997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491194537
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,12 +1089,9 @@ MonoBehaviour:
   cirqueEvents:
   - {fileID: 11400000, guid: 9b1154a9145e8b642a0f4d45378adf77, type: 2}
   - {fileID: 11400000, guid: fd08e31f9c59657408f75920e3f976c3, type: 2}
-  place2Events:
-  - {fileID: 11400000, guid: 1610f4769d9d73a43a06d9411900e2cb, type: 2}
-  place3Events:
-  - {fileID: 11400000, guid: b7eb7663bc0b7464c9d3b941b6542d18, type: 2}
-  place4Events:
-  - {fileID: 11400000, guid: 71e78eb2b29fe744aa6a0b15d7ffdfab, type: 2}
+  baladeEvents: []
+  restaurantEvents: []
+  animalerieEvents: []
 --- !u!4 &844864339
 Transform:
   m_ObjectHideFlags: 0
@@ -1364,7 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: c69eb27f48114dd439c0f89a95e18945, type: 2}
+  m_Material: {fileID: 2100000, guid: c2c6bf5ccd0a2b84891e57db6d64a2e6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
