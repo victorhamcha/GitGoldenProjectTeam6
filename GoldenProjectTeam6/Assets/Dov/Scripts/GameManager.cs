@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Toggle _censuredToggle;
     [HideInInspector] public bool _isCensuredMod;
     [HideInInspector] public List<string> _savingDrawCardCard;
-    [HideInInspector] public List<bool> _savingDrawCardBool;
 
     private void Awake()
     {
@@ -26,10 +25,13 @@ public class GameManager : MonoBehaviour
             _savingDrawCardCard = FindObjectOfType<SaveAndLoad>().alreadyDrawCards;
         }
 
-        if (_savingDrawCardBool.Count < FindObjectOfType<SaveAndLoad>().alreadyDrawBool.Count)
+
+        if (FindObjectOfType<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Count < FindObjectOfType<SaveAndLoad>().unlockSinceLastTime.Count)
         {
-            _savingDrawCardBool = FindObjectOfType<SaveAndLoad>().alreadyDrawBool;
+            FindObjectOfType<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime = FindObjectOfType<SaveAndLoad>().unlockSinceLastTime;
         }
+
+
         if (FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree.Count < FindObjectOfType<SaveAndLoad>().objectInTree.Count)
         {
             FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree = FindObjectOfType<SaveAndLoad>().objectInTree;

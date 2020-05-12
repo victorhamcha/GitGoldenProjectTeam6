@@ -5,9 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-
-    public List<bool> imageTreeData;
-    public List<bool> savingDrawCardBoolData;
+    public List<string> imageTreeData;
+    public List<string> imageTreeUnlockSinceLastTimeData;
     public List<string> savingDrawCardCardData;
 
 
@@ -18,10 +17,9 @@ public class PlayerData
     {
 
         imageTreeData = objectTree._imageTreeChildAlreadyInTree;
-
+        imageTreeUnlockSinceLastTimeData = objectTree._imageTreeUnlockSinceLastTime;
 
         savingDrawCardCardData = cardsAlreadyDraw._savingDrawCardCard;
-        savingDrawCardBoolData = cardsAlreadyDraw._savingDrawCardBool;
 
         position = new float[3];
         position[0] = objectTree.transform.position.x;

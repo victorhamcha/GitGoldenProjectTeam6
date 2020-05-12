@@ -577,7 +577,6 @@ MonoBehaviour:
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
   _savingDrawCardCard: []
-  _savingDrawCardBool: 
 --- !u!4 &609547332
 Transform:
   m_ObjectHideFlags: 0
@@ -604,9 +603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInTree: 
-  alreadyDrawBool: 
+  objectInTree: []
   alreadyDrawCards: []
+  unlockSinceLastTime: []
   tree: {fileID: 1850001911}
   manage: {fileID: 609547331}
 --- !u!1 &637314401
@@ -852,7 +851,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2016,8 +2015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageTreeChilds: []
-  _imageTreeChildAlreadyInTree: 
-  _cardToReset: []
+  _imageTreeChildAlreadyInTree: []
+  _imageTreeUnlockSinceLastTime: []
 --- !u!4 &1850001912
 Transform:
   m_ObjectHideFlags: 0

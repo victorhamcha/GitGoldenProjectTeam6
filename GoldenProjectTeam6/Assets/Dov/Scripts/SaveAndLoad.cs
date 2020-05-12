@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    [HideInInspector] public List<bool> objectInTree;
-    [HideInInspector] public List<bool> alreadyDrawBool;
-    [HideInInspector] public List<string> alreadyDrawCards;
+     public List<string> objectInTree;
+     public List<string> alreadyDrawCards;
+     public List<string> unlockSinceLastTime;
 
     public ContainAllObjectTree tree;
     public GameManager manage;
 
-    private void Start()
+    void Start()
     {
         objectInTree = FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree;
-        alreadyDrawBool = FindObjectOfType<GameManager>()._savingDrawCardBool;
+        unlockSinceLastTime = FindObjectOfType<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime;
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
     }
 
@@ -27,9 +27,10 @@ public class SaveAndLoad : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
-        objectInTree = data.imageTreeData;
 
-        alreadyDrawBool = data.savingDrawCardBoolData;
+        objectInTree = data.imageTreeData;
+        unlockSinceLastTime = data.imageTreeUnlockSinceLastTimeData;
+
         alreadyDrawCards = data.savingDrawCardCardData;
 
 

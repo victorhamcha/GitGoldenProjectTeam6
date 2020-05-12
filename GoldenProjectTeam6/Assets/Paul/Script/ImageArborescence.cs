@@ -19,7 +19,6 @@ public class ImageArborescence : MonoBehaviour
 
     [HideInInspector] public float _timeToRevealCard = 0f;
     [HideInInspector] public bool _disolve = false;
-    [HideInInspector] public bool _alreadyInTree;
 
     Transform _positionLeft, _positionRight, _positionUp;
 
@@ -36,17 +35,18 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
     [HideInInspector] public GameObject _cardZoom;
 
-    public bool _alreadyDraw;
+    [SerializeField] bool _alreadyInTree;
+    [SerializeField] bool _alreadyDraw;
 
 
 
     void Start()
     {
+        CheckIfIsInTree();
         if (_alreadyInTree)
         {
             _image.material = null;
         }
-
         CheckIfAlreadyDraw();
     }
 
@@ -56,19 +56,35 @@ public class ImageArborescence : MonoBehaviour
         IsSpawning();
     }
 
+    void CheckIfIsInTree()
+    {
+        for (int i = 0; i < FindObjectOfType<SaveAndLoad>().unlockSinceLastTime.Count; i++)
+        {
+            if (FindObjectOfType<SaveAndLoad>().unlockSinceLastTime[i] == _cardID._title)
+            {
+                _alreadyInTree = true;
+            }
+        }
+
+        for (int i = 0; i < FindObjectOfType<SaveAndLoad>().alreadyDrawCards.Count; i++)
+        {
+            if (FindObjectOfType<SaveAndLoad>().alreadyDrawCards[i] == _cardID._title)
+            {
+                _alreadyDraw = true;
+            }
+        }
+    }
 
     void IsSpawning()
     {
         if (_disolve)
         {
-            //_image.gameObject.SetActive(true);
             _timeToRevealCard += Time.deltaTime;
         }
 
         if (_timeToRevealCard >= 1f)
         {
             _timeToRevealCard = 1f;
-            //_image.gameObject.SetActive(false);
 
             _disolve = false;
             Assigner();
@@ -163,9 +179,9 @@ public class ImageArborescence : MonoBehaviour
 
     void CheckIfAlreadyDraw()
     {
-        //CHANGE NECT LINE TO !_cardID._cardAlreadyDraw
+        //CHANGE NEXT LINE TO !_alreadyDraw
 
-        if (!_cardID._cardAlreadyDraw) // Card never draw
+        if (!_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
             _title.enabled = false;
@@ -200,7 +216,11 @@ public class ImageArborescence : MonoBehaviour
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
         _disolve = true;
         _alreadyInTree = true;
-        GetComponentInParent<ContainAllObjectTree>()._imageTreeChildAlreadyInTree[_idInParent] = true;
+        if (!_emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Contains(_cardID._title))
+        {
+            _emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Add(_cardID._title);
+        }
+        FindObjectOfType<SaveAndLoad>().SavePlayer();
         _image.enabled = true;
         _title.enabled = true;
         _title.gameObject.SetActive(true);
