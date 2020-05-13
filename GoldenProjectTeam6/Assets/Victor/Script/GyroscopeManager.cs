@@ -10,7 +10,7 @@ public class GyroscopeManager : MonoBehaviour
     public float rotateSpeed;
     public float rotateMax;
     public float paralaxSpeed;
-
+    private Color basicColor;
 
     [Header("Logic")]
     private Gyroscope gyro;
@@ -19,7 +19,7 @@ public class GyroscopeManager : MonoBehaviour
     private float accX=0;
     private float lastAcc=0;
     [Header("tweaks")]
-    [SerializeField] private Quaternion baseRotation = new Quaternion(0, 0, 1, 0);
+    [SerializeField] private Quaternion baseRotation = new Quaternion(0, 0, 0, 0);
 
 
     public void EnableGyro()
@@ -42,7 +42,14 @@ public class GyroscopeManager : MonoBehaviour
 
     void Start()
     {
+        
         EnableGyro();
+        if(gyroActive)
+        {
+            baseRotation = gyro.attitude;
+        }
+       
+        basicColor =  collector.GetColor("_RotateColor");
     }
 
   
@@ -51,10 +58,25 @@ public class GyroscopeManager : MonoBehaviour
         if(gyroActive)
         {
             rotation = gyro.attitude;            
-            Debug.Log(rotation);
-            rotateMax = rotation.x * rotateSpeed - 0.2f * rotateSpeed;
-            rotateMax = Mathf.Clamp(rotateMax,-20,20);
-            collector.SetFloat("_Mouvement", rotateMax);         
+            Debug.Log(rotateMax);
+            rotateMax = (rotation.x * rotateSpeed)-(baseRotation.x*rotateSpeed);
+            //rotateMax = Mathf.Clamp(rotateMax,-20,20);
+            if(gyro.rotationRate.x>0.03f|| gyro.rotationRate.x < -0.03f)
+            {
+                collector.SetFloat("_Mouvement", rotateMax);
+                collector.SetVector("_MouvementVector", new Vector2(rotation.x*Time.deltaTime*5, rotation.y * Time.deltaTime * 5));
+            }
+           
+            //if(rotateMax>=-4.5&&rotateMax<=4.5)
+            //{
+            //    collector.SetColor("_RotateColor", collector.GetColor("_RotateColor") * 0);
+            //}
+            //else
+            //{
+            //    collector.SetColor("_RotateColor", basicColor);
+            //}
+           
+          
         }
 
         //float acceleration = Input.acceleration.x;

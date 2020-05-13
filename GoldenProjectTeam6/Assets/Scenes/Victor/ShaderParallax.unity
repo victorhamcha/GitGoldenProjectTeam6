@@ -1102,6 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collector: {fileID: 2100000, guid: c2c6bf5ccd0a2b84891e57db6d64a2e6, type: 2}
   rotateSpeed: 40
+  rotateMax: 0
   paralaxSpeed: 0
   baseRotation: {x: 0, y: 0, z: 1, w: 0}
 --- !u!1 &844864337
@@ -1439,7 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRotation: 5
-  rotateSpeed: 1
+  rotateSpeed: 15
   zRotation: 0
   reRotate: 0
   canGoUp: 0
