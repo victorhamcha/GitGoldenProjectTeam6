@@ -7,8 +7,8 @@ public class CameraFollowMouse : MonoBehaviour
 {
     Camera _cam;
 
-    [HideInInspector]
-    public GameObject _positionPositiv, _positionNegativ;
+
+    [HideInInspector] public GameObject _positionPositiv, _positionNegativ;
 
     Vector2 StartPosition;
     Vector2 DragStartPosition;
@@ -34,9 +34,15 @@ public class CameraFollowMouse : MonoBehaviour
         _cam = GetComponent<Camera>();
         _sizeCamAtStart = _cam.orthographicSize;
         _positivValue = _positionPositiv.transform.position;
-        _positionPositiv.GetComponent<SpriteRenderer>().enabled = false;
+        foreach (Transform child in _positionPositiv.transform)
+        {
+            child.GetComponent<SpriteRenderer>().enabled = false;
+        }
         _negativValue = _positionNegativ.transform.position;
-        _positionNegativ.GetComponent<SpriteRenderer>().enabled = false;
+        foreach (Transform child in _positionNegativ.transform)
+        {
+            child.GetComponent<SpriteRenderer>().enabled = false;
+        }
         DrawLine();
     }
 
