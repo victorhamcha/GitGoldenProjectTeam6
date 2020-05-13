@@ -35,8 +35,10 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
     [HideInInspector] public GameObject _cardZoom;
 
-    [SerializeField] bool _alreadyInTree;
-    [SerializeField] bool _alreadyDraw;
+    bool _alreadyInTree;
+    bool _alreadyDraw;
+
+
 
 
 

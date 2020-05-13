@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d95744d6d228be54387db246ebd29c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstCardScriptable: {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51,
+  _firstCardScriptable: {fileID: 11400000, guid: f58651d57ce448142889072a37cde86c,
     type: 2}
   _imageCard: {fileID: 1169474632}
   _titleCard: {fileID: 430237590}
@@ -1118,6 +1118,7 @@ MonoBehaviour:
   canSlideUp: 0
   _isADeadCard: 0
   _unlockSlideUp: 0
+  _isAContrat: 0
   _enumSuccess: 
   _enumDirectionOfSwipeToUnlockObject: 
   _enumPlace: 
