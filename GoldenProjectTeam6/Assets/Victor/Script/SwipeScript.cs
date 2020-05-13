@@ -37,7 +37,7 @@ public class SwipeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        img.SetActive(false);
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
         imgColor = img.GetComponent<Image>();
@@ -222,6 +222,7 @@ public class SwipeScript : MonoBehaviour
                {
                     card.VerifyIfCanSlideUp();
                }
+                img.SetActive(true);
                 touched = true;
             }
         }
