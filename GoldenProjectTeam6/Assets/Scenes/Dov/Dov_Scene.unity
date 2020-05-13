@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4058,7 +4058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1015507426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6019,7 +6019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1559297663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6425,8 +6425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageTreeChilds: []
-  _imageTreeChildAlreadyInTree: 
-  _cardToReset: []
+  _imageTreeChildAlreadyInTree: []
+  _imageTreeUnlockSinceLastTime: []
 --- !u!4 &1748896918
 Transform:
   m_ObjectHideFlags: 0
@@ -6614,7 +6614,6 @@ MonoBehaviour:
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
   _savingDrawCardCard: []
-  _savingDrawCardBool: 
 --- !u!4 &1795114464
 Transform:
   m_ObjectHideFlags: 0
@@ -6641,9 +6640,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInTree: 
-  alreadyDrawBool: 
+  objectInTree: []
   alreadyDrawCards: []
+  unlockSinceLastTime: []
   tree: {fileID: 1748896917}
   manage: {fileID: 1795114463}
 --- !u!1 &1860353016
