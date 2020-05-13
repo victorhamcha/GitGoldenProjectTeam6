@@ -171,7 +171,7 @@ public class SwipeScript : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
                 fade = 1f;
-                img.SetActive(true);
+               
 
                 disolve = false;
             }
@@ -222,7 +222,11 @@ public class SwipeScript : MonoBehaviour
                {
                     card.VerifyIfCanSlideUp();
                }
-                img.SetActive(true);
+              if(!disolve)
+              {
+                    img.SetActive(true);
+              }
+               
                 touched = true;
             }
         }
