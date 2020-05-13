@@ -153,7 +153,8 @@ MonoBehaviour:
   collector: {fileID: 2100000, guid: c2c6bf5ccd0a2b84891e57db6d64a2e6, type: 2}
   rotateSpeed: 30
   rotateMax: 20
-  paralaxSpeed: 10
+  paralaxSpeed: 200
+  paraPos: {x: -1, y: 0.098}
   baseRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &88972611
 Transform:

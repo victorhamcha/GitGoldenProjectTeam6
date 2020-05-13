@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_61B26065:
-        m_Texture: {fileID: 2800000, guid: d657b1c548eb21f479544026c0d12895, type: 3}
+        m_Texture: {fileID: 2800000, guid: 053083211a19adb4c99eab76b39c496f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTex:
@@ -67,6 +67,7 @@ Material:
     m_Floats:
     - Boolean_1085C910: 1
     - Boolean_9CC744E5: 0
+    - Boolean_DFD2A409: 0
     - Vector1_1B7E01C4: 5.63
     - Vector1_500FE434: 0
     - Vector1_58F43E92: 20
@@ -83,7 +84,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Fade: 1
     - _GlossinessSource: 0
-    - _Mouvement: -6.31638
+    - _Mouvement: 8.422005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Shininess: 0
@@ -104,7 +105,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _MouvementVector: {r: 0.007164734, g: 0.053369652, b: 0, a: 0}
+    - _MouvementVector: {r: -0.191005, g: -0.230618, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _RotateColor: {r: 2.14069, g: 0.3568816, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
