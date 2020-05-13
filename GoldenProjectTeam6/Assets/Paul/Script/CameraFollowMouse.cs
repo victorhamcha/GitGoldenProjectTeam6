@@ -21,13 +21,13 @@ public class CameraFollowMouse : MonoBehaviour
     [Header("Card Grow")] [Range(0, 1000)] public float _maxZoom = 100;
     float _sizeCamAtStart;
 
-    int _boucinessByTouchingBorder = 10;
+    [Range(1,100)] public int _boucinessByTouchingBorder = 10;
 
 
     Vector2 _positivValue;
     Vector2 _negativValue;
 
-    public LineRenderer _line;
+    [HideInInspector] public LineRenderer _line;
 
     void Start()
     {
@@ -62,7 +62,8 @@ public class CameraFollowMouse : MonoBehaviour
         {
             if (!isZooming)
             {
-                if(transform.position.x > _negativValue.x)
+                #region NE PAS REGARDER (VRAIMENT)
+                if (transform.position.x > _negativValue.x)
                 {
                     if (transform.position.x < _positivValue.x)
                     {
@@ -97,6 +98,7 @@ public class CameraFollowMouse : MonoBehaviour
                 {
                     transform.position = new Vector3(transform.position.x + _boucinessByTouchingBorder, transform.position.y, -10);
                 }
+                #endregion
             }
         }
         #endregion
