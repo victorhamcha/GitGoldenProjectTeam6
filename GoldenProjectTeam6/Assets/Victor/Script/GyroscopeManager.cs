@@ -60,11 +60,11 @@ public class GyroscopeManager : MonoBehaviour
             rotation = gyro.attitude;            
             Debug.Log(rotateMax);
             rotateMax = (rotation.x * rotateSpeed)-(baseRotation.x*rotateSpeed);
-            //rotateMax = Mathf.Clamp(rotateMax,-20,20);
+            rotateMax = Mathf.Clamp(rotateMax,-20,20);
             if(gyro.rotationRate.x>0.03f|| gyro.rotationRate.x < -0.03f)
             {
                 collector.SetFloat("_Mouvement", rotateMax);
-                collector.SetVector("_MouvementVector", new Vector2(rotation.x*Time.deltaTime*5, rotation.y * Time.deltaTime * 5));
+                collector.SetVector("_MouvementVector", new Vector2(rotation.x*Time.deltaTime*paralaxSpeed, rotation.y * Time.deltaTime * paralaxSpeed));
             }
            
             //if(rotateMax>=-4.5&&rotateMax<=4.5)

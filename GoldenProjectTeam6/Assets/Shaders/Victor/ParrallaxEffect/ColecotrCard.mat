@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ColecotrCard
-  m_Shader: {fileID: -6465566751694194690, guid: b02b334794c918c438a230a723bf8379,
+  m_Shader: {fileID: -6465566751694194690, guid: f2fb47275e17bc94fa4ee97eac54c592,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_61B26065:
+        m_Texture: {fileID: 2800000, guid: d657b1c548eb21f479544026c0d12895, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -37,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 90651c15e04643b49a55f95d5f004fb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -52,16 +56,24 @@ Material:
         m_Texture: {fileID: 2800000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_84642933_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_1085C910: 1
     - Boolean_9CC744E5: 0
     - Vector1_1B7E01C4: 5.63
+    - Vector1_500FE434: 0
+    - Vector1_58F43E92: 20
     - Vector1_6A3E55C0: 14.03
     - Vector1_9ACB7039: -0.01
     - Vector1_CA79303C: 6.81
+    - Vector1_E985D483: 10
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -71,6 +83,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _Fade: 1
     - _GlossinessSource: 0
+    - _Mouvement: -6.31638
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Shininess: 0
@@ -84,10 +97,14 @@ Material:
     m_Colors:
     - Color_30DE262: {r: 2, g: 1.74902, b: 0, a: 1}
     - Color_4EEFEB95: {r: 2, g: 0.1254902, b: 0, a: 1}
+    - Color_63BFFF87: {r: 1.370351, g: 0.3892968, b: 0, a: 0}
+    - Color_864372B6: {r: 1.140377, g: 1.140377, b: 1.140377, a: 1}
     - Color_AA7FC1F4: {r: 5.3360286, g: 0.11174929, b: 0, a: 1}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _MouvementVector: {r: 0.007164734, g: 0.053369652, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RotateColor: {r: 2.14069, g: 0.3568816, b: 0, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
