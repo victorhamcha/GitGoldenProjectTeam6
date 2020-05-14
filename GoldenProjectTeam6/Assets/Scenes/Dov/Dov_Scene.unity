@@ -1485,6 +1485,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: TogglesID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: ChangeToggles
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 538000450}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!224 &538000451
 RectTransform:
@@ -2035,6 +2057,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: TogglesID
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: ChangeToggles
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 668878124}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &672967042
 GameObject:
@@ -2047,7 +2091,7 @@ GameObject:
   - component: {fileID: 672967043}
   - component: {fileID: 672967044}
   m_Layer: 5
-  m_Name: ToggleMusic
+  m_Name: ToggleCensure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2119,12 +2163,23 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795114463}
-        m_MethodName: ChangeToggle
-        m_Mode: 1
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: TogglesID
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1559297667}
+        m_MethodName: ChangeToggles
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 672967044}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4058,7 +4113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1015507426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6019,7 +6074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1559297663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6113,6 +6168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 1015507425}
+  options: 000000
+  music: {fileID: 538000450}
+  sound: {fileID: 668878124}
+  censure: {fileID: 672967044}
 --- !u!1 &1607014228
 GameObject:
   m_ObjectHideFlags: 0
@@ -6425,8 +6484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageTreeChilds: []
-  _imageTreeChildAlreadyInTree: 
-  _cardToReset: []
+  _imageTreeChildAlreadyInTree: []
+  _imageTreeUnlockSinceLastTime: []
 --- !u!4 &1748896918
 Transform:
   m_ObjectHideFlags: 0
@@ -6614,7 +6673,6 @@ MonoBehaviour:
   _censuredToggle: {fileID: 0}
   _isCensuredMod: 0
   _savingDrawCardCard: []
-  _savingDrawCardBool: 
 --- !u!4 &1795114464
 Transform:
   m_ObjectHideFlags: 0
@@ -6641,11 +6699,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48443477ebcc67442a9adb92ee3d5e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectInTree: 
-  alreadyDrawBool: 
+  objectInTree: []
   alreadyDrawCards: []
+  unlockSinceLastTime: []
+  saveOptions: 
   tree: {fileID: 1748896917}
   manage: {fileID: 1795114463}
+  option: {fileID: 1559297667}
 --- !u!1 &1860353016
 GameObject:
   m_ObjectHideFlags: 0
