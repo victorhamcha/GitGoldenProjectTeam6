@@ -36,8 +36,8 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
     [HideInInspector] public GameObject _cardZoom;
 
-    [SerializeField] bool _alreadyInTree;
-    [SerializeField] bool _alreadyDraw;
+     bool _alreadyInTree;
+     bool _alreadyDraw;
 
 
 
@@ -181,9 +181,12 @@ public class ImageArborescence : MonoBehaviour
 
     void CheckIfAlreadyDraw()
     {
+
+        // --- RECHANGER ICI --- \\
         //CHANGE NEXT LINE TO !_alreadyDraw
 
-        if (!_alreadyDraw) // Card never draw
+
+        if (_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
             //_title.enabled = false;
