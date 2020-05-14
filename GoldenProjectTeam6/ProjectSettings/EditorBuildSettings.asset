@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Paul/PaulSceneUpdate.unity
     guid: bbfbce1da34604941a29149e3598046e
+  - enabled: 1
+    path: Assets/Scenes/Julien/Julien.unity
+    guid: 8420e7613c1277b41bf05a9e152785cd
+  - enabled: 1
+    path: Assets/Scenes/ScenesBuild/GeneralScene.unity
+    guid: a95f11a6fcf335047be329240d1b530c
   m_configObjects: {}
