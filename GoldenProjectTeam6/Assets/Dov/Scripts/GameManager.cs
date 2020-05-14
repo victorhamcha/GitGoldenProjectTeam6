@@ -38,17 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ChangeToggle()
-    {
-        if (_censuredToggle.isOn)
-        {
-            _isCensuredMod = true;
-        }
-        else
-        {
-            _isCensuredMod = false;
-        }
-    }
+    
 
     public void LoadScene(int scene)
     {
