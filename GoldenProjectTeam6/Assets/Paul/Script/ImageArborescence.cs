@@ -8,6 +8,7 @@ public class ImageArborescence : MonoBehaviour
 {
     [HideInInspector] public Image _image;
     [HideInInspector] public TextMeshProUGUI _title;
+    [HideInInspector] public Text _titleText;
     [HideInInspector] public List<GameObject> _lineRendererGO;
     [HideInInspector] public GameObject _lineRendererShowNext;
     [HideInInspector] public GameObject _emptyParent;
@@ -172,7 +173,8 @@ public class ImageArborescence : MonoBehaviour
 
     void Assigner()
     {
-        _title.text = _cardID._title;
+        //_title.text = _cardID._title;
+        _titleText.text = _cardID._title;
         _image.enabled = true;
         _image.sprite = _cardID._image;
     }
@@ -184,22 +186,26 @@ public class ImageArborescence : MonoBehaviour
         if (!_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
-            _title.enabled = false;
+            //_title.enabled = false;
+            _titleText.enabled = false;
         }
         else // Card already draw
         {
             if (_alreadyInTree) //Card already shows in tree so don't play anim
             {
                 _image.enabled = true;
-                _title.enabled = true;
+                //_title.enabled = true;
+                _titleText.enabled = true;
                 Assigner();
                 DrawLineAuto();
-                _title.gameObject.SetActive(true);
+                //_title.gameObject.SetActive(true);
+                _titleText.gameObject.SetActive(true);
             }
             else //Card never shows in tree so play animation
             {
                 //_image.enabled = false;
                 _title.enabled = false;
+                _titleText.enabled = true;
                 StartCoroutine(ShowUp());
             }
         }
@@ -208,10 +214,15 @@ public class ImageArborescence : MonoBehaviour
     IEnumerator ShowUp()
     {
         _image.material = _materialImg;
+        _titleText.enabled = true;
+        _titleText.text = _cardID._title;
+        _titleText.gameObject.SetActive(true);
         _image.material.SetFloat("_Dissolve", 0);
+        _titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
         yield return new WaitForSeconds(0.3f);
         _image.material.SetFloat("_Dissolve", 0);
+        _titleText.material.SetFloat("_Dissolve", 0);
         _image.sprite = _cardID._image;
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
         _disolve = true;
@@ -222,8 +233,8 @@ public class ImageArborescence : MonoBehaviour
         }
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         _image.enabled = true;
-        _title.enabled = true;
-        _title.gameObject.SetActive(true);
+        //_title.enabled = true;
+        //_title.gameObject.SetActive(true);
         DrawLineAuto();
         ChangeLineMaterial();
     }
