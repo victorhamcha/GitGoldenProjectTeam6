@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Elephant_AskWhat
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Zoo
+  _image: {fileID: 21300000, guid: 8de18e400fe173045b493b458fd98cb5, type: 3}
+  _description: '"What are you doing ?" asked the animal.'
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideUp: 1
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardUp: {fileID: 11400000}
+  _isSwipingUpDescription: Throw the dead mouse to the elephant
+  _isNextCardRight: {fileID: 11400000, guid: bb6f56f41aae20942a69996921f4be94, type: 2}
+  _isSwipingRightDescription: Piss off, fuck face
+  _isNextCardLeft: {fileID: 11400000, guid: bb6f56f41aae20942a69996921f4be94, type: 2}
+  _isSwipingLeftDescription: Your mother is so cheap, ducks throw her bread
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -43,9 +43,9 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 3
   _isDeadCard: 0
   _isContratCard: 0
-  _enumObjectConditionList: 
+  _enumObjectConditionList: 08000000
   _swipeDirectionEnd: 0
   _specialVFX: {fileID: 0}

@@ -14,9 +14,9 @@ public class UpdateCards : ScriptableObject
 {
     public Test sheettest;
     public List<CardScriptableObject> cards;
-  
 
-    
+
+
     public void CreateCards()
     {
         foreach (DataSheetTypes.Test card in DataSheet.test)
@@ -32,27 +32,29 @@ public class UpdateCards : ScriptableObject
             }
             if (create)
             {
-                if (!Directory.Exists("Assets/TheCards/"+card.place+"/"+card._event))
+                if (!Directory.Exists("Assets/TheCards/" + card.place + "/" + card._event))
                 {
                     //if it doesn't, create it
                     Directory.CreateDirectory("Assets/TheCards/" + card.place + "/" + card._event);
-
                 }
                 CardScriptableObject asset = ScriptableObject.CreateInstance<CardScriptableObject>();
 
-                AssetDatabase.CreateAsset(asset, "Assets/TheCards/" + card.place + "/" + card._event +"/"+ card.name + ".asset");
+#if UNITY_EDITOR
+
+                AssetDatabase.CreateAsset(asset, "Assets/TheCards/" + card.place + "/" + card._event + "/" + card.name + ".asset");
                 AssetDatabase.SaveAssets();
 
                 EditorUtility.FocusProjectWindow();
 
                 Selection.activeObject = asset;
+#endif
                 //cards.Add(asset);
                 //if(card.iD!=cards.Count-1)
                 //{
                 cards.Insert(card.iD, asset);
                 //}
             }
-            
+
 
 
         }
@@ -65,6 +67,7 @@ public class UpdateCards : ScriptableObject
         {
             bool update = false;
             CardScriptableObject change = null;
+            
             for (int i = 0; i < cards.Count; i++)
             {
                 if (card.name == cards[i].name)
@@ -77,7 +80,9 @@ public class UpdateCards : ScriptableObject
             if (update)
             {
                 change._title = card.titreCarte;
+#if UNITY_EDITOR
                 change._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/Card_Background/" + card.sprite + ".png", typeof(Sprite));
+#endif
                 change._description = card.description;
                 change._placeEnum = (EnumPlaceGame._enumPlace)Enum.Parse(typeof(EnumPlaceGame._enumPlace), card.place);
                 if (card.mort)
@@ -88,7 +93,7 @@ public class UpdateCards : ScriptableObject
                 else
                 {
 
-                   
+
 
 
 
@@ -127,6 +132,7 @@ public class UpdateCards : ScriptableObject
                     }
                     if (card.leftCardID != 0)
                     {
+                        Debug.Log(card.leftCardID);
                         change._isNextCardLeft = cards[card.leftCardID];
                     }
                     else
@@ -159,13 +165,20 @@ public class UpdateCards : ScriptableObject
                         change._eventCanBePlayOne = card.playedOnce;
                         change._firstCardOfEvent = cards[card.firstOfEventID];
                     }
-
+#if UNITY_EDITOR
                     if (card.hasVFX)
                     {
-                        change._specialVFX = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/" + card.sprite + ".png", typeof(GameObject));
-                    }
-                }
 
+                        change._specialVFX = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/" + card.sprite + ".png", typeof(GameObject));
+
+                    }
+                    
+                  
+#endif
+                }
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(change);
+#endif
             }
         }
     }
@@ -207,6 +220,9 @@ public class UpdateCards : ScriptableObject
 
                     }
                 }
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(change);
+#endif
             }
         }
     }
@@ -227,13 +243,13 @@ public class CardsEditor : Editor
         DrawDefaultInspector();
 
         UpdateCards script = (UpdateCards)target;
-      
+
         GUI.backgroundColor = Color.white;
-        
-       if(GUILayout.Button("Update Valeurs"))
-       {
+
+        if (GUILayout.Button("Update Valeurs"))
+        {
             script.Update();
-       }
+        }
         if (GUILayout.Button("Update Cards"))
         {
             script.CreateCards();

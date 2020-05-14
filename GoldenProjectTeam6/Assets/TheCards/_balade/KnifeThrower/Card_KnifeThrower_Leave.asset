@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_KnifeThrower_Leave
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Broadwalk
+  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _description: You go on your way.
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 0}
+  _firstCardOfEvent: {fileID: 11400000, guid: a46d1b9a47461c2428dbfc08d3cc875d, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
-  _isEndingEvent: 0
+  _isEndingEvent: 1
   _eventCanBePlayOne: 0
   _enumSuccessString: 
   _enumDirectpionSwipeString: 
@@ -43,7 +43,7 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 1
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

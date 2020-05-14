@@ -12,23 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Clown_See
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Broadwalk
+  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _description: You go ahead of a clown who blows up balloons in the shape of lions
+    and elephants for children.
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideUp: 1
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardUp: {fileID: 11400000, guid: 33b0a644231d93643afecf3852a05aaa, type: 2}
+  _isSwipingUpDescription: Pinch his big, appealing red nose
+  _isNextCardRight: {fileID: 11400000, guid: 5d3d3f94d9c25634bbe5ee399e0ebed9, type: 2}
+  _isSwipingRightDescription: Hey Clown, tell me a joke!
+  _isNextCardLeft: {fileID: 11400000, guid: 955ce7899d8db7c4dbd56525c3003a48, type: 2}
+  _isSwipingLeftDescription: Hey clown! I want a balloon
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -43,7 +44,7 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 1
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

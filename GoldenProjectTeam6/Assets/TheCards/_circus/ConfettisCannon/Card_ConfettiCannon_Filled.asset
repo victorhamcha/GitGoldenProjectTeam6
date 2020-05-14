@@ -12,23 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_ConfettiCannon_Filled
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Circus
+  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _description: 'Wow !
+
+    The cannon is filled to the brim, the confetti are overflowing.'
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideUp: 1
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardUp: {fileID: 11400000, guid: 8e96c01d3320fbf4c86b90fedc4959a5, type: 2}
+  _isSwipingUpDescription: Ligh the fuse
+  _isNextCardRight: {fileID: 11400000, guid: b8c9a0a035c57ec46974be1d74a21666, type: 2}
+  _isSwipingRightDescription: Leave
+  _isNextCardLeft: {fileID: 11400000, guid: d2857eaa9bbc03f43b3cedae9d9a71b5, type: 2}
+  _isSwipingLeftDescription: Get in the cannon
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -46,6 +48,6 @@ MonoBehaviour:
   _placeEnum: 0
   _isDeadCard: 0
   _isContratCard: 0
-  _enumObjectConditionList: 
+  _enumObjectConditionList: 01000000
   _swipeDirectionEnd: 0
   _specialVFX: {fileID: 0}

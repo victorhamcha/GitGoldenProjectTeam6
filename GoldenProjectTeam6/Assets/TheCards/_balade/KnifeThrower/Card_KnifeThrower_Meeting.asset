@@ -12,23 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_KnifeThrower_Meeting
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Broadwalk
+  _image: {fileID: 21300000, guid: aefb91f31fcefad42a1ebd60bf0eea48, type: 3}
+  _description: As you walk through the funfair, you come across the knife-thrower's
+    stall. He's drinking whiskey.
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardRight: {fileID: 11400000, guid: 3f1496ce1e103844ab49cdfe4b4cdd62, type: 2}
+  _isSwipingRightDescription: Volunteer for his show
+  _isNextCardLeft: {fileID: 11400000, guid: 1b1087eda7b473049a2482aec6f5dc95, type: 2}
+  _isSwipingLeftDescription: Tell him to stop drinking
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -43,7 +44,7 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 1
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

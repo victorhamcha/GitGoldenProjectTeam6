@@ -12,23 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_FortuneTeller_Follow
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Broadwalk
+  _image: {fileID: 21300000, guid: aed067b0cc1461840af828f45a865206, type: 3}
+  _description: "You walk into her tent and sit at a table. \nThe woman look at her
+    crystal ball and shouted: \"By all the gods, something horrible is about to happen
+    to you! You must leave at once!\"."
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardRight: {fileID: 11400000, guid: 804cfc2d67052cf44abf170c2d02758b, type: 2}
+  _isSwipingRightDescription: Stay anyway
+  _isNextCardLeft: {fileID: 11400000, guid: e8cab6eddd19a81459e3ce2fe92e4549, type: 2}
+  _isSwipingLeftDescription: Leave, that's some freaky shit
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -43,7 +45,7 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 1
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Piranhas_Death_ManAttacked
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Zoo
+  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _description: 'With an incredible movement, the man pushes the fish you have caught
+    into your mouth.
+
+
+    He plunges your head into the pond.
+
+
+    You struggle
+    while the man holds you and the piranhas tear your face.
+
+
+    You die in indescribable
+    suffering.   '
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0
@@ -43,8 +55,8 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
-  _isDeadCard: 0
+  _placeEnum: 3
+  _isDeadCard: 1
   _isContratCard: 0
   _enumObjectConditionList: 
   _swipeDirectionEnd: 0

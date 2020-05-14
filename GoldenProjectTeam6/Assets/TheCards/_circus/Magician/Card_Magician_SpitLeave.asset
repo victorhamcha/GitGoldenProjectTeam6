@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Magician_SpitLeave
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Circus
+  _image: {fileID: 21300000, guid: 9b0e7a21c36abb04582eebf78031cdde, type: 3}
+  _description: '"Damn it! You animal! Get him out of here, will you?"
+
+    The guards
+    grab you by the arms and throw you off the stage and off the show.  '
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 0}
+  _firstCardOfEvent: {fileID: 11400000, guid: c7e832ec9583354408278e3a46774e3d, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
-  _isEndingEvent: 0
+  _isEndingEvent: 1
   _eventCanBePlayOne: 0
   _enumSuccessString: 
   _enumDirectpionSwipeString: 

@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Fire_FindCig
   m_EditorClassIdentifier: 
-  _title: 
-  _image: {fileID: 0}
-  _description: 
+  _title: The Food Courts
+  _image: {fileID: 21300000, guid: 4613604ce98ac304f84a6e66418f671b, type: 3}
+  _description: It's full of slime and well chewed.
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isNextCardRight: {fileID: 11400000, guid: e258f2e78f4931149ac6a87259ab14c5, type: 2}
+  _isSwipingRightDescription: Put it back
+  _isNextCardLeft: {fileID: 11400000, guid: 1ea5f56fd3dd8a64e834d7cc99f9fce8, type: 2}
+  _isSwipingLeftDescription: Take a smoke
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
-  _placeEnum: 0
+  _placeEnum: 2
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 
