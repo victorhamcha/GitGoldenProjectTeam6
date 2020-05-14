@@ -77,7 +77,7 @@ public class UpdateCards : ScriptableObject
             if (update)
             {
                 change._title = card.titreCarte;
-                change._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/" + card.sprite + ".png", typeof(Sprite));
+                change._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/Card_Background/" + card.sprite + ".png", typeof(Sprite));
                 change._description = card.description;
                 change._placeEnum = (EnumPlaceGame._enumPlace)Enum.Parse(typeof(EnumPlaceGame._enumPlace), card.place);
                 if (card.mort)
@@ -100,9 +100,9 @@ public class UpdateCards : ScriptableObject
                         {
                             change._enumSuccessUp = (EnumSuccess._enumSuccess)Enum.Parse(typeof(EnumSuccess._enumSuccess), card.upSuccesUnlock);
                         }
-                        if (card.uObjectUnlock != "")
+                        if (card.upObjectUnlock != "")
                         {
-                            change._enumObjectToUnlockUp = (EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.uObjectUnlock);
+                            change._enumObjectToUnlockUp = (EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.upObjectUnlock);
                         }
                         if (card.upCardID != 0)
                         {
@@ -140,9 +140,9 @@ public class UpdateCards : ScriptableObject
                     {
                         change._enumSuccessRight = (EnumSuccess._enumSuccess)Enum.Parse(typeof(EnumSuccess._enumSuccess), card.rightSucessUnlock);
                     }
-                    if (card.rObjectUnlock != "")
+                    if (card.rightObjectUnlock != "")
                     {
-                        change._enumObjectToUnlockRight = (EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.rObjectUnlock);
+                        change._enumObjectToUnlockRight = (EnumListObject._objectList)Enum.Parse(typeof(EnumListObject._objectList), card.rightObjectUnlock);
                     }
                     if (card.rightCardID != 0)
                     {
