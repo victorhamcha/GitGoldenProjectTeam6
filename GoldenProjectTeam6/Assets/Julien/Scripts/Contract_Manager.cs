@@ -19,13 +19,14 @@ public class Contract_Manager : MonoBehaviour
     public RectTransform posCard3;
 
     private int nbCard = 1;
-
     static public int rankingPoints = 0;
-
     private int percentageGame = 0;
-
     public int nbContractVE = 0, nbContractE = 0, nbContractM = 0, nbContractH = 0, nbContractVH = 0;
-    // Start is called before the first frame update
+
+    private bool hasSwiped = false;
+
+    public GameObject txt_noContractAvailable;
+    
     void Start()
     {
         
@@ -39,7 +40,7 @@ public class Contract_Manager : MonoBehaviour
         {
             if(contrats.Count == 0)
             {
-                // Mettre UI en mode "y'a plus rien comme contrat"
+                txt_noContractAvailable.gameObject.SetActive(true);
             }
 
             if(isDone[i1] == false && nbCard <= 3)
