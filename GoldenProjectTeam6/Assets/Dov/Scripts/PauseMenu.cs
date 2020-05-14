@@ -12,7 +12,15 @@ public class PauseMenu : MonoBehaviour
     public Toggle music, sound, censure;
     private int togglesID;
 
-    
+
+    private void Start()
+    {
+        music.isOn = options[0];
+        sound.isOn = options[1];
+        censure.isOn = options[2];
+        
+    }
+
     public void TogglesID(int id)
     {
         togglesID = id;
@@ -51,6 +59,8 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        FindObjectOfType<SaveAndLoad>().SavePlayer();
         SceneManager.LoadScene("MenuBuild");
+        FindObjectOfType<SaveAndLoad>().LoadPlayer();
     }
 }

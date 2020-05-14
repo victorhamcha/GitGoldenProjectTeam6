@@ -25,6 +25,7 @@ public class SaveAndLoad : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SaveScore(tree, manage, option);
+        Debug.Log("save");
     }
 
     public void LoadPlayer()
@@ -55,5 +56,7 @@ public class SaveAndLoad : MonoBehaviour
         position3.y = data.position3[1];
         position3.z = data.position3[2];
         transform.position = position3;
+
+        Debug.Log("load");
     }
 }

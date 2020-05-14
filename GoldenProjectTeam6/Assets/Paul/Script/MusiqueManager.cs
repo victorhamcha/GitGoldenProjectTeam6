@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MusiqueManager : MonoBehaviour
 {
-    [HideInInspector] public Toggle _toggleWhichChanges;
+    public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
     public Sound[] musics;
 

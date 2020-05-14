@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-    [HideInInspector] public Toggle _toggleWhichChanges;
+    public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
 
     void Awake()

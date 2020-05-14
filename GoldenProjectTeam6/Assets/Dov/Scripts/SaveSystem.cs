@@ -9,6 +9,7 @@ public static class SaveSystem
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
+        Debug.Log(path);
 
         PlayerData data = new PlayerData(objectTree, cardsAlreadyDraw, option);
 

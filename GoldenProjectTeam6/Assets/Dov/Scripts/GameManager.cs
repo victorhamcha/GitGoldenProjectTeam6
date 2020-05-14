@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
         AttributionValeur();
     }
 
+    private void OnApplicationQuit()
+    {
+        FindObjectOfType<SaveAndLoad>().SavePlayer();
+    }
 
     void AttributionValeur()
     {
@@ -36,6 +40,9 @@ public class GameManager : MonoBehaviour
         {
             FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree = FindObjectOfType<SaveAndLoad>().objectInTree;
         }
+
+        FindObjectOfType<PauseMenu>().options = FindObjectOfType<SaveAndLoad>().saveOptions;
+        
     }
 
     
