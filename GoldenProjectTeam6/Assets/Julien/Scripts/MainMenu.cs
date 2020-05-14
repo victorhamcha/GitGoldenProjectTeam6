@@ -40,13 +40,13 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        //SceneManager.LoadScene("Game");
-        Debug.Log("Bouton Play");
+        SceneManager.LoadScene("GeneralScene");
     }
 
     public void Achievements()
     {
         UI_Achiev.SetActive(true);
+        UI_MainMenu.SetActive(false);
     }
 
     public void Credits()
@@ -144,6 +144,7 @@ public class MainMenu : MonoBehaviour
     public void Achievements_Quit()
     {
         UI_Achiev.SetActive(false);
+        UI_MainMenu.SetActive(true);
     }
 
     public void Main_Menu()

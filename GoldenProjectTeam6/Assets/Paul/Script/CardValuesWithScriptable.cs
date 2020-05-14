@@ -40,17 +40,10 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
-        _titleCard.text = _firstCardScriptable._title;
-
-        _descriptionCard.text = _firstCardScriptable._description;
+        
 
         //SAVE
-        
-        if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable._title))
-        {
-            FindObjectOfType<GameManager>()._savingDrawCardCard.Add(_firstCardScriptable._title);
-            FindObjectOfType<SaveAndLoad>().SavePlayer();
-        }
+
 
         if (_firstCardScriptable._canSlideLeft)
             _descriptionLeftSwipe.text = _firstCardScriptable._isSwipingLeftDescription;
@@ -65,6 +58,15 @@ public class CardValuesWithScriptable : MonoBehaviour
 
         if (!_isAContrat)
         {
+            _titleCard.text = _firstCardScriptable._title;
+            _descriptionCard.text = _firstCardScriptable._description;
+
+            if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable._title))
+            {
+                FindObjectOfType<GameManager>()._savingDrawCardCard.Add(_firstCardScriptable._title);
+                FindObjectOfType<SaveAndLoad>().SavePlayer();
+            }
+
             _isADeadCard = _firstCardScriptable._isDeadCard;
 
             _enumPlace = _firstCardScriptable._enumPlaceString;
