@@ -22,7 +22,7 @@ public class SaveAndLoad : MonoBehaviour
         unlockSinceLastTime = FindObjectOfType<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime;
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
         saveOptions = FindObjectOfType<PauseMenu>().options;
-        //firstCard = FindObjectOfType<CardValuesWithScriptable>()._firstCardScriptable.name;
+        card = FindObjectOfType<CardValuesWithScriptable>();
     }
 
     public void SaveCards()
@@ -42,16 +42,22 @@ public class SaveAndLoad : MonoBehaviour
     {
         CardsData data = SaveSystem.LoadCards();
 
-        foreach (CardValuesWithScriptable cvws in FindObjectsOfType<CardValuesWithScriptable>())
+        if (data.firstCardData != null)
         {
-            if (cvws.name == data.firstCardData)
-            {
-                card = cvws;
-                break;
-            }
+            //card._firstCardScriptable = Resources.Load<CardScriptableObject>("Resources/" + data.firstCardData + "/.asset");
+            Debug.Log(data.firstCardData);
         }
 
-        Debug.Log("load card");
+        //foreach (CardScriptableObject cvws in FindObjectsOfType<CardScriptableObject>())
+        //{
+        //    if (cvws.name == data.firstCardData)
+        //    {
+        //        card._firstCardScriptable = cvws;
+        //        break;
+        //    }
+        //}
+
+        
     }
 
     public void LoadPlayer()
