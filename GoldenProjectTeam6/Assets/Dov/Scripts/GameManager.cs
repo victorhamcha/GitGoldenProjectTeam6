@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool _isCensuredMod;
     [HideInInspector] public List<string> _savingDrawCardCard;
 
+    public bool inGame;
+
     private void Awake()
     {
         AttributionValeur();
@@ -22,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     void AttributionValeur()
     {
+        if (inGame)
+        {
+            FindObjectOfType<SaveAndLoad>().LoadCard();
+        }
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
 
         if (_savingDrawCardCard.Count < FindObjectOfType<SaveAndLoad>().alreadyDrawCards.Count)
