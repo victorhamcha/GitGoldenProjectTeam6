@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Succes : MonoBehaviour
@@ -14,20 +15,34 @@ public class Succes : MonoBehaviour
     public bool locked=true;
     private bool insert = false;
     public Sprite succesIMG;
+    public string txtTitre;
+    public string txtDescription;
     public TextMeshProUGUI description;
     public TextMeshProUGUI titre;
+    public bool inGame=false;
     private void Start()
     {
-        manager = GetComponentInParent<ContratsPanel>();
-        if (!locked)
+        
+        if(SceneManager.GetActiveScene().name== "GeneralScene")
         {
-            manager.unlockSucces.Add(this);
-            insert = true;
+            inGame = true;
         }
-        else
+        if(!inGame)
         {
-            manager.lockSucces.Add(this);
+            description.text = txtDescription;
+            titre.text = txtTitre;
+            manager = GetComponentInParent<ContratsPanel>();
+            if (!locked)
+            {
+                manager.unlockSucces.Add(this);
+                insert = true;
+            }
+            else
+            {
+                manager.lockSucces.Add(this);
+            }
         }
+      
     }
     private void Update()
     {

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class CardValuesWithScriptable : MonoBehaviour
 {
-    
+
+    [Header("Succes")]
+    private SuccesManager succesManager;
     [Header("First Card To Play")]
     public CardScriptableObject _firstCardScriptable;
     [Header("Value to change")]
@@ -33,6 +35,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Start()
     {
+        succesManager = FindObjectOfType<SuccesManager>();
         eventManager = FindObjectOfType<EventManager>();
         if (FindObjectOfType<SaveAndLoad>().firstCard != null)
         {
@@ -300,7 +303,19 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         if(_successToUnlock.ToString() != "none")
         {
-
+            for(int i =0; i<succesManager.allTheSucces.Count;i++)
+            {
+                if(succesManager.allTheSucces[i].locked)
+                {
+                    if(succesManager.allTheSucces[i].txtTitre == _successToUnlock.ToString())
+                    {
+                        succesManager.allTheSucces[i].locked = false;
+                        //saveSucces
+                        succesManager.SuccesAnim();
+                        break;
+                    }
+                }
+            }
         }
     }
 
