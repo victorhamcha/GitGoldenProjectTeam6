@@ -14,7 +14,7 @@ public class SaveAndLoad : MonoBehaviour
     public ContainAllObjectTree tree;
     public GameManager manage;
     public PauseMenu option;
-    public CardValuesWithScriptable card;
+    private CardValuesWithScriptable card;
 
     void Start()
     {
@@ -25,18 +25,31 @@ public class SaveAndLoad : MonoBehaviour
         //firstCard = FindObjectOfType<CardValuesWithScriptable>()._firstCardScriptable.name;
     }
 
+    public void SaveCards()
+    {
+        SaveSystem.SaveCards(card);
+    }
 
     public void SavePlayer()
     {
-        SaveSystem.SaveScore(tree, manage, option, card);
+        SaveSystem.SavePlayer(tree, manage, option);
+        SaveCards();
         Debug.Log("save");
     }
 
+
     public void LoadCard()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
+        CardsData data = SaveSystem.LoadCards();
 
-        firstCard = data.firstCardData;
+        foreach (CardValuesWithScriptable cvws in FindObjectsOfType<CardValuesWithScriptable>())
+        {
+            if (cvws.name == data.firstCardData)
+            {
+                card = cvws;
+                break;
+            }
+        }
 
         Debug.Log("load card");
     }
@@ -52,7 +65,7 @@ public class SaveAndLoad : MonoBehaviour
 
         saveOptions = data.optionsData;
 
-
+        LoadCard();
         Debug.Log("load");
     }
 }

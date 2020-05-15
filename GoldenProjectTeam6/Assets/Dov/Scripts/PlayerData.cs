@@ -9,10 +9,9 @@ public class PlayerData
     public List<string> imageTreeUnlockSinceLastTimeData;
     public List<string> savingDrawCardCardData;
     public List<bool> optionsData;
-    public string firstCardData;
 
 
-    public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu saveOptions, CardValuesWithScriptable cardvalue)
+    public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu saveOptions)
     {
 
         imageTreeData = objectTree._imageTreeChildAlreadyInTree;
@@ -21,12 +20,22 @@ public class PlayerData
         savingDrawCardCardData = cardsAlreadyDraw._savingDrawCardCard;
 
         optionsData = saveOptions.options;
+    }
 
+}
+
+
+[System.Serializable]
+public class CardsData
+{
+    public string firstCardData;
+
+    public CardsData(CardValuesWithScriptable cardvalue)
+    {
 
         if (cardvalue != null)
         {
             firstCardData = cardvalue._firstCardScriptable.name;
         }
-
     }
 }
