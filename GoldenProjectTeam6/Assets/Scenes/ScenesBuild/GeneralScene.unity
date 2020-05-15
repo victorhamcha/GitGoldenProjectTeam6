@@ -200,9 +200,11 @@ MonoBehaviour:
   alreadyDrawCards: []
   unlockSinceLastTime: []
   saveOptions: 000000
+  firstCard: 
   tree: {fileID: 1004929819}
   manage: {fileID: 35170268}
   option: {fileID: 1419286920}
+  card: {fileID: 1944642716}
 --- !u!114 &35170268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,6 +4012,7 @@ MonoBehaviour:
   _enumDirectionOfSwipeToUnlockObject: 
   _enumPlace: 
   _enumObjectToUnlock: 
+  allScriptableObjects: []
   _conditionNumberList: 
   _enumConditionListObject: 
 --- !u!61 &1944642717
