@@ -20,6 +20,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     [HideInInspector] public bool canSlideUp, _isADeadCard, _unlockSlideUp, _isAContrat;
     [HideInInspector] public string _enumSuccess, _enumDirectionOfSwipeToUnlockObject,_enumPlace, _enumObjectToUnlock;
 
+    public CardScriptableObject[] allScriptableObjects;
 
     [HideInInspector] public List<int> _conditionNumberList;
 
@@ -33,6 +34,17 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Start()
     {
         eventManager = FindObjectOfType<EventManager>();
+        if (FindObjectOfType<SaveAndLoad>().firstCard != null)
+        {
+            allScriptableObjects = Resources.FindObjectsOfTypeAll<CardScriptableObject>();
+            foreach (CardScriptableObject item in allScriptableObjects)
+            {
+                if (item.name == FindObjectOfType<SaveAndLoad>().firstCard)
+                {
+                    _firstCardScriptable = item;
+                }
+            }
+        }
         LoadValueFromScriptableObject();
     }
 
@@ -60,6 +72,8 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             _titleCard.text = _firstCardScriptable._title;
             _descriptionCard.text = _firstCardScriptable._description;
+
+            FindObjectOfType<SaveAndLoad>().firstCard = _firstCardScriptable.name;
 
             if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable._title))
             {
