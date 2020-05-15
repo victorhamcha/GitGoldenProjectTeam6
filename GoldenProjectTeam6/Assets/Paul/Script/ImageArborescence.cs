@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Diagnostics.Tracing;
 
 public class ImageArborescence : MonoBehaviour
 {
     [HideInInspector] public Image _image;
+    [HideInInspector] public Image _imageBackground;
     [HideInInspector] public TextMeshProUGUI _title;
     [HideInInspector] public Text _titleText;
     [HideInInspector] public List<GameObject> _lineRendererGO;
@@ -33,13 +35,25 @@ public class ImageArborescence : MonoBehaviour
 
     [HideInInspector] public Image _imageZoomCard;
     [HideInInspector] public TextMeshProUGUI _titleZoomCard;
-    [HideInInspector] public TextMeshProUGUI _descriptionZoomCard;
+    [HideInInspector] public TextMeshProUGUI _textSlideRight;
+    [HideInInspector] public TextMeshProUGUI _textSlideLeft;
+    [HideInInspector] public TextMeshProUGUI _textSlideUp;
     [HideInInspector] public GameObject _cardZoom;
 
      bool _alreadyInTree;
      bool _alreadyDraw;
 
+    private void Awake()
+    {
 
+        foreach (Transform child in transform)
+        {
+            if (child.name == "ImageBackground")
+            {
+                _imageBackground = child.GetComponent<Image>();
+            }
+        }
+    }
 
     void Start()
     {
@@ -47,8 +61,10 @@ public class ImageArborescence : MonoBehaviour
         if (_alreadyInTree)
         {
             _image.material = null;
+            _imageBackground.material = null;
         }
         CheckIfAlreadyDraw();
+
     }
 
     private void Update()
@@ -90,11 +106,15 @@ public class ImageArborescence : MonoBehaviour
             _disolve = false;
             Assigner();
             _image.material = null;
+            _imageBackground.material = null;
+            _titleText.material = null;
             Assigner();
         }
         else
         {
             _image.material.SetFloat("_Dissolve", _timeToRevealCard);
+            _imageBackground.material.SetFloat("_Dissolve", _timeToRevealCard);
+            _titleText.material.SetFloat("_Dissolve", _timeToRevealCard);
             for (int i = 0; i < _lineRendererGO.Count; i++)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().material.SetFloat("_Dissolve", _timeToRevealCard);
@@ -160,6 +180,7 @@ public class ImageArborescence : MonoBehaviour
         {
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             if (i == 0)
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
@@ -176,7 +197,9 @@ public class ImageArborescence : MonoBehaviour
         //_title.text = _cardID._title;
         _titleText.text = _cardID._title;
         _image.enabled = true;
+        _imageBackground.enabled = true;
         _image.sprite = _cardID._image;
+        _titleText.material = null;
     }
 
     void CheckIfAlreadyDraw()
@@ -189,6 +212,7 @@ public class ImageArborescence : MonoBehaviour
         if (_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
+            _imageBackground.enabled = false;
             //_title.enabled = false;
             _titleText.enabled = false;
         }
@@ -197,6 +221,7 @@ public class ImageArborescence : MonoBehaviour
             if (_alreadyInTree) //Card already shows in tree so don't play anim
             {
                 _image.enabled = true;
+                _imageBackground.enabled = true;
                 //_title.enabled = true;
                 _titleText.enabled = true;
                 Assigner();
@@ -217,14 +242,18 @@ public class ImageArborescence : MonoBehaviour
     IEnumerator ShowUp()
     {
         _image.material = _materialImg;
+        _imageBackground.material = _materialImg;
         _titleText.enabled = true;
         _titleText.text = _cardID._title;
         _titleText.gameObject.SetActive(true);
         _image.material.SetFloat("_Dissolve", 0);
+        _imageBackground.material.SetFloat("_Dissolve", 0);
         _titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
+        _imageBackground.enabled = false;
         yield return new WaitForSeconds(0.3f);
         _image.material.SetFloat("_Dissolve", 0);
+        _imageBackground.material.SetFloat("_Dissolve", 0);
         _titleText.material.SetFloat("_Dissolve", 0);
         _image.sprite = _cardID._image;
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
@@ -236,6 +265,7 @@ public class ImageArborescence : MonoBehaviour
         }
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         _image.enabled = true;
+        _imageBackground.enabled = true;
         //_title.enabled = true;
         //_title.gameObject.SetActive(true);
         DrawLineAuto();
@@ -255,6 +285,59 @@ public class ImageArborescence : MonoBehaviour
         _cardZoom.SetActive(true);
         _imageZoomCard.sprite = _cardID._image;
         _titleZoomCard.text = _cardID._title;
-        _descriptionZoomCard.text = _cardID._description;
+
+        //SLIDE RIGHT DESCRIPTION
+
+        if (_cardID._canSlideRight)
+        {
+            if(_cardID._isNextCardRight != null)
+            {
+                _textSlideRight.text = _cardID._isSwipingRightDescription;
+            }
+            else
+            {
+                _textSlideRight.text = "";
+            }
+        }
+        else
+        {
+            _textSlideRight.text = "";
+        }
+
+        //SLIDE LEFT DESCRIPTION
+
+        if (_cardID._canSlideLeft)
+        {
+            if (_cardID._isNextCardLeft != null)
+            {
+                _textSlideLeft.text = _cardID._isSwipingLeftDescription;
+            }
+            else
+            {
+                _textSlideLeft.text = "";
+            }
+        }
+        else
+        {
+            _textSlideLeft.text = "";
+        }
+
+        //SLIDE UP DESCRIPTION
+
+        if (_cardID._canSlideUp)
+        {
+            if (_cardID._isNextCardRight != null)
+            {
+                _textSlideUp.text = _cardID._isSwipingUpDescription;
+            }
+            else
+            {
+                _textSlideUp.text = "";
+            }
+        }
+        else
+        {
+            _textSlideUp.text = "";
+        }
     }
 }
