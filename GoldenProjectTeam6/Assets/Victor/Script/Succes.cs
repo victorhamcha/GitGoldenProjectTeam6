@@ -6,6 +6,8 @@ using TMPro;
 
 public class Succes : MonoBehaviour
 {
+    public enum difficulté { TrèsFacile, Facile,Moyen,Difficile, TrèsDifficile };
+    public difficulté _difficulté;
     private ContratsPanel manager;
     public int id;
     public Image img;

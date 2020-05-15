@@ -3447,8 +3447,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26d9a1e9b70acd47bc71d21c374b984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minY: -1000
-  maxY: 1000
+  panel: {fileID: 1666546774}
+  minY: -1
+  maxY: 10
+  posY: 0
+  touching: 0
+  toucMax: 0
+  toucMin: 0
+  txt: {fileID: 120047124}
 --- !u!1 &460518878
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,6 +10202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   androidControl: {fileID: 1666546775}
+  j: 1
   txtPanel: {fileID: 120047125}
   lockSucces: []
   unlockSucces: []

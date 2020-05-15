@@ -7,7 +7,7 @@ using TMPro;
 public class ContratsPanel : MonoBehaviour
 {
     public Swiping androidControl;
-    private int j = 1;
+    public int j = 1;
     public TextMeshProUGUI txtPanel;
     public List<Succes> lockSucces = new List<Succes>();
     public List<Succes> unlockSucces = new List<Succes>();
