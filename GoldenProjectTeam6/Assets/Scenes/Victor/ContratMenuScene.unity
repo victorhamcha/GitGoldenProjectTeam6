@@ -994,7 +994,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -2629,12 +2629,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1608295559}
-  - {fileID: 668902050}
   - {fileID: 610323812}
   - {fileID: 2050595483}
   - {fileID: 1296079856}
   - {fileID: 1966302703}
   - {fileID: 1044966483}
+  - {fileID: 668902050}
   - {fileID: 2024141040}
   - {fileID: 1482601042}
   - {fileID: 2109949822}
@@ -3454,6 +3454,7 @@ MonoBehaviour:
   touching: 0
   toucMax: 0
   toucMin: 0
+  lastSucces: {fileID: 0}
   txt: {fileID: 120047124}
 --- !u!1 &460518878
 GameObject:
@@ -3866,7 +3867,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -7484,7 +7485,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -8503,7 +8504,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -9276,7 +9277,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -10202,7 +10203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   androidControl: {fileID: 1666546775}
-  j: 1
+  j: 0
   txtPanel: {fileID: 120047125}
   lockSucces: []
   unlockSucces: []
@@ -10854,7 +10855,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859904, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}

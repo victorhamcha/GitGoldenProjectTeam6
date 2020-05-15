@@ -18,7 +18,7 @@ public class Yslide : MonoBehaviour
     public bool toucMin = false;
     private float lastmoveDownY;
     private float lastmoveUpY;
-    private Succes lastSucces;
+    public Succes lastSucces;
     public Transform txt;
     void Start()
     {
@@ -30,13 +30,19 @@ public class Yslide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(panel.androidControl.SwipeLeft|| panel.androidControl.SwipeRight)
+        {
+            transform.position = originalPos;
+            toucMax = false;
+            toucMin = false;
+        }
         if (panel.j == 1)
         {
             lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
         }
         if (panel.j == 2)
         {
-            lastSucces = panel.unlockSucces[panel.lockSucces.Count - 1];
+            lastSucces = panel.unlockSucces[panel.lockSucces.Count];
             
         }
         posY = transform.position.y;
