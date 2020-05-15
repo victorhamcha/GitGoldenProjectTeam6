@@ -27,7 +27,7 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 439faf7fd73e41348916f41283be0262, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 11a39c9c62192bd46a77d813ff074548, type: 2}
   _isSwipingRightDescription: Grab and bite a piranha
   _isNextCardLeft: {fileID: 11400000, guid: 3ac8aee3597207d4f82e6ab9fb6770a0, type: 2}
   _isSwipingLeftDescription: Thorw a piranha to the cleaner's head

@@ -26,9 +26,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 6c11f11253b02854794cdda495bbf048, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 71e24be01414ea543ac215ed6a99b01f, type: 2}
   _isSwipingRightDescription: Shove him and try to take a fish
-  _isNextCardLeft: {fileID: 11400000, guid: 0ccabdf14fe727740a404fe603c4b18e, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 439faf7fd73e41348916f41283be0262, type: 2}
   _isSwipingLeftDescription: Give me one of those fish
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

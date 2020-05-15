@@ -61,6 +61,9 @@ public class UpdateCards : ScriptableObject
 
         }
         Update();
+#if UNITY_EDITOR
+        EditorUtility.SetDirty(this);
+#endif
     }
 
     public void Update()

@@ -7,20 +7,41 @@ using TMPro;
 public class ContratsPanel : MonoBehaviour
 {
     public Swiping androidControl;
-    private int j = 0;
+    private int j = 1;
     public TextMeshProUGUI txtPanel;
-    private bool[] lockedSucces=new bool[25];
+    public List<Succes> lockSucces = new List<Succes>();
+    public List<Succes> unlockSucces = new List<Succes>();
+    public Transform startPosition;
+    public Transform unlock;
+    public Transform locked;
+    public float space;
+ 
    
+
+
     void Start()
     {
-      
-        
+        StartCoroutine(waitSucces());
+        unlockSucces.Reverse();
+        lockSucces.Reverse();
+        for(int i =0;i<unlockSucces.Count;i++)
+        {
+            unlockSucces[i].transform.SetParent(unlock);
+            unlockSucces[i].transform.localPosition = new Vector2(0,startPosition.position.y+300- space * (i));
+        }
+        for (int i = 0; i < lockSucces.Count; i++)
+        {
+            lockSucces[i].transform.SetParent(locked);
+            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+300 - space * (i));
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(androidControl.SwipeLeft)
+
+        if (androidControl.SwipeLeft)
         {
             j--;
         }
@@ -40,19 +61,26 @@ public class ContratsPanel : MonoBehaviour
            case 0:
           {
             txtPanel.text = "Passeport";
-            break;
+                    locked.gameObject.SetActive(false);
+                    unlock.gameObject.SetActive(false);
+                    break;
           }
 
             case 1:
            {
               txtPanel.text = "Lock Contract";
-              break;
+                    locked.gameObject.SetActive(true);
+                    unlock.gameObject.SetActive(false);
+                    break;
            }
 
             case 2:
            {
             txtPanel.text = "Succed Contract";
-            break;
+
+                    locked.gameObject.SetActive(false);
+                    unlock.gameObject.SetActive(true);
+                    break;
            }
             case 3:
           {
@@ -61,5 +89,12 @@ public class ContratsPanel : MonoBehaviour
             break;
           }
         }
+    }
+
+   
+
+    IEnumerator waitSucces()
+    {
+        yield return new WaitForSeconds(0.01f);
     }
 }
