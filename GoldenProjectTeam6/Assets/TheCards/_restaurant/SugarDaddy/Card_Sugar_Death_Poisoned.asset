@@ -19,6 +19,7 @@ MonoBehaviour:
 
     After
     some vomiting, you die with your face in the remains of chewed cotton candy.'
+  _cardID: 98
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

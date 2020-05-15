@@ -19,6 +19,7 @@ MonoBehaviour:
 
 
     You get a wounded fish.'
+  _cardID: 104
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

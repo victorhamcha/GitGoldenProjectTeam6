@@ -19,6 +19,7 @@ MonoBehaviour:
 
 
     "Shit, oh my poor thing! You''re a real pirate now ahahahahaa!" '
+  _cardID: 25
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

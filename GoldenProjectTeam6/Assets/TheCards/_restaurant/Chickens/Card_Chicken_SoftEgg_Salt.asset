@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "Mmmmh well melting in the mouth this egg!\n\nCome on, the dish :
     an omelet.\n\nIt's simply disgusting ! \n\nYou're leaving this disgusting restaurant
     !"
+  _cardID: 72
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

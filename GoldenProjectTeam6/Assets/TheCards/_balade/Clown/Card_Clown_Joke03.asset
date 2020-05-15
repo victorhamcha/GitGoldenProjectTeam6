@@ -18,6 +18,7 @@ MonoBehaviour:
 
     Suddenly she falls. Why does
     she fall ?"'
+  _cardID: 22
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

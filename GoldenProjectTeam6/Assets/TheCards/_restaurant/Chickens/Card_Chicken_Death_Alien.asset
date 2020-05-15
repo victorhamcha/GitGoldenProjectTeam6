@@ -19,6 +19,7 @@ MonoBehaviour:
 
     You bleed out badly while the hen tries to escape
     the cook''s knife.'
+  _cardID: 76
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Circus
   _image: {fileID: 21300000, guid: 0974135184da6634eb2b61a64da7ae9d, type: 3}
   _description: '"What''s the matter with you people? Let''s calm down!"'
+  _cardID: 41
   _cardAlreadyDraw: 0
   _canSlideUp: 1
   _canSlideRight: 1

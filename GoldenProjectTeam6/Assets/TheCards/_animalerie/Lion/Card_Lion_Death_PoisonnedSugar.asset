@@ -26,6 +26,7 @@ MonoBehaviour:
 
 
     You perish with your face slashed.'
+  _cardID: 118
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

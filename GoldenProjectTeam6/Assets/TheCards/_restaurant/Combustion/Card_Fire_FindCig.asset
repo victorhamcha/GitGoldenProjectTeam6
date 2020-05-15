@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 4613604ce98ac304f84a6e66418f671b, type: 3}
   _description: It's full of slime and well chewed.
+  _cardID: 60
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

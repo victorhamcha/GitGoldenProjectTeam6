@@ -19,6 +19,7 @@ MonoBehaviour:
 
     "Are you
     ready for the next number!? I will need a volunteer!"'
+  _cardID: 40
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -21,6 +21,7 @@ MonoBehaviour:
     you go ! A good sweetness ! Good luck !"
 
     You get a [Poisoned cotton candy].'
+  _cardID: 93
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

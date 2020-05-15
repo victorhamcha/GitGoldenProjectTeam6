@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -204,7 +204,6 @@ MonoBehaviour:
   tree: {fileID: 1004929819}
   manage: {fileID: 35170268}
   option: {fileID: 1419286920}
-  card: {fileID: 1944642716}
 --- !u!114 &35170268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9646,6 +9645,16 @@ MonoBehaviour:
   - _objectList: 2
     _hasThisObject: 0
   - _objectList: 3
+    _hasThisObject: 0
+  - _objectList: 4
+    _hasThisObject: 0
+  - _objectList: 5
+    _hasThisObject: 0
+  - _objectList: 6
+    _hasThisObject: 0
+  - _objectList: 7
+    _hasThisObject: 0
+  - _objectList: 8
     _hasThisObject: 0
 --- !u!4 &2121943030
 Transform:

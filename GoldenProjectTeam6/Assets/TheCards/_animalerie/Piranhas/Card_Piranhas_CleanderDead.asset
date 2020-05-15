@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "Smelling the bloody smell of fish, the piranha severely bit the
     nose of the man who fell into the pond. \n\nHe is devoured within seconds while
     you are still unharmed, in the midst of the carnage."
+  _cardID: 102
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

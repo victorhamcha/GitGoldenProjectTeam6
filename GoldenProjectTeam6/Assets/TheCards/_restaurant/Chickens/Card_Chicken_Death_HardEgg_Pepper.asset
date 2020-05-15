@@ -18,6 +18,7 @@ MonoBehaviour:
     you two chickens to choose which one you'll eat.\nOne of them he doesn't like
     pepper seasonning! \nIt escapes the waiter's hand and pecks at your eye! \nYou
     will die with your head on the plate..."
+  _cardID: 75
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

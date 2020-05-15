@@ -19,6 +19,7 @@ MonoBehaviour:
 
     With these words, the elephant catches
     you with its trunk and throws you away from its enclosure.'
+  _cardID: 123
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

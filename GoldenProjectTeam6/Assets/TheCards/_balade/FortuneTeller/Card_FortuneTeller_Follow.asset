@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "You walk into her tent and sit at a table. \nThe woman look at her
     crystal ball and shouted: \"By all the gods, something horrible is about to happen
     to you! You must leave at once!\"."
+  _cardID: 4
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

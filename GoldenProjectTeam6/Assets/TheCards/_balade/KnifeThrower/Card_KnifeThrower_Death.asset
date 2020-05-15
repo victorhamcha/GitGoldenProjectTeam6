@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "Totally drunk, he sends his four knives. \nYour hands and feet are
     pierced. The knife-thrower falls asleep on a chair next to you. \nYou bleed to
     death... and die."
+  _cardID: 13
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

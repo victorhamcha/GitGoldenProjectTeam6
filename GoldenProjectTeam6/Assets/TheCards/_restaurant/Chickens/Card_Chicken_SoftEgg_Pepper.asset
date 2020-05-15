@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "You have a serious stomach ache.\n\nAnyway... it's time for the
     dish. \n\nYou're going to have the omelette.\n\nYou feel that your stomach ache
     is becoming unbearable... \n\nAs if your belly is going to explode!"
+  _cardID: 73
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

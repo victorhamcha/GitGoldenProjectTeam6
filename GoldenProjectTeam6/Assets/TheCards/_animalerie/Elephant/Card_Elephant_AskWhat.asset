@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Zoo
   _image: {fileID: 21300000, guid: 8de18e400fe173045b493b458fd98cb5, type: 3}
   _description: '"What are you doing ?" asked the animal.'
+  _cardID: 122
   _cardAlreadyDraw: 0
   _canSlideUp: 1
   _canSlideRight: 1
@@ -23,7 +24,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000}
+  _isNextCardUp: {fileID: 11400000, guid: 69b81bcb04f7c4c41ac4dbd8bd9bfd28, type: 2}
   _isSwipingUpDescription: Throw the dead mouse to the elephant
   _isNextCardRight: {fileID: 11400000, guid: bb6f56f41aae20942a69996921f4be94, type: 2}
   _isSwipingRightDescription: Piss off, fuck face

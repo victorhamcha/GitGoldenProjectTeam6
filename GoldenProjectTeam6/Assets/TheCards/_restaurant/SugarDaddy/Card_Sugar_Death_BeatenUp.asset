@@ -18,6 +18,7 @@ MonoBehaviour:
     those words, the salesman grabs your head and shoves it into his cotton candy
     machine. \n\nYour face melts and mixes with the pink sugar...\n\n... Let's just
     say that you've eaten your cotton candy... "
+  _cardID: 99
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

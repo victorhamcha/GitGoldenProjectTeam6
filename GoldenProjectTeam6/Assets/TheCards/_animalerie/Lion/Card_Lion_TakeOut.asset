@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "\"Of course not, you idiot ! \nI am fed and caressed abundantly
     every day! \nAll I have to do is roar in front of a few people! \nDo you have
     such a cool life?\""
+  _cardID: 115
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

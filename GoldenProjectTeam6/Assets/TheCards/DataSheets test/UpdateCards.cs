@@ -14,6 +14,8 @@ public class UpdateCards : ScriptableObject
 {
     public Test sheettest;
     public List<CardScriptableObject> cards;
+   // public List<CardScriptableObject> cardsPlace;
+    
 
 
 
@@ -63,8 +65,12 @@ public class UpdateCards : ScriptableObject
 
     public void Update()
     {
+        //cardsPlace = cards;
+        //cards.Clear();
+
         foreach (DataSheetTypes.Test card in DataSheet.test)
         {
+
             bool update = false;
             CardScriptableObject change = null;
             
@@ -85,6 +91,7 @@ public class UpdateCards : ScriptableObject
 #endif
                 change._description = card.description;
                 change._placeEnum = (EnumPlaceGame._enumPlace)Enum.Parse(typeof(EnumPlaceGame._enumPlace), card.place);
+                change._cardID = card.iD;
                 if (card.mort)
                 {
                     change._isDeadCard = card.mort;

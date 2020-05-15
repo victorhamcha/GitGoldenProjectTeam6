@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 624777843503aa940b55c27b77ba2952, type: 3}
   _description: It's still closed.
+  _cardID: 64
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -23,6 +23,7 @@ MonoBehaviour:
 
     Instantly, you catch
     fire and die burned alive.'
+  _cardID: 67
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

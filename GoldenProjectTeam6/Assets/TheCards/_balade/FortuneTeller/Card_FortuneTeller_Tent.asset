@@ -16,6 +16,7 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: f02730ade8e4d54489a6ff2cb9677b8a, type: 3}
   _description: As you walk through the funfair, you come across a fortune-teller
     and she invites you to follow her in her tent for a prediction.
+  _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

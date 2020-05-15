@@ -26,6 +26,7 @@ MonoBehaviour:
 
     "That''s
     what we call being dead laughing hehehahahahahahahaha!"'
+  _cardID: 23
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1
