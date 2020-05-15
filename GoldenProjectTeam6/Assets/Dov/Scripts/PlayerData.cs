@@ -9,13 +9,15 @@ public class PlayerData
     public List<string> imageTreeUnlockSinceLastTimeData;
     public List<string> savingDrawCardCardData;
     public List<bool> optionsData;
+    public string firstCardData;
 
 
     public float[] position;
     public float[] position2;
     public float[] position3;
+    public float[] position4;
 
-    public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu saveOptions)
+    public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu saveOptions, CardValuesWithScriptable cardvalue)
     {
 
         imageTreeData = objectTree._imageTreeChildAlreadyInTree;
@@ -24,6 +26,8 @@ public class PlayerData
         savingDrawCardCardData = cardsAlreadyDraw._savingDrawCardCard;
 
         optionsData = saveOptions.options;
+
+        firstCardData = cardvalue._firstCardScriptable.name;
 
         position = new float[3];
         position[0] = objectTree.transform.position.x;
@@ -39,5 +43,10 @@ public class PlayerData
         position3[0] = saveOptions.transform.position.x;
         position3[1] = saveOptions.transform.position.y;
         position3[2] = saveOptions.transform.position.z;
+
+        position4 = new float[3];
+        position4[0] = saveOptions.transform.position.x;
+        position4[1] = saveOptions.transform.position.y;
+        position4[2] = saveOptions.transform.position.z;
     }
 }

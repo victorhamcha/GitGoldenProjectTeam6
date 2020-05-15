@@ -4,14 +4,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    public static void SaveScore (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu option)
+    public static void SaveScore (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu option, CardValuesWithScriptable cardValue)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
         Debug.Log(path);
 
-        PlayerData data = new PlayerData(objectTree, cardsAlreadyDraw, option);
+        PlayerData data = new PlayerData(objectTree, cardsAlreadyDraw, option, cardValue);
 
         formatter.Serialize(stream, data);
         stream.Close();
