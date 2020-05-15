@@ -78,9 +78,16 @@ public class SwipeScript : MonoBehaviour
             rightText.text = "well done";
             leftText.text = "you should be so proud!";
         }
-        
 
-        
+        else if (card._firstCardScriptable._isEndingEvent)
+        {
+            upText.text = "";
+            rightText.text = "Go in an other direction";
+            leftText.text = "Continue this way";
+        }
+
+
+
         img.transform.eulerAngles = new Vector3(0, 0, 0);
        
         if (Input.touchCount > 0)

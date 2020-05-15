@@ -120,8 +120,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
                 }
             }
-            Debug.Log(_firstCardScriptable._isEndingEvent);
-            Debug.Log(_firstCardScriptable._enumDirectpionSwipeString);
+          
 
 
             if (_firstCardScriptable._isEndingEvent)// && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == ""))
