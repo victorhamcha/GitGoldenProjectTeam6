@@ -15,25 +15,17 @@ public class ContratsPanel : MonoBehaviour
     public Transform unlock;
     public Transform locked;
     public float space;
- 
-   
 
+
+    private void Awake()
+    {
+        StartCoroutine(waitSucces());
+    }
 
     void Start()
     {
+
         StartCoroutine(waitSucces());
-        unlockSucces.Reverse();
-        lockSucces.Reverse();
-        for(int i =0;i<unlockSucces.Count;i++)
-        {
-            unlockSucces[i].transform.SetParent(unlock);
-            unlockSucces[i].transform.localPosition = new Vector2(0,startPosition.position.y+300- space * (i));
-        }
-        for (int i = 0; i < lockSucces.Count; i++)
-        {
-            lockSucces[i].transform.SetParent(locked);
-            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+300 - space * (i));
-        }
 
     }
 
@@ -96,5 +88,17 @@ public class ContratsPanel : MonoBehaviour
     IEnumerator waitSucces()
     {
         yield return new WaitForSeconds(0.01f);
+        unlockSucces.Reverse();
+        lockSucces.Reverse();
+        for (int i = 0; i < unlockSucces.Count; i++)
+        {
+            unlockSucces[i].transform.SetParent(unlock);
+            unlockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y + 300 - space * (i));
+        }
+        for (int i = 0; i < lockSucces.Count; i++)
+        {
+            lockSucces[i].transform.SetParent(locked);
+            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y + 300 - space * (i));
+        }
     }
 }

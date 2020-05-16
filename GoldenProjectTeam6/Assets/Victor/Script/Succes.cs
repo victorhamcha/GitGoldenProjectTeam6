@@ -7,20 +7,27 @@ using TMPro;
 
 public class Succes : MonoBehaviour
 {
+
+    public int id;
+    //DIffiuclité
     public enum difficulté { TrèsFacile, Facile,Moyen,Difficile, TrèsDifficile };
     public difficulté _difficulté;
-    private ContratsPanel manager;
-    public int id;
-    public Image img;
+   
     public bool locked=true;
-    private bool insert = false;
-    public Sprite succesIMG;
+       
+    //TXT
     public string txtTitre;
     public string txtDescription;
-    public TextMeshProUGUI description;
-    public TextMeshProUGUI titre;
-    public bool inGame=false;
-    private void Start()
+
+    //UI in menu scene
+    private ContratsPanel manager;
+    private TextMeshProUGUI description;
+    private TextMeshProUGUI titre;
+    private Image img;
+   //public Sprite succesIMG;
+    //verify scene
+    private bool inGame=false;
+    private void Awake()
     {
         
         if(SceneManager.GetActiveScene().name== "GeneralScene")
@@ -29,13 +36,20 @@ public class Succes : MonoBehaviour
         }
         if(!inGame)
         {
+            //text
+            description = GetComponentsInChildren<TextMeshProUGUI>()[1];
+            titre = GetComponentsInChildren<TextMeshProUGUI>()[0];
             description.text = txtDescription;
             titre.text = txtTitre;
+            ////////////////////////////////////////////////////////////
+            img = GetComponentInChildren<Image>();
+            
+
             manager = GetComponentInParent<ContratsPanel>();
             if (!locked)
             {
                 manager.unlockSucces.Add(this);
-                insert = true;
+               
             }
             else
             {
