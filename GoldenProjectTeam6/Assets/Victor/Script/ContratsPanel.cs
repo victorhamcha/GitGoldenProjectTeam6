@@ -14,6 +14,7 @@ public class ContratsPanel : MonoBehaviour
     public Transform startPosition;
     public Transform unlock;
     public Transform locked;
+    public Transform passeport;
     public float space;
 
 
@@ -25,7 +26,7 @@ public class ContratsPanel : MonoBehaviour
     void Start()
     {
 
-        StartCoroutine(waitSucces());
+        
 
     }
 
@@ -55,6 +56,7 @@ public class ContratsPanel : MonoBehaviour
             txtPanel.text = "Passeport";
                     locked.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(false);
+                    passeport.gameObject.SetActive(true);
                     break;
           }
 
@@ -63,6 +65,7 @@ public class ContratsPanel : MonoBehaviour
               txtPanel.text = "Lock Contract";
                     locked.gameObject.SetActive(true);
                     unlock.gameObject.SetActive(false);
+                    passeport.gameObject.SetActive(false);
                     break;
            }
 
@@ -71,6 +74,7 @@ public class ContratsPanel : MonoBehaviour
             txtPanel.text = "Succed Contract";
 
                     locked.gameObject.SetActive(false);
+                    passeport.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(true);
                     break;
            }
@@ -93,12 +97,12 @@ public class ContratsPanel : MonoBehaviour
         for (int i = 0; i < unlockSucces.Count; i++)
         {
             unlockSucces[i].transform.SetParent(unlock);
-            unlockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y + 300 - space * (i));
+            unlockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+765  - space * (i));
         }
         for (int i = 0; i < lockSucces.Count; i++)
         {
             lockSucces[i].transform.SetParent(locked);
-            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y + 300 - space * (i));
+            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+765  - space * (i));
         }
     }
 }
