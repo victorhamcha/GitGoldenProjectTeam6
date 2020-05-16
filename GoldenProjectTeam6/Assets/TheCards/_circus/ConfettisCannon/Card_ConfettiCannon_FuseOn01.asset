@@ -17,15 +17,15 @@ MonoBehaviour:
   _description: The fuse begins to burn slowly.
   _cardID: 35
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
+  _canSlideUp: 1
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
+  _isNextCardUp: {fileID: 11400000, guid: a8eedfefe34c7584d810888e219ea04f, type: 2}
+  _isSwipingUpDescription: Add even more confettis !
   _isNextCardRight: {fileID: 11400000, guid: c6fc8ba9008b88941a94bb5703e37b46, type: 2}
   _isSwipingRightDescription: Add even more confettis
   _isNextCardLeft: {fileID: 11400000, guid: beafc27e3d0ad484ebb434e8c5d9efe4, type: 2}

@@ -25,7 +25,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: 4793d381dae57e842b778a88ab74a70a, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 941582193af69fb42939787d20137fba, type: 2}
   _isSwipingUpDescription: Throw some Cotton Candy to him
   _isNextCardRight: {fileID: 11400000, guid: 54ca869b9dd44804e98b19909afcefa6, type: 2}
   _isSwipingRightDescription: Try to enter the cage
@@ -44,7 +44,7 @@ MonoBehaviour:
   _conditionsObjectList: 
   _enumObjectToUnlockRight: 0
   _enumObjectToUnlockLeft: 0
-  _enumObjectToUnlockUp: 0
+  _enumObjectToUnlockUp: 8
   _placeEnum: 3
   _isDeadCard: 0
   _isContratCard: 0
