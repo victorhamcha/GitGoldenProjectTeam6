@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CardValuesWithScriptable : MonoBehaviour
 {
@@ -317,6 +318,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Death()
     {
+        //SceneManager.LoadScene("");
         Debug.Log("Death go to achievement");
     }
 }
