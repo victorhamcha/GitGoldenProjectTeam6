@@ -28,8 +28,8 @@ MonoBehaviour:
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 8843286bc09777443a589b42bb97815f, type: 2}
   _isSwipingRightDescription: Look back inside
-  _isNextCardLeft: {fileID: 11400000, guid: 08a4a708b2ad8a944868843fd9644079, type: 2}
-  _isSwipingLeftDescription: Leave
+  _isNextCardLeft: {fileID: 11400000, guid: 1ea5f56fd3dd8a64e834d7cc99f9fce8, type: 2}
+  _isSwipingLeftDescription: Realize it's disgusting
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0

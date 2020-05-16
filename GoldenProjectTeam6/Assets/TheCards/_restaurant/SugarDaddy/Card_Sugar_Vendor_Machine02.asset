@@ -25,7 +25,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: 111ed16079414ef4a96cb77466d8362a, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: a4bb722df2e9b104081263268ed29334, type: 2}
   _isSwipingUpDescription: Discreetly put two broken teeth in the machine
   _isNextCardRight: {fileID: 11400000, guid: 11d481a478f13d149b973b90fe92b348, type: 2}
   _isSwipingRightDescription: Wait for the cotton candy
