@@ -17,14 +17,14 @@ public static class SaveSystem
         stream.Close();
     }
 
-    public static void SaveCards(CardValuesWithScriptable cardValue)
+    public static void SaveCards(CardValuesWithScriptable cardValue, SuccesManager allSucces)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/cards.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
         Debug.Log(path);
 
-        CardsData data = new CardsData(cardValue);
+        CardsData data = new CardsData(cardValue, allSucces);
 
         formatter.Serialize(stream, data);
         stream.Close();

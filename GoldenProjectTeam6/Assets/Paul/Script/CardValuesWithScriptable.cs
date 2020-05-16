@@ -37,11 +37,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         succesManager = FindObjectOfType<SuccesManager>();
         eventManager = FindObjectOfType<EventManager>();
-        if (FindObjectOfType<SaveAndLoad>().firstCard != null)
-        {
-            //_firstCardScriptable = Resources.Load<CardScriptableObject>("Resources/" + FindObjectOfType<SaveAndLoad>().firstCard + "/.asset");
-            Debug.Log(FindObjectOfType<SaveAndLoad>().firstCard);
-        }
+        
         LoadValueFromScriptableObject();
     }
 

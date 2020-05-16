@@ -7,6 +7,7 @@ public class SuccesManager : MonoBehaviour
 {
     public List<Succes> allTheSucces = new List<Succes>();
     public List<Succes> easiestSucces = new List<Succes>();
+    public List<bool> lockInfo = new List<bool>();
     public TextMeshProUGUI titre1;
     public TextMeshProUGUI des1;
     public TextMeshProUGUI titre2;
@@ -17,11 +18,15 @@ public class SuccesManager : MonoBehaviour
     public int lvl=0;
     void Start()
     {
-        for (int j =0; j<allTheSucces.Count;j++)
-        {
-            //allTheSucces[j].locked = SaveSystem.LoadSucces;
-        }
+        FindObjectOfType<SaveAndLoad>().success = lockInfo;
 
+        if (allTheSucces.Count == lockInfo.Count)
+        {
+            for (int i = 0; i < allTheSucces.Count; i++)
+            {
+                allTheSucces[i].locked = lockInfo[i];
+            }
+        }
        
         //easiest succes
         while (easiestSucces.Count < 3 && lvl <= 4)
@@ -135,6 +140,9 @@ public class SuccesManager : MonoBehaviour
 
     public void SuccesAnim()
     {
-
+        for (int i = 0; i < allTheSucces.Count; i++)
+        {
+            lockInfo[i] = allTheSucces[i].locked;
+        }
     }
 }
