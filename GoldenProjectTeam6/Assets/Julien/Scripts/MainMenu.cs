@@ -41,6 +41,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("GeneralScene");
     }
 
+    public void Arbo()
+    {
+        SceneManager.LoadScene("BaptisteTestArbo");
+    }
+
     public void Achievements()
     {
         if(menu)
@@ -172,5 +177,8 @@ public class MainMenu : MonoBehaviour
         UI_MainMenu.SetActive(true);
     }
 
-
+    public void Load_Menu()
+    {
+        SceneManager.LoadScene("ProtoMenu");
+    }
 }

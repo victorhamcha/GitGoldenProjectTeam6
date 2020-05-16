@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2110,7 +2110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 57.700012}
+  m_AnchoredPosition: {x: 0, y: 57.69995}
   m_SizeDelta: {x: 147.8, y: 62.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362228624
@@ -4105,7 +4105,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1089914684}
-        m_MethodName: Achievements
+        m_MethodName: Arbo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5408,7 +5408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.2999878, y: 0}
+  m_AnchoredPosition: {x: -2.3000488, y: 0}
   m_SizeDelta: {x: -54.4, y: -164.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &998020278
@@ -10158,7 +10158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00030517578, y: -73.400024}
+  m_AnchoredPosition: {x: -0.00024414062, y: -73.3999}
   m_SizeDelta: {x: 402.9, y: 480.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709414017
@@ -10481,7 +10481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 98.900024}
+  m_AnchoredPosition: {x: 0, y: 98.8999}
   m_SizeDelta: {x: 0, y: -197.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771916769

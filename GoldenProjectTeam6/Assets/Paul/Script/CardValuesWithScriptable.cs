@@ -318,7 +318,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Death()
     {
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("BaptisteTestArbo");
         Debug.Log("Death go to achievement");
     }
 }
