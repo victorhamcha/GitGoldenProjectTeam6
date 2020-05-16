@@ -276,6 +276,7 @@ MonoBehaviour:
   unlockSinceLastTime: []
   saveOptions: 000000
   firstCard: 
+  success: 
   tree: {fileID: 1004929819}
   manage: {fileID: 35170268}
   option: {fileID: 1419286920}
@@ -8831,6 +8832,7 @@ MonoBehaviour:
   - {fileID: 1722240702}
   - {fileID: 1010033319}
   easiestSucces: []
+  lockInfo: 010001000101
   titre1: {fileID: 966350293}
   des1: {fileID: 579588135}
   titre2: {fileID: 1875173121}

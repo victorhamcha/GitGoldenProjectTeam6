@@ -2104,7 +2104,7 @@ RectTransform:
   m_Children:
   - {fileID: 1111734374}
   m_Father: {fileID: 1679067960}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2861,7 +2861,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &532473502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,7 +4308,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1001 &771955934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4729,16 +4729,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802185898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3064.365}
-  m_LocalScale: {x: 1.4611586, y: 1.4611586, z: 1.4611586}
+  m_LocalPosition: {x: 0, y: 0, z: 3064.3647}
+  m_LocalScale: {x: 1.4611588, y: 1.4611588, z: 1.4611588}
   m_Children:
   - {fileID: 1370675023}
   m_Father: {fileID: 1679067960}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: -1155}
+  m_AnchoredPosition: {x: 303.00018, y: -1155.0002}
   m_SizeDelta: {x: 147.6, y: 24.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802185900
@@ -5373,7 +5373,7 @@ RectTransform:
   m_Children:
   - {fileID: 1072956096}
   m_Father: {fileID: 1679067960}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -9367,10 +9367,10 @@ Transform:
   - {fileID: 501395902}
   - {fileID: 1782241196}
   - {fileID: 796311102}
+  - {fileID: 802185899}
   - {fileID: 1774442840}
   - {fileID: 910789570}
   - {fileID: 395693186}
-  - {fileID: 802185899}
   m_Father: {fileID: 1559857808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9407,8 +9407,9 @@ MonoBehaviour:
   objectInTree: []
   alreadyDrawCards: []
   unlockSinceLastTime: []
-  saveOptions: 010100
+  saveOptions: 000000
   firstCard: 
+  success: 
   tree: {fileID: 1175086736}
   manage: {fileID: 1717507217}
   option: {fileID: 583867686}
@@ -9637,7 +9638,7 @@ RectTransform:
   m_Children:
   - {fileID: 290891810}
   m_Father: {fileID: 1679067960}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

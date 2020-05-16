@@ -9,6 +9,7 @@ public class PlayerData
     public List<string> imageTreeUnlockSinceLastTimeData;
     public List<string> savingDrawCardCardData;
     public List<bool> optionsData;
+    
 
 
     public PlayerData (ContainAllObjectTree objectTree, GameManager cardsAlreadyDraw, PauseMenu saveOptions)
@@ -29,13 +30,21 @@ public class PlayerData
 public class CardsData
 {
     public string firstCardData;
+    public List<bool> allSuccesData;
 
-    public CardsData(CardValuesWithScriptable cardvalue)
+    public CardsData(CardValuesWithScriptable cardvalue, SuccesManager allSucces)
     {
 
         if (cardvalue != null)
         {
             firstCardData = cardvalue._firstCardScriptable.name;
         }
+
+
+        if (allSucces != null)
+        {
+           allSuccesData = allSucces.lockInfo;
+        }
+
     }
 }
