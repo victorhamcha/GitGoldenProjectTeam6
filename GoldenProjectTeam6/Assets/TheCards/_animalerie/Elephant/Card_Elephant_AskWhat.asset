@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: f69d94bc69bd31840b434a3c0cf91f3d, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 69b81bcb04f7c4c41ac4dbd8bd9bfd28, type: 2}
   _isSwipingUpDescription: Throw the dead mouse to the elephant
-  _isNextCardRight: {fileID: 11400000, guid: 8516696f27a26094c867a82b29bdc135, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 217c2be5a9e27294c861b74ef7a8a747, type: 2}
   _isSwipingRightDescription: Piss off, fuck face
-  _isNextCardLeft: {fileID: 11400000, guid: 8516696f27a26094c867a82b29bdc135, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 217c2be5a9e27294c861b74ef7a8a747, type: 2}
   _isSwipingLeftDescription: Your mother is so cheap, ducks throw her bread
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

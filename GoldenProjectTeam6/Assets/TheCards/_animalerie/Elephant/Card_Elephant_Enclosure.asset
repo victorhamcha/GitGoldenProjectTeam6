@@ -25,7 +25,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: f69d94bc69bd31840b434a3c0cf91f3d, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 69b81bcb04f7c4c41ac4dbd8bd9bfd28, type: 2}
   _isSwipingUpDescription: Throw the dead mouse to the elephant
   _isNextCardRight: {fileID: 11400000, guid: 32f7968bd9afe474f879f0ee7c9635a8, type: 2}
   _isSwipingRightDescription: Say Hi to the animal
