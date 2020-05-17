@@ -11,14 +11,19 @@ public class SwipeScript : MonoBehaviour
     public float maxRotation = 20f;
     public float rotateSpeed;
     public float zRotation;
-    public bool reRotate=false;
+    
     private float touchOffSet;
     private float touchRef;
     private Vector2 originalPos;
+    private Vector2 originalPosPlus;
     private Vector3 distance;
+    private bool smooth = false;
+    private bool step1 = false;
+    public bool reRotate = false;
     public bool canGoUp;
     public float maxX = 265;
     public float maxY = 425;
+    public float offSetsmooth = 0.4f;
     //Canvas//
     public GameObject img;
     private Image imgColor;
@@ -30,6 +35,7 @@ public class SwipeScript : MonoBehaviour
     Material material;
     public float fade = 1f;
     public bool disolve = false;
+    public bool undisolve = false;
 
     public bool canslidup;
     //Changement//
@@ -82,7 +88,7 @@ public class SwipeScript : MonoBehaviour
         else if (card._firstCardScriptable._isEndingEvent)
         {
             upText.text = "";
-            rightText.text = "Go in an other direction";
+            rightText.text = "Go in another direction";
             leftText.text = "Continue this way";
         }
 
@@ -131,6 +137,7 @@ public class SwipeScript : MonoBehaviour
 
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
+                    img.SetActive(false);
                     touched = false;
                     if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
                     {
@@ -138,6 +145,7 @@ public class SwipeScript : MonoBehaviour
                     }
                     else
                     {
+                        originalPosPlus = (originalPos- (Vector2)transform.position).normalized;
                         reRotate = true;
                     }
                    
@@ -156,6 +164,7 @@ public class SwipeScript : MonoBehaviour
         {
            
             img.SetActive(false);
+          
             fade -= Time.deltaTime*2;
 
             if(fade<=0f)
@@ -177,10 +186,10 @@ public class SwipeScript : MonoBehaviour
                 }
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
-                fade = 1f;
-               
-
                 disolve = false;
+                undisolve = true;
+
+
             }
 
             material.SetFloat("_Fade", fade);
@@ -188,13 +197,38 @@ public class SwipeScript : MonoBehaviour
         else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 2f||Vector2.Distance(transform.position,originalPos)>0.05)
+            if (Vector3.Distance(transform.eulerAngles, to) > 2f||(Vector2.Distance(transform.position,originalPos)>0.05||!smooth))
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-                transform.position = Vector2.MoveTowards(transform.position, originalPos,10*Time.deltaTime);
-                
-                if((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
+               if(offSetsmooth>0.05f)
+                {
+                    if (step1)
+                    {
+                        if (!smooth)
+                            smooth = Vector2.Distance(transform.position, originalPos) >= offSetsmooth;
+                    }
+                    else
+                    {
+
+                        step1 = Vector2.Distance(transform.position, originalPos) <= offSetsmooth - 0.05f;
+
+                    }
+
+                    if (!smooth)
+                        transform.position += (Vector3)originalPosPlus * 10 * Time.deltaTime;
+                    else
+                        transform.position = Vector2.MoveTowards(transform.position, originalPos, 5 * Time.deltaTime);
+                }
+               else
+                {
+                    smooth = true;
+                    transform.position = Vector2.MoveTowards(transform.position, originalPos, 10 * Time.deltaTime);
+                }
+               
+
+
+                if ((transform.eulerAngles.z-180)/Mathf.Abs((transform.eulerAngles.z - 180))>=0)
                 {
                     transform.Rotate(0, 0, Time.deltaTime * rotateSpeed*40);
                 }
@@ -210,7 +244,22 @@ public class SwipeScript : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
                 reRotate = false;
+                smooth = false;
+                step1 = false;
             }
+        }
+        else if(undisolve)
+        {
+            if (fade >= 1f)
+            {
+                fade = 1f;
+                undisolve = false;
+            }
+            else
+            {
+                fade += Time.deltaTime * 3;
+            }
+            material.SetFloat("_Fade", fade);
         }
     }
   

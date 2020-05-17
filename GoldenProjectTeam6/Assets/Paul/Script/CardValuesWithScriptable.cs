@@ -8,8 +8,9 @@ using UnityEngine.SceneManagement;
 public class CardValuesWithScriptable : MonoBehaviour
 {
 
-    [Header("Succes")]
+  
     private SuccesManager succesManager;
+    
     [Header("First Card To Play")]
     public CardScriptableObject _firstCardScriptable;
     [Header("Value to change")]
@@ -308,7 +309,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     {
                         succesManager.allTheSucces[i].locked = false;
                         //saveSucces
-                        succesManager.SuccesAnim();
+                        succesManager.SuccesAnim(_successToUnlock.ToString());
                         break;
                     }
                 }
@@ -319,6 +320,6 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Death()
     {
         SceneManager.LoadScene("BaptisteTestArbo");
-        Debug.Log("Death go to achievement");
+       
     }
 }

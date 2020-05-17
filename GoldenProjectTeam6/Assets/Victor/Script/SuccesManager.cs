@@ -5,9 +5,12 @@ using TMPro;
 
 public class SuccesManager : MonoBehaviour
 {
-    public List<Succes> allTheSucces = new List<Succes>();
-    public List<Succes> easiestSucces = new List<Succes>();
+    [Header("SuccesManagement")]
     public List<bool> lockInfo = new List<bool>();
+    public List<Succes> allTheSucces = new List<Succes>();
+    private int lvl = 0;
+    [Header("EASY succes")]
+    public List<Succes> easiestSucces = new List<Succes>();
     public TextMeshProUGUI titre1;
     public TextMeshProUGUI des1;
     public TextMeshProUGUI titre2;
@@ -15,7 +18,10 @@ public class SuccesManager : MonoBehaviour
     public TextMeshProUGUI titre3;
     public TextMeshProUGUI des3;
 
-    public int lvl=0;
+    [Header("SuccesUnlockAnim")]
+    public Animator succesAnim;
+    public TextMeshProUGUI sucesName;
+    
     void Start()
     {
         FindObjectOfType<SaveAndLoad>().success = lockInfo;
@@ -138,8 +144,10 @@ public class SuccesManager : MonoBehaviour
         
     }
 
-    public void SuccesAnim()
+    public void SuccesAnim(string succesname)
     {
+        succesAnim.SetTrigger("Unlock");
+        sucesName.text = succesname;
         for (int i = 0; i < allTheSucces.Count; i++)
         {
             lockInfo[i] = allTheSucces[i].locked;
