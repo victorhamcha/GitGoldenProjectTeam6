@@ -36,17 +36,17 @@ public class Yslide : MonoBehaviour
             toucMax = false;
             toucMin = false;
         }
-        if (panel.j == 1)
+        if (panel.page == 1)
         {
             lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
         }
-        if (panel.j == 2)
+        if (panel.page == 2)
         {
             lastSucces = panel.unlockSucces[panel.lockSucces.Count];
             
         }
         posY = transform.position.y;
-        if(panel.j!=0)
+        if(panel.page!=0)
         {
             if (Input.touchCount > 0)
             {
