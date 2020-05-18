@@ -24,7 +24,7 @@ public class OngletArboManager : MonoBehaviour
         {
             _positionListOnglet.Add(positionListChild);
         }
-        _actualdId = 0;
+        _actualdId = 1;
         Actualise(_actualdId);
     }
     public void Actualise(int childID)
@@ -42,19 +42,11 @@ public class OngletArboManager : MonoBehaviour
 
             }
         }
-
-        if(_actualdId > 0)
-        {
             _cam.transform.position = _positionListOnglet[_actualdId-1].transform.position;
             _cam.transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, - 10);
             float zoomInList = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._zoomChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
             ActualiseCamera(zoomInList);
-        }
-        else
-        {
-            _cam.transform.position = _cameraAtStart;
-            _cam.orthographicSize = _zoomGeneral;
-        }
+
         #region Active Or Desactive LeftRight Button
         if (_actualdId == 0)
         {
