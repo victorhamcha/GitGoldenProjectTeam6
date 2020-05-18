@@ -18,7 +18,7 @@ public class GPSAchievements : MonoBehaviour
     public void ShowAchievemnts()
     {
         Social.ShowAchievementsUI();
-        Debug.Log("Show Succes");
+       
     }
 
     public void IncrementSucces(string id)
@@ -27,9 +27,9 @@ public class GPSAchievements : MonoBehaviour
         Debug.Log("Increment" + id);
     }
 
-    public void UnlockSucces(string id)
+    public void UnlockSucces()
     {
-        Social.ReportProgress(id, 100f, null);
-        Debug.Log("Unlock" + id);
+        Social.ReportProgress(GPGSIds.achievement_magicdeath, 100f, null);
+        Debug.Log("Unlock");
     }
 }
