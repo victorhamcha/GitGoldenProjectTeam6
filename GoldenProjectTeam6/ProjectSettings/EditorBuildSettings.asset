@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScenesBuild/MenuBuild.unity
     guid: db1239b37d302e54ebc78b9020f4bacf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Proto/ProtoMenu.unity
     guid: 3118c702efae4624c8a869019f0998cb
+  - enabled: 1
+    path: Assets/Scenes/Victor/MenuModifVic.unity
+    guid: 481b27b1037265d4093f8cbf0f7e0c71
   - enabled: 1
     path: Assets/Scenes/ScenesBuild/GeneralScene.unity
     guid: a95f11a6fcf335047be329240d1b530c
