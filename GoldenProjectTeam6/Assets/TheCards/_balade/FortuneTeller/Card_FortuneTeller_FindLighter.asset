@@ -16,6 +16,7 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: 5a21a8dbb8dc58542aac0c73ec543acd, type: 3}
   _description: You continue on your way and notice that there is a lighter on the
     ground.
+  _cardID: 1
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

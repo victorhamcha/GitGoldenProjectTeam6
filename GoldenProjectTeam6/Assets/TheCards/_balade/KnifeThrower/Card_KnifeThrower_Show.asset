@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "\"Ooooh, all right, come here. \nLie down on that wheel... let me
     tie you up...\" \nYou're strapped vertically on a wheel that slowly spins. \nThe
     pitcher sharpens his knives before throwing them while drinking."
+  _cardID: 11
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

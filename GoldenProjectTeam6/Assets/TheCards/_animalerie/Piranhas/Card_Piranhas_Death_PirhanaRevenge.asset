@@ -23,6 +23,7 @@ MonoBehaviour:
 
     You
     feel your limbs tear and die in unimaginable pain.'
+  _cardID: 107
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

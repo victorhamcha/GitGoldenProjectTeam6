@@ -21,6 +21,7 @@ MonoBehaviour:
     petanque ball and fall back on your buttocks again. \nAt the same time, a plank
     from the perforated ceiling falls on you....\nYou die with your head squashed
     and your asshole punctured."
+  _cardID: 6
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

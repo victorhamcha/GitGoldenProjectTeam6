@@ -22,6 +22,7 @@ MonoBehaviour:
 
 
     The lion generously offers you a [dead mouse].'
+  _cardID: 117
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -9,12 +9,14 @@ public class SaveAndLoad : MonoBehaviour
     public List<string> unlockSinceLastTime;
     public List<bool> saveOptions;
     public string firstCard;
+    public List<bool> success;
 
 
     public ContainAllObjectTree tree;
     public GameManager manage;
     public PauseMenu option;
     private CardValuesWithScriptable card;
+    private SuccesManager succes;
 
     void Start()
     {
@@ -23,11 +25,12 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
         saveOptions = FindObjectOfType<PauseMenu>().options;
         card = FindObjectOfType<CardValuesWithScriptable>();
+        succes = FindObjectOfType<SuccesManager>();
     }
 
     public void SaveCards()
     {
-        SaveSystem.SaveCards(card);
+        SaveSystem.SaveCards(card, succes);
     }
 
     public void SavePlayer()
@@ -48,16 +51,11 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log(data.firstCardData);
         }
 
-        //foreach (CardScriptableObject cvws in FindObjectsOfType<CardScriptableObject>())
-        //{
-        //    if (cvws.name == data.firstCardData)
-        //    {
-        //        card._firstCardScriptable = cvws;
-        //        break;
-        //    }
-        //}
+        if (data.allSuccesData != null)
+        {
+            succes.lockInfo = data.allSuccesData;
+        }
 
-        
     }
 
     public void LoadPlayer()

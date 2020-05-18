@@ -20,6 +20,7 @@ MonoBehaviour:
 
     Did she do it on purpose? It doesn''t
     matter, you''re dead.'
+  _cardID: 58
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

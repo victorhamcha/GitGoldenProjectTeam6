@@ -22,6 +22,7 @@ MonoBehaviour:
 
 
     You''d better get out of here now.'
+  _cardID: 116
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: You see a beautiful cannon with confetti inside and next to it in
     a seal. As you get closer, you can choose to add confetti inside, slide inside,
     or light the fuse of the cannon.
+  _cardID: 30
   _cardAlreadyDraw: 0
   _canSlideUp: 1
   _canSlideRight: 1

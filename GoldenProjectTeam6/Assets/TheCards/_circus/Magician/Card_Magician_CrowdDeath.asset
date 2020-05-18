@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: "Right in the face ! \nYou have heated the public ! \nHe throws chairs
     at the magician and starts to climb on the stage ! \nYou're trampled to death
     by the madding crowd..."
+  _cardID: 46
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

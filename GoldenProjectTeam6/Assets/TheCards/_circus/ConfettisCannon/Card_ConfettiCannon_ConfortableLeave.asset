@@ -18,6 +18,7 @@ MonoBehaviour:
     happening...
 
     You''re coming out of the cannon.'
+  _cardID: 32
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

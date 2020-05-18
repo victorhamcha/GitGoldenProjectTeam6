@@ -27,6 +27,7 @@ MonoBehaviour:
 
     You die in indescribable
     suffering.   '
+  _cardID: 108
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

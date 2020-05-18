@@ -21,6 +21,7 @@ MonoBehaviour:
     show, hey.... \nGet the hell out of here now ! Show's over.\nPooof! You disappeared
     without reappearing !\nYou're dead... for sure... Let's say you're dead, well
     done !\n"
+  _cardID: 47
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

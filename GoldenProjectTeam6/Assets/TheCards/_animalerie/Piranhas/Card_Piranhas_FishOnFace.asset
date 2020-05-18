@@ -19,6 +19,7 @@ MonoBehaviour:
 
     You
     go away thinking about the meaning of your life.'
+  _cardID: 105
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -22,6 +22,7 @@ MonoBehaviour:
 
 
     You get a shock and die electrocuted.'
+  _cardID: 26
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

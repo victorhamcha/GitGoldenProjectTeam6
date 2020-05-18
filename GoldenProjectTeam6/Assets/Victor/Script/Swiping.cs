@@ -70,6 +70,7 @@ public class Swiping : MonoBehaviour
                 else
                 {
                     swipeRight = true;
+                    
                 }
             }
             else

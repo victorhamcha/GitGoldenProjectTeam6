@@ -19,6 +19,7 @@ MonoBehaviour:
     BOOM
     ! Confetti fireworks! That was cool! But you''re still in perfect condition...
     too bad.'
+  _cardID: 33
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

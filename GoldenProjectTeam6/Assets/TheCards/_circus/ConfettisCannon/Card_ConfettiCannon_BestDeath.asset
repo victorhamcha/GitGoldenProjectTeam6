@@ -18,6 +18,7 @@ MonoBehaviour:
 
     Your limbs and the rest of your body join the confetti
     in the explosion, what a beautiful death !'
+  _cardID: 38
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

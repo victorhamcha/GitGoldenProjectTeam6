@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CardValuesWithScriptable : MonoBehaviour
 {
+
+  
+    private SuccesManager succesManager;
     
     [Header("First Card To Play")]
     public CardScriptableObject _firstCardScriptable;
@@ -33,12 +37,9 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Start()
     {
+        succesManager = FindObjectOfType<SuccesManager>();
         eventManager = FindObjectOfType<EventManager>();
-        if (FindObjectOfType<SaveAndLoad>().firstCard != null)
-        {
-            //_firstCardScriptable = Resources.Load<CardScriptableObject>("Resources/" + FindObjectOfType<SaveAndLoad>().firstCard + "/.asset");
-            Debug.Log(FindObjectOfType<SaveAndLoad>().firstCard);
-        }
+        
         LoadValueFromScriptableObject();
     }
 
@@ -300,12 +301,25 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         if(_successToUnlock.ToString() != "none")
         {
-
+            for(int i =0; i<succesManager.allTheSucces.Count;i++)
+            {
+                if(succesManager.allTheSucces[i].locked)
+                {
+                    if(succesManager.allTheSucces[i].txtTitre == _successToUnlock.ToString())
+                    {
+                        succesManager.allTheSucces[i].locked = false;
+                        //saveSucces
+                        succesManager.SuccesAnim(_successToUnlock.ToString());
+                        break;
+                    }
+                }
+            }
         }
     }
 
     void Death()
     {
-        Debug.Log("Death go to achievement");
+        SceneManager.LoadScene("BaptisteTestArbo");
+       
     }
 }

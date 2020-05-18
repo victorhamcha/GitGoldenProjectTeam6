@@ -18,6 +18,7 @@ MonoBehaviour:
     \n\nIn his blind madness he impale you with one of his tusks.\n\nYou will die
     with a smile on your face, with a hole in your belly on the elephant's tusk while
     thanking the lion."
+  _cardID: 125
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

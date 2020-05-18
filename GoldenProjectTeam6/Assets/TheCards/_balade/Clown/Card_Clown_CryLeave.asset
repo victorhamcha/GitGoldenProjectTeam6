@@ -26,6 +26,7 @@ MonoBehaviour:
 
 
     "So we''re having a ball, huh?!"'
+  _cardID: 17
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

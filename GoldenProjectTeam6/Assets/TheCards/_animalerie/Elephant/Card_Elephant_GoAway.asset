@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Zoo
   _image: {fileID: 21300000, guid: 03ed31513bc00374ea0154578f74b26d, type: 3}
   _description: "\"Fuck off then ! \nGet out of here! Get out of here !\""
+  _cardID: 121
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
   _description: And the seasoning ?
+  _cardID: 71
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1
@@ -25,9 +26,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000}
+  _isNextCardRight: {fileID: 11400000, guid: 0e32d5181c1f90441ba635db07913f50, type: 2}
   _isSwipingRightDescription: Salt
-  _isNextCardLeft: {fileID: 11400000, guid: 0e32d5181c1f90441ba635db07913f50, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: af97bb74714142a49b7e52c0af830a63, type: 2}
   _isSwipingLeftDescription: Pepper
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

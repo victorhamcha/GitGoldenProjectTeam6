@@ -16,6 +16,7 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: aefb91f31fcefad42a1ebd60bf0eea48, type: 3}
   _description: As you walk through the funfair, you come across the knife-thrower's
     stall. He's drinking whiskey.
+  _cardID: 7
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

@@ -17,6 +17,7 @@ MonoBehaviour:
   _description: 'Wow !
 
     The cannon is filled to the brim, the confetti are overflowing.'
+  _cardID: 31
   _cardAlreadyDraw: 0
   _canSlideUp: 1
   _canSlideRight: 1

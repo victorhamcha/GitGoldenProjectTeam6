@@ -18,6 +18,7 @@ MonoBehaviour:
 
     The guards
     grab you by the arms and throw you off the stage and off the show.  '
+  _cardID: 44
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1

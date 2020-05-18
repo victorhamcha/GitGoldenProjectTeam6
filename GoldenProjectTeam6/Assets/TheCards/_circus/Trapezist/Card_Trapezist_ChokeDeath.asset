@@ -21,6 +21,7 @@ MonoBehaviour:
 
     You''ll
     choke to death... '
+  _cardID: 57
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 0

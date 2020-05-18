@@ -15,6 +15,7 @@ MonoBehaviour:
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 861d7395570caa846af5551ac21ed044, type: 3}
   _description: There's not only snot in this tissue...
+  _cardID: 61
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1
