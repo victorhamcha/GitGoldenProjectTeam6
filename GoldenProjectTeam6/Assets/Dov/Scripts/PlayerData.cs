@@ -9,7 +9,7 @@ public class PlayerData
     public List<string> imageTreeUnlockSinceLastTimeData;
     public List<string> savingDrawCardCardData;
     public List<bool> optionsData;
-
+    public List<string> apparationOrderData;
     
 
 
@@ -20,6 +20,7 @@ public class PlayerData
         imageTreeUnlockSinceLastTimeData = objectTree._imageTreeUnlockSinceLastTime;
 
         savingDrawCardCardData = cardsAlreadyDraw._savingDrawCardCard;
+        apparationOrderData = cardsAlreadyDraw._apparitionOrder;
 
         optionsData = saveOptions.options;
     }

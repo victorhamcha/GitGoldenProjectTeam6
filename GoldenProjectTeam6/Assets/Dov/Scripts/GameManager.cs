@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Toggle _censuredToggle;
     [HideInInspector] public bool _isCensuredMod;
     [HideInInspector] public List<string> _savingDrawCardCard;
+    public List<string> _apparitionOrder;
 
     public bool inGame;
 
@@ -29,6 +30,15 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<SaveAndLoad>().LoadCard();
         }
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
+
+        if (SceneManager.GetActiveScene().name == "BaptisteTestArbo")
+        {
+
+        }
+        else
+        {
+            Debug.Log("Je ne suis pas dans l'arbo");
+        }
 
         if (_savingDrawCardCard.Count < FindObjectOfType<SaveAndLoad>().alreadyDrawCards.Count)
         {

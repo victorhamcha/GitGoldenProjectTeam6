@@ -10,6 +10,7 @@ public class SaveAndLoad : MonoBehaviour
     public List<bool> saveOptions;
     public string firstCard;
     public List<bool> success;
+    public List<string> apparitionOrder;
 
 
     public ContainAllObjectTree tree;
@@ -23,6 +24,7 @@ public class SaveAndLoad : MonoBehaviour
         objectInTree = FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree;
         unlockSinceLastTime = FindObjectOfType<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime;
         alreadyDrawCards = FindObjectOfType<GameManager>()._savingDrawCardCard;
+        apparitionOrder = FindObjectOfType<GameManager>()._apparitionOrder;
         saveOptions = FindObjectOfType<PauseMenu>().options;
         card = FindObjectOfType<CardValuesWithScriptable>();
         succes = FindObjectOfType<SuccesManager>();
@@ -66,6 +68,7 @@ public class SaveAndLoad : MonoBehaviour
         unlockSinceLastTime = data.imageTreeUnlockSinceLastTimeData;
 
         alreadyDrawCards = data.savingDrawCardCardData;
+        apparitionOrder = data.apparationOrderData;
 
         saveOptions = data.optionsData;
 

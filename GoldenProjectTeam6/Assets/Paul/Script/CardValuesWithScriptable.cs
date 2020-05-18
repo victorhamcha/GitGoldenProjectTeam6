@@ -76,6 +76,11 @@ public class CardValuesWithScriptable : MonoBehaviour
                 FindObjectOfType<SaveAndLoad>().SavePlayer();
             }
 
+            if (!FindObjectOfType<GameManager>()._apparitionOrder.Contains(_firstCardScriptable._title))
+            {
+                FindObjectOfType<GameManager>()._apparitionOrder.Add(_firstCardScriptable._title);
+            }
+
             _isADeadCard = _firstCardScriptable._isDeadCard;
 
             _enumPlace = _firstCardScriptable._enumPlaceString;
