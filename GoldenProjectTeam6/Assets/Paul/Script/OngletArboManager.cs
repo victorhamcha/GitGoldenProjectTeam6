@@ -13,8 +13,13 @@ public class OngletArboManager : MonoBehaviour
 
     public GameObject _goRight, _goLeft;
 
+    float _zoomGeneral;
+    Vector3 _cameraAtStart;
+
     void Start()
     {
+        _zoomGeneral = _cam.orthographicSize;
+        _cameraAtStart = _cam.transform.position;
         foreach (Transform positionListChild in _positionListManager.transform)
         {
             _positionListOnglet.Add(positionListChild);
@@ -47,7 +52,8 @@ public class OngletArboManager : MonoBehaviour
         }
         else
         {
-            _cam.transform.position = new Vector3(0, 0, -10);
+            _cam.transform.position = _cameraAtStart;
+            _cam.orthographicSize = _zoomGeneral;
         }
         #region Active Or Desactive LeftRight Button
         if (_actualdId == 0)

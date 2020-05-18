@@ -39,7 +39,7 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _textSlideLeft;
     [HideInInspector] public TextMeshProUGUI _textSlideUp;
     [HideInInspector] public GameObject _cardZoom;
-     public int _ordreList = 1;
+    [HideInInspector] public int _ordreList = 1;
     float _ordreInListTempo = 0.3f;
 
      bool _alreadyInTree;
@@ -183,7 +183,7 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
-            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.red, Color.blue);
+            //_lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.red, Color.blue);
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             if (i == 0)
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
