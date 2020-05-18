@@ -27,9 +27,9 @@ public class GPSAchievements : MonoBehaviour
         Debug.Log("Increment" + id);
     }
 
-    public void UnlockSucces()
+    public static void UnlockSucces(string id)
     {
-        Social.ReportProgress(GPGSIds.achievement_magicdeath, 100f, null);
+        Social.ReportProgress(id, 100f, null);
         Debug.Log("Unlock");
     }
 }

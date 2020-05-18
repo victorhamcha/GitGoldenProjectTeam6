@@ -24,7 +24,20 @@
 
 public static class GPGSIds
 {
+        public const string achievement_alcohol_is_dangerous_to_health = "CgkI2pWb-7ofEAIQBQ"; // <GPGSID>
+        public const string achievement_we_dont_insult_mothers = "CgkI2pWb-7ofEAIQCg"; // <GPGSID>
+        public const string achievement_hitman = "CgkI2pWb-7ofEAIQAw"; // <GPGSID>
+        public const string achievement_speedrun = "CgkI2pWb-7ofEAIQDg"; // <GPGSID>
+        public const string achievement_insulting = "CgkI2pWb-7ofEAIQBg"; // <GPGSID>
+        public const string achievement_routine_of_the_restaurant = "CgkI2pWb-7ofEAIQCQ"; // <GPGSID>
+        public const string achievement_patience = "CgkI2pWb-7ofEAIQDQ"; // <GPGSID>
+        public const string achievement_promotion = "CgkI2pWb-7ofEAIQBA"; // <GPGSID>
+        public const string achievement_none_respect = "CgkI2pWb-7ofEAIQBw"; // <GPGSID>
+        public const string achievement_tourist = "CgkI2pWb-7ofEAIQDA"; // <GPGSID>
+        public const string achievement_bastard = "CgkI2pWb-7ofEAIQCA"; // <GPGSID>
+        public const string achievement_poison_of_patience = "CgkI2pWb-7ofEAIQCw"; // <GPGSID>
         public const string achievement_magicdeath = "CgkI2pWb-7ofEAIQAQ"; // <GPGSID>
+        public const string achievement_first = "CgkI2pWb-7ofEAIQAg"; // <GPGSID>
 
 }
 

@@ -8,13 +8,13 @@ using TMPro;
 public class Succes : MonoBehaviour
 {
 
-    public int id;
+    public string id;
     //DIffiuclité
     public enum difficulté { TrèsFacile, Facile,Moyen,Difficile, TrèsDifficile };
     public difficulté _difficulté;
-   
+    public EnumSuccess._enumSuccess enumSucces;
     public bool locked=true;
-       
+   
     //TXT
     public string txtTitre;
     public string txtDescription;
@@ -39,7 +39,7 @@ public class Succes : MonoBehaviour
             //text
             description = GetComponentsInChildren<TextMeshProUGUI>()[1];
             titre = GetComponentsInChildren<TextMeshProUGUI>()[0];
-            description.text = txtDescription;
+           
             titre.text = txtTitre;
             ////////////////////////////////////////////////////////////
             img = GetComponentInChildren<Image>();
@@ -49,11 +49,12 @@ public class Succes : MonoBehaviour
             if (!locked)
             {
                 manager.unlockSucces.Add(this);
-               
+                description.text = txtDescription;
             }
             else
             {
                 manager.lockSucces.Add(this);
+                description.text = "???????????????";
             }
         }
       

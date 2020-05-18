@@ -112,6 +112,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
+                succesManager.UnlockSuccess(succesManager.allTheSucces[0].enumSucces);
             }
         }
     }
@@ -131,7 +132,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 }
                 if (_firstCardScriptable._enumSuccessLeft.ToString() != "none")
                 {
-                    UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
+                  succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
                 }
             }
           
@@ -181,7 +182,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 }
                 if (_firstCardScriptable._enumSuccessRight.ToString() != "none")
                 {
-                    UnlockSuccess(_firstCardScriptable._enumSuccessRight);
+                    succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessRight);
                 }
             }
 
@@ -256,7 +257,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     }
                     if (_firstCardScriptable._enumSuccessUp.ToString() != "none")
                     {
-                        UnlockSuccess(_firstCardScriptable._enumSuccessUp);
+                        succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
                     }
                 }
 
@@ -273,7 +274,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                 {
                     if (_firstCardScriptable._enumSuccessDeath.ToString() != "none")
                     {
-                        UnlockSuccess(_firstCardScriptable._enumSuccessUp);
+                        succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
                     }
                     Death();
                 }
@@ -302,25 +303,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
     }
 
-    void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
-    {
-        if(_successToUnlock.ToString() != "none")
-        {
-            for(int i =0; i<succesManager.allTheSucces.Count;i++)
-            {
-                if(succesManager.allTheSucces[i].locked)
-                {
-                    if(succesManager.allTheSucces[i].txtTitre == _successToUnlock.ToString())
-                    {
-                        succesManager.allTheSucces[i].locked = false;
-                        //saveSucces
-                        succesManager.SuccesAnim(_successToUnlock.ToString());
-                        break;
-                    }
-                }
-            }
-        }
-    }
+   
 
     void Death()
     {
