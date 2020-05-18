@@ -39,6 +39,8 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _textSlideLeft;
     [HideInInspector] public TextMeshProUGUI _textSlideUp;
     [HideInInspector] public GameObject _cardZoom;
+     public int _ordreList = 1;
+    float _ordreInListTempo = 0.3f;
 
      bool _alreadyInTree;
      bool _alreadyDraw;
@@ -252,7 +254,7 @@ public class ImageArborescence : MonoBehaviour
         _titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
         _imageBackground.enabled = false;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(_ordreInListTempo * _ordreList);
         _image.material.SetFloat("_Dissolve", 0);
         _imageBackground.material.SetFloat("_Dissolve", 0);
         _titleText.material.SetFloat("_Dissolve", 0);
