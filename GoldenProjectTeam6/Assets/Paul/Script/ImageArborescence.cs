@@ -34,7 +34,7 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public Sprite _lineRendererTexture;
 
     [HideInInspector] public Image _imageZoomCard;
-    //[HideInInspector] public TextMeshProUGUI _titleZoomCard;
+    [HideInInspector] public TextMeshProUGUI _titleZoomCard;
     [HideInInspector] public TextMeshProUGUI _textSlideRight;
     [HideInInspector] public TextMeshProUGUI _textSlideLeft;
     [HideInInspector] public TextMeshProUGUI _textSlideUp;
@@ -183,7 +183,7 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
-            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.white, Color.gray);
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             if (i == 0)
             {
@@ -284,6 +284,7 @@ public class ImageArborescence : MonoBehaviour
         _imageBackground.enabled = true;
         //_title.enabled = true;
         //_title.gameObject.SetActive(true);
+        DragCamHere();
         DrawLineAuto();
         ChangeLineMaterial();
     }
@@ -293,6 +294,23 @@ public class ImageArborescence : MonoBehaviour
         for (int i = 0; i < _lineRendererGO.Count; i++)
         {
             _lineRendererGO[i].GetComponent<LineRenderer>().material = _materialLine;
+        }
+    }
+
+    void DragCamHere()
+    {
+        if (FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart)
+        {
+            FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart = false;
+
+            for (int i = 0; i < FindObjectOfType<OngletArboManager>()._listEvents.Count; i++)
+            {
+                if(FindObjectOfType<OngletArboManager>()._listEvents[i] == _cardID._title)
+                {
+                    Debug.Log(FindObjectOfType<OngletArboManager>()._listEvents[i] + " / " + _cardID._title);
+                    FindObjectOfType<OngletArboManager>().FindOngletToActive(i);
+                }
+            }
         }
     }
 

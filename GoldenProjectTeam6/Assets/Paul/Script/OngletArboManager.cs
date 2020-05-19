@@ -22,8 +22,11 @@ public class OngletArboManager : MonoBehaviour
     float _zoomGeneral;
     Vector3 _cameraAtStart;
 
+    [HideInInspector] public bool _canMoveToPosAtStart;
+
     void Start()
     {
+        _canMoveToPosAtStart = true;
         _zoomGeneral = _cam.orthographicSize;
         _cameraAtStart = _cam.transform.position;
         foreach (Transform positionListChild in _positionListManager.transform)
@@ -128,5 +131,51 @@ public class OngletArboManager : MonoBehaviour
             _addition = 11;
         }
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+    }
+
+    public void FindOngletToActive(int i)
+    {
+        int _soustraction;
+
+        if (i > 11)
+        {
+            _soustraction = 4;
+        }
+        else if(i > 8)
+        {
+            _soustraction = 3;
+        }
+        else if (i>4)
+        {
+            _soustraction = 2;
+        }
+        else
+        {
+            _soustraction = 1;
+        }
+
+        Debug.Log("------------------------------------------------------------------------------------------------- " + _soustraction);
+
+        foreach (Transform child in transform)
+        {
+            if (_soustraction == child.GetComponent<OngletArbo>()._id)
+            {
+                child.GetComponent<Button>().onClick.Invoke();
+            }
+        }
+
+        #region RegardeQuelEstActualPos
+        if(i == 13 || i == 10 || i== 7 || i == 3)
+            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+        else  if (i == 12 || i == 9 || i == 6 || i == 2)
+            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+        else if (i == 11 || i == 8 || i == 5 || i == 1)
+            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+        else
+            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
+
+        #endregion
+
+
     }
 }
