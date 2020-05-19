@@ -44,7 +44,7 @@ public class OngletArboManager : MonoBehaviour
         _actualdId = childID;
         foreach (Transform child in transform)
         {
-            if(_actualdId == child.GetComponent<OngletArbo>()._id)
+            if (_actualdId == child.GetComponent<OngletArbo>()._id)
             {
                 child.GetComponent<Image>().enabled = false;
             }
@@ -156,6 +156,8 @@ public class OngletArboManager : MonoBehaviour
             _soustraction = 1;
         }
 
+        Debug.Log("soust = " + _soustraction);
+
         foreach (Transform child in transform)
         {
             if (_soustraction == child.GetComponent<OngletArbo>()._id)
@@ -165,12 +167,12 @@ public class OngletArboManager : MonoBehaviour
         }
 
         #region RegardeQuelEstActualPos
-        if(i == 13 || i == 10 || i== 7 || i == 3)
-            _positionListOnglet[_soustraction -1].GetComponent<PositionChildArbo>()._actualPos = 2;
-        else  if (i == 12 || i == 9 || i == 6 || i == 2)
+        if (i == 13 || i == 10 || i == 7 || i == 3)
+            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+        else if (i == 12 || i == 9 || i == 6 || i == 2)
             _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
         else if (i == 11 || i == 8 || i == 5 || i == 1)
-            _positionListOnglet[_soustraction -1 ].GetComponent<PositionChildArbo>()._actualPos = 0;
+            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
         else
             _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
 
