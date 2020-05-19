@@ -34,25 +34,12 @@ public class ContratsPanel : MonoBehaviour
     public Color[] colorLvl = new Color[5];
     private void Awake()
     {
-        StartCoroutine(waitSucces());
+        
     }
 
     void Start()
     {
-        //parameters
-        int succesCount = lockSucces.Count + unlockSucces.Count;
-        progress = unlockSucces.Count * 100 / succesCount;
-        lvl = progress / 20;
-        int progressLVL = (((progress - lvl * 20)*100)/20);
-        
-        //bar UI
-        bar.localScale = new Vector3((progressLVL / 100f)*barBG.localScale.x,barBG.localScale.y,barBG.localScale.z);
-        prctBar.text = progressLVL.ToString()+"%";
-        bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
-        //character UI
-        statusTMP.text = "status : " + statuttxt[lvl];
-        imgCharacter.sprite = imgLvl[lvl];
-
+        StartCoroutine(waitSucces());
     }
 
     // Update is called once per frame
@@ -117,7 +104,7 @@ public class ContratsPanel : MonoBehaviour
 
     IEnumerator waitSucces()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.015f);
         unlockSucces.Reverse();
         lockSucces.Reverse();
         for (int i = 0; i < unlockSucces.Count; i++)
@@ -130,5 +117,20 @@ public class ContratsPanel : MonoBehaviour
             lockSucces[i].transform.SetParent(locked);
             lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+ 475 - space * (i));
         }
+
+        //parameters
+        int succesCount = lockSucces.Count + unlockSucces.Count;
+        progress = unlockSucces.Count * 100 / succesCount;
+        lvl = progress / 20;
+        int progressLVL = (((progress - lvl * 20) * 100) / 20);
+
+        //bar UI
+        bar.localScale = new Vector3((progressLVL / 100f) * barBG.localScale.x, barBG.localScale.y, barBG.localScale.z);
+        prctBar.text = progressLVL.ToString() + "%";
+        bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
+        //character UI
+        statusTMP.text = "status : " + statuttxt[lvl];
+        imgCharacter.sprite = imgLvl[lvl];
+
     }
 }

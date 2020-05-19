@@ -30,37 +30,48 @@ public class Succes : MonoBehaviour
     private void Awake()
     {
         
-        if(SceneManager.GetActiveScene().name== "GeneralScene")
+     
+    
+      
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "GeneralScene")
         {
             inGame = true;
         }
-        if(!inGame)
+        if (!inGame)
         {
             //text
             description = GetComponentsInChildren<TextMeshProUGUI>()[1];
             titre = GetComponentsInChildren<TextMeshProUGUI>()[0];
-           
+
             titre.text = txtTitre;
             ////////////////////////////////////////////////////////////
             img = GetComponentInChildren<Image>();
-            
+
 
             manager = GetComponentInParent<ContratsPanel>();
-            if (!locked)
-            {
-                manager.unlockSucces.Add(this);
-                description.text = txtDescription;
-            }
-            else
-            {
-                manager.lockSucces.Add(this);
-                description.text = "???????????????";
-            }
+            StartCoroutine(waitForLoading());
         }
-      
     }
     private void Update()
     {
       
+    }
+
+    IEnumerator waitForLoading()
+    {
+        yield return new WaitForSeconds(0.01f);
+        if (!locked)
+        {
+            manager.unlockSucces.Add(this);
+            description.text = txtDescription;
+        }
+        else
+        {
+            manager.lockSucces.Add(this);
+            description.text = "???????????????";
+        }
     }
 }

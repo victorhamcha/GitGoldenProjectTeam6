@@ -7,7 +7,7 @@ using TMPro;
 public class SuccesManager : MonoBehaviour
 {
     [Header("SuccesManagement")]
-    [HideInInspector] public List<bool> lockInfo = new List<bool>();
+    public List<bool> lockInfo = new List<bool>();
     public List<Succes> allTheSucces = new List<Succes>();
     private int lvl = 0;
     [Header("EASY succes")]
