@@ -923,8 +923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 261258944}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 420519519}
-  _titleText: {fileID: 1434859139}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -938,7 +936,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -1839,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000013828}
+  m_AnchoredPosition: {x: -4.3046875, y: -14.601074}
   m_SizeDelta: {x: 115.45, y: 115.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23715248
@@ -2136,7 +2133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5734.7466, y: -7094.52}
+  m_AnchoredPosition: {x: 5734.7466, y: -6814.3096}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30197159
@@ -2153,8 +2150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 682012336}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1400538742}
-  _titleText: {fileID: 881508217}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -2168,7 +2163,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -3606,6 +3600,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 464971271}
+  - {fileID: 1491549168}
   - {fileID: 662079837}
   - {fileID: 1678832783}
   - {fileID: 1484927647}
@@ -4170,7 +4165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7624.462, y: -6277.0073}
+  m_AnchoredPosition: {x: 7624.462, y: -5996.797}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73114186
@@ -4187,8 +4182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 50052366}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1916855511}
-  _titleText: {fileID: 655387793}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -4202,7 +4195,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -5340,7 +5332,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -433.58884, y: 873.37506}
-  m_SizeDelta: {x: 270, y: 100}
+  m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88464020
 MonoBehaviour:
@@ -7394,8 +7386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 212978321}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 222928473}
-  _titleText: {fileID: 646910386}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -7409,7 +7399,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -7651,8 +7640,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1393715741}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2052904634}
-  _titleText: {fileID: 1729279612}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -7666,7 +7653,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -10646,7 +10632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8808.879, y: -6288.584}
+  m_AnchoredPosition: {x: 8808.879, y: -6008.3735}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180843985
@@ -10663,8 +10649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1018549077}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1724384818}
-  _titleText: {fileID: 601253550}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -10678,7 +10662,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -11020,7 +11003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6928.95, y: -5898.5283}
+  m_AnchoredPosition: {x: 6928.95, y: -5618.318}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182029748
@@ -11037,8 +11020,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1767354307}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1399288408}
-  _titleText: {fileID: 293027523}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -11052,7 +11033,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -12437,8 +12417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 225662380}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 369133704}
-  _titleText: {fileID: 224188152}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -12452,7 +12430,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -12720,8 +12697,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1083149704}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1169863839}
-  _titleText: {fileID: 1466610484}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -12735,7 +12710,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -13993,6 +13967,93 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &262489759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262489760}
+  - component: {fileID: 262489763}
+  - component: {fileID: 262489762}
+  - component: {fileID: 262489761}
+  m_Layer: 5
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &262489760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262489759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 938254281}
+  m_Father: {fileID: 923078001}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.24996948, y: 374.3}
+  m_SizeDelta: {x: -0.50012, y: -1174.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &262489761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &262489762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &262489763
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262489759}
+  m_CullTransparentMesh: 0
 --- !u!1 &270105106
 GameObject:
   m_ObjectHideFlags: 0
@@ -14666,8 +14727,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1251074880}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1199623246}
-  _titleText: {fileID: 1268185045}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -14681,7 +14740,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -15155,8 +15213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 359756947}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 488044304}
-  _titleText: {fileID: 193537272}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -15170,7 +15226,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -16227,8 +16282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 384893194}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1589671228}
-  _titleText: {fileID: 1332006651}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -16242,7 +16295,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -16355,8 +16407,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 153727919}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 334933810}
-  _titleText: {fileID: 1246124076}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -16370,7 +16420,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -16455,7 +16504,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662079837}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16605,7 +16654,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662079837}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16788,8 +16837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1173795682}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1015562448}
-  _titleText: {fileID: 1926708880}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -16803,7 +16850,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -17462,8 +17508,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1346310981}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1519045081}
-  _titleText: {fileID: 478629059}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -17477,7 +17521,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -17842,6 +17885,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 99}
   m_SizeDelta: {x: 340.4, y: 85.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &342888761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342888762}
+  - component: {fileID: 342888764}
+  - component: {fileID: 342888763}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [Nightmare Before Christmas SDF Material + LiberationSans
+    SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &342888762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342888761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 509674767}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &342888763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342888761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 342888764}
+  m_TextComponent: {fileID: 509674768}
+  m_materialReferenceIndex: 1
+--- !u!222 &342888764
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342888761}
+  m_CullTransparentMesh: 0
 --- !u!1 &348737522
 GameObject:
   m_ObjectHideFlags: 0
@@ -18339,8 +18455,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1820126692}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1197430841}
-  _titleText: {fileID: 1325265333}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -18354,7 +18468,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -18450,7 +18563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6548.696, y: -7920.9414}
+  m_AnchoredPosition: {x: 6548.696, y: -7640.7314}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356074040
@@ -18467,8 +18580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1484892921}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 542636325}
-  _titleText: {fileID: 207879491}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -18482,7 +18593,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -18595,8 +18705,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 950750643}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1085078799}
-  _titleText: {fileID: 598630760}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -18610,7 +18718,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -19825,8 +19932,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1470577349}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 589279777}
-  _titleText: {fileID: 427882482}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -19840,7 +19945,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -20284,8 +20388,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1460999329}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 552988223}
-  _titleText: {fileID: 484733067}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -20299,7 +20401,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -21186,7 +21287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8262.093, y: -8036.709}
+  m_AnchoredPosition: {x: 8262.093, y: -7756.4985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406408260
@@ -21203,8 +21304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1200510793}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1470696624}
-  _titleText: {fileID: 321629963}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -21218,7 +21317,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -21453,7 +21551,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662079837}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21849,8 +21947,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2092634799}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1246857197}
-  _titleText: {fileID: 612903669}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -21864,7 +21960,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -22411,8 +22506,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 960872044}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 459334229}
-  _titleText: {fileID: 668419162}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -22426,7 +22519,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -22921,8 +23013,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 698940272}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1111626695}
-  _titleText: {fileID: 77400431}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -22936,7 +23026,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -24292,8 +24381,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1901626030}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1962821028}
-  _titleText: {fileID: 1577669848}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -24307,7 +24394,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -25284,8 +25370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1162920685}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1167337012}
-  _titleText: {fileID: 2137500033}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -25299,7 +25383,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -26334,8 +26417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 876585181}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1989234938}
-  _titleText: {fileID: 1102491334}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -26349,7 +26430,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -26965,8 +27045,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1249231053}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2080389998}
-  _titleText: {fileID: 1095736952}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -26980,7 +27058,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -27136,7 +27213,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 342888762}
   m_Father: {fileID: 1563071388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27165,8 +27243,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: <
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
+  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -27239,14 +27318,14 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 342888763}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -29332,8 +29411,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1593965527}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1552597370}
-  _titleText: {fileID: 1943345104}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -29347,7 +29424,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -30204,8 +30280,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1075419368}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 207530428}
-  _titleText: {fileID: 1203888012}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -30219,7 +30293,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -32223,7 +32296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6600.346, y: -5919.01}
+  m_AnchoredPosition: {x: 6600.346, y: -5638.7993}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602648651
@@ -32240,8 +32313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 618071191}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 529632717}
-  _titleText: {fileID: 1392342793}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -32255,7 +32326,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -33787,8 +33857,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2040402840}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1855652896}
-  _titleText: {fileID: 961703411}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -33802,7 +33870,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -34323,8 +34390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1769428348}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2021685721}
-  _titleText: {fileID: 665047873}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -34338,7 +34403,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -35225,8 +35289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 158698270}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 960985522}
-  _titleText: {fileID: 1078565}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -35240,7 +35302,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -35353,8 +35414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 891612436}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 334836524}
-  _titleText: {fileID: 409878138}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -35368,7 +35427,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -35678,14 +35736,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1491549168}
   - {fileID: 974815800}
   - {fileID: 320271368}
   - {fileID: 321773217}
   - {fileID: 410155611}
   - {fileID: 1489858502}
   m_Father: {fileID: 56229590}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -35900,8 +35957,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 451964537}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 167149618}
-  _titleText: {fileID: 1452829652}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -35915,7 +35970,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -36084,8 +36138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407.03763, y: 905.92114}
-  m_SizeDelta: {x: 270, y: 100}
+  m_AnchoredPosition: {x: 444.9798, y: 877.0068}
+  m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669173023
 MonoBehaviour:
@@ -37809,7 +37863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7009.989, y: -7202.2754}
+  m_AnchoredPosition: {x: 7009.989, y: -6922.0645}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697062773
@@ -37826,8 +37880,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 521407131}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1511118848}
-  _titleText: {fileID: 1678217952}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -37841,7 +37893,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -38208,7 +38259,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
+  m_fontSize: 48.45
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -40381,8 +40432,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 965756918}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1465810716}
-  _titleText: {fileID: 1340495408}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -40396,7 +40445,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -40741,8 +40789,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 588229279}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1060974577}
-  _titleText: {fileID: 1485143450}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -40756,7 +40802,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -41205,8 +41250,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 436579172}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1375524585}
-  _titleText: {fileID: 181713885}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -41220,7 +41263,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -41858,7 +41900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5549.512, y: -6105.1323}
+  m_AnchoredPosition: {x: 5549.512, y: -5824.922}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773437747
@@ -41875,8 +41917,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1637594223}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 910092213}
-  _titleText: {fileID: 1643254160}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -41890,7 +41930,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -42115,7 +42154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7178.2935, y: -5205.689}
+  m_AnchoredPosition: {x: 7178.2935, y: -4925.4785}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779826968
@@ -42132,8 +42171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 88087200}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1707873842}
-  _titleText: {fileID: 919988701}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -42147,7 +42184,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -42333,8 +42369,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1776470821}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1132822051}
-  _titleText: {fileID: 2087113178}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -42348,7 +42382,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -43222,7 +43255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6907.5825, y: -5604.6494}
+  m_AnchoredPosition: {x: 6907.5825, y: -5324.439}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798928026
@@ -43239,8 +43272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 59705563}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1478957386}
-  _titleText: {fileID: 896157541}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -43254,7 +43285,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -43950,8 +43980,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2057361731}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 799056346}
-  _titleText: {fileID: 2025506423}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -43965,7 +43993,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -44302,8 +44329,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1574686590}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 76259729}
-  _titleText: {fileID: 1291327402}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -44317,7 +44342,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -45382,7 +45406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7696.6025, y: -7356.3384}
+  m_AnchoredPosition: {x: 7696.6025, y: -7076.1274}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842204457
@@ -45399,8 +45423,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1190220640}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1346567957}
-  _titleText: {fileID: 105188249}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -45414,7 +45436,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -45832,8 +45853,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1664613217}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1116205432}
-  _titleText: {fileID: 849580649}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -45847,7 +45866,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -46162,8 +46180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 133746650}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1780537066}
-  _titleText: {fileID: 691687845}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -46177,7 +46193,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -47180,8 +47195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1279719464}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 839491104}
-  _titleText: {fileID: 1849220472}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -47195,7 +47208,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -47308,8 +47320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 50921413}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1814819657}
-  _titleText: {fileID: 1072074988}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -47323,7 +47333,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -48065,8 +48074,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 138323579}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 920289643}
-  _titleText: {fileID: 1584432763}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -48080,7 +48087,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -49046,7 +49052,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.28072917, y: 0.28072917, z: 0.28072917}
   m_Children:
-  - {fileID: 938254281}
+  - {fileID: 262489760}
   - {fileID: 477750134}
   - {fileID: 1044436432}
   m_Father: {fileID: 0}
@@ -49115,8 +49121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1889378325}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1302391162}
-  _titleText: {fileID: 1683137397}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -49130,7 +49134,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -49243,8 +49246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 211541755}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 6062895}
-  _titleText: {fileID: 1762885074}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -49258,7 +49259,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -49646,7 +49646,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938254280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -49777,12 +49777,12 @@ RectTransform:
   - {fileID: 73114185}
   - {fileID: 779826967}
   - {fileID: 1410615472}
-  m_Father: {fileID: 923078001}
+  m_Father: {fileID: 262489760}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33, y: -332}
+  m_AnchoredPosition: {x: -32.749542, y: -706.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938254282
@@ -50377,8 +50377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 467283494}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 111413644}
-  _titleText: {fileID: 480589415}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -50392,7 +50390,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -51759,7 +51756,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662079837}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -52420,8 +52417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 22857874}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1299525296}
-  _titleText: {fileID: 1010890429}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -52435,7 +52430,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -52750,7 +52744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7361.754, y: -7547.8057}
+  m_AnchoredPosition: {x: 7361.754, y: -7267.595}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007915453
@@ -52767,8 +52761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1834056923}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1100650283}
-  _titleText: {fileID: 1575957588}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -52782,7 +52774,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -53200,8 +53191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 492419790}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1202943845}
-  _titleText: {fileID: 1538005569}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -53215,7 +53204,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -53363,8 +53351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 749680710}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 315120101}
-  _titleText: {fileID: 1030291913}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -53378,7 +53364,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -54419,8 +54404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1237292979}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 594442150}
-  _titleText: {fileID: 1680047781}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -54434,7 +54417,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -56354,8 +56336,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1443458609}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 127180440}
-  _titleText: {fileID: 179074119}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -56369,7 +56349,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -56525,7 +56504,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1372647168}
   m_Father: {fileID: 1484927647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -56554,8 +56534,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
+  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -56628,14 +56609,14 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1372647169}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -57997,8 +57978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1548393015}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 654216452}
-  _titleText: {fileID: 467879798}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -58012,7 +57991,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -58421,8 +58399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 506961667}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 306524321}
-  _titleText: {fileID: 1071594364}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -58436,7 +58412,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -58842,7 +58817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6142.6143, y: -6660.829}
+  m_AnchoredPosition: {x: 6142.6143, y: -6380.6187}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124003948
@@ -58859,8 +58834,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1314174887}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1394361603}
-  _titleText: {fileID: 554596025}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -58874,7 +58847,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -59641,8 +59613,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2043957834}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 483636403}
-  _titleText: {fileID: 1854694765}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -59656,7 +59626,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -59769,8 +59738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1483322991}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1480116838}
-  _titleText: {fileID: 1052637602}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -59784,7 +59751,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -60399,8 +60365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1072607678}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 96651778}
-  _titleText: {fileID: 1210895747}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -60414,7 +60378,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -60716,7 +60679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6144.387, y: -5937.712}
+  m_AnchoredPosition: {x: 6144.387, y: -5657.5015}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161437504
@@ -60733,8 +60696,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1185453469}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1524770424}
-  _titleText: {fileID: 70801084}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -60748,7 +60709,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -61478,8 +61438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 397091780}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1214041518}
-  _titleText: {fileID: 1504478136}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -61493,7 +61451,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -61606,8 +61563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 858075052}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1344580070}
-  _titleText: {fileID: 1053830308}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -61621,7 +61576,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -61973,8 +61927,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1257146310}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1498331073}
-  _titleText: {fileID: 56125377}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -61988,7 +61940,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -63418,8 +63369,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 694314167}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1286422384}
-  _titleText: {fileID: 2117446073}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -63433,7 +63382,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -64797,8 +64745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 952327037}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 824287534}
-  _titleText: {fileID: 1493599742}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -64812,7 +64758,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -65183,8 +65128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.91936, y: 905.92114}
-  m_SizeDelta: {x: 270, y: 100}
+  m_AnchoredPosition: {x: 231.01488, y: 877.0068}
+  m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219102701
 MonoBehaviour:
@@ -65347,8 +65292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1046669003}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 674914976}
-  _titleText: {fileID: 568043865}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -65362,7 +65305,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -66120,8 +66062,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1264906795}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 880341929}
-  _titleText: {fileID: 754268836}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -66135,7 +66075,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -66304,7 +66243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7741.126, y: -7642.201}
+  m_AnchoredPosition: {x: 7741.126, y: -7361.99}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240979773
@@ -66321,8 +66260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1640496079}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 241480788}
-  _titleText: {fileID: 591273637}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -66336,7 +66273,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -66747,8 +66683,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 756079456}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 270105107}
-  _titleText: {fileID: 426520736}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -66762,7 +66696,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -67309,7 +67242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6076.715, y: -7472.1084}
+  m_AnchoredPosition: {x: 6076.7153, y: -7191.8975}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1252494960
@@ -67326,8 +67259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 82612389}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1150979779}
-  _titleText: {fileID: 937054298}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -67341,7 +67272,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -67656,8 +67586,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 757341667}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 577697672}
-  _titleText: {fileID: 89395278}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -67671,7 +67599,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -67969,7 +67896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6936.9673, y: -6243.166}
+  m_AnchoredPosition: {x: 6936.9673, y: -5962.9556}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264982510
@@ -67986,8 +67913,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 313538552}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 186985636}
-  _titleText: {fileID: 1472000779}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -68001,7 +67926,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -68551,7 +68475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.6085205, y: 3.6420898}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1285777841
@@ -71154,7 +71078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8804.429, y: -6641.236}
+  m_AnchoredPosition: {x: 8804.429, y: -6361.0254}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337550523
@@ -71171,8 +71095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 780533485}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1859586355}
-  _titleText: {fileID: 251692465}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -71186,7 +71108,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -72052,7 +71973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7719.753, y: -8007.3213}
+  m_AnchoredPosition: {x: 7719.753, y: -7727.111}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352623235
@@ -72069,8 +71990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 848296783}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 611055942}
-  _titleText: {fileID: 1043647191}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -72084,7 +72003,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -72331,8 +72249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -133.03767, y: 905.92114}
-  m_SizeDelta: {x: 270, y: 100}
+  m_AnchoredPosition: {x: 12.967571, y: 877.0068}
+  m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358615924
 MonoBehaviour:
@@ -72650,8 +72568,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 670702097}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 559467621}
-  _titleText: {fileID: 816364556}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -72665,7 +72581,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -73003,6 +72918,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368303599}
+  m_CullTransparentMesh: 0
+--- !u!1 &1372647167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372647168}
+  - component: {fileID: 1372647170}
+  - component: {fileID: 1372647169}
+  m_Layer: 0
+  m_Name: TMP SubMeshUI [Nightmare Before Christmas SDF Material + LiberationSans
+    SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1372647168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372647167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1082407070}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1372647169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372647167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1372647170}
+  m_TextComponent: {fileID: 1082407071}
+  m_materialReferenceIndex: 1
+--- !u!222 &1372647170
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372647167}
   m_CullTransparentMesh: 0
 --- !u!1 &1374118458
 GameObject:
@@ -74184,8 +74172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1495299105}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 965609530}
-  _titleText: {fileID: 1988486790}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -74199,7 +74185,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -74450,7 +74435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7241.535, y: -4834.334}
+  m_AnchoredPosition: {x: 7241.535, y: -4554.1235}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410615473
@@ -74467,8 +74452,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2140338575}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1705491783}
-  _titleText: {fileID: 1088892897}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -74482,7 +74465,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -76094,8 +76076,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1537803348}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 469774820}
-  _titleText: {fileID: 1629525360}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -76109,7 +76089,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -78610,11 +78589,11 @@ RectTransform:
   m_Children:
   - {fileID: 1082407070}
   m_Father: {fileID: 56229590}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -840}
+  m_AnchoredPosition: {x: 400, y: -123.912346}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484927648
@@ -78689,8 +78668,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 06051ac72b9e7ab4babb5f5276cdb05e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -78969,7 +78948,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 662079837}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -79119,17 +79098,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491549167}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 662079837}
-  m_RootOrder: 0
+  m_Father: {fileID: 56229590}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 418.99988}
-  m_SizeDelta: {x: 888.8, y: 167.6}
+  m_AnchoredPosition: {x: -0.000026703, y: -151.97272}
+  m_SizeDelta: {x: 700, y: 167.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491549169
 MonoBehaviour:
@@ -79151,8 +79130,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
+  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -80483,8 +80463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1868331815}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 678865073}
-  _titleText: {fileID: 715664974}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -80498,7 +80476,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -81144,8 +81121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1787720695}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1590090277}
-  _titleText: {fileID: 114932451}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -81159,7 +81134,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -81427,8 +81401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 948258919}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1496480769}
-  _titleText: {fileID: 458363494}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -81442,7 +81414,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -81555,8 +81526,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 782912}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 601446764}
-  _titleText: {fileID: 673508217}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -81570,7 +81539,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -82592,7 +82560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1165.7644, y: 6380.534}
+  m_AnchoredPosition: {x: 1146, y: 6555.1245}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531808958
@@ -82609,8 +82577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1284249440}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 34673515}
-  _titleText: {fileID: 966172805}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -82624,7 +82590,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -84423,11 +84388,11 @@ RectTransform:
   m_Children:
   - {fileID: 509674767}
   m_Father: {fileID: 56229590}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: -840}
+  m_AnchoredPosition: {x: -400, y: -123.912224}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563071389
@@ -84502,8 +84467,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 06051ac72b9e7ab4babb5f5276cdb05e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -84940,8 +84905,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1952153016}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1306820928}
-  _titleText: {fileID: 1881486158}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -84955,7 +84918,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -85785,8 +85747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1478763810}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2045616475}
-  _titleText: {fileID: 148282967}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -85800,7 +85760,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -86827,8 +86786,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1310797776}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 103068289}
-  _titleText: {fileID: 415834928}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -86842,7 +86799,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -86969,8 +86925,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401.9947, y: 904.9458}
-  m_SizeDelta: {x: 270, y: 100}
+  m_AnchoredPosition: {x: -213.00436, y: 876.03143}
+  m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605709190
 MonoBehaviour:
@@ -87894,8 +87850,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2074992956}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1178910281}
-  _titleText: {fileID: 198657429}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -87909,7 +87863,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -88606,8 +88559,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 782084769}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1471105909}
-  _titleText: {fileID: 23369405}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -88621,7 +88572,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -89887,8 +89837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1520405337}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1723855965}
-  _titleText: {fileID: 592314080}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -89902,7 +89850,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -90271,7 +90218,7 @@ RectTransform:
   - {fileID: 1219102700}
   - {fileID: 669173022}
   m_Father: {fileID: 56229590}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -90290,12 +90237,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee5725ba29766d49a15f7eab46c5a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actualdId: 0
+  _actualdId: 4
   _cam: {fileID: 1564637229}
   _positionListManager: {fileID: 1044436431}
-  _positionListOnglet: []
+  _positionListOnglet:
+  - {fileID: 1221688620}
+  - {fileID: 2123175182}
+  - {fileID: 808267204}
+  - {fileID: 1561305776}
+  _listEvents:
+  - Elephant
+  - Lion
+  - Piranha
+  - Clown
+  - Fortune Teller
+  - Knife Thrower
+  - Vald
+  - Canon a confetti
+  - Magician
+  - Trapezists
+  - Chicken
+  - Bin
+  - Sucrerie
   _goRight: {fileID: 1484927646}
   _goLeft: {fileID: 1563071387}
+  _text: {fileID: 1491549169}
 --- !u!1 &1679261616
 GameObject:
   m_ObjectHideFlags: 0
@@ -91123,8 +91089,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1965639838}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1435689318}
-  _titleText: {fileID: 515255962}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -91138,7 +91102,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -92714,8 +92677,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1450443652}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 42833756}
-  _titleText: {fileID: 2046670547}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -92729,7 +92690,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -93512,8 +93472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1884409563}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1780551472}
-  _titleText: {fileID: 35328351}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -93527,7 +93485,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -94883,8 +94840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1332632732}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1931813373}
-  _titleText: {fileID: 1701088375}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -94898,7 +94853,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -96052,8 +96006,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1952221830}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1311307776}
-  _titleText: {fileID: 96402658}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -96067,7 +96019,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -96163,7 +96114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8135.6255, y: -6944.019}
+  m_AnchoredPosition: {x: 8135.6255, y: -6663.8086}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808001358
@@ -96180,8 +96131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2063340466}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 968504520}
-  _titleText: {fileID: 307782062}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -96195,7 +96144,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -97139,8 +97087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1103113967}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2136118221}
-  _titleText: {fileID: 905619779}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -97154,7 +97100,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -97340,8 +97285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1196362943}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1691226658}
-  _titleText: {fileID: 1473637867}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -97355,7 +97298,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -97971,8 +97913,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 113797735}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1356664452}
-  _titleText: {fileID: 2112430272}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -97986,7 +97926,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -98563,8 +98502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 279945453}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 177606506}
-  _titleText: {fileID: 1724270950}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -98578,7 +98515,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -98923,8 +98859,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 545610667}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1923550317}
-  _titleText: {fileID: 1442779089}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -98938,7 +98872,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -99051,8 +98984,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 739533286}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 186896625}
-  _titleText: {fileID: 1130328756}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -99066,7 +98997,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -99925,8 +99855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1169734971}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 952195356}
-  _titleText: {fileID: 1533050592}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -99940,7 +99868,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -100728,8 +100655,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1236809630}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1531067697}
-  _titleText: {fileID: 1161058493}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -100743,7 +100668,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -101006,8 +100930,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2058567427}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1611732217}
-  _titleText: {fileID: 1627292200}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -101021,7 +100943,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -101693,8 +101614,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 65882967}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1510658639}
-  _titleText: {fileID: 968292846}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -101708,7 +101627,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -102083,7 +102001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7702.8057, y: -6955.5957}
+  m_AnchoredPosition: {x: 7702.8057, y: -6675.3853}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907018798
@@ -102100,8 +102018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 144692778}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1583495490}
-  _titleText: {fileID: 1971527958}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -102115,7 +102031,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -102383,8 +102298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1228191340}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1061637063}
-  _titleText: {fileID: 1906550565}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -102398,7 +102311,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -102820,8 +102732,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: General
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
+  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -102846,10 +102759,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24
+  m_fontSize: 69.15
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
@@ -106683,8 +106596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1607595695}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1935401411}
-  _titleText: {fileID: 400017447}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -106698,7 +106609,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -107483,8 +107393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 374950855}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 2058048103}
-  _titleText: {fileID: 223746475}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -107498,7 +107406,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -108081,8 +107988,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1380047801}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1298932376}
-  _titleText: {fileID: 645215649}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -108096,7 +108001,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -108657,7 +108561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1052, y: 6010.811}
+  m_AnchoredPosition: {x: 1032.2356, y: 6185.4014}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022596495
@@ -108674,8 +108578,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1836691348}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 707764264}
-  _titleText: {fileID: 2123241925}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -108689,7 +108591,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -108802,8 +108703,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 502352336}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 132151534}
-  _titleText: {fileID: 1092979986}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -108817,7 +108716,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -109003,8 +108901,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2010675706}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 35045059}
-  _titleText: {fileID: 1036538159}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -109018,7 +108914,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -109131,8 +109026,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1426100155}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1869737114}
-  _titleText: {fileID: 1374118459}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -109146,7 +109039,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -109952,7 +109844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8141.808, y: 2461.2485}
+  m_AnchoredPosition: {x: 8272.5625, y: 2660.2485}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042308459
@@ -109969,8 +109861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1858841169}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 68860491}
-  _titleText: {fileID: 739169256}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -109984,7 +109874,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -110243,8 +110132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 506578803}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1336612619}
-  _titleText: {fileID: 598287138}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -110258,7 +110145,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -112164,8 +112050,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1502466975}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 917692141}
-  _titleText: {fileID: 936772733}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -112179,7 +112063,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -113109,8 +112992,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 2137888968}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1074219315}
-  _titleText: {fileID: 303465439}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -113124,7 +113005,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -114361,8 +114241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 1455033201}
   _imageBackground: {fileID: 0}
-  _title: {fileID: 1036089115}
-  _titleText: {fileID: 1525136027}
   _lineRendererGO: []
   _lineRendererShowNext: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
     type: 3}
@@ -114376,7 +114254,6 @@ MonoBehaviour:
   _lineRendererTexture: {fileID: 21300000, guid: 35a9b2f5578daf643a68238bb008ca7b,
     type: 3}
   _imageZoomCard: {fileID: 320271369}
-  _titleZoomCard: {fileID: 1491549169}
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
@@ -114935,7 +114812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.21386719}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2141533010
@@ -115093,3 +114970,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141533010}
   m_CullTransparentMesh: 0
+--- !u!1001 &1568541121874189614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763276, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200169865670763282, guid: 5ed730c3587335240a2ce2afe3865723,
+        type: 3}
+      propertyPath: m_Name
+      value: LineRendererTree
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ed730c3587335240a2ce2afe3865723, type: 3}

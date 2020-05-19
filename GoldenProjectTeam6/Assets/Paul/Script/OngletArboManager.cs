@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OngletArboManager : MonoBehaviour
 {
-    public int _actualdId;
+    [HideInInspector] public int _actualdId;
     [HideInInspector] public Camera _cam;
 
     [HideInInspector] public GameObject _positionListManager;
-    public List <Transform> _positionListOnglet;
+    [HideInInspector] public List <Transform> _positionListOnglet;
 
-    public GameObject _goRight, _goLeft;
+    public List<string> _listEvents;
+
+    [HideInInspector] public GameObject _goRight, _goLeft;
+
+    [HideInInspector] public TextMeshProUGUI _text;
 
     float _zoomGeneral;
     Vector3 _cameraAtStart;
@@ -27,6 +33,7 @@ public class OngletArboManager : MonoBehaviour
         _actualdId = 1;
         Actualise(_actualdId);
     }
+
     public void Actualise(int childID)
     {
         _actualdId = childID;
@@ -39,13 +46,21 @@ public class OngletArboManager : MonoBehaviour
             else
             {
                 child.GetComponent<Image>().enabled = true;
-
             }
         }
-            _cam.transform.position = _positionListOnglet[_actualdId-1].transform.position;
-            _cam.transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, - 10);
+
+        if (_actualdId > 0)
+        {
+            _cam.transform.position = _positionListOnglet[_actualdId - 1].transform.position;
+            _cam.transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, -10);
             float zoomInList = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._zoomChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
             ActualiseCamera(zoomInList);
+        }
+        else
+        {
+            _cam.orthographicSize = _zoomGeneral;
+            _cam.transform.position = _cameraAtStart;
+        }
 
         #region Active Or Desactive LeftRight Button
         if (_actualdId == 0)
@@ -95,5 +110,23 @@ public class OngletArboManager : MonoBehaviour
     {
         _cam.transform.position = new Vector3(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
         _cam.orthographicSize = zoom;
+        int _addition;
+        if (_actualdId == 1)
+        {
+            _addition = 1;
+        }
+        else if(_actualdId == 2)
+        {
+            _addition = 4;
+        }
+        else if (_actualdId == 3)
+        {
+            _addition = 8;
+        }
+        else
+        {
+            _addition = 11;
+        }
+        _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
     }
 }
