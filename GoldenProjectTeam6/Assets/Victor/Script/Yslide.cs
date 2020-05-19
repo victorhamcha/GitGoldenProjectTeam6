@@ -38,14 +38,14 @@ public class Yslide : MonoBehaviour
         }
         if (panel.page == 1)
         {
-            lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
+            if (panel.lockSucces.Count > 0)
+                lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
         }
         if (panel.page == 2)
         {
-            if(panel.unlockSucces.Count>1)
-            lastSucces = panel.unlockSucces[panel.lockSucces.Count];
-            else
-                lastSucces = panel.unlockSucces[0];
+            if(panel.unlockSucces.Count>0)
+            lastSucces = panel.unlockSucces[panel.lockSucces.Count-1];
+         
 
         }
         posY = transform.position.y;

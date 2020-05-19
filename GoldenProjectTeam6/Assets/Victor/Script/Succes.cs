@@ -26,7 +26,7 @@ public class Succes : MonoBehaviour
     private Image img;
    //public Sprite succesIMG;
     //verify scene
-    private bool inGame=false;
+    private bool inMenu=false;
     private void Awake()
     {
         
@@ -36,11 +36,11 @@ public class Succes : MonoBehaviour
     }
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "GeneralScene")
+        if (SceneManager.GetActiveScene().name == "MenuModifVic")
         {
-            inGame = true;
+            inMenu = true;
         }
-        if (!inGame)
+        if (inMenu)
         {
             //text
             description = GetComponentsInChildren<TextMeshProUGUI>()[1];

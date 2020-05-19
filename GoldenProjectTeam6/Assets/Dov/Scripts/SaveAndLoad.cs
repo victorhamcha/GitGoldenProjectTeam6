@@ -36,7 +36,10 @@ public class SaveAndLoad : MonoBehaviour
 
     public void SaveCards()
     {
-        SaveSystem.SaveCards(card, succes);
+        if (manage.inGame)
+        {
+            SaveSystem.SaveCards(card, succes);
+        }
     }
 
     public void SavePlayer()
