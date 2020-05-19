@@ -35,6 +35,8 @@ public class OngletArboManager : MonoBehaviour
         }
         _actualdId = 1;
         Actualise(_actualdId);
+
+        StartCoroutine(DeleteList());
     }
 
     public void Actualise(int childID)
@@ -137,15 +139,15 @@ public class OngletArboManager : MonoBehaviour
     {
         int _soustraction;
 
-        if (i > 11)
+        if (i > 9)
         {
             _soustraction = 4;
         }
-        else if(i > 8)
+        else if(i > 6)
         {
             _soustraction = 3;
         }
-        else if (i>4)
+        else if (i>2)
         {
             _soustraction = 2;
         }
@@ -153,8 +155,6 @@ public class OngletArboManager : MonoBehaviour
         {
             _soustraction = 1;
         }
-
-        Debug.Log("------------------------------------------------------------------------------------------------- " + _soustraction);
 
         foreach (Transform child in transform)
         {
@@ -166,16 +166,24 @@ public class OngletArboManager : MonoBehaviour
 
         #region RegardeQuelEstActualPos
         if(i == 13 || i == 10 || i== 7 || i == 3)
-            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+            _positionListOnglet[_soustraction -1].GetComponent<PositionChildArbo>()._actualPos = 2;
         else  if (i == 12 || i == 9 || i == 6 || i == 2)
-            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
         else if (i == 11 || i == 8 || i == 5 || i == 1)
-            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+            _positionListOnglet[_soustraction -1 ].GetComponent<PositionChildArbo>()._actualPos = 0;
         else
-            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
+            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
 
         #endregion
 
+        GoRight();
 
+
+    }
+
+    IEnumerator DeleteList()
+    {
+        yield return new WaitForSeconds(15);
+        FindObjectOfType<GameManager>()._apparitionOrder.Clear();
     }
 }

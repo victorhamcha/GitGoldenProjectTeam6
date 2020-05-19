@@ -42,11 +42,14 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public int _ordreList = 1;
     float _ordreInListTempo = 0.3f;
 
+    
+    public int _idInList;
+
      bool _alreadyInTree;
      bool _alreadyDraw;
 
 
-    private void Awake()
+    void Awake()
     {
 
         foreach (Transform child in transform)
@@ -267,6 +270,7 @@ public class ImageArborescence : MonoBehaviour
         //_titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
         _imageBackground.enabled = false;
+        DragCamHere();
         yield return new WaitForSeconds(_ordreInListTempo * _ordreList);
         _image.material.SetFloat("_Dissolve", 0);
         _imageBackground.material.SetFloat("_Dissolve", 0);
@@ -284,7 +288,6 @@ public class ImageArborescence : MonoBehaviour
         _imageBackground.enabled = true;
         //_title.enabled = true;
         //_title.gameObject.SetActive(true);
-        DragCamHere();
         DrawLineAuto();
         ChangeLineMaterial();
     }
@@ -302,15 +305,7 @@ public class ImageArborescence : MonoBehaviour
         if (FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart)
         {
             FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart = false;
-
-            for (int i = 0; i < FindObjectOfType<OngletArboManager>()._listEvents.Count; i++)
-            {
-                if(FindObjectOfType<OngletArboManager>()._listEvents[i] == _cardID._title)
-                {
-                    Debug.Log(FindObjectOfType<OngletArboManager>()._listEvents[i] + " / " + _cardID._title);
-                    FindObjectOfType<OngletArboManager>().FindOngletToActive(i);
-                }
-            }
+            FindObjectOfType<OngletArboManager>().FindOngletToActive(_idInList);
         }
     }
 
