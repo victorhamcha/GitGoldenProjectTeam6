@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d912e2374b73764f9128a32431ef075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2100000, guid: 6f71a095f616fa2458f5442b188c6150, type: 2}
+  collector: {fileID: 2100000, guid: 42bff0a5b8dfaff41b3822e8ea8559d6, type: 2}
   rotateSpeed: 30
   rotateMax: 20
   paralaxSpeed: 200
@@ -2058,7 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6f71a095f616fa2458f5442b188c6150, type: 2}
+  m_Material: {fileID: 2100000, guid: 42bff0a5b8dfaff41b3822e8ea8559d6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
