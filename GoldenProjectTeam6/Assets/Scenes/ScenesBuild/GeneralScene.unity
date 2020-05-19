@@ -276,7 +276,6 @@ MonoBehaviour:
   unlockSinceLastTime: []
   saveOptions: 000000
   firstCard: 
-  success: 
   apparitionOrder: []
   tree: {fileID: 1004929819}
   manage: {fileID: 35170268}
@@ -1092,6 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 3
+  enumSucces: 0
   locked: 1
   txtTitre: Yolo
   txtDescription: 
@@ -7096,6 +7096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 2
+  enumSucces: 0
   locked: 1
   txtTitre: Yolo
   txtDescription: 
@@ -8250,6 +8251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 0
+  enumSucces: 0
   locked: 1
   txtTitre: Trop simple
   txtDescription: 
@@ -9832,6 +9834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 4
+  enumSucces: 0
   locked: 1
   txtTitre: Yolo
   txtDescription: 
@@ -10382,6 +10385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 2
+  enumSucces: 0
   locked: 1
   txtTitre: Assez chaud
   txtDescription: 
@@ -11288,6 +11292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   "_difficult\xE9": 1
+  enumSucces: 0
   locked: 1
   txtTitre: C'est ok
   txtDescription: 
