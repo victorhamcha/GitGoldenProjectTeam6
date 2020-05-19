@@ -7,7 +7,7 @@ using TMPro;
 public class SuccesManager : MonoBehaviour
 {
     [Header("SuccesManagement")]
-     public List<bool> lockInfo = new List<bool>();
+    [HideInInspector] public List<bool> lockInfo = new List<bool>();
     public List<Succes> allTheSucces = new List<Succes>();
     private int lvl = 0;
     [Header("EASY succes")]
@@ -27,14 +27,11 @@ public class SuccesManager : MonoBehaviour
     {
         bool inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
-
-        //if (allTheSucces.Count == lockInfo.Count)
-        //{
+        
             for (int i = 0; i < allTheSucces.Count; i++)
             {
                 allTheSucces[i].locked = lockInfo[i];
             }
-        //}
        
         //easiest succes
         if(inGame)

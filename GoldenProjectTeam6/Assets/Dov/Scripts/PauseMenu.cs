@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
-        SceneManager.LoadScene("MenuBuild");
+        SceneManager.LoadScene("MenuModifVic");
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
     }
 }
