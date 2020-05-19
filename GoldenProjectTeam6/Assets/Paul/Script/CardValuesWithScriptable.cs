@@ -47,9 +47,16 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
-        
+
 
         //SAVE
+
+        //succes
+        if(succesManager.allTheSucces[11].locked)
+        succesManager.timer = 0;
+        if (succesManager.allTheSucces[12].locked)
+            succesManager.swiped++;
+
 
 
         if (_firstCardScriptable._canSlideLeft)
@@ -112,6 +119,9 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
+                if (succesManager.allTheSucces[12].locked&&succesManager.swiped<=5)
+                    succesManager.UnlockSuccess(succesManager.allTheSucces[12].enumSucces);
+                if (succesManager.allTheSucces[0].locked)
                 succesManager.UnlockSuccess(succesManager.allTheSucces[0].enumSucces);
             }
         }

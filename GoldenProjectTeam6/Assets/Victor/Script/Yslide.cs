@@ -42,8 +42,11 @@ public class Yslide : MonoBehaviour
         }
         if (panel.page == 2)
         {
+            if(panel.unlockSucces.Count>1)
             lastSucces = panel.unlockSucces[panel.lockSucces.Count];
-            
+            else
+                lastSucces = panel.unlockSucces[0];
+
         }
         posY = transform.position.y;
         if(panel.page!=0)
