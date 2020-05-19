@@ -179,6 +179,6 @@ public class MainMenu : MonoBehaviour
 
     public void Load_Menu()
     {
-        SceneManager.LoadScene("ProtoMenu");
+        SceneManager.LoadScene("MenuModifVic");
     }
 }
