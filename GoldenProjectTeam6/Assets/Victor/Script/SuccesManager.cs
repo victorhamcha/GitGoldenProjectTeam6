@@ -6,6 +6,16 @@ using TMPro;
 
 public class SuccesManager : MonoBehaviour
 {
+    bool inGame=false;
+
+
+    //succes12
+     public float timer = 0f;
+
+
+    //succes13
+    [HideInInspector] public float swiped = 0f;
+
     [Header("SuccesManagement")]
     public List<bool> lockInfo = new List<bool>();
     public List<Succes> allTheSucces = new List<Succes>();
@@ -25,7 +35,7 @@ public class SuccesManager : MonoBehaviour
     
     void Start()
     {
-        bool inGame = SceneManager.GetActiveScene().name == "GeneralScene";
+         inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
         
             for (int i = 0; i < allTheSucces.Count; i++)
@@ -144,7 +154,19 @@ public class SuccesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(inGame)
+        {
+            if(lockInfo[11])
+            {
+                timer += Time.deltaTime;
+                if(timer>=30)
+                {
+                    UnlockSuccess(allTheSucces[11].enumSucces);
+                }
+            }
+           
+        }
+
     }
 
    public void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
