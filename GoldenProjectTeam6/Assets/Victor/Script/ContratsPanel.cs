@@ -32,6 +32,17 @@ public class ContratsPanel : MonoBehaviour
     public string[] statuttxt = new string[5];
     public Sprite[] imgLvl = new Sprite[5];
     public Color[] colorLvl = new Color[5];
+
+    //Skin
+    public Material[] skinLvl = new Material[5];
+    public string[] skinName = new string[5];
+    private int changeMat=0;
+    public TextMeshProUGUI skinTXT;
+
+    //Name
+    public TextMeshProUGUI nameTXT;
+    //Country
+    public TextMeshProUGUI CountryTXT;
     private void Awake()
     {
         
@@ -131,6 +142,24 @@ public class ContratsPanel : MonoBehaviour
         //character UI
         statusTMP.text = "status : " + statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
+
+    }
+
+
+    public void ChangeSkin(int i)
+    {
+       
+        changeMat += 1;
+        if(changeMat> lvl)
+        {
+            changeMat = 0;
+        }
+        else if (changeMat<0)
+        {
+            changeMat = lvl;
+        }
+        skinTXT.text = skinName[changeMat];
+        SuccesManager.cardSkin = skinLvl[changeMat];
 
     }
 }

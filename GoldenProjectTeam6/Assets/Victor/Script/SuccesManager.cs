@@ -15,6 +15,7 @@ public class SuccesManager : MonoBehaviour
 
     //succes13
     [HideInInspector] public float swiped = 0f;
+    [HideInInspector] public static Material cardSkin;
 
     [Header("SuccesManagement")]
     public List<bool> lockInfo = new List<bool>();
