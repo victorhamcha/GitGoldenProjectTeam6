@@ -168,4 +168,9 @@ public class ContratsPanel : MonoBehaviour
         SuccesManager.cardSkin = skinLvl[changeMat];
 
     }
+
+    private void OnApplicationQuit()
+    {
+        FindObjectOfType<SaveAndLoad>().SavePassport();
+    }
 }
