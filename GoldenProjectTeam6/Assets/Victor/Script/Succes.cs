@@ -8,13 +8,13 @@ using TMPro;
 public class Succes : MonoBehaviour
 {
 
-    public int id;
+    public string id;
     //DIffiuclité
     public enum difficulté { TrèsFacile, Facile,Moyen,Difficile, TrèsDifficile };
     public difficulté _difficulté;
-   
+    public EnumSuccess._enumSuccess enumSucces;
     public bool locked=true;
-       
+   
     //TXT
     public string txtTitre;
     public string txtDescription;
@@ -26,40 +26,52 @@ public class Succes : MonoBehaviour
     private Image img;
    //public Sprite succesIMG;
     //verify scene
-    private bool inGame=false;
+    private bool inMenu=false;
     private void Awake()
     {
         
-        if(SceneManager.GetActiveScene().name== "GeneralScene")
+     
+    
+      
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "MenuModifVic")
         {
-            inGame = true;
+            inMenu = true;
         }
-        if(!inGame)
+        if (inMenu)
         {
             //text
             description = GetComponentsInChildren<TextMeshProUGUI>()[1];
             titre = GetComponentsInChildren<TextMeshProUGUI>()[0];
-            description.text = txtDescription;
+
             titre.text = txtTitre;
             ////////////////////////////////////////////////////////////
             img = GetComponentInChildren<Image>();
-            
+
 
             manager = GetComponentInParent<ContratsPanel>();
-            if (!locked)
-            {
-                manager.unlockSucces.Add(this);
-               
-            }
-            else
-            {
-                manager.lockSucces.Add(this);
-            }
+            StartCoroutine(waitForLoading());
         }
-      
     }
     private void Update()
     {
       
+    }
+
+    IEnumerator waitForLoading()
+    {
+        yield return new WaitForSeconds(0.01f);
+        if (!locked)
+        {
+            manager.unlockSucces.Add(this);
+            description.text = txtDescription;
+        }
+        else
+        {
+            manager.lockSucces.Add(this);
+            description.text = "???????????????";
+        }
     }
 }

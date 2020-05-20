@@ -34,8 +34,17 @@ public class ContainAllObjectTree : MonoBehaviour
         {
             _imageTreeChilds.Add(child.gameObject);
         }
-        
 
+        for (int i = 0; i < FindObjectOfType<GameManager>()._apparitionOrder.Count; i++)
+        {
+            foreach (Transform child in transform)
+            {
+                if(child.GetComponent<ImageArborescence>()._cardID.name == FindObjectOfType<GameManager>()._apparitionOrder[i])
+                {
+                    child.GetComponent<ImageArborescence>()._ordreList = i;
+                }
+            }
+        }
 
         //for (int i = 0; i < _imageTreeChilds.Count; i++)
         //{

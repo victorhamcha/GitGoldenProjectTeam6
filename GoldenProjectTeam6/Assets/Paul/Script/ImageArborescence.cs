@@ -9,8 +9,8 @@ public class ImageArborescence : MonoBehaviour
 {
     [HideInInspector] public Image _image;
     [HideInInspector] public Image _imageBackground;
-    [HideInInspector] public TextMeshProUGUI _title;
-    [HideInInspector] public Text _titleText;
+    //[HideInInspector] public TextMeshProUGUI _title;
+    //[HideInInspector] public Text _titleText;
     [HideInInspector] public List<GameObject> _lineRendererGO;
     [HideInInspector] public GameObject _lineRendererShowNext;
     [HideInInspector] public GameObject _emptyParent;
@@ -39,11 +39,17 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _textSlideLeft;
     [HideInInspector] public TextMeshProUGUI _textSlideUp;
     [HideInInspector] public GameObject _cardZoom;
+    [HideInInspector] public int _ordreList = 1;
+    float _ordreInListTempo = 0.3f;
+
+    
+    public int _idInList;
 
      bool _alreadyInTree;
      bool _alreadyDraw;
 
-    private void Awake()
+
+    void Awake()
     {
 
         foreach (Transform child in transform)
@@ -67,9 +73,8 @@ public class ImageArborescence : MonoBehaviour
 
     }
 
-    private void Update()
+    void Update()
     {
-
         IsSpawning();
     }
 
@@ -107,14 +112,14 @@ public class ImageArborescence : MonoBehaviour
             Assigner();
             _image.material = null;
             _imageBackground.material = null;
-            _titleText.material = null;
+            //_titleText.material = null;
             Assigner();
         }
         else
         {
             _image.material.SetFloat("_Dissolve", _timeToRevealCard);
             _imageBackground.material.SetFloat("_Dissolve", _timeToRevealCard);
-            _titleText.material.SetFloat("_Dissolve", _timeToRevealCard);
+            //_titleText.material.SetFloat("_Dissolve", _timeToRevealCard);
             for (int i = 0; i < _lineRendererGO.Count; i++)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().material.SetFloat("_Dissolve", _timeToRevealCard);
@@ -181,14 +186,27 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
-            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.red, Color.blue);
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             if (i == 0)
+            {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
+                _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionLeft.transform);
+            }
             else if (i == 1)
+            {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionRight.position);
+                _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionRight.transform);
+
+
+            }
             else
+            {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionUp.position);
+                _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionUp.transform);
+
+
+            }
 
         }
     }
@@ -196,11 +214,11 @@ public class ImageArborescence : MonoBehaviour
     void Assigner()
     {
         //_title.text = _cardID._title;
-        _titleText.text = _cardID._title;
+        //_titleText.text = _cardID._title;
         _image.enabled = true;
         _imageBackground.enabled = true;
         _image.sprite = _cardID._image;
-        _titleText.material = null;
+        //_titleText.material = null;
     }
 
     void CheckIfAlreadyDraw()
@@ -210,12 +228,12 @@ public class ImageArborescence : MonoBehaviour
         //CHANGE NEXT LINE TO !_alreadyDraw
 
 
-        if (_alreadyDraw) // Card never draw
+        if (!_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
             _imageBackground.enabled = false;
             //_title.enabled = false;
-            _titleText.enabled = false;
+            //_titleText.enabled = false;
         }
         else // Card already draw
         {
@@ -224,17 +242,17 @@ public class ImageArborescence : MonoBehaviour
                 _image.enabled = true;
                 _imageBackground.enabled = true;
                 //_title.enabled = true;
-                _titleText.enabled = true;
+                //_titleText.enabled = true;
                 Assigner();
                 DrawLineAuto();
                 //_title.gameObject.SetActive(true);
-                _titleText.gameObject.SetActive(true);
+                //_titleText.gameObject.SetActive(true);
             }
             else //Card never shows in tree so play animation
             {
                 //_image.enabled = false;
-                _title.enabled = false;
-                _titleText.enabled = true;
+                //_title.enabled = false;
+                //_titleText.enabled = true;
                 StartCoroutine(ShowUp());
             }
         }
@@ -244,18 +262,19 @@ public class ImageArborescence : MonoBehaviour
     {
         _image.material = _materialImg;
         _imageBackground.material = _materialImg;
-        _titleText.enabled = true;
-        _titleText.text = _cardID._title;
-        _titleText.gameObject.SetActive(true);
+        //_titleText.enabled = true;
+        //_titleText.text = _cardID._title;
+        //_titleText.gameObject.SetActive(true);
         _image.material.SetFloat("_Dissolve", 0);
         _imageBackground.material.SetFloat("_Dissolve", 0);
-        _titleText.material.SetFloat("_Dissolve", 0);
+        //_titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
         _imageBackground.enabled = false;
-        yield return new WaitForSeconds(0.3f);
+        DragCamHere();
+        yield return new WaitForSeconds(_ordreInListTempo * _ordreList);
         _image.material.SetFloat("_Dissolve", 0);
         _imageBackground.material.SetFloat("_Dissolve", 0);
-        _titleText.material.SetFloat("_Dissolve", 0);
+        //_titleText.material.SetFloat("_Dissolve", 0);
         _image.sprite = _cardID._image;
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
         _disolve = true;
@@ -281,11 +300,20 @@ public class ImageArborescence : MonoBehaviour
         }
     }
 
+    void DragCamHere()
+    {
+        if (FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart)
+        {
+            FindObjectOfType<OngletArboManager>()._canMoveToPosAtStart = false;
+            FindObjectOfType<OngletArboManager>().FindOngletToActive(_idInList);
+        }
+    }
+
     public void IClick()
     {
         _cardZoom.SetActive(true);
         _imageZoomCard.sprite = _cardID._image;
-        _titleZoomCard.text = _cardID._title;
+        //_titleZoomCard.text = _cardID._title;
 
         //SLIDE RIGHT DESCRIPTION
 

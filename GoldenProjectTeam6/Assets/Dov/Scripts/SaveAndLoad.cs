@@ -9,7 +9,6 @@ public class SaveAndLoad : MonoBehaviour
     public List<string> unlockSinceLastTime;
     public List<bool> saveOptions;
     public string firstCard;
-    public List<bool> success;
     public List<string> apparitionOrder;
 
 
@@ -19,6 +18,12 @@ public class SaveAndLoad : MonoBehaviour
     private CardValuesWithScriptable card;
     private SuccesManager succes;
 
+    private void Awake()
+    {
+
+        succes = FindObjectOfType<SuccesManager>();
+    }
+
     void Start()
     {
         objectInTree = FindObjectOfType<ContainAllObjectTree>()._imageTreeChildAlreadyInTree;
@@ -27,12 +32,14 @@ public class SaveAndLoad : MonoBehaviour
         apparitionOrder = FindObjectOfType<GameManager>()._apparitionOrder;
         saveOptions = FindObjectOfType<PauseMenu>().options;
         card = FindObjectOfType<CardValuesWithScriptable>();
-        succes = FindObjectOfType<SuccesManager>();
     }
 
     public void SaveCards()
     {
-        SaveSystem.SaveCards(card, succes);
+        if (manage.inGame)
+        {
+            SaveSystem.SaveCards(card, succes);
+        }
     }
 
     public void SavePlayer()
@@ -53,6 +60,7 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log(data.firstCardData);
         }
 
+        Debug.Log(succes);
         if (data.allSuccesData != null)
         {
             succes.lockInfo = data.allSuccesData;

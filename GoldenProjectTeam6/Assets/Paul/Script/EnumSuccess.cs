@@ -7,8 +7,18 @@ public class EnumSuccess : ScriptableObject
     public enum _enumSuccess
     {
         none,
-        aaa,
-        bbb,
-        ccc,
+        First,
+        Hitman,
+        Promotion,
+        Alcoholisdangeroustohealth,
+        Insulting,
+        Nonerespect,
+        Bastard,
+        Routineoftherestaurant,
+        Wedontinsultmothers,
+        Poisonofpatience,
+        Tourist,
+        Patience,
+        Speedrun
     }
 }
