@@ -72,16 +72,15 @@ public class SwipeScript : MonoBehaviour
      
 
         
-        if(!card.canSlideUp && !touched)
+        if(!card.canSlideUp)
         {
            
             upText.text= "";
-            ArrowSlideUp.SetActive(true);
+            ArrowSlideUp.SetActive(false);
         }
-        else
+        else if(card.canSlideUp && !touched)
         {
-            Debug.Log("Can Swipe up");
-           // ArrowSlideUp.SetActive(true);
+            ArrowSlideUp.SetActive(true);
         }
         
         if (card._isADeadCard)
@@ -90,8 +89,7 @@ public class SwipeScript : MonoBehaviour
             rightText.text = "well done";
             leftText.text = "you should be so proud!";
         }
-
-        else if (card._firstCardScriptable._isEndingEvent)
+         else if (card._firstCardScriptable._isEndingEvent)
         {
             upText.text = "";
             rightText.text = "Go in another direction";
@@ -146,7 +144,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                     Debug.Log("go in touch end");
-                    if (!canslidup)
+                    if (canslidup)
                     {
                         ArrowSlideUp.SetActive(true);
                     }
