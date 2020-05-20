@@ -36,7 +36,7 @@ public class ContratsPanel : MonoBehaviour
     //Skin
     public Material[] skinLvl = new Material[5];
     public string[] skinName = new string[5];
-    private int changeMat=0;
+    public int changeMat=0;
     public TextMeshProUGUI skinTXT;
 
     //Name
@@ -111,6 +111,10 @@ public class ContratsPanel : MonoBehaviour
         }
     }
 
+    public void SaveModif()
+    {
+        FindObjectOfType<SaveAndLoad>().SavePassport();
+    }
    
 
     IEnumerator waitSucces()
@@ -142,7 +146,9 @@ public class ContratsPanel : MonoBehaviour
         //character UI
         statusTMP.text = "status : " + statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
-
+        //LoadPassport
+        FindObjectOfType<SaveAndLoad>().LoadPassport();
+        SuccesManager.cardSkin = skinLvl[changeMat];
     }
 
 

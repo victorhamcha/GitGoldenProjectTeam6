@@ -30,6 +30,39 @@ public static class SaveSystem
         stream.Close();
     }
 
+    public static void SavePassport(ContratsPanel contrat)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/passport.fun";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        Debug.Log(path);
+
+        PassportData data = new PassportData(contrat);
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static PassportData LoadPassport()
+    {
+        string path = Application.persistentDataPath + "/passport.fun";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            PassportData data = formatter.Deserialize(stream) as PassportData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.Log("Save file not found in " + path);
+            return null;
+        }
+    }
+
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.fun";
