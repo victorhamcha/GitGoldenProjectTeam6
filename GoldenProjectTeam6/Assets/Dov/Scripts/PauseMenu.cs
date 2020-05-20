@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     public List<bool> options;
     public Toggle music, sound, censure;
+    public GameObject card;
     private int togglesID;
 
 
@@ -45,12 +46,14 @@ public class PauseMenu : MonoBehaviour
         {
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
+            card.SetActive(false);
             GameIsPaused = true;
         }
         else
         {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
+            card.SetActive(true);
             GameIsPaused = false;
         }
        

@@ -30,6 +30,7 @@ public class SwipeScript : MonoBehaviour
     public TextMeshProUGUI leftText;
     public TextMeshProUGUI rightText;
     public TextMeshProUGUI upText;
+    public GameObject Cadenas;
 
     //EFFECT//
     Material material;
@@ -74,8 +75,13 @@ public class SwipeScript : MonoBehaviour
         if(!card.canSlideUp)
         {
            
-                upText.text= "";
-            
+            upText.text= "";
+            //Cadenas.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Can Swipe up");
+            //Cadenas.SetActive(false);
         }
         
         if (card._isADeadCard)
