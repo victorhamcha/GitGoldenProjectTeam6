@@ -2208,6 +2208,7 @@ MonoBehaviour:
   music: {fileID: 1749395929}
   sound: {fileID: 1020937840}
   censure: {fileID: 490329519}
+  card: {fileID: 0}
 --- !u!224 &711606675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8071,6 +8072,7 @@ MonoBehaviour:
   leftText: {fileID: 232078222}
   rightText: {fileID: 1920098946}
   upText: {fileID: 508023782}
+  Cadenas: {fileID: 0}
   fade: 1
   disolve: 0
   undisolve: 0
@@ -9482,7 +9484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e161c788c09f63849bef9ea38ce88749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockInfo: 010001000101
+  timer: 0
+  swiped: 0
+  lockInfo: 01010101010101010101010101
   allTheSucces:
   - {fileID: 3918384881571183429}
   - {fileID: 5201894371018618852}
@@ -9506,6 +9510,7 @@ MonoBehaviour:
   des3: {fileID: 1537660747}
   succesAnim: {fileID: 1471067948}
   sucesName: {fileID: 924167320}
+  anim: {fileID: 0}
 --- !u!1 &1537660745
 GameObject:
   m_ObjectHideFlags: 0
@@ -11283,7 +11288,6 @@ MonoBehaviour:
   unlockSinceLastTime: []
   saveOptions: 000000
   firstCard: 
-  success: 
   apparitionOrder: []
   tree: {fileID: 1449711610}
   manage: {fileID: 1960507100}
