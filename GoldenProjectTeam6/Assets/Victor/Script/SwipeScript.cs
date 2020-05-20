@@ -33,7 +33,7 @@ public class SwipeScript : MonoBehaviour
     public GameObject ArrowSlideUp;
 
     //EFFECT//
-    Material material;
+    public Material material;
     public float fade = 1f;
     public bool disolve = false;
     public bool undisolve = false;
@@ -47,6 +47,8 @@ public class SwipeScript : MonoBehaviour
         img.SetActive(false);
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
+        material = SuccesManager.cardSkin;
+        GetComponent<Image>().material = material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
         material.SetFloat("_Fade", 1f);

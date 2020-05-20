@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12577,12 +12577,13 @@ MonoBehaviour:
   canGoUp: 0
   maxX: 0.79
   maxY: 2.04
-  offSetsmooth: 0.18
+  offSetsmooth: 0
   img: {fileID: 739031383}
   leftText: {fileID: 727492954}
   rightText: {fileID: 1743702886}
   upText: {fileID: 1363243350}
   ArrowSlideUp: {fileID: 1026666120}
+  material: {fileID: 0}
   fade: 1
   disolve: 0
   undisolve: 0
