@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("VictorTest2");
+        SceneManager.LoadScene("GeneralScene");
     }
 
     public void Arbo()

@@ -37,7 +37,7 @@ public class SuccesManager : MonoBehaviour
 
     void Start()
     {
-        inGame = SceneManager.GetActiveScene().name == "VictorTest2";
+        inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
 
         for (int i = 0; i < allTheSucces.Count; i++)
