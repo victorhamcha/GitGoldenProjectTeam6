@@ -9,10 +9,15 @@ public class ContainAllObjectTree : MonoBehaviour
      public List<string> _imageTreeChildAlreadyInTree;
      public List<string> _imageTreeUnlockSinceLastTime;
 
+    public List<bool> _allCardFinishEvent;
+    public List<bool> _allCardUnlock;
+
+
 
     void Start()
     {
         Attribution();
+        StartCoroutine(VerifyingSuccess());
     }
 
     void Update()
@@ -24,7 +29,6 @@ public class ContainAllObjectTree : MonoBehaviour
             _imageTreeChilds.Clear();
             _imageTreeUnlockSinceLastTime.Clear();
             Attribution();
-            
         }
     }
 
@@ -64,6 +68,50 @@ public class ContainAllObjectTree : MonoBehaviour
         //}
         
         FindObjectOfType<SaveAndLoad>().SavePlayer();
-        
+
+    }
+
+    IEnumerator VerifyingSuccess()
+    {
+        for (int i = 0; i < FindObjectOfType<OngletArboManager>()._listEvents.Count; i++)
+        {
+            _allCardFinishEvent.Add(false);
+        }
+        yield return new WaitForSeconds(2);
+
+        int verifierFinish = 0;
+        int verifierUnlock = 0;
+
+        for (int i = 0; i < _imageTreeChilds.Count; i++)
+        {
+            _allCardUnlock.Add(false);
+
+            if (_imageTreeChilds[i].gameObject.activeInHierarchy)
+            {
+                _allCardUnlock[i] = true;
+                verifierUnlock++;
+
+                if (_imageTreeChilds[i].GetComponent<ImageArborescence>()._cardID._isDeadCard)
+                {
+                    _allCardFinishEvent[_imageTreeChilds[i].GetComponent<ImageArborescence>()._idInList] = true;
+                    verifierFinish++;
+                }
+            }
+        }
+
+        if(verifierFinish == _allCardFinishEvent.Count)
+        {
+            SuccesManager succesManager;
+            succesManager = FindObjectOfType<SuccesManager>();
+            if (succesManager.allTheSucces[10].locked)
+                succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
+        }
+        if (verifierUnlock == _allCardUnlock.Count)
+        {
+            SuccesManager succesManager;
+            succesManager = FindObjectOfType<SuccesManager>();
+            if (succesManager.allTheSucces[2].locked)
+                succesManager.UnlockSuccess(succesManager.allTheSucces[2].enumSucces);
+        }
     }
 }
