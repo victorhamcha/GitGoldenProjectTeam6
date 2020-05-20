@@ -35,8 +35,12 @@ public class SuccesManager : MonoBehaviour
     public TextMeshProUGUI sucesName;
     public Animation anim;
 
+    //sound
+    private AudioManager audioManager;
+
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
 
@@ -228,6 +232,7 @@ public class SuccesManager : MonoBehaviour
     }
     public void SuccesAnim(string succesname)
     {
+        audioManager.Play("SFX_UnlockSuccess");
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
         StartCoroutine(WaitEndAnim());

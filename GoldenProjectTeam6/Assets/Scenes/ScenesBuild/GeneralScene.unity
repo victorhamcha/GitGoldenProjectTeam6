@@ -6568,7 +6568,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1d285626d077947bd872ac2f963ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: SFX_UnlockSuccess
+    clip: {fileID: 8300000, guid: a14c6477d920aa74d9a79c46a32da464, type: 3}
+    volume: 0.073
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathSound
+    clip: {fileID: 8300000, guid: 01b9c1567fc132344a95e04bacb89774, type: 3}
+    volume: 0.061
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_FinEventSansMort
+    clip: {fileID: 8300000, guid: 73930011d591c7a489ea491b1fb09359, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
   _toggleWhichChanges: {fileID: 1253095763}
 --- !u!4 &544111577
 Transform:
@@ -8801,6 +8822,8 @@ MonoBehaviour:
   _imageTreeChilds: []
   _imageTreeChildAlreadyInTree: []
   _imageTreeUnlockSinceLastTime: []
+  _allCardFinishEvent: 
+  _allCardUnlock: 
 --- !u!4 &1004929820
 Transform:
   m_ObjectHideFlags: 0
@@ -9098,8 +9121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 0, y: 316}
+  m_SizeDelta: {x: 20, y: -611.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1092003664
 MonoBehaviour:
@@ -12036,7 +12059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.5, y: 0.012418}
+  m_AnchoredPosition: {x: 345.5, y: 0.000069267}
   m_SizeDelta: {x: 20, y: 1256.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1850199277

@@ -53,7 +53,20 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
-            s.source.volume = _volumeToggle;
+            if (_volumeToggle == 0)
+            {
+                s.source.volume = _volumeToggle;
+            }
+            else
+            {
+                for (int i = 0; i < sounds.Length; i++)
+                {
+                    if (sounds[i].clip == s.source.clip)
+                    {
+                        s.source.volume = sounds[i].volume;
+                    }
+                }
+            }
         }
     }
     public void Play(string name)

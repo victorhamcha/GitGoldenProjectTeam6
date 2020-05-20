@@ -33,10 +33,12 @@ public class CardValuesWithScriptable : MonoBehaviour
     [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
 
     EventManager eventManager;
-    
+
+    private AudioManager audioManager;
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         succesManager = FindObjectOfType<SuccesManager>();
         eventManager = FindObjectOfType<EventManager>();
         
@@ -118,6 +120,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
             else
             {
+                audioManager.Play("SFX_DeathSound");
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
                 if (succesManager.allTheSucces[12].locked&&succesManager.swiped<=5)
                     succesManager.UnlockSuccess(succesManager.allTheSucces[12].enumSucces);
@@ -157,6 +160,10 @@ public class CardValuesWithScriptable : MonoBehaviour
                 }
                 _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
                 //Debug.Log(_firstCardScriptable._placeEnum.ToString());
+                if (!_isADeadCard)
+                {
+                    audioManager.Play("SFX_FinEventSansMort");
+                }
             }
 
             _firstCardScriptable = _nextCardLeft;
@@ -206,6 +213,11 @@ public class CardValuesWithScriptable : MonoBehaviour
                     eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
                 }
                 _nextCardRight = eventManager.LoadNewEvent("_balade");
+
+                if (!_isADeadCard)
+                {
+                    audioManager.Play("SFX_FinEventSansMort");
+                }
             }
 
             _firstCardScriptable = _nextCardRight;
@@ -290,6 +302,13 @@ public class CardValuesWithScriptable : MonoBehaviour
                 }
                 canSlideUp = false;
             }
+            else
+            {
+                if (!_isADeadCard)
+                {
+                    audioManager.Play("SFX_FinEventSansMort");
+                }
+            }
         }
         else
         {
@@ -318,6 +337,6 @@ public class CardValuesWithScriptable : MonoBehaviour
     void Death()
     {
         SceneManager.LoadScene("BaptisteTestArbo");
-       
     }
+
 }
