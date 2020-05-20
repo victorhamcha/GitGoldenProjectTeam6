@@ -27,7 +27,7 @@ MonoBehaviour:
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
-  _enumSuccessLeft: 0
+  _enumSuccessLeft: 10
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}

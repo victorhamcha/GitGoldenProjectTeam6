@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Elephant_AskWhat
   m_EditorClassIdentifier: 
   _title: The Zoo
-  _image: {fileID: 21300000, guid: 8de18e400fe173045b493b458fd98cb5, type: 3}
+  _image: {fileID: 0}
   _description: '"What are you doing ?" asked the animal.'
   _cardID: 122
   _cardAlreadyDraw: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
-  _enumSuccessLeft: 0
+  _enumSuccessLeft: 9
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 11400000, guid: 69b81bcb04f7c4c41ac4dbd8bd9bfd28, type: 2}
