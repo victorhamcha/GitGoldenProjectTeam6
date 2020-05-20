@@ -20,7 +20,7 @@ public class SaveAndLoad : MonoBehaviour
 
     private void Awake()
     {
-        
+
         succes = FindObjectOfType<SuccesManager>();
     }
 
@@ -60,7 +60,7 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log(data.firstCardData);
         }
 
-            Debug.Log(succes);
+        Debug.Log(succes);
         if (data.allSuccesData != null)
         {
             succes.lockInfo = data.allSuccesData;
