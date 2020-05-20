@@ -191,7 +191,8 @@ public class SuccesManager : MonoBehaviour
                         if (succesAnim.GetBool("UNLOCK"))
                         {
                             Debug.Log("Different");
-                            WaitAnim(allTheSucces[i].txtTitre);
+                            StartCoroutine(WaitAnim(allTheSucces[i].txtTitre));
+                           
                         }
                         else
                         {
