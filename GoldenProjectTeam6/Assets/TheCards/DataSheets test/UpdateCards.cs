@@ -90,7 +90,7 @@ public class UpdateCards : ScriptableObject
             {
                 change._title = card.titreCarte;
 #if UNITY_EDITOR
-                change._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/Card_Background/" + card.sprite + ".png", typeof(Sprite));
+                change._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/Cards_Game/" + card.sprite + ".png", typeof(Sprite));
 #endif
                 change._description = card.description;
                 change._placeEnum = (EnumPlaceGame._enumPlace)Enum.Parse(typeof(EnumPlaceGame._enumPlace), card.place);
