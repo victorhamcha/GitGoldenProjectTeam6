@@ -24,6 +24,7 @@ public class OngletArboManager : MonoBehaviour
 
     [HideInInspector] public bool _canMoveToPosAtStart;
 
+    int _soustraction;
     void Start()
     {
         _canMoveToPosAtStart = true;
@@ -137,24 +138,86 @@ public class OngletArboManager : MonoBehaviour
 
     public void FindOngletToActive(int i)
     {
-        int _soustraction;
 
-        if (i > 9)
+        //if (i > 9)
+        //{
+        //    _soustraction = 4;
+        //}
+        //else if(i > 6 && i<10)
+        //{
+        //    _soustraction = 3;
+        //}
+        //else if (i>2 && i<7)
+        //{
+        //    _soustraction = 2;
+        //}
+        //else
+        //{
+        //    _soustraction = 1;
+        //}
+
+        #region Switch
+
+        switch (i)
         {
-            _soustraction = 4;
+            case 12: _soustraction = 4;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                break;
+            case 11:
+                _soustraction = 4;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                break;
+            case 10:
+                _soustraction = 4;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                break;
+            case 9:
+                _soustraction = 3;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                break;
+            case 8:
+                _soustraction = 3;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                break;
+            case 7:
+                _soustraction = 3;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                break;
+            case 6:
+                _soustraction = 2;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 3;
+                break;
+            case 5:
+                _soustraction = 2;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                break;
+            case 4:
+                _soustraction = 2;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                break;
+            case 3:
+                _soustraction = 2;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                break;
+            case 2:
+                _soustraction = 1;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                break;
+            case 1:
+                _soustraction = 1;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                break;
+            case 0:
+                _soustraction = 1;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                break;
+            default:
+                _soustraction = 1;
+                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                break;
         }
-        else if(i > 6)
-        {
-            _soustraction = 3;
-        }
-        else if (i>2)
-        {
-            _soustraction = 2;
-        }
-        else
-        {
-            _soustraction = 1;
-        }
+
+        #endregion
 
         Debug.Log("soust = " + _soustraction);
 
@@ -166,17 +229,17 @@ public class OngletArboManager : MonoBehaviour
             }
         }
 
-        #region RegardeQuelEstActualPos
-        if (i == 13 || i == 10 || i == 7 || i == 3)
-            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
-        else if (i == 12 || i == 9 || i == 6 || i == 2)
-            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
-        else if (i == 11 || i == 8 || i == 5 || i == 1)
-            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
-        else
-            _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
+        //#region RegardeQuelEstActualPos
+        //if (i == 12 || i == 9 || i == 6 || i == 2)
+        //    _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+        //else if (i == 11 || i == 8 || i == 5 || i == 1)
+        //    _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+        //else if (i == 10 || i == 7 || i == 4 || i == 0)
+        //    _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+        //else
+        //    _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 3;
 
-        #endregion
+        //#endregion
 
         GoRight();
 
