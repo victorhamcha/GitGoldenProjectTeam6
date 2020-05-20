@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Sugar_WaitOnce
   m_EditorClassIdentifier: 
   _title: The Food Courts
-  _image: {fileID: 0}
+  _image: {fileID: 21300000, guid: 47abfa638cad89a4ab8e7ea21aa3bef7, type: 3}
   _description: There's a lot of people... You've already been waiting for an hour...
   _cardID: 78
   _cardAlreadyDraw: 0

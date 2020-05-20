@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [System.Serializable]
 public class PlayerData
@@ -48,5 +49,23 @@ public class CardsData
            allSuccesData = allSucces.lockInfo;
         }
 
+    }
+}
+
+[System.Serializable] 
+public class PassportData
+{
+    public string nameData;
+    public string countryData;
+    public int materialIndexData;
+
+    public PassportData(ContratsPanel contrat)
+    {
+        if (contrat != null)
+        {
+            nameData = contrat.nameTXT.text;
+            countryData = contrat.CountryTXT.text;
+            materialIndexData = contrat.changeMat;
+        }
     }
 }

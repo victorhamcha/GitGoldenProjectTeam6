@@ -15,6 +15,7 @@ public class SuccesManager : MonoBehaviour
 
     //succes13
     [HideInInspector] public float swiped = 0f;
+    [HideInInspector] public static Material cardSkin;
 
     [Header("SuccesManagement")]
     public List<bool> lockInfo = new List<bool>();
@@ -32,10 +33,11 @@ public class SuccesManager : MonoBehaviour
     [Header("SuccesUnlockAnim")]
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
+    public Animation anim;
 
     void Start()
     {
-        inGame = SceneManager.GetActiveScene().name == "GeneralScene";
+        inGame = SceneManager.GetActiveScene().name == "VictorTest2";
 
 
         for (int i = 0; i < allTheSucces.Count; i++)
@@ -162,6 +164,9 @@ public class SuccesManager : MonoBehaviour
                 if (timer >= 30)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
+                    if (allTheSucces[0].locked)
+                        UnlockSuccess(allTheSucces[0].enumSucces);
+                    //SceneManager.LoadScene("BaptisteTestArbo");
                 }
             }
 
@@ -179,10 +184,22 @@ public class SuccesManager : MonoBehaviour
                 {
                     if (allTheSucces[i].enumSucces == _successToUnlock)
                     {
+                        
                         allTheSucces[i].locked = false;
                         GPSAchievements.UnlockSucces(allTheSucces[i].id);
                         //saveSucces
-                        SuccesAnim(allTheSucces[i].txtTitre);
+                        if (succesAnim.GetBool("UNLOCK"))
+                        {
+                            Debug.Log("Different");
+                            StartCoroutine(WaitAnim(allTheSucces[i].txtTitre));
+                           
+                        }
+                        else
+                        {
+                            Debug.Log("Basic");
+                            SuccesAnim(allTheSucces[i].txtTitre);
+                        }
+                        
                         break;
                     }
                 }
@@ -190,13 +207,41 @@ public class SuccesManager : MonoBehaviour
         }
     }
 
-    public void SuccesAnim(string succesname)
+ 
+
+    IEnumerator WaitAnim(string succesname)
     {
+        Debug.Log("enter couroutine");
+        while (succesAnim.GetBool("UNLOCK"))
+        {
+            yield return null;
+        }
+        Debug.Log("exit couroutine");
         succesAnim.SetTrigger("Unlock");
+        succesAnim.SetBool("UNLOCK", true);
+        StartCoroutine(WaitEndAnim());
         sucesName.text = succesname;
         for (int i = 0; i < allTheSucces.Count; i++)
         {
             lockInfo[i] = allTheSucces[i].locked;
         }
+    }
+    public void SuccesAnim(string succesname)
+    {
+        succesAnim.SetTrigger("Unlock");
+        succesAnim.SetBool("UNLOCK", true);
+        StartCoroutine(WaitEndAnim());
+        sucesName.text = succesname;
+        for (int i = 0; i < allTheSucces.Count; i++)
+        {
+            lockInfo[i] = allTheSucces[i].locked;
+        }
+    }
+
+    IEnumerator WaitEndAnim()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Debug.Log("Mput bool false");
+        succesAnim.SetBool("UNLOCK", false);
     }
 }

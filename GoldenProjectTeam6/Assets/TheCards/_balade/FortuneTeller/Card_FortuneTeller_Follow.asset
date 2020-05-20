@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Broadwalk
   _image: {fileID: 21300000, guid: aed067b0cc1461840af828f45a865206, type: 3}
-  _description: "You walk into her tent and sit at a table. \nThe woman look at her
-    crystal ball and shouted: \"By all the gods, something horrible is about to happen
-    to you! You must leave at once!\"."
+  _description: "You walk into her tent and sit at the table. \nThe woman looks at
+    her crystal ball and shouts: \"By all the gods, something horrible is about to
+    happen to you! You must leave at once!\"."
   _cardID: 4
   _cardAlreadyDraw: 0
   _canSlideUp: 0

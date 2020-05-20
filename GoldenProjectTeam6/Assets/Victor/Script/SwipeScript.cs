@@ -30,7 +30,7 @@ public class SwipeScript : MonoBehaviour
     public TextMeshProUGUI leftText;
     public TextMeshProUGUI rightText;
     public TextMeshProUGUI upText;
-    public GameObject Cadenas;
+    public GameObject ArrowSlideUp;
 
     //EFFECT//
     Material material;
@@ -76,12 +76,11 @@ public class SwipeScript : MonoBehaviour
         {
            
             upText.text= "";
-            //Cadenas.SetActive(true);
+            ArrowSlideUp.SetActive(false);
         }
-        else
+        else if(card.canSlideUp && !touched)
         {
-            Debug.Log("Can Swipe up");
-            //Cadenas.SetActive(false);
+            ArrowSlideUp.SetActive(true);
         }
         
         if (card._isADeadCard)
@@ -90,8 +89,7 @@ public class SwipeScript : MonoBehaviour
             rightText.text = "well done";
             leftText.text = "you should be so proud!";
         }
-
-        else if (card._firstCardScriptable._isEndingEvent)
+         else if (card._firstCardScriptable._isEndingEvent)
         {
             upText.text = "";
             rightText.text = "Go in another direction";
@@ -112,13 +110,15 @@ public class SwipeScript : MonoBehaviour
                
                 if (touch.phase == TouchPhase.Began)
                 {
+                    Debug.Log("go in touch began");
+                    ArrowSlideUp.SetActive(false);
                     touchRef = touch.position.x;
                     distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
                 }
                 else if (touch.phase == TouchPhase.Moved)
                 {
-                   
 
+                    ArrowSlideUp.SetActive(false);
 
                     Vector2 pos_move = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
                     transform.position = new Vector2(pos_move.x - distance.x, pos_move.y-distance.y);
@@ -143,6 +143,11 @@ public class SwipeScript : MonoBehaviour
 
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
+                    Debug.Log("go in touch end");
+                    if (canslidup)
+                    {
+                        ArrowSlideUp.SetActive(true);
+                    }
                     img.SetActive(false);
                     touched = false;
                     if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))

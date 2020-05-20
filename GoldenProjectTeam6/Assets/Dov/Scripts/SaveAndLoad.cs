@@ -17,10 +17,10 @@ public class SaveAndLoad : MonoBehaviour
     public PauseMenu option;
     private CardValuesWithScriptable card;
     private SuccesManager succes;
+    private ContratsPanel contrats;
 
     private void Awake()
     {
-
         succes = FindObjectOfType<SuccesManager>();
     }
 
@@ -32,6 +32,7 @@ public class SaveAndLoad : MonoBehaviour
         apparitionOrder = FindObjectOfType<GameManager>()._apparitionOrder;
         saveOptions = FindObjectOfType<PauseMenu>().options;
         card = FindObjectOfType<CardValuesWithScriptable>();
+        contrats = FindObjectOfType<ContratsPanel>();
     }
 
     public void SaveCards()
@@ -49,6 +50,22 @@ public class SaveAndLoad : MonoBehaviour
         Debug.Log("save");
     }
 
+    public void SavePassport()
+    {
+        SaveSystem.SavePassport(contrats);
+        Debug.Log("savePassport");
+    }
+
+    public void LoadPassport()
+    {
+        PassportData data = SaveSystem.LoadPassport();
+        Debug.Log("loadpasseport");
+        contrats.changeMat = data.materialIndexData;
+        contrats.nameText =  data.nameData;
+        contrats.countryText = data.countryData;
+        Debug.Log(data.nameData);
+        contrats.skinTXT.text = contrats.skinName[data.materialIndexData];
+    }
 
     public void LoadCard()
     {
