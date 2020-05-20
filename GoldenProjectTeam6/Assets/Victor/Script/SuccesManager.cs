@@ -36,11 +36,12 @@ public class SuccesManager : MonoBehaviour
     public Animation anim;
 
     //sound
-    private AudioManager audioManager;
+    [Header("Audio")]
+    public AudioManager audioManager;
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+
         inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
 
@@ -220,6 +221,7 @@ public class SuccesManager : MonoBehaviour
         {
             yield return null;
         }
+        audioManager.Play("SFX_UnlockSuccess");
         Debug.Log("exit couroutine");
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);

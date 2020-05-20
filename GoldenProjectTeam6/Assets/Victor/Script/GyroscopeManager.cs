@@ -48,7 +48,7 @@ public class GyroscopeManager : MonoBehaviour
 
     void Start()
     {
-        
+        collector = SuccesManager.cardSkin;
         EnableGyro();
         if(gyroActive)
         {
