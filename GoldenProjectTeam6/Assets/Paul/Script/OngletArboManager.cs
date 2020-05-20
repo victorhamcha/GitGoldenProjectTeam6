@@ -11,7 +11,7 @@ public class OngletArboManager : MonoBehaviour
     [HideInInspector] public Camera _cam;
 
     [HideInInspector] public GameObject _positionListManager;
-    [HideInInspector] public List <Transform> _positionListOnglet;
+    public List <Transform> _positionListOnglet;
 
     public List<string> _listEvents;
 
@@ -114,8 +114,21 @@ public class OngletArboManager : MonoBehaviour
 
     void ActualiseCamera(float zoom)
     {
-        _cam.transform.position = new Vector3(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
-        _cam.orthographicSize = zoom;
+        
+        if(_actualdId != 2)
+        {
+            _cam.transform.position = new Vector3(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
+            _cam.orthographicSize = zoom;
+        }
+        else
+        {
+            //Debug.Log(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].name);
+            Debug.Log("actual id = " + _actualdId);
+            Debug.Log("Position In Child = " + _positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._actualPos]);
+            _cam.transform.position = new Vector3(_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
+            _cam.orthographicSize = zoom;
+
+        }
         int _addition;
         if (_actualdId == 1)
         {
@@ -158,68 +171,76 @@ public class OngletArboManager : MonoBehaviour
 
         #region Switch
 
+        int _posOfTheObject;
+
         switch (i)
         {
             case 12: _soustraction = 4;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                _posOfTheObject = 2;
                 break;
             case 11:
                 _soustraction = 4;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                _posOfTheObject = 1;
                 break;
             case 10:
                 _soustraction = 4;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                _posOfTheObject = 0;
                 break;
             case 9:
                 _soustraction = 3;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                _posOfTheObject = 2;
                 break;
             case 8:
                 _soustraction = 3;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                _posOfTheObject = 1;
                 break;
             case 7:
                 _soustraction = 3;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                _posOfTheObject = 0;
                 break;
             case 6:
                 _soustraction = 2;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 3;
+                _posOfTheObject = 3;
                 break;
             case 5:
                 _soustraction = 2;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                _posOfTheObject = 2;
                 break;
             case 4:
                 _soustraction = 2;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                _posOfTheObject = 1;
                 break;
             case 3:
                 _soustraction = 2;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                _posOfTheObject = 0;
                 break;
             case 2:
                 _soustraction = 1;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
+                _posOfTheObject = 2;
                 break;
             case 1:
                 _soustraction = 1;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 1;
+                _posOfTheObject = 1;
                 break;
             case 0:
                 _soustraction = 1;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                _posOfTheObject = 0;
                 break;
             default:
                 _soustraction = 1;
-                _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 0;
+                _posOfTheObject = 0;
                 break;
         }
+
+
+        _positionListOnglet[_soustraction-1].GetComponent<PositionChildArbo>()._actualPos = _posOfTheObject;
 
         #endregion
 
         Debug.Log("soust = " + _soustraction);
+        Debug.Log("i = " + i);
+
+        _actualdId = _soustraction;
 
         foreach (Transform child in transform)
         {
@@ -229,6 +250,7 @@ public class OngletArboManager : MonoBehaviour
             }
         }
 
+        Debug.Log(" actual pos = " + _positionListOnglet[_soustraction - 1].GetComponent<PositionChildArbo>()._actualPos);
         //#region RegardeQuelEstActualPos
         //if (i == 12 || i == 9 || i == 6 || i == 2)
         //    _positionListOnglet[_soustraction].GetComponent<PositionChildArbo>()._actualPos = 2;
@@ -241,8 +263,10 @@ public class OngletArboManager : MonoBehaviour
 
         //#endregion
 
-        GoRight();
+        float zoomInList = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._zoomChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+        ActualiseCamera(zoomInList);
 
+        //GoRight();
 
     }
 

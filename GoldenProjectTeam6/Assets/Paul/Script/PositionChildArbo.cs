@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PositionChildArbo : MonoBehaviour
 {
-    [HideInInspector] public List<Transform> _positionChild;
+     public List<Transform> _positionChild;
     public float[] _zoomChild;
-    [HideInInspector] public int _actualPos;
+     public int _actualPos;
     void Start()
     {
         foreach (Transform child in transform)
