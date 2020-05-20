@@ -82,7 +82,7 @@ public class ImageArborescence : MonoBehaviour
     {
         for (int i = 0; i < FindObjectOfType<SaveAndLoad>().unlockSinceLastTime.Count; i++)
         {
-            if (FindObjectOfType<SaveAndLoad>().unlockSinceLastTime[i] == _cardID._title)
+            if (FindObjectOfType<SaveAndLoad>().unlockSinceLastTime[i] == _cardID.name)
             {
                 _alreadyInTree = true;
             }
@@ -90,7 +90,7 @@ public class ImageArborescence : MonoBehaviour
 
         for (int i = 0; i < FindObjectOfType<SaveAndLoad>().alreadyDrawCards.Count; i++)
         {
-            if (FindObjectOfType<SaveAndLoad>().alreadyDrawCards[i] == _cardID._title)
+            if (FindObjectOfType<SaveAndLoad>().alreadyDrawCards[i] == _cardID.name)
             {
                 _alreadyDraw = true;
             }
@@ -279,9 +279,9 @@ public class ImageArborescence : MonoBehaviour
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
         _disolve = true;
         _alreadyInTree = true;
-        if (!_emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Contains(_cardID._title))
+        if (!_emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Contains(_cardID.name))
         {
-            _emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Add(_cardID._title);
+            _emptyParent.GetComponent<ContainAllObjectTree>()._imageTreeUnlockSinceLastTime.Add(_cardID.name);
         }
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         _image.enabled = true;

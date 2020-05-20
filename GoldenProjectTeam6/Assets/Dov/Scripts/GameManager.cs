@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
         }
 
         FindObjectOfType<PauseMenu>().options = FindObjectOfType<SaveAndLoad>().saveOptions;
+
+        _apparitionOrder = FindObjectOfType<SaveAndLoad>().apparitionOrder;
         
     }
 

@@ -6,11 +6,11 @@ using TMPro;
 
 public class SuccesManager : MonoBehaviour
 {
-    bool inGame=false;
+    bool inGame = false;
 
 
     //succes12
-     public float timer = 0f;
+    public float timer = 0f;
 
 
     //succes13
@@ -32,19 +32,19 @@ public class SuccesManager : MonoBehaviour
     [Header("SuccesUnlockAnim")]
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
-    
+
     void Start()
     {
-         inGame = SceneManager.GetActiveScene().name == "GeneralScene";
+        inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
-        
-            for (int i = 0; i < allTheSucces.Count; i++)
-            {
-                allTheSucces[i].locked = lockInfo[i];
-            }
-       
+
+        for (int i = 0; i < allTheSucces.Count; i++)
+        {
+            allTheSucces[i].locked = lockInfo[i];
+        }
+
         //easiest succes
-        if(inGame)
+        if (inGame)
         {
             while (easiestSucces.Count < 3 && lvl <= 4)
             {
@@ -147,30 +147,30 @@ public class SuccesManager : MonoBehaviour
                 des3.text = "Succes Done";
             }
         }
-        
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(inGame)
+        if (inGame)
         {
-            if(lockInfo[11])
+            if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if(timer>=30)
+                if (timer >= 30)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                 }
             }
-           
+
         }
 
     }
 
-   public void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
-   {
+    public void UnlockSuccess(EnumSuccess._enumSuccess _successToUnlock)
+    {
         if (_successToUnlock.ToString() != "none")
         {
             for (int i = 0; i < allTheSucces.Count; i++)
@@ -188,7 +188,7 @@ public class SuccesManager : MonoBehaviour
                 }
             }
         }
-   }
+    }
 
     public void SuccesAnim(string succesname)
     {
