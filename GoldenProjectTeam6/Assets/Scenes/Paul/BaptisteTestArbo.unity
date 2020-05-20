@@ -50315,7 +50315,7 @@ MonoBehaviour:
   _isCensuredMod: 0
   _savingDrawCardCard: []
   _apparitionOrder: []
-  inGame: 0
+  inGame: 1
 --- !u!4 &944759642
 Transform:
   m_ObjectHideFlags: 0

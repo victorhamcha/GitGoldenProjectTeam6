@@ -32,7 +32,7 @@ public class PlayerData
 public class CardsData
 {
     public string firstCardData;
-    public List<bool> allSuccesData;
+    public List<bool> allSuccesData = new List<bool>();
 
     public CardsData(CardValuesWithScriptable cardvalue, SuccesManager allSucces)
     {

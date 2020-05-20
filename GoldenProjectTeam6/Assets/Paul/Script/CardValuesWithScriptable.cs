@@ -77,9 +77,9 @@ public class CardValuesWithScriptable : MonoBehaviour
 
             FindObjectOfType<SaveAndLoad>().firstCard = _firstCardScriptable.name;
 
-            if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable._title))
+            if (!FindObjectOfType<GameManager>()._savingDrawCardCard.Contains(_firstCardScriptable.name))
             {
-                FindObjectOfType<GameManager>()._savingDrawCardCard.Add(_firstCardScriptable._title);
+                FindObjectOfType<GameManager>()._savingDrawCardCard.Add(_firstCardScriptable.name);
                 FindObjectOfType<SaveAndLoad>().SavePlayer();
             }
 

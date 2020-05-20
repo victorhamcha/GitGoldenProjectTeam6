@@ -61,6 +61,10 @@ public class SaveAndLoad : MonoBehaviour
         }
 
         Debug.Log(succes);
+        if (succes == null)
+        {
+            succes = FindObjectOfType<SuccesManager>();
+        }
         if (data.allSuccesData != null)
         {
             succes.lockInfo = data.allSuccesData;
