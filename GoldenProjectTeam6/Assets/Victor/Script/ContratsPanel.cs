@@ -40,9 +40,11 @@ public class ContratsPanel : MonoBehaviour
     public TextMeshProUGUI skinTXT;
 
     //Name
-    public TextMeshProUGUI nameTXT;
+    public TMP_InputField nameTXT;
+    public string nameText;
     //Country
-    public TextMeshProUGUI CountryTXT;
+    public TMP_InputField CountryTXT;
+    public string countryText;
     private void Awake()
     {
         
@@ -148,7 +150,12 @@ public class ContratsPanel : MonoBehaviour
         imgCharacter.sprite = imgLvl[lvl];
         //LoadPassport
         FindObjectOfType<SaveAndLoad>().LoadPassport();
+        CountryTXT.text = countryText;
+        nameTXT.text = nameText;
         SuccesManager.cardSkin = skinLvl[changeMat];
+
+       
+
     }
 
 

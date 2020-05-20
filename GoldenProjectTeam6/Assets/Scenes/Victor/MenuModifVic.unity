@@ -1012,7 +1012,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1620396265}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389311141}
+        m_MethodName: ChangeSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &119833070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,8 +1301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.099998, y: 0.76000977}
-  m_SizeDelta: {x: -44.54, y: -4.97}
+  m_AnchoredPosition: {x: 20.099998, y: -0.6805906}
+  m_SizeDelta: {x: -44.54, y: -1.3612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176166970
 MonoBehaviour:
@@ -1670,8 +1681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 23.93, y: 0.76000977}
-  m_SizeDelta: {x: -52.19, y: -4.97}
+  m_AnchoredPosition: {x: 23.93, y: -0.77999973}
+  m_SizeDelta: {x: -52.19, y: -1.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264180024
 MonoBehaviour:
@@ -8496,7 +8507,7 @@ GameObject:
   - component: {fileID: 1256000586}
   - component: {fileID: 1256000585}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextCountry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8519,8 +8530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.16999817, y: -1.1000004}
-  m_SizeDelta: {x: -4.02, y: 5.17}
+  m_AnchoredPosition: {x: -0.16999817, y: -0.0000019073486}
+  m_SizeDelta: {x: -4.02, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256000585
 MonoBehaviour:
@@ -10320,8 +10331,10 @@ MonoBehaviour:
   - God
   changeMat: 0
   skinTXT: {fileID: 490639671}
-  nameTXT: {fileID: 1479780290}
-  CountryTXT: {fileID: 1256000585}
+  nameTXT: {fileID: 1725334636}
+  nameText: 
+  CountryTXT: {fileID: 1370747434}
+  countryText: 
 --- !u!114 &1389311142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11437,8 +11450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.877491, y: -2.5699997}
-  m_SizeDelta: {x: -1.755, y: 4.55}
+  m_AnchoredPosition: {x: -0.877491, y: -1.0299997}
+  m_SizeDelta: {x: -1.75, y: 2.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479780290
 MonoBehaviour:
@@ -11487,7 +11500,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18
+  m_fontSize: 18.3
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11504,7 +11517,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -13112,7 +13125,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 863377228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1389311141}
+        m_MethodName: ChangeSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1680431354
 MonoBehaviour:
   m_ObjectHideFlags: 0

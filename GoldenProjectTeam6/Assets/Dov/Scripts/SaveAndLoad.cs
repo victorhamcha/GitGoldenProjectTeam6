@@ -59,10 +59,11 @@ public class SaveAndLoad : MonoBehaviour
     public void LoadPassport()
     {
         PassportData data = SaveSystem.LoadPassport();
-
+        Debug.Log("loadpasseport");
         contrats.changeMat = data.materialIndexData;
-        contrats.CountryTXT.text = data.countryData;
-        contrats.nameTXT.text = data.nameData;
+        contrats.nameText =  data.nameData;
+        contrats.countryText = data.countryData;
+        Debug.Log(data.nameData);
         contrats.skinTXT.text = contrats.skinName[data.materialIndexData];
     }
 
