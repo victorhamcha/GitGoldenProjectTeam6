@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Sugar_Death_Waiting
   m_EditorClassIdentifier: 
   _title: The Food Courts
-  _image: {fileID: 0}
+  _image: {fileID: 21300000, guid: 68252defafd64a7459cf63cf4ae56bd5, type: 3}
   _description: 'You can''t stand waiting for hours and hours... You''re hungry and
     thirsty...
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Sugar_VendorAssKickLeave02
   m_EditorClassIdentifier: 
   _title: The Food Courts
-  _image: {fileID: 0}
+  _image: {fileID: 21300000, guid: affbe66ea96235b4287ac63ca02880eb, type: 3}
   _description: The salesman, very unhappy, rolls up his sleeves and throws you away
     from the stand.
   _cardID: 96

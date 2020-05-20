@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Chicken_SoftEgg_Pepper
   m_EditorClassIdentifier: 
   _title: The Food Courts
-  _image: {fileID: 0}
+  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
   _description: "You have a serious stomach ache.\n\nAnyway... it's time for the
     dish. \n\nYou're going to have the omelette.\n\nYou feel that your stomach ache
     is becoming unbearable... \n\nAs if your belly is going to explode!"
