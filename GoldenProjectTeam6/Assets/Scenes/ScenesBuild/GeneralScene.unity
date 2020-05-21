@@ -6641,8 +6641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.999985, y: -60.999878}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 199.8, y: -60.999878}
+  m_SizeDelta: {x: 476.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545119279
 MonoBehaviour:
@@ -8469,8 +8469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 97, y: -62}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 199.8, y: -62}
+  m_SizeDelta: {x: 476.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966350293
 MonoBehaviour:
@@ -9267,12 +9267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d912e2374b73764f9128a32431ef075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2100000, guid: c2c6bf5ccd0a2b84891e57db6d64a2e6, type: 2}
+  collector: {fileID: 2100000, guid: 7600822dc66cf6a4496c8850ac946e51, type: 2}
   rotateSpeed: 30
   rotateMax: 20
   paralaxSpeed: 200
-  paraPos: {x: -1, y: 0.098}
-  baseRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &1152181619
 Transform:
   m_ObjectHideFlags: 0
@@ -12323,8 +12321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.999985, y: -61.000046}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 199.8, y: -61.000046}
+  m_SizeDelta: {x: 476.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875173121
 MonoBehaviour:

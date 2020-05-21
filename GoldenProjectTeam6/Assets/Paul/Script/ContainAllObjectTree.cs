@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ContainAllObjectTree : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class ContainAllObjectTree : MonoBehaviour
     void Start()
     {
         Attribution();
+        if(SceneManager.GetActiveScene().name== "BaptisteTestArbo")
         StartCoroutine(VerifyingSuccess());
     }
 

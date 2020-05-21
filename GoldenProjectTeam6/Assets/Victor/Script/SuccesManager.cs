@@ -65,7 +65,7 @@ public class SuccesManager : MonoBehaviour
                     {
                         if (lvl == 0)
                         {
-                            if (allTheSucces[i]._difficulté.ToString() == "TrèsFacile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Friendly" && easiestSucces.Count < 3)
                             {
 
                                 easiestSucces.Add(allTheSucces[i]);
@@ -76,7 +76,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 1)
                         {
 
-                            if (allTheSucces[i]._difficulté.ToString() == "Facile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Easy" && easiestSucces.Count < 3)
                             {
                                 Debug.Log("yo");
                                 easiestSucces.Add(allTheSucces[i]);
@@ -87,7 +87,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 2)
                         {
                             Debug.Log("hihi");
-                            if (allTheSucces[i]._difficulté.ToString() == "Moyen" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Normal" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -96,7 +96,7 @@ public class SuccesManager : MonoBehaviour
                         }
                         if (lvl == 3)
                         {
-                            if (allTheSucces[i]._difficulté.ToString() == "Difficile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Hard" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -106,7 +106,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 4)
                         {
 
-                            if (allTheSucces[i]._difficulté.ToString() == "TrèsDifficile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Impossible" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -124,7 +124,7 @@ public class SuccesManager : MonoBehaviour
 
             if (easiestSucces[0] != null)
             {
-                titre1.text = easiestSucces[0]._difficulté.ToString();
+                titre1.text = "Difficulty : "+easiestSucces[0]._difficulté.ToString();
                 des1.text = easiestSucces[0].txtTitre;
             }
             else
@@ -135,7 +135,7 @@ public class SuccesManager : MonoBehaviour
 
             if (easiestSucces[1] != null)
             {
-                titre2.text = easiestSucces[1]._difficulté.ToString();
+                titre2.text = "Difficulty : " + easiestSucces[1]._difficulté.ToString();
                 des2.text = easiestSucces[1].txtTitre;
             }
             else
@@ -145,7 +145,7 @@ public class SuccesManager : MonoBehaviour
             }
             if (easiestSucces[2] != null)
             {
-                titre3.text = easiestSucces[2]._difficulté.ToString();
+                titre3.text = "Difficulty : " + easiestSucces[2]._difficulté.ToString();
                 des3.text = easiestSucces[2].txtTitre;
             }
             else
