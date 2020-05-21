@@ -7,7 +7,7 @@ public class Swiping : MonoBehaviour
     private bool tap, swipeLeft, swipeRight, swipeUp, swipeDown = false;
     private bool isDraging = false;
     private Vector2 startTouch, swipeDelta;
-
+    public float pointMort = 200;
 
     private void Update()
     {
@@ -55,7 +55,7 @@ public class Swiping : MonoBehaviour
             }
         }
 
-        if(swipeDelta.magnitude>125)
+        if(swipeDelta.magnitude>pointMort)
         {
             float x = swipeDelta.x;
             float y = swipeDelta.y;
