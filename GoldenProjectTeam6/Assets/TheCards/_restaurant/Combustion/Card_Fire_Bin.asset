@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: b04a5743a62daf444a05b2e8ff0fce75, type: 3}
-  _description: You are strolling between restaurants, not really knowing why, you're
-    searching through a garbage...
+  _description: You are strolling between restaurants, not really knowing why, you
+    end up looking in a trashbin
   _cardID: 59
   _cardAlreadyDraw: 0
   _canSlideUp: 1

@@ -16,7 +16,8 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: 7474b952c6717584cad775af4d7ae239, type: 3}
   _description: 'Wow !
 
-    The cannon is filled to the brim, the confetti are overflowing.'
+    The cannon is filled to the brim, it''s overflowing with
+    confetti.'
   _cardID: 31
   _cardAlreadyDraw: 0
   _canSlideUp: 1

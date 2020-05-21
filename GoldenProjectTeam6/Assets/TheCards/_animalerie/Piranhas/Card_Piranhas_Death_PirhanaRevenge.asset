@@ -14,15 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Zoo
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: 'You seriously hurt the piranha who, wishing for revenge, in turn
-    bit you.
+  _description: 'You seriously hurt the piranha who, wishing for revenge, bites you
+    back.
 
+    You fall backwards in the pool and all the piranhas throw themselves
+    at you.
 
-    You fall backwards and all the piranhas throw themselves at you.
-
-
-    You
-    feel your limbs tear and die in unimaginable pain.'
+    You feel your limbs tear and die in unimaginable pain.'
   _cardID: 107
   _cardAlreadyDraw: 0
   _canSlideUp: 0

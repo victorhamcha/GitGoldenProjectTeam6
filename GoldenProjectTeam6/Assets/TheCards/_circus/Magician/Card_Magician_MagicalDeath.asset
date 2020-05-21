@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Circus
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: "\"All right ! Come on, get on that cross on the ground. \nLadies
-    and gentlemen ! Behold ! \nWith this wand I will make our friend disappear! A\nla
-    wak vadaaa baa davraa !\" \nPOOOF ! \n\"And now he's going to reappear: Davraaa
-    baa vadaaa vadaaa wak ala !\n............ Uhh.......... It's all part of the
-    show, hey.... \nGet the hell out of here now ! Show's over.\nPooof! You disappeared
-    without reappearing !\nYou're dead... for sure... Let's say you're dead, well
-    done !\n"
+  _description: "\"Get on that cross on the ground. \nLadies and gentlemen ! Behold
+    ! \nWith this wand I will make our friend disappear! \nAv adaaaaaaaa ked avraaaa!\"
+    \nPOOOF !\n\"And now he's going to reappear: Davraaa baa vadaaa vadaaa wak ala
+    !\n............ Uhh.......... It's all part of the show, hey....                                    
+    \nGet the hell out of here now ! Show's over.\nPooof! You disappeared without
+    reappearing !\nLet's say you're dead... Well done !\n"
   _cardID: 47
   _cardAlreadyDraw: 0
   _canSlideUp: 0

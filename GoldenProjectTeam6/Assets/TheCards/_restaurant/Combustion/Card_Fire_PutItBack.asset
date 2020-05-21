@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: c000138235625cb48b9731370dc940b3, type: 3}
-  _description: Good
+  _description: Good boy!
   _cardID: 62
   _cardAlreadyDraw: 0
   _canSlideUp: 0

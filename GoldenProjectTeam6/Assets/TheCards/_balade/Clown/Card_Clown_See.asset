@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Broadwalk
   _image: {fileID: 21300000, guid: 90651c15e04643b49a55f95d5f004fb6, type: 3}
-  _description: You go ahead of a clown who blows up balloons in the shape of lions
+  _description: You approach a clown who is blowing balloons to the shape of lions
     and elephants for children.
   _cardID: 14
   _cardAlreadyDraw: 0

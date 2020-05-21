@@ -30,10 +30,10 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 0}
+  _firstCardOfEvent: {fileID: 11400000, guid: 08f040e192c69534996d38e7eb2cceb8, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
-  _isEndingEvent: 0
+  _isEndingEvent: 1
   _eventCanBePlayOne: 0
   _enumSuccessString: 
   _enumDirectpionSwipeString: 
