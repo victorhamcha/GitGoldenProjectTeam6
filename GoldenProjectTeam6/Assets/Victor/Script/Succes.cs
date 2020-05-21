@@ -10,7 +10,7 @@ public class Succes : MonoBehaviour
 
     public string id;
     //DIffiuclité
-    public enum difficulté { TrèsFacile, Facile,Moyen,Difficile, TrèsDifficile };
+    public enum difficulté { friendly, Eaysy,Normal,Hard, Impossible};
     public difficulté _difficulté;
     public EnumSuccess._enumSuccess enumSucces;
     public bool locked=true;
