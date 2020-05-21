@@ -28,6 +28,7 @@ public class ContratsPanel : MonoBehaviour
     public Transform barBG;
     public TextMeshProUGUI prctBar;
     public TextMeshProUGUI statusTMP;
+    public TextMeshProUGUI LevelTXT;
     public Image imgCharacter;
     public string[] statuttxt = new string[5];
     public Sprite[] imgLvl = new Sprite[5];
@@ -144,17 +145,19 @@ public class ContratsPanel : MonoBehaviour
         //bar UI
         bar.localScale = new Vector3((progressLVL / 100f) * barBG.localScale.x, barBG.localScale.y, barBG.localScale.z);
         prctBar.text = progressLVL.ToString() + "%";
+        LevelTXT.text = "Level : " + (lvl + 1);
         bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
         //character UI
         statusTMP.text = "status : " + statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
         //LoadPassport
+        SuccesManager.cardSkin = skinLvl[changeMat];
         FindObjectOfType<SaveAndLoad>().LoadPassport();
         CountryTXT.text = countryText;
         nameTXT.text = nameText;
         SuccesManager.cardSkin = skinLvl[changeMat];
 
-       
+
 
     }
 
