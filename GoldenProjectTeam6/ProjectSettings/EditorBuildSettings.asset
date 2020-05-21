@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ScenesBuild/Disclaimer.unity
+    guid: 90897e81ba18c0a41a088054fccd3855
+  - enabled: 1
     path: Assets/Scenes/Victor/MenuModifVic.unity
     guid: 481b27b1037265d4093f8cbf0f7e0c71
   - enabled: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DisclaimerScript : MonoBehaviour
 {
@@ -10,12 +11,12 @@ public class DisclaimerScript : MonoBehaviour
     private void Update()
     {
         Timer -= Time.deltaTime;
-        if (Timer <= 0/* || Fais le truc ou le mec touche l'écran*/)
+        if (Timer <= 0|| Input.GetMouseButtonDown(0))
             SceneTransition();
     }
 
     private void SceneTransition()
     {
-        // Fais le truc magique ou la scene change
+        SceneManager.LoadScene("MenuModifVic");
     }
 }
