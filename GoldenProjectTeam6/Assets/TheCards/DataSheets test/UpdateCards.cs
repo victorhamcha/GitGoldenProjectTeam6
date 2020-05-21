@@ -237,7 +237,16 @@ public class UpdateCards : ScriptableObject
         }
     }
 
-
+    public void VerifyThings()
+    {
+        for(int i=0;i<cards.Count;i++)
+        {
+            if(cards[i]._image==null)
+            {
+                Debug.Log("No sprite on : " + cards[i].name);
+            }
+        }
+    }
 
     //asset._image = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/AssetsGraphiques/" + card.imageName+".png", typeof(Sprite)); 
 }
@@ -268,6 +277,10 @@ public class CardsEditor : Editor
         if (GUILayout.Button("Update Lists"))
         {
             script.UpdateList();
+        }
+        if (GUILayout.Button("Verify cards"))
+        {
+            script.VerifyThings();
         }
     }
 }
