@@ -228,7 +228,7 @@ public class ImageArborescence : MonoBehaviour
         //CHANGE NEXT LINE TO !_alreadyDraw
 
 
-        if (_alreadyDraw) // Card never draw
+        if (!_alreadyDraw) // Card never draw
         {
             _image.enabled = false;
             _imageBackground.enabled = false;

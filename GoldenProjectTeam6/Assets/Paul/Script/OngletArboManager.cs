@@ -122,10 +122,7 @@ public class OngletArboManager : MonoBehaviour
         }
         else
         {
-            //Debug.Log(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].name);
-            Debug.Log("actual id = " + _actualdId);
-            Debug.Log("Position In Child = " + _positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._actualPos]);
-            _cam.transform.position = new Vector3(_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
+            _cam.transform.position = new Vector3(_positionListOnglet[_actualdId-1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId-1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
             _cam.orthographicSize = zoom;
 
         }
