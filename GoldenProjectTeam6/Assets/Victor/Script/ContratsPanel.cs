@@ -64,10 +64,18 @@ public class ContratsPanel : MonoBehaviour
         if (androidControl.SwipeLeft)
         {
             page--;
+            if(page==-1)
+            {
+                page = 2;
+            }
         }
         else if (androidControl.SwipeRight)
         {
             page++;
+            if(page==3)
+            {
+                page = 0;
+            }
         }
 
         switch(page)
@@ -165,7 +173,7 @@ public class ContratsPanel : MonoBehaviour
     public void ChangeSkin(int i)
     {
        
-        changeMat += 1;
+        changeMat += i;
         if(changeMat> lvl)
         {
             changeMat = 0;
