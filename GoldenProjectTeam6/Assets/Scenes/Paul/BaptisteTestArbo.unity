@@ -6677,6 +6677,7 @@ MonoBehaviour:
   rightText: {fileID: 1591436034}
   upText: {fileID: 2032219542}
   ArrowSlideUp: {fileID: 0}
+  material: {fileID: 0}
   fade: 1
   disolve: 0
   undisolve: 0
@@ -36398,7 +36399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 444.9798, y: 877.0068}
+  m_AnchoredPosition: {x: 351.00003, y: 877.0068}
   m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669173023
@@ -65789,7 +65790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.01488, y: 877.0068}
+  m_AnchoredPosition: {x: 135, y: 877.0068}
   m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219102701
@@ -72797,7 +72798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.967571, y: 877.0068}
+  m_AnchoredPosition: {x: -83.0473, y: 877.0068}
   m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358615924
@@ -83323,6 +83324,7 @@ MonoBehaviour:
   succesAnim: {fileID: 52968488}
   sucesName: {fileID: 1503623486}
   anim: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!4 &1528218003
 Transform:
   m_ObjectHideFlags: 0
@@ -88092,7 +88094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213.00436, y: 876.03143}
+  m_AnchoredPosition: {x: -309.01923, y: 876.03143}
   m_SizeDelta: {x: 216, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605709190
