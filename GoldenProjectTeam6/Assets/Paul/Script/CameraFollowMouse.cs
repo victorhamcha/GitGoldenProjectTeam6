@@ -32,7 +32,7 @@ public class CameraFollowMouse : MonoBehaviour
     void Start()
     {
         _cam = GetComponent<Camera>();
-        _sizeCamAtStart = _cam.orthographicSize;
+        CalculateNewCamera();
         _positivValue = _positionPositiv.transform.position;
         foreach (Transform child in _positionPositiv.transform)
         {
@@ -46,9 +46,14 @@ public class CameraFollowMouse : MonoBehaviour
         DrawLine();
     }
 
+    public void CalculateNewCamera()
+    {
+        _sizeCamAtStart = _cam.orthographicSize;
+    }
+
     void DrawLine()
     {
-        _line.SetWidth(3, 3);
+        _line.SetWidth(5, 5);
         _line.SetPosition(0, new Vector2(_positivValue.x, _positivValue.y));
         _line.SetPosition(1, new Vector2(_positivValue.x, _negativValue.y));
         _line.SetPosition(2, new Vector2(_negativValue.x, _negativValue.y));
