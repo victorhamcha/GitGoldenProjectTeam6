@@ -26,9 +26,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 4793d381dae57e842b778a88ab74a70a, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Because I'm asking you
-  _isNextCardLeft: {fileID: 11400000, guid: 4793d381dae57e842b778a88ab74a70a, type: 2}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: Oh my god please eat me! I beg you!
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

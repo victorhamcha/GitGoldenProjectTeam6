@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: 02cb89497f117544d898563d075fe9b7, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: c27e6d5763e76ae43b33c39b55a7a4a5, type: 2}
   _isSwipingUpDescription: Discreetly put two broken teeth in the machine
-  _isNextCardRight: {fileID: 11400000, guid: 9c29b75d7bc8da6419e0887c81d4637d, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Wait for the cotton candy
-  _isNextCardLeft: {fileID: 11400000, guid: c27e6d5763e76ae43b33c39b55a7a4a5, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 9c29b75d7bc8da6419e0887c81d4637d, type: 2}
   _isSwipingLeftDescription: Look at the waiting line like a jerk
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

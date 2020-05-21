@@ -30,9 +30,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 6c11f11253b02854794cdda495bbf048, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Enter, legs deep, in the fish tank
-  _isNextCardLeft: {fileID: 11400000, guid: 5760ca0d0f4700c4eb1d6825f9e0f254, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 3ac8aee3597207d4f82e6ab9fb6770a0, type: 2}
   _isSwipingLeftDescription: Go and talk to him
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

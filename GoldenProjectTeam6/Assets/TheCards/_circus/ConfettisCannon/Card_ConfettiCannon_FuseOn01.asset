@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: a8eedfefe34c7584d810888e219ea04f, type: 2}
+  _isNextCardUp: {fileID: 11400000}
   _isSwipingUpDescription: Add even more confettis !
-  _isNextCardRight: {fileID: 11400000, guid: c6fc8ba9008b88941a94bb5703e37b46, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: d2857eaa9bbc03f43b3cedae9d9a71b5, type: 2}
   _isSwipingRightDescription: Add even more confettis
-  _isNextCardLeft: {fileID: 11400000, guid: beafc27e3d0ad484ebb434e8c5d9efe4, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 826119774ecc8ca4bb2966104a15f7ad, type: 2}
   _isSwipingLeftDescription: Get inside that cannon
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

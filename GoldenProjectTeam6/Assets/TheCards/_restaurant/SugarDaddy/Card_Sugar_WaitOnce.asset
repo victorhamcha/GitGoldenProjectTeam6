@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: 0d6811b00fab4e2428759cb5f6e76009, type: 2}
+  _isNextCardUp: {fileID: 11400000}
   _isSwipingUpDescription: Wait a tiny bit more
-  _isNextCardRight: {fileID: 11400000, guid: 487577982b36c21459037ad2f74acaa0, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 0d6811b00fab4e2428759cb5f6e76009, type: 2}
   _isSwipingRightDescription: '"Politely" ask the one in front of you to leave'
-  _isNextCardLeft: {fileID: 11400000, guid: 23269e6a631837445991c3dac40f6820, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 487577982b36c21459037ad2f74acaa0, type: 2}
   _isSwipingLeftDescription: Sneak to the front of the row
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

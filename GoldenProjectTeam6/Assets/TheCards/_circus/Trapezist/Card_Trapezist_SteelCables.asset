@@ -36,7 +36,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: a4ce8c1b987375542ba2b74848ef6125, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 77210e2e05c7ee341a03f11d74099a30, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

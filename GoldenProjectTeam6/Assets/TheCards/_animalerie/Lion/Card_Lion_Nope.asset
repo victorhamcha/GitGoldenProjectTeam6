@@ -27,9 +27,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 2cb34b7d71f979d4babfe1cfddd5a925, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Ask him to eat you
-  _isNextCardLeft: {fileID: 11400000, guid: 4d78b4fcae126d84ca0e67c4e05f5cda, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 4793d381dae57e842b778a88ab74a70a, type: 2}
   _isSwipingLeftDescription: Try to break the cage with your foot
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

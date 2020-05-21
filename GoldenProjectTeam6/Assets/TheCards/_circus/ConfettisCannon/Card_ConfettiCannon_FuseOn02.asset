@@ -26,9 +26,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: c6fc8ba9008b88941a94bb5703e37b46, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: d2857eaa9bbc03f43b3cedae9d9a71b5, type: 2}
   _isSwipingRightDescription: Add even more confettis
-  _isNextCardLeft: {fileID: 11400000, guid: c1a554667d30a5b4c8c561b1f301c788, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: beafc27e3d0ad484ebb434e8c5d9efe4, type: 2}
   _isSwipingLeftDescription: Get inside that cannon
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
