@@ -42,11 +42,14 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public int _ordreList = 1;
     float _ordreInListTempo = 0.3f;
 
-    
+    [HideInInspector] public Material _lineMove;
+
     public int _idInList;
 
      bool _alreadyInTree;
      bool _alreadyDraw;
+
+    Button _button;
 
 
     void Awake()
@@ -57,6 +60,10 @@ public class ImageArborescence : MonoBehaviour
             if (child.name == "ImageBackground")
             {
                 _imageBackground = child.GetComponent<Image>();
+            }
+            if (child.GetComponent<Button>())
+            {
+                _button = child.GetComponent<Button>();
             }
         }
     }
@@ -186,7 +193,8 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
-            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
+            //_lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
+            _lineRendererGO[i].GetComponent<LineRenderer>().material = _lineMove;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             if (i == 0)
             {
@@ -217,6 +225,7 @@ public class ImageArborescence : MonoBehaviour
         //_titleText.text = _cardID._title;
         _image.enabled = true;
         _imageBackground.enabled = true;
+        _button.enabled = true;
         _image.sprite = _cardID._image;
         //_titleText.material = null;
     }
@@ -232,6 +241,7 @@ public class ImageArborescence : MonoBehaviour
         {
             _image.enabled = false;
             _imageBackground.enabled = false;
+            _button.enabled = false;
             //_title.enabled = false;
             //_titleText.enabled = false;
         }
@@ -241,6 +251,7 @@ public class ImageArborescence : MonoBehaviour
             {
                 _image.enabled = true;
                 _imageBackground.enabled = true;
+                _button.enabled = true;
                 //_title.enabled = true;
                 //_titleText.enabled = true;
                 Assigner();
@@ -270,6 +281,7 @@ public class ImageArborescence : MonoBehaviour
         //_titleText.material.SetFloat("_Dissolve", 0);
         _image.enabled = false;
         _imageBackground.enabled = false;
+        _button.enabled = false;
         DragCamHere();
         yield return new WaitForSeconds(_ordreInListTempo * _ordreList);
         _image.material.SetFloat("_Dissolve", 0);
@@ -286,6 +298,7 @@ public class ImageArborescence : MonoBehaviour
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         _image.enabled = true;
         _imageBackground.enabled = true;
+        _button.enabled = true;
         //_title.enabled = true;
         //_title.gameObject.SetActive(true);
         DrawLineAuto();

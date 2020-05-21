@@ -61,9 +61,9 @@ public class CameraFollowMouse : MonoBehaviour
     {
         if (Input.touchCount == 0 && isZooming)
         {
-            isZooming = false;
+            //isZooming = false;
         }
-        #region Drag
+        //#region Drag
         //if (Input.touchCount == 1)
         //{
         //    if (!isZooming)
@@ -73,9 +73,9 @@ public class CameraFollowMouse : MonoBehaviour
         //        {
         //            if (transform.position.x < _positivValue.x)
         //            {
-        //                if(transform.position.y > _negativValue.y)
+        //                if (transform.position.y > _negativValue.y)
         //                {
-        //                    if(transform.position.y < _positivValue.y)
+        //                    if (transform.position.y < _positivValue.y)
         //                    {
         //                        if (Input.GetTouch(0).phase == TouchPhase.Moved)
         //                        {
@@ -92,12 +92,12 @@ public class CameraFollowMouse : MonoBehaviour
         //                }
         //                else
         //                {
-        //                    transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder,-10);
+        //                    transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder, -10);
         //                }
         //            }
         //            else
         //            {
-        //                transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y,-10);
+        //                transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y, -10);
         //            }
         //        }
         //        else
@@ -107,7 +107,7 @@ public class CameraFollowMouse : MonoBehaviour
         //        #endregion
         //    }
         //}
-        #endregion
+        //#endregion
         #region Zoom
         else if (Input.touchCount == 2)
         {
