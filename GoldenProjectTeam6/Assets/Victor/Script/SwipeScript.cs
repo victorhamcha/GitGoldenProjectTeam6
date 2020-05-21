@@ -47,7 +47,9 @@ public class SwipeScript : MonoBehaviour
         img.SetActive(false);
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
+        if(SuccesManager.cardSkin!=null)
         material = SuccesManager.cardSkin;
+        
         GetComponent<Image>().material = material;
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
