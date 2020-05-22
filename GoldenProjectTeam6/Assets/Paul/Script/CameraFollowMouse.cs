@@ -8,8 +8,6 @@ public class CameraFollowMouse : MonoBehaviour
     Camera _cam;
 
 
-    [HideInInspector] public GameObject _positionPositiv, _positionNegativ;
-
     Vector2 StartPosition;
     Vector2 DragStartPosition;
     Vector2 DragNewPosition;
@@ -29,26 +27,44 @@ public class CameraFollowMouse : MonoBehaviour
 
     [HideInInspector] public LineRenderer _line;
 
+
+    [HideInInspector] public List<GameObject> _positionLim;
+    [HideInInspector] public GameObject _positionLimMaster;
+    [HideInInspector] public int _numberInArray =0;
+
     void Start()
     {
+        foreach (Transform child in _positionLimMaster.transform)
+        {
+            _positionLim.Add(child.gameObject);
+        }
         _cam = GetComponent<Camera>();
         CalculateNewCamera();
-        _positivValue = _positionPositiv.transform.position;
-        foreach (Transform child in _positionPositiv.transform)
-        {
-            child.GetComponent<SpriteRenderer>().enabled = false;
-        }
-        _negativValue = _positionNegativ.transform.position;
-        foreach (Transform child in _positionNegativ.transform)
-        {
-            child.GetComponent<SpriteRenderer>().enabled = false;
-        }
         DrawLine();
     }
 
     public void CalculateNewCamera()
     {
         _sizeCamAtStart = _cam.orthographicSize;
+
+        foreach (Transform child in _positionLim[_numberInArray].transform)
+        {
+            if (child.name == "PostitivValueZoom")
+            {
+                _positivValue = child.transform.position;
+            }
+            else
+            {
+                _negativValue = child.transform.position;
+            }
+        }
+        foreach (Transform child in _positionLim[_numberInArray].transform)
+        {
+            foreach (Transform childOfChild in child)
+            {
+                childOfChild.GetComponent<SpriteRenderer>().enabled = false;
+            }
+        }
     }
 
     void DrawLine()
@@ -66,53 +82,53 @@ public class CameraFollowMouse : MonoBehaviour
     {
         if (Input.touchCount == 0 && isZooming)
         {
-            //isZooming = false;
+            isZooming = false;
         }
-        //#region Drag
-        //if (Input.touchCount == 1)
-        //{
-        //    if (!isZooming)
-        //    {
-        //        #region NE PAS REGARDER (VRAIMENT)
-        //        if (transform.position.x > _negativValue.x)
-        //        {
-        //            if (transform.position.x < _positivValue.x)
-        //            {
-        //                if (transform.position.y > _negativValue.y)
-        //                {
-        //                    if (transform.position.y < _positivValue.y)
-        //                    {
-        //                        if (Input.GetTouch(0).phase == TouchPhase.Moved)
-        //                        {
-        //                            Vector2 NewPosition = GetWorldPosition();
-        //                            Vector2 PositionDifference = NewPosition - StartPosition;
-        //                            _cam.transform.Translate(-PositionDifference);
-        //                        }
-        //                        StartPosition = GetWorldPosition();
-        //                    }
-        //                    else
-        //                    {
-        //                        transform.position = new Vector3(transform.position.x, transform.position.y - _boucinessByTouchingBorder, -10);
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder, -10);
-        //                }
-        //            }
-        //            else
-        //            {
-        //                transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y, -10);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            transform.position = new Vector3(transform.position.x + _boucinessByTouchingBorder, transform.position.y, -10);
-        //        }
-        //        #endregion
-        //    }
-        //}
-        //#endregion
+        #region Drag
+        if (Input.touchCount == 1)
+        {
+            if (!isZooming)
+            {
+                #region NE PAS REGARDER (VRAIMENT)
+                if (transform.position.x > _negativValue.x)
+                {
+                    if (transform.position.x < _positivValue.x)
+                    {
+                        if (transform.position.y > _negativValue.y)
+                        {
+                            if (transform.position.y < _positivValue.y)
+                            {
+                                if (Input.GetTouch(0).phase == TouchPhase.Moved)
+                                {
+                                    Vector2 NewPosition = GetWorldPosition();
+                                    Vector2 PositionDifference = NewPosition - StartPosition;
+                                    _cam.transform.Translate(-PositionDifference);
+                                }
+                                StartPosition = GetWorldPosition();
+                            }
+                            else
+                            {
+                                transform.position = new Vector3(transform.position.x, transform.position.y - _boucinessByTouchingBorder, -10);
+                            }
+                        }
+                        else
+                        {
+                            transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder, -10);
+                        }
+                    }
+                    else
+                    {
+                        transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y, -10);
+                    }
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x + _boucinessByTouchingBorder, transform.position.y, -10);
+                }
+                #endregion
+            }
+        }
+        #endregion
         #region Zoom
         else if (Input.touchCount == 2)
         {
