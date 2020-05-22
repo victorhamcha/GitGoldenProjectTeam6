@@ -71,6 +71,7 @@ public class ImageArborescence : MonoBehaviour
 
     void Start()
     {
+        GetComponent<Image>().color = new Vector4(0,0,0,0);
         CheckIfIsInTree();
         if (_alreadyInTree)
         {
