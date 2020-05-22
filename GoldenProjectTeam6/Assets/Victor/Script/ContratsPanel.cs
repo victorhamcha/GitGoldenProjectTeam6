@@ -150,6 +150,12 @@ public class ContratsPanel : MonoBehaviour
         lvl = progress / 20;
         int progressLVL = (((progress - lvl * 20) * 100) / 20);
 
+        if(lvl>4)
+        {
+            lvl = 4;
+            progressLVL = 100;
+        }
+
         //bar UI
         bar.localScale = new Vector3((progressLVL / 100f) * barBG.localScale.x, barBG.localScale.y, barBG.localScale.z);
         prctBar.text = progressLVL.ToString() + "%";

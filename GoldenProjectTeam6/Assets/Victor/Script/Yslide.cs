@@ -44,7 +44,7 @@ public class Yslide : MonoBehaviour
         if (panel.page == 2)
         {
             if(panel.unlockSucces.Count>0)
-            lastSucces = panel.unlockSucces[panel.lockSucces.Count-1];
+            lastSucces = panel.unlockSucces[panel.unlockSucces.Count-1];
          
 
         }
