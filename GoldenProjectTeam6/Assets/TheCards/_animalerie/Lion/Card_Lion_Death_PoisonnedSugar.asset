@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Lion_Death_PoisonnedSugar
   m_EditorClassIdentifier: 
   _title: The Zoo
-  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _image: {fileID: 21300000, guid: 3d1d5835a5f0a124e88c7cbbc95eac77, type: 3}
   _description: 'The lion takes a bite.
 
 

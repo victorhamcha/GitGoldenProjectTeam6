@@ -226,7 +226,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toggleWhichChanges: {fileID: 111218766}
-  musics: []
+  musics:
+  - name: GameMusic
+    clip: {fileID: 8300000, guid: d2d4c269fc715994abd21914cf376778, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
+  - name: RainSound
+    clip: {fileID: 8300000, guid: 7b09d7c85a9b19e4997a25543603aa61, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playOnAwake: 1
+    source: {fileID: 0}
 --- !u!4 &24142057
 Transform:
   m_ObjectHideFlags: 0
@@ -12153,7 +12167,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092003664}
   m_HandleRect: {fileID: 1092003663}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

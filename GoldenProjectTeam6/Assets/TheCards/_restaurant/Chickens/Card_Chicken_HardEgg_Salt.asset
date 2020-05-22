@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Chicken_HardEgg_Salt
   m_EditorClassIdentifier: 
   _title: The Food Courts
-  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _image: {fileID: 21300000, guid: 82931d21bea6c054c86274d992370ed3, type: 3}
   _description: "Ouch... it's actually well cooked.\nYou lose two teeth on this egg...\n[You
     gain two teeth]\nYou're going to the dish.\nRoast chicken.\nThat's just disgusting!
     \nYou are leaving this disgusting restaurant, all you've earned are two of your
