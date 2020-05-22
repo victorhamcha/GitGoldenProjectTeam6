@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     public GameObject UI_Achiev;
     public GameObject UI_Credits;
     public GameObject UI_MainMenu;
+    private bool loadingScene = false;
 
     //public GameObject button_EasyOnes;
     //public GameObject button_Unlocked;
@@ -38,12 +39,16 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("GeneralScene");
+       // SceneManager.LoadScene("GeneralScene");
+       if(!loadingScene)
+        StartCoroutine(LoadYourAsyncScene("GeneralScene"));
     }
 
     public void Arbo()
     {
-        SceneManager.LoadScene("BaptisteTestArbo");
+        //SceneManager.LoadScene("BaptisteTestArbo");
+        if (!loadingScene)
+            StartCoroutine(LoadYourAsyncScene("BaptisteTestArbo"));
     }
 
     public void Achievements()
@@ -180,5 +185,17 @@ public class MainMenu : MonoBehaviour
     public void Load_Menu()
     {
         SceneManager.LoadScene("MenuModifVic");
+    }
+
+    IEnumerator LoadYourAsyncScene(string scene)
+    {
+        loadingScene = true;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

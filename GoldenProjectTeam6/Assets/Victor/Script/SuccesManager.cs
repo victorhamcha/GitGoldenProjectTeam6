@@ -10,11 +10,12 @@ public class SuccesManager : MonoBehaviour
 
 
     //succes12
-    public float timer = 0f;
-
+    
 
     //succes13
     [HideInInspector] public float swiped = 0f;
+
+    //skin
     [HideInInspector] public static Material cardSkin;
 
     [Header("SuccesManagement")]
@@ -34,6 +35,10 @@ public class SuccesManager : MonoBehaviour
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
     public Animation anim;
+
+    [Header("Succes 12 Stuff")]
+    public float timer = 0f;
+    public CardScriptableObject boredomCard;
 
     //sound
     [Header("Audio")]
@@ -166,11 +171,14 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 30)
+                if (timer >= 120)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)
                         UnlockSuccess(allTheSucces[0].enumSucces);
+                    FindObjectOfType<CardValuesWithScriptable>()._firstCardScriptable = boredomCard;
+                    FindObjectOfType<CardValuesWithScriptable>().LoadValueFromScriptableObject();
+
                     //SceneManager.LoadScene("BaptisteTestArbo");
                 }
             }

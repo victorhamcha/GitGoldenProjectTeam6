@@ -6512,7 +6512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e161c788c09f63849bef9ea38ce88749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
   swiped: 0
   lockInfo: 01010101010101010101010101
   allTheSucces:
@@ -6539,6 +6538,8 @@ MonoBehaviour:
   succesAnim: {fileID: 989702415}
   sucesName: {fileID: 923274746}
   anim: {fileID: 0}
+  timer: 0
+  boredomCard: {fileID: 11400000, guid: ddb6d80a90752294f870500091275f32, type: 2}
   audioManager: {fileID: 544111576}
 --- !u!1 &544111575
 GameObject:

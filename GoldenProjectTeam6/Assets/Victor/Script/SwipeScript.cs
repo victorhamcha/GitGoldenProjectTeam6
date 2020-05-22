@@ -89,9 +89,9 @@ public class SwipeScript : MonoBehaviour
         
         if (card._isADeadCard)
         {
-            upText.text = "You are dead";
-            rightText.text = "well done";
-            leftText.text = "you should be so proud!";
+            upText.text = "You did it, you're dead!";
+            rightText.text = "Find an other way to die";
+            leftText.text = "Go to menu";
         }
          else if (card._firstCardScriptable._isEndingEvent)
         {
