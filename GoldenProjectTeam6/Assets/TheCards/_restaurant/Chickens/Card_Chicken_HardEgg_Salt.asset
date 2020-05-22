@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: "Ow... it's actually well cooked.\n\nYou lose two teeth on this egg...\n\n[You
-    gain two teeth]\n\nYou're going to the dish.\n\nRoast chicken.\n\nThat's just
-    disgusting! \n\nYou are leaving this disgusting restaurant, all you've earned
-    are two of your broken teeth!"
+  _description: "Ouch... it's actually well cooked.\nYou lose two teeth on this egg...\n[You
+    gain two teeth]\nYou're going to the dish.\nRoast chicken.\nThat's just disgusting!
+    \nYou are leaving this disgusting restaurant, all you've earned are two of your
+    broken teeth!"
   _cardID: 70
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: 4716d5783c0925f42bb385494b4a897f, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: bc7fb1a555f6c6c498c3bf8ed76d2398, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

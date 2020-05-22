@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Circus
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: 'The main trapeze artist falls into his net.
+  _description: 'The main trapezist falls into his net.
 
-    He yells at you
-    for what you''ve done and shoves your popcorn down your throat.
+    He yells at you for
+    what you''ve done and shoves your popcorn down your throat.
 
-    You''ll
-    choke to death... '
+    You choke to
+    death... '
   _cardID: 51
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: a4ce8c1b987375542ba2b74848ef6125, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 77210e2e05c7ee341a03f11d74099a30, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

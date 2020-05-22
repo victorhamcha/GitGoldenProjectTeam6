@@ -10,11 +10,12 @@ public class SuccesManager : MonoBehaviour
 
 
     //succes12
-    public float timer = 0f;
-
+    
 
     //succes13
     [HideInInspector] public float swiped = 0f;
+
+    //skin
     [HideInInspector] public static Material cardSkin;
 
     [Header("SuccesManagement")]
@@ -34,6 +35,10 @@ public class SuccesManager : MonoBehaviour
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
     public Animation anim;
+
+    [Header("Succes 12 Stuff")]
+    public float timer = 0f;
+    public CardScriptableObject boredomCard;
 
     //sound
     [Header("Audio")]
@@ -65,7 +70,7 @@ public class SuccesManager : MonoBehaviour
                     {
                         if (lvl == 0)
                         {
-                            if (allTheSucces[i]._difficulté.ToString() == "TrèsFacile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Friendly" && easiestSucces.Count < 3)
                             {
 
                                 easiestSucces.Add(allTheSucces[i]);
@@ -76,7 +81,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 1)
                         {
 
-                            if (allTheSucces[i]._difficulté.ToString() == "Facile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Easy" && easiestSucces.Count < 3)
                             {
                                 Debug.Log("yo");
                                 easiestSucces.Add(allTheSucces[i]);
@@ -87,7 +92,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 2)
                         {
                             Debug.Log("hihi");
-                            if (allTheSucces[i]._difficulté.ToString() == "Moyen" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Normal" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -96,7 +101,7 @@ public class SuccesManager : MonoBehaviour
                         }
                         if (lvl == 3)
                         {
-                            if (allTheSucces[i]._difficulté.ToString() == "Difficile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Hard" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -106,7 +111,7 @@ public class SuccesManager : MonoBehaviour
                         if (lvl == 4)
                         {
 
-                            if (allTheSucces[i]._difficulté.ToString() == "TrèsDifficile" && easiestSucces.Count < 3)
+                            if (allTheSucces[i]._difficulté.ToString() == "Impossible" && easiestSucces.Count < 3)
                             {
                                 easiestSucces.Add(allTheSucces[i]);
                                 continue;
@@ -122,9 +127,9 @@ public class SuccesManager : MonoBehaviour
                 lvl++;
             }
 
-            if (easiestSucces[0] != null)
+            if (easiestSucces.Count>0)
             {
-                titre1.text = easiestSucces[0]._difficulté.ToString();
+                titre1.text = "Difficulty : "+easiestSucces[0]._difficulté.ToString();
                 des1.text = easiestSucces[0].txtTitre;
             }
             else
@@ -133,9 +138,9 @@ public class SuccesManager : MonoBehaviour
                 des1.text = "Succes Done";
             }
 
-            if (easiestSucces[1] != null)
+            if (easiestSucces.Count > 1)
             {
-                titre2.text = easiestSucces[1]._difficulté.ToString();
+                titre2.text = "Difficulty : " + easiestSucces[1]._difficulté.ToString();
                 des2.text = easiestSucces[1].txtTitre;
             }
             else
@@ -143,9 +148,9 @@ public class SuccesManager : MonoBehaviour
                 titre2.text = "No Succes";
                 des2.text = "Succes Done";
             }
-            if (easiestSucces[2] != null)
+            if (easiestSucces.Count > 2)
             {
-                titre3.text = easiestSucces[2]._difficulté.ToString();
+                titre3.text = "Difficulty : " + easiestSucces[2]._difficulté.ToString();
                 des3.text = easiestSucces[2].txtTitre;
             }
             else
@@ -166,11 +171,14 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 30)
+                if (timer >= 120)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)
                         UnlockSuccess(allTheSucces[0].enumSucces);
+                    FindObjectOfType<CardValuesWithScriptable>()._firstCardScriptable = boredomCard;
+                    FindObjectOfType<CardValuesWithScriptable>().LoadValueFromScriptableObject();
+
                     //SceneManager.LoadScene("BaptisteTestArbo");
                 }
             }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Zoo
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: "Piranhas graze your legs but do not attack you. \n\nThe man looks
-    at you strangely while asking you to come out."
+  _description: "Piranhas graze your legs but don't attack you. \nThe man looks at
+    you strangely while asking you to come out."
   _cardID: 101
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -27,9 +27,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 11a39c9c62192bd46a77d813ff074548, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: f279d8f6460e6a445bf6d4214e770abf, type: 2}
   _isSwipingRightDescription: Grab and bite a piranha
-  _isNextCardLeft: {fileID: 11400000, guid: 3ac8aee3597207d4f82e6ab9fb6770a0, type: 2}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: Thorw a piranha to the cleaner's head
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

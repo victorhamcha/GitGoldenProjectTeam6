@@ -50,6 +50,7 @@ public class ImageArborescence : MonoBehaviour
      bool _alreadyDraw;
 
     Button _button;
+    float _lineSize = 5;
 
 
     void Awake()
@@ -192,7 +193,7 @@ public class ImageArborescence : MonoBehaviour
         {
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
-            _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(3,3);
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(_lineSize, _lineSize);
             //_lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
             _lineRendererGO[i].GetComponent<LineRenderer>().material = _lineMove;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);

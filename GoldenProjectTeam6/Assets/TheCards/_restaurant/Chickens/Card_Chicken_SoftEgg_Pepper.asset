@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: "You have a serious stomach ache.\n\nAnyway... it's time for the
-    dish. \n\nYou're going to have the omelette.\n\nYou feel that your stomach ache
-    is becoming unbearable... \n\nAs if your belly is going to explode!"
+  _description: "You have a serious stomach ache.\nAnyway... it's time for the dish.
+    \nYou're going to have the omelette.\nYou feel that a stomach ache that's becoming
+    unbearable... \nAs if your belly is going to explode!"
   _cardID: 73
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -28,9 +28,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 8cb0d250b94aca74d91a6e0d1cbf5eb3, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Go to the toilets
-  _isNextCardLeft: {fileID: 11400000, guid: 706b373d852cf42489f9eb2bc5155d8d, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 1a1b7ee5c6fcf3a4c82524282559cbb4, type: 2}
   _isSwipingLeftDescription: Stay, like a real man!
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

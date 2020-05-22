@@ -17,7 +17,7 @@ MonoBehaviour:
   _description: 'You light the fuse, but before you can do anything, the gun fires.
 
     BOOM
-    ! Confetti fireworks! That was cool! But you''re still in perfect condition...
+    ! Confetti'' firework! That was cool! But you''re still in perfect condition...
     too bad.'
   _cardID: 33
   _cardAlreadyDraw: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: 4c42449d6392e524a8720931e08ee171, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 061962619eb2a684b91667fdeca7db9b, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

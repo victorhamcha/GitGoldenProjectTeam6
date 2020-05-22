@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Broadwalk
   _image: {fileID: 21300000, guid: 89e5906d48839bc4da681210edb68a33, type: 3}
-  _description: "He's putting the bottle down.\nHe throws his knives right at the
-    edge of your limbs on the wheel. \nYou leave, unharmed."
+  _description: "He puts the bottle down and throws his knives right at the edge
+    of your limbs on the wheel. \nYou leave, unharmed."
   _cardID: 12
   _cardAlreadyDraw: 0
   _canSlideUp: 0

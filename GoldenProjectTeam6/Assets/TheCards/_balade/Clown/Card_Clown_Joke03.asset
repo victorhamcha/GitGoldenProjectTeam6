@@ -16,8 +16,7 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
   _description: '"A little girl''s on a swing.
 
-    Suddenly she falls. Why does
-    she fall ?"'
+    Suddenly she falls. Why ?"'
   _cardID: 22
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -29,9 +28,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 65670c0cc5357514890ac7afb2dafeeb, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: e495d096dc5aa88409818a88c6271cc4, type: 2}
   _isSwipingRightDescription: AHAHAHAHAHAHAHAHAHAHAHA
-  _isNextCardLeft: {fileID: 11400000, guid: 65670c0cc5357514890ac7afb2dafeeb, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: e495d096dc5aa88409818a88c6271cc4, type: 2}
   _isSwipingLeftDescription: ...
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: aed7e433c7eddc94bbd42c6220e03e4b, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 23e171d481318a941a2e40bc8b130208, type: 2}
   _isSwipingUpDescription: Throw a tomato
-  _isNextCardRight: {fileID: 11400000, guid: 23e171d481318a941a2e40bc8b130208, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: c1d4c5dcb0d75ac43989e7a658b0dcd7, type: 2}
   _isSwipingRightDescription: Try to insult someone mothers
-  _isNextCardLeft: {fileID: 11400000, guid: ee6f22202ef3dcd4dbc2f46acdad1dd7, type: 2}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: Leave, it's shit anyways
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

@@ -64,10 +64,18 @@ public class ContratsPanel : MonoBehaviour
         if (androidControl.SwipeLeft)
         {
             page--;
+            if(page==-1)
+            {
+                page = 2;
+            }
         }
         else if (androidControl.SwipeRight)
         {
             page++;
+            if(page==3)
+            {
+                page = 0;
+            }
         }
 
         switch(page)
@@ -142,6 +150,12 @@ public class ContratsPanel : MonoBehaviour
         lvl = progress / 20;
         int progressLVL = (((progress - lvl * 20) * 100) / 20);
 
+        if(lvl>4)
+        {
+            lvl = 4;
+            progressLVL = 100;
+        }
+
         //bar UI
         bar.localScale = new Vector3((progressLVL / 100f) * barBG.localScale.x, barBG.localScale.y, barBG.localScale.z);
         prctBar.text = progressLVL.ToString() + "%";
@@ -165,7 +179,7 @@ public class ContratsPanel : MonoBehaviour
     public void ChangeSkin(int i)
     {
        
-        changeMat += 1;
+        changeMat += i;
         if(changeMat> lvl)
         {
             changeMat = 0;

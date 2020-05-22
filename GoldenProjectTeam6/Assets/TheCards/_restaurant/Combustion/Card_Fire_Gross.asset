@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 072cffb90ae40b24a92830bcca356a39, type: 3}
-  _description: You still have a modicum of dignity, that's good...
+  _description: OH MY GOD THAT'S DISGUSTING
   _cardID: 63
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: 8843286bc09777443a589b42bb97815f, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: dbbd2ef40b945204980a6c609c2bd60d, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

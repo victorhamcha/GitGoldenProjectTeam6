@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Zoo
   _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
-  _description: 'You''re wondering what possessed you to do such a stupid thing...
-
+  _description: 'You''re wondering what made you to do such a stupid thing...
 
     You
     go away thinking about the meaning of your life.'
@@ -34,7 +33,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: 246732d8f27acfe4dafc421dcf21c652, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 685e8e0224bcb094990261aed907b082, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

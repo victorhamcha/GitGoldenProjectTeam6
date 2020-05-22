@@ -45,7 +45,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         LoadValueFromScriptableObject();
     }
 
-    void LoadValueFromScriptableObject()
+    public void LoadValueFromScriptableObject()
     {
         _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
@@ -173,7 +173,8 @@ public class CardValuesWithScriptable : MonoBehaviour
 
             else
             {
-                Death();
+                // Death(); just for proto
+                SceneManager.LoadScene("MenuModifVic");
             }
 
             canSlideUp = false;
@@ -230,7 +231,8 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
             else
             {
-                Death();
+                //Death(); just for proto
+                SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
             }
 
             canSlideUp = false;

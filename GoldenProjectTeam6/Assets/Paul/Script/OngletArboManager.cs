@@ -24,7 +24,9 @@ public class OngletArboManager : MonoBehaviour
 
     [HideInInspector] public bool _canMoveToPosAtStart;
 
+
     int _soustraction;
+
     void Start()
     {
         _canMoveToPosAtStart = true;
@@ -114,7 +116,6 @@ public class OngletArboManager : MonoBehaviour
 
     void ActualiseCamera(float zoom)
     {
-        
         if(_actualdId != 2)
         {
             _cam.transform.position = new Vector3(_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
@@ -144,6 +145,9 @@ public class OngletArboManager : MonoBehaviour
             _addition = 11;
         }
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+
+        FindObjectOfType<CameraFollowMouse>()._numberInArray = _addition;
+        FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
     }
 
     public void FindOngletToActive(int i)

@@ -18,9 +18,7 @@ MonoBehaviour:
     a cotton candy that is certainly bad considering the cavities you had.
 
     "Here
-    you go ! A good sweetness ! Good luck !"
-
-    You get a [Poisoned cotton candy].'
+    you go! A good treat for you! Good luck!"'
   _cardID: 93
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -32,9 +30,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 45c738b1606f6fb4290d900596c2fcb0, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 18752557ad6f10544a1c7155b7dcb301, type: 2}
   _isSwipingRightDescription: Eat the juicy poisonned cotton candy
-  _isNextCardLeft: {fileID: 11400000, guid: 111ed16079414ef4a96cb77466d8362a, type: 2}
+  _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: Leave with your poisonned cotton candy
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

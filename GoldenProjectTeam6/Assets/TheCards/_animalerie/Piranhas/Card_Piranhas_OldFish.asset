@@ -17,7 +17,6 @@ MonoBehaviour:
   _description: '"I warn you, they taste very bad, they''re supposed to be for piranhas...
     Here you go."
 
-
     You get a wounded fish.'
   _cardID: 104
   _cardAlreadyDraw: 0
@@ -30,9 +29,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 0ccabdf14fe727740a404fe603c4b18e, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isSwipingRightDescription: Rub the fish on your face
-  _isNextCardLeft: {fileID: 11400000, guid: f279d8f6460e6a445bf6d4214e770abf, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 0ccabdf14fe727740a404fe603c4b18e, type: 2}
   _isSwipingLeftDescription: Eat the fish
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

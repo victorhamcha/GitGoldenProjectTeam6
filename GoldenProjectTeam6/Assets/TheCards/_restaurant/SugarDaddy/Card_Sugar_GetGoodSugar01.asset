@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Food Courts
   _image: {fileID: 21300000, guid: 7a428fb02fc7b9b4bbf66ac6819d0959, type: 3}
-  _description: '"Here you go ! A good sweetness ! Good luck !"
+  _description: '"Here you go! A good treat for you! Good luck!"
 
     You get a [cotton
     candy].'
@@ -33,7 +33,7 @@ MonoBehaviour:
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
-  _firstCardOfEvent: {fileID: 11400000, guid: 08f040e192c69534996d38e7eb2cceb8, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 706b373d852cf42489f9eb2bc5155d8d, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1
