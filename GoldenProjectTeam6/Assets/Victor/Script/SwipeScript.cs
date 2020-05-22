@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class SwipeScript : MonoBehaviour
 {
+    //Anim related variables
+    public Animator animCard;
+    private float inactivity = 0.0f;
+
     bool touched = false;
     //ROTATION//
     public float maxRotation = 20f;
@@ -44,7 +48,9 @@ public class SwipeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        img.SetActive(false);
+        animCard = GetComponent<Animator>();
+
+        //img.SetActive(false);
         card = GetComponent<CardValuesWithScriptable>();
         material = GetComponent<Image>().material;
         if(SuccesManager.cardSkin!=null)
@@ -59,7 +65,25 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       canslidup=card.canSlideUp;
+        if(!touched)
+        {
+            inactivity += Time.deltaTime;
+            Debug.Log(inactivity);
+        }
+        else
+        {
+            inactivity = 0.0f;
+        }
+
+        if(inactivity > 30.0f && animCard.enabled == false)
+        {
+            animCard.enabled = true;
+            img.SetActive(true);
+            
+        }
+        
+
+        canslidup=card.canSlideUp;
         upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y)-2 / (maxY/1.5f));
         if (transform.eulerAngles.z-180>0)
         {
@@ -114,6 +138,8 @@ public class SwipeScript : MonoBehaviour
                
                 if (touch.phase == TouchPhase.Began)
                 {
+                    animCard.enabled = false;
+
                     Debug.Log("go in touch began");
                     ArrowSlideUp.SetActive(false);
                     touchRef = touch.position.x;
