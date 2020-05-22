@@ -1099,7 +1099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e161c788c09f63849bef9ea38ce88749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
   swiped: 0
   lockInfo: 
   allTheSucces:
@@ -1126,6 +1125,8 @@ MonoBehaviour:
   succesAnim: {fileID: 0}
   sucesName: {fileID: 0}
   anim: {fileID: 0}
+  timer: 0
+  boredomCard: {fileID: 0}
   audioManager: {fileID: 0}
 --- !u!224 &151850637
 RectTransform:
@@ -3199,7 +3200,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toggleWhichChanges: {fileID: 9605637}
-  musics: []
+  musics:
+  - name: GameMusic
+    clip: {fileID: 8300000, guid: d2d4c269fc715994abd21914cf376778, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 1
+    source: {fileID: 0}
 --- !u!4 &448028638
 Transform:
   m_ObjectHideFlags: 0
