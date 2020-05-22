@@ -8,7 +8,11 @@ using UnityEngine.SceneManagement;
 public class CardValuesWithScriptable : MonoBehaviour
 {
 
-  
+
+    //vibration
+    private long[] paternVibrationDeath = new long[4];
+   
+
     private SuccesManager succesManager;
     
     [Header("First Card To Play")]
@@ -38,6 +42,10 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Start()
     {
+        paternVibrationDeath[3] = 200;
+        paternVibrationDeath[2] = 100;
+        paternVibrationDeath[1] = 75;
+        paternVibrationDeath[0] = 50;
         audioManager = FindObjectOfType<AudioManager>();
         succesManager = FindObjectOfType<SuccesManager>();
         eventManager = FindObjectOfType<EventManager>();
@@ -121,6 +129,9 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 audioManager.Play("SFX_DeathSound");
+
+                Vibration.Vibrate(paternVibrationDeath, 1);
+               
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
                 if (succesManager.allTheSucces[12].locked&&succesManager.swiped<=5)
                     succesManager.UnlockSuccess(succesManager.allTheSucces[12].enumSucces);

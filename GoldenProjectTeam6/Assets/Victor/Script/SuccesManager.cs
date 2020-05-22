@@ -9,8 +9,8 @@ public class SuccesManager : MonoBehaviour
     bool inGame = false;
 
 
-    //succes12
-    
+    //Vibration
+    private long[] paternVibrationSucces = new long[2];
 
     //succes13
     [HideInInspector] public float swiped = 0f;
@@ -46,7 +46,8 @@ public class SuccesManager : MonoBehaviour
 
     void Start()
     {
-
+        paternVibrationSucces[0] = 100;
+        paternVibrationSucces[1] = 150;
         inGame = SceneManager.GetActiveScene().name == "GeneralScene";
 
 
@@ -230,6 +231,7 @@ public class SuccesManager : MonoBehaviour
             yield return null;
         }
         audioManager.Play("SFX_UnlockSuccess");
+        Vibration.Vibrate(paternVibrationSucces, 1);
         Debug.Log("exit couroutine");
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
@@ -243,6 +245,7 @@ public class SuccesManager : MonoBehaviour
     public void SuccesAnim(string succesname)
     {
         audioManager.Play("SFX_UnlockSuccess");
+        Vibration.Vibrate(paternVibrationSucces, 1);
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
         StartCoroutine(WaitEndAnim());
