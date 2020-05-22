@@ -68,7 +68,7 @@ public class SwipeScript : MonoBehaviour
         if(!touched)
         {
             inactivity += Time.deltaTime;
-            Debug.Log(inactivity);
+            //Debug.Log(inactivity);
         }
         else
         {
