@@ -27,9 +27,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 036a0fd0eb03b6a479e946bd71f6bbf4, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 204442f339f0fca41b5b16a45d574420, type: 2}
   _isSwipingRightDescription: Poched Egg
-  _isNextCardLeft: {fileID: 11400000}
+  _isNextCardLeft: {fileID: 11400000, guid: 0a64f19d0834b0841acf679cf0b4fb26, type: 2}
   _isSwipingLeftDescription: Hard Egg
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

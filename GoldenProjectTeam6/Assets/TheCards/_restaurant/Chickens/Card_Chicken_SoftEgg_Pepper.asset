@@ -28,9 +28,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000}
+  _isNextCardRight: {fileID: 11400000, guid: 8cb0d250b94aca74d91a6e0d1cbf5eb3, type: 2}
   _isSwipingRightDescription: Go to the toilets
-  _isNextCardLeft: {fileID: 11400000, guid: 1a1b7ee5c6fcf3a4c82524282559cbb4, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 706b373d852cf42489f9eb2bc5155d8d, type: 2}
   _isSwipingLeftDescription: Stay, like a real man!
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

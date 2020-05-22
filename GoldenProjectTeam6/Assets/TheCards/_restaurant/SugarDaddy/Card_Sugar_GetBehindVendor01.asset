@@ -26,11 +26,11 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000}
+  _isNextCardRight: {fileID: 11400000, guid: ed6b7d010394f7847b93e61fc924893f, type: 2}
   _isSwipingRightDescription: Eat someone else's cotton candy
-  _isNextCardLeft: {fileID: 11400000, guid: 45c738b1606f6fb4290d900596c2fcb0, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 685e8e0224bcb094990261aed907b082, type: 2}
   _isSwipingLeftDescription: Intimidate the vendor to get yours faster
-  _firstCardOfEvent: {fileID: 11400000, guid: 706b373d852cf42489f9eb2bc5155d8d, type: 2}
+  _firstCardOfEvent: {fileID: 11400000, guid: 08f040e192c69534996d38e7eb2cceb8, type: 2}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

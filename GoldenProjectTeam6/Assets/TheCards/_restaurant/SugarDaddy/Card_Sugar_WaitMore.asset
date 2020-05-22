@@ -27,9 +27,9 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: fffaf510018f8d54c9281948ea883962, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 18752557ad6f10544a1c7155b7dcb301, type: 2}
   _isSwipingRightDescription: Wait a tiny tidy bity more
-  _isNextCardLeft: {fileID: 11400000, guid: 487577982b36c21459037ad2f74acaa0, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: 23269e6a631837445991c3dac40f6820, type: 2}
   _isSwipingLeftDescription: Sneak to the front of the row
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

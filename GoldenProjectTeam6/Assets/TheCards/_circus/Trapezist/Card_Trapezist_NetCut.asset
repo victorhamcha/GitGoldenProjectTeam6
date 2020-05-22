@@ -24,11 +24,11 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000}
+  _isNextCardUp: {fileID: 11400000, guid: 1fbc86bfff7113244bc630757514dd97, type: 2}
   _isSwipingUpDescription: Cut the cables holding the poles
-  _isNextCardRight: {fileID: 11400000, guid: 1fbc86bfff7113244bc630757514dd97, type: 2}
+  _isNextCardRight: {fileID: 11400000, guid: 12410298b3665af4aac8b7cdffccca2e, type: 2}
   _isSwipingRightDescription: Get the crowd to attack the acrobats
-  _isNextCardLeft: {fileID: 11400000, guid: 543ea62c854451f4db7b86fca9d6213b, type: 2}
+  _isNextCardLeft: {fileID: 11400000, guid: dbbd2ef40b945204980a6c609c2bd60d, type: 2}
   _isSwipingLeftDescription: Stress the acrobats insulting their mothers
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0

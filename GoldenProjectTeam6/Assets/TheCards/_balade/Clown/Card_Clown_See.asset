@@ -25,7 +25,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 11400000, guid: 7be1c17847e2e1942993df0befb8c052, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 33b0a644231d93643afecf3852a05aaa, type: 2}
   _isSwipingUpDescription: Pinch his big, appealing red nose
   _isNextCardRight: {fileID: 11400000, guid: 5d3d3f94d9c25634bbe5ee399e0ebed9, type: 2}
   _isSwipingRightDescription: Hey Clown, tell me a joke!
