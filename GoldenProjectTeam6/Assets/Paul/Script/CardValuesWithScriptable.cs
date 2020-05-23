@@ -130,7 +130,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             {
                 audioManager.Play("SFX_DeathSound");
 
-                Vibration.Vibrate(paternVibrationDeath, 1);
+               
                
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
                 if (succesManager.allTheSucces[12].locked&&succesManager.swiped<=5)

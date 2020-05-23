@@ -200,6 +200,7 @@ public class SuccesManager : MonoBehaviour
                     {
                         
                         allTheSucces[i].locked = false;
+                        lockInfo[i] = allTheSucces[i].locked;
                         GPSAchievements.UnlockSucces(allTheSucces[i].id);
                         //saveSucces
                         if (succesAnim.GetBool("UNLOCK"))
@@ -213,7 +214,9 @@ public class SuccesManager : MonoBehaviour
                             Debug.Log("Basic");
                             SuccesAnim(allTheSucces[i].txtTitre);
                         }
-                        
+
+                      
+
                         break;
                     }
                 }
@@ -231,29 +234,23 @@ public class SuccesManager : MonoBehaviour
             yield return null;
         }
         audioManager.Play("SFX_UnlockSuccess");
-        Vibration.Vibrate(paternVibrationSucces, 1);
+        Vibration.Vibrate(200);
         Debug.Log("exit couroutine");
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
         StartCoroutine(WaitEndAnim());
         sucesName.text = succesname;
-        for (int i = 0; i < allTheSucces.Count; i++)
-        {
-            lockInfo[i] = allTheSucces[i].locked;
-        }
+       
     }
     public void SuccesAnim(string succesname)
     {
         audioManager.Play("SFX_UnlockSuccess");
-        Vibration.Vibrate(paternVibrationSucces, 1);
+        Vibration.Vibrate(200);
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
         StartCoroutine(WaitEndAnim());
         sucesName.text = succesname;
-        for (int i = 0; i < allTheSucces.Count; i++)
-        {
-            lockInfo[i] = allTheSucces[i].locked;
-        }
+       
     }
 
     IEnumerator WaitEndAnim()
