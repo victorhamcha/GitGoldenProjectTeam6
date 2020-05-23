@@ -7,6 +7,7 @@ public class DisclaimerScript : MonoBehaviour
 {
     [SerializeField]
     private float Timer;
+    private bool loadingScene = false;
 
     private void Update()
     {
@@ -17,6 +18,19 @@ public class DisclaimerScript : MonoBehaviour
 
     private void SceneTransition()
     {
-        SceneManager.LoadScene("MenuModifVic");
+        if (!loadingScene)
+            StartCoroutine(LoadYourAsyncScene("MenuModifVic"));
+    }
+
+    IEnumerator LoadYourAsyncScene(string scene)
+    {
+        loadingScene = true;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

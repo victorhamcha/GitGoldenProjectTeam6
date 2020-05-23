@@ -17,6 +17,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     
     [Header("First Card To Play")]
     public CardScriptableObject _firstCardScriptable;
+    private CardScriptableObject originalCard;
     [Header("Value to change")]
     public Image _imageCard;
     public TextMeshProUGUI _titleCard, _descriptionCard, _descriptionLeftSwipe, _descriptionRightSwipe, _descriptionUpSwipe;
@@ -42,6 +43,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Start()
     {
+        originalCard = _firstCardScriptable;
         paternVibrationDeath[3] = 200;
         paternVibrationDeath[2] = 100;
         paternVibrationDeath[1] = 75;
@@ -185,7 +187,9 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 // Death(); just for proto
+                FindObjectOfType<SaveAndLoad>().SavePlayer();
                 SceneManager.LoadScene("MenuModifVic");
+                FindObjectOfType<SaveAndLoad>().LoadPlayer();
             }
 
             canSlideUp = false;
@@ -243,7 +247,10 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 //Death(); just for proto
-                SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+                FindObjectOfType<SaveAndLoad>().SavePlayer();
+                _firstCardScriptable = originalCard;
+                LoadValueFromScriptableObject();
+                
             }
 
             canSlideUp = false;

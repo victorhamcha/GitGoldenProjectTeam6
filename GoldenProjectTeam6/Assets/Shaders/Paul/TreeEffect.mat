@@ -34,7 +34,7 @@ Material:
     - Vector1_C1F899AA: 1
     - Vector1_D1DF913E: 6.91
     - _Diffuse: 0
-    - _Dissolve: 0.9935519
+    - _Dissolve: 0
     - _EdgeWidth: 0.01
     - _Fade: 1
     - _Noise: 0.05

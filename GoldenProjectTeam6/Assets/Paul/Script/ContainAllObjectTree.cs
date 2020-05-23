@@ -105,8 +105,8 @@ public class ContainAllObjectTree : MonoBehaviour
         {
             SuccesManager succesManager;
             succesManager = FindObjectOfType<SuccesManager>();
-            if (succesManager.allTheSucces[10].locked)
-                succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
+            //if (succesManager.allTheSucces[10].locked)
+                //succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
         }
         if (verifierUnlock == _allCardUnlock.Count)
         {

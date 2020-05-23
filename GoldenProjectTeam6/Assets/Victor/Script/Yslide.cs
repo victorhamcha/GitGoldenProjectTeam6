@@ -8,11 +8,11 @@ public class Yslide : MonoBehaviour
 {
     
     public ContratsPanel panel;
-    private Vector2 originalPos;
+    public Vector2 originalPos;
     private Vector3 distance;
     public float minY;
     public float maxY;
-    public float posY;
+   
     public bool touching = false;
     public bool toucMax = false;
     public bool toucMin = false;
@@ -32,9 +32,83 @@ public class Yslide : MonoBehaviour
     {
         if(panel.androidControl.SwipeLeft|| panel.androidControl.SwipeRight)
         {
-            transform.position = originalPos;
+            transform.position = new Vector2(transform.position.x,originalPos.y+0.2f);
             toucMax = false;
             toucMin = false;
+        }
+
+       
+        else
+        {
+           if(panel.page!=0)
+            {
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+
+                    if (touch.phase == TouchPhase.Began)
+                    {
+                        touching = true;
+                        distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
+                    }
+                    else if (touch.phase == TouchPhase.Moved)
+                    {
+                        Vector2 pos_move = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
+                        float moveY = pos_move.y - distance.y;
+                        if (transform.position.y > minY && Vector2.Distance(lastSucces.transform.position, txt.position) > 1f && touching)
+                        {
+                            transform.position = new Vector2(originalPos.x, moveY);
+                        }
+
+                        else if (transform.position.y < minY)
+                        {
+                            transform.position = new Vector2(originalPos.x, -0.8862568f);
+                            if (touching)
+                            {
+                                lastmoveDownY = moveY;
+                            }
+                            touching = false;
+                            toucMin = true;
+                        }
+                        else if (Vector2.Distance(lastSucces.transform.position, txt.position) < 1f)
+                        {
+                            transform.position = new Vector2(originalPos.x, transform.position.y - 1);
+                            if (touching)
+                            {
+                                lastmoveUpY = moveY;
+                            }
+                            touching = false;
+                            toucMax = true;
+                        }
+                        else if (!touching)
+                        {
+
+                            if (moveY > lastmoveDownY && toucMin)
+                            {
+                                touching = true;
+                                toucMin = false;
+                            }
+                            else if (moveY < lastmoveUpY && toucMax)
+                            {
+                                touching = true;
+                                toucMax = false;
+                            }
+
+                        }
+
+                    }
+
+
+
+
+
+
+
+                }
+            }
+
+               
+            
         }
         if (panel.page == 1)
         {
@@ -43,83 +117,17 @@ public class Yslide : MonoBehaviour
         }
         if (panel.page == 2)
         {
-            if(panel.unlockSucces.Count>0)
-            lastSucces = panel.unlockSucces[panel.unlockSucces.Count-1];
-         
+            if (panel.unlockSucces.Count > 0)
+                lastSucces = panel.unlockSucces[panel.unlockSucces.Count - 1];
+
 
         }
-        posY = transform.position.y;
-        if(panel.page!=0)
-        {
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-
-                if (touch.phase == TouchPhase.Began)
-                {
-                    touching = true;
-                    distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
-                }
-                else if (touch.phase == TouchPhase.Moved)
-                {
-                    Vector2 pos_move = Camera.main.ScreenToWorldPoint(new Vector2(touch.position.x, touch.position.y));
-                    float moveY = pos_move.y - distance.y;
-                    if (transform.position.y > minY && Vector2.Distance(lastSucces.transform.position,txt.position)>1f && touching)
-                    {
-                        transform.position = new Vector2(originalPos.x, moveY);
-                    }
-
-                    else if (transform.position.y < minY)
-                    {
-                        transform.position = new Vector2(originalPos.x, -0.8862568f);
-                        if (touching)
-                        {
-                            lastmoveDownY = moveY;
-                        }
-                        touching = false;
-                        toucMin = true;
-                    }
-                    else if (Vector2.Distance(lastSucces.transform.position, txt.position) < 1f)
-                    {
-                        transform.position = new Vector2(originalPos.x, transform.position.y-1);
-                        if (touching)
-                        {
-                            lastmoveUpY = moveY;
-                        }
-                        touching = false;
-                        toucMax = true;
-                    }
-                    else if (!touching)
-                    {
-
-                        if (moveY > lastmoveDownY && toucMin)
-                        {
-                            touching = true;
-                            toucMin = false;
-                        }
-                        else if (moveY < lastmoveUpY && toucMax)
-                        {
-                            touching = true;
-                            toucMax = false;
-                        }
-
-                    }
-
-                }
 
 
 
 
 
 
-
-            }
-        }
-        
-
-
-
-      
     }
 
     

@@ -202,6 +202,7 @@ public class SuccesManager : MonoBehaviour
                         allTheSucces[i].locked = false;
                         lockInfo[i] = allTheSucces[i].locked;
                         GPSAchievements.UnlockSucces(allTheSucces[i].id);
+                        FindObjectOfType<SaveAndLoad>().SaveCards();
                         //saveSucces
                         if (succesAnim.GetBool("UNLOCK"))
                         {
