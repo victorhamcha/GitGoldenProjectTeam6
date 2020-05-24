@@ -77,7 +77,7 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log(data.firstCardData);
         }
 
-        Debug.Log(succes);
+
         if (succes == null)
         {
             succes = FindObjectOfType<SuccesManager>();
@@ -102,6 +102,6 @@ public class SaveAndLoad : MonoBehaviour
         saveOptions = data.optionsData;
 
         LoadCard();
-        Debug.Log("load");
+
     }
 }

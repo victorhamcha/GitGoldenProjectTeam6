@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
         if (inGame)
         {
             FindObjectOfType<SaveAndLoad>().LoadCard();
+            if (SceneManager.GetActiveScene().name == "GeneralScene")
+            {
+                MusiqueManager.Instance.Play("RainSound");
+            }
+           
         }
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
 
@@ -37,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Je ne suis pas dans l'arbo");
+
         }
 
         if (_savingDrawCardCard.Count < FindObjectOfType<SaveAndLoad>().alreadyDrawCards.Count)

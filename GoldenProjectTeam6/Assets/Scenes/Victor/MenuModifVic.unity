@@ -5560,6 +5560,13 @@ MonoBehaviour:
     loop: 1
     playOnAwake: 1
     source: {fileID: 0}
+  - name: RainSound
+    clip: {fileID: 8300000, guid: 7b09d7c85a9b19e4997a25543603aa61, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
 --- !u!4 &852573720
 Transform:
   m_ObjectHideFlags: 0
@@ -13171,7 +13178,6 @@ MonoBehaviour:
   toucMax: 0
   toucMin: 0
   lastSucces: {fileID: 0}
-  firstSucces: {fileID: 0}
   txt: {fileID: 674019377}
 --- !u!114 &1607973642
 MonoBehaviour:

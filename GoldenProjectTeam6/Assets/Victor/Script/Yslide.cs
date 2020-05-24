@@ -19,11 +19,14 @@ public class Yslide : MonoBehaviour
     private float lastmoveDownY;
     private float lastmoveUpY;
     public Succes lastSucces;
-   
+    private bool canTOuch = true;
+    Touch touch;
+
+
     public Transform txt;
     void Start()
     {
-        originalPos = transform.position;
+        originalPos = GetComponent<RectTransform>().anchoredPosition;
         minY = -0.8862568f-0.1f;
         
     }
@@ -31,7 +34,8 @@ public class Yslide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(swiping.SwipeLeft|| swiping.SwipeRight)
+       
+        if (swiping.SwipeLeft|| swiping.SwipeRight)
         {
             if (panel.page == 1)
             {
@@ -50,20 +54,20 @@ public class Yslide : MonoBehaviour
                 }
                
             }
+            
             GetComponent<RectTransform>().anchoredPosition = originalPos;
             toucMax = false;
             toucMin = false;
-        }
-
+           
+            //canTOuch = false;
+            distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
+        }      
        
-        else
+        if(panel.page!=0)
         {
-           if(panel.page!=0)
-            {
                 if (Input.touchCount > 0)
                 {
-                    Touch touch = Input.GetTouch(0);
-
+                    touch = Input.GetTouch(0);
                     if (touch.phase == TouchPhase.Began)
                     {
                         touching = true;
@@ -115,33 +119,22 @@ public class Yslide : MonoBehaviour
                         }
 
                     }
-
-
-
-
-
-
-
                 }
-            }
-
-               
-            
         }
-      
 
-
-
-
-
-
+       //if(Input.GetMouseButtonUp(0))
+       //{
+       //     canTOuch = true;
+       //}
     }
+
+
 
     
-
-    IEnumerator waitSucces()
-    {
-        yield return new WaitForSeconds(0.01f);
-    }
+    //IEnumerator waitSucces()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    canTOuch = true;
+    //}
     
 }

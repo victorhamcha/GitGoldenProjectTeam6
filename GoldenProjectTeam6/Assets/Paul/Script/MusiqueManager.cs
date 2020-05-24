@@ -7,21 +7,36 @@ public class MusiqueManager : MonoBehaviour
     public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
     public Sound[] musics;
-    //public static MusiqueManager Instance { get; private set; }
+    public static MusiqueManager Instance { get; private set; }
 
 
     private void Awake()
     {
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //    DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+            Toggle[] toggles =Resources.FindObjectsOfTypeAll<Toggle>();
             
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
+            Debug.Log(toggles.Length);
+            for (int i=0;i<toggles.Length;i++)
+            {
+                if(toggles[i].name== "ToggleMusic")
+                {
+                    Instance._toggleWhichChanges = toggles[i];
+                    Debug.Log("qmlkdfjqmlsdkf");
+                    break;
+                }
+            }
+            
+            ChangeToggle();
+            //Instance = this;
+            //DontDestroyOnLoad(this);
+        }
     }
     void Start()
     {
@@ -41,8 +56,7 @@ public class MusiqueManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-            FindObjectOfType<MusiqueManager>().Play("Them");
+     
     }
 
     void PlayOnAwake()
