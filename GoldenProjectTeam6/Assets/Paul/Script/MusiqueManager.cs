@@ -7,8 +7,22 @@ public class MusiqueManager : MonoBehaviour
     public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
     public Sound[] musics;
+    //public static MusiqueManager Instance { get; private set; }
 
 
+    private void Awake()
+    {
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //    DontDestroyOnLoad(this);
+            
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
     void Start()
     {
         foreach (Sound s in musics)

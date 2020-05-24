@@ -12,13 +12,14 @@ public class Yslide : MonoBehaviour
     private Vector3 distance;
     public float minY;
     public float maxY;
-   
+    public Swiping swiping;
     public bool touching = false;
     public bool toucMax = false;
     public bool toucMin = false;
     private float lastmoveDownY;
     private float lastmoveUpY;
     public Succes lastSucces;
+   
     public Transform txt;
     void Start()
     {
@@ -30,9 +31,26 @@ public class Yslide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(panel.androidControl.SwipeLeft|| panel.androidControl.SwipeRight)
+        if(swiping.SwipeLeft|| swiping.SwipeRight)
         {
-            transform.position = new Vector2(transform.position.x,originalPos.y+0.2f);
+            if (panel.page == 1)
+            {
+                if (panel.lockSucces.Count > 0)
+                {
+                    lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
+                   
+                }
+            }
+            if (panel.page == 2)
+            {
+                if (panel.unlockSucces.Count > 0)
+                {
+                    lastSucces = panel.unlockSucces[panel.unlockSucces.Count - 1];
+                  
+                }
+               
+            }
+            GetComponent<RectTransform>().anchoredPosition = originalPos;
             toucMax = false;
             toucMin = false;
         }
@@ -110,18 +128,7 @@ public class Yslide : MonoBehaviour
                
             
         }
-        if (panel.page == 1)
-        {
-            if (panel.lockSucces.Count > 0)
-                lastSucces = panel.lockSucces[panel.lockSucces.Count - 1];
-        }
-        if (panel.page == 2)
-        {
-            if (panel.unlockSucces.Count > 0)
-                lastSucces = panel.unlockSucces[panel.unlockSucces.Count - 1];
-
-
-        }
+      
 
 
 

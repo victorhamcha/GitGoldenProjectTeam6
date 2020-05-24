@@ -45,9 +45,20 @@ public class SwipeScript : MonoBehaviour
     public bool canslidup;
     //Changement//
     private CardValuesWithScriptable card;
+
+    //description
+    public RectTransform descriptionTransform;
+    private Vector2 originalDescriptionPosition;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        if(descriptionTransform!=null)
+        {
+            originalDescriptionPosition = descriptionTransform.anchoredPosition;
+        }
+
         animCard = GetComponent<Animator>();
 
         //img.SetActive(false);
@@ -101,15 +112,24 @@ public class SwipeScript : MonoBehaviour
      
 
         
-        if(!card.canSlideUp)
+        if(!card._firstCardScriptable._canSlideUp)
         {
            
             upText.text= "";
             ArrowSlideUp.SetActive(false);
         }
-        else if(card.canSlideUp && !touched)
+        else if(card._firstCardScriptable._canSlideUp && !touched)
         {
             ArrowSlideUp.SetActive(true);
+        }
+        else if(card._firstCardScriptable._canSlideUp &&!canslidup && touched)
+        {
+            ArrowSlideUp.SetActive(false);
+            upText.text = "You don't have the object needed";
+        }
+        else if(card._firstCardScriptable._canSlideUp && canslidup && touched)
+        {
+            ArrowSlideUp.SetActive(false);
         }
         
         if (card._isADeadCard)
@@ -224,13 +244,14 @@ public class SwipeScript : MonoBehaviour
                 }
                 else if (transform.position.y >= maxY && card.canSlideUp)
                 {
-                    card.VerifyIfCanSlideUp();
+                    card.GoUp();
                   
                 }
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
                 disolve = false;
                 undisolve = true;
+                descriptionTransform.anchoredPosition = originalDescriptionPosition;
 
 
             }
@@ -297,6 +318,7 @@ public class SwipeScript : MonoBehaviour
             {
                 fade = 1f;
                 undisolve = false;
+                
             }
             else
             {

@@ -179,7 +179,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                     audioManager.Play("SFX_FinEventSansMort");
                 }
             }
-
+            audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+            
             _firstCardScriptable = _nextCardLeft;
             if (!_isADeadCard)
                 LoadValueFromScriptableObject();
@@ -236,10 +237,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                     audioManager.Play("SFX_FinEventSansMort");
                 }
             }
-            else
-            {
-                    audioManager.PlayRandomPitch("SFX_Swipe",0.3f,1.7f);               
-            }
+            audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+            
 
             _firstCardScriptable = _nextCardRight;
 
@@ -292,7 +291,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     public void GoUp()
     {
-
+        
         if (_firstCardScriptable._canSlideUp)
         {
             if (_firstCardScriptable._enumObjectToUnlockUp.ToString() != "none")
@@ -328,7 +327,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             {
                 succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
             }
-            Death();
+            //Death(); for the proto
         }
         canSlideUp = false;
           

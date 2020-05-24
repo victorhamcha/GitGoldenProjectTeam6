@@ -8,9 +8,22 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
+    //public static AudioManager Instance { get; private set; }
+   
+
 
     void Awake()
     {
+        //if(Instance==null)
+        //{
+        //    Instance = this;
+        //    DontDestroyOnLoad(this);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
