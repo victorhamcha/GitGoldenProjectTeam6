@@ -245,6 +245,10 @@ public class UpdateCards : ScriptableObject
             {
                 Debug.Log("No sprite on : " + cards[i].name);
             }
+            else if(cards[i]._image.name== "Card_Background")
+            {
+                Debug.Log("Sprite is background for : " + cards[i].name);
+            }
         }
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Clown_CryLeave
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
+  _image: {fileID: 21300000, guid: 44e04ae0d7bb72f4eac857777e432bff, type: 3}
   _description: '"............"
 
     The clown quickly inflates a big balloon and

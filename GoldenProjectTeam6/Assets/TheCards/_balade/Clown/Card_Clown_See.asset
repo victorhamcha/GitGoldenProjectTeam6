@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Clown_See
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: 90651c15e04643b49a55f95d5f004fb6, type: 3}
+  _image: {fileID: 21300000, guid: cb8e07d3c8e846a44a178f8163054797, type: 3}
   _description: You approach a clown who is blowing balloons to the shape of lions
     and elephants for children.
   _cardID: 14
