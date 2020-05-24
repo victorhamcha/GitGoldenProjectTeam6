@@ -65,6 +65,7 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(!touched)
         {
             inactivity += Time.deltaTime;
@@ -139,6 +140,7 @@ public class SwipeScript : MonoBehaviour
                 if (touch.phase == TouchPhase.Began)
                 {
                     animCard.enabled = false;
+                    card.audioManager.Play("SFX_Click");
 
                     Debug.Log("go in touch began");
                     ArrowSlideUp.SetActive(false);

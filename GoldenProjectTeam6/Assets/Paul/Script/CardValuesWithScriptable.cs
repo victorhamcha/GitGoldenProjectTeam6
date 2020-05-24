@@ -39,7 +39,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     EventManager eventManager;
 
-    private AudioManager audioManager;
+    [HideInInspector]public AudioManager audioManager;
 
     void Start()
     {
@@ -131,7 +131,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             else
             {
                 audioManager.Play("SFX_DeathSound");
-
+                Vibration.Vibrate(300);
                
                
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
@@ -236,6 +236,10 @@ public class CardValuesWithScriptable : MonoBehaviour
                     audioManager.Play("SFX_FinEventSansMort");
                 }
             }
+            else
+            {
+                    audioManager.PlayRandomPitch("SFX_Swipe",0.3f,1.7f);               
+            }
 
             _firstCardScriptable = _nextCardRight;
 
@@ -246,6 +250,7 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
             else
             {
+                
                 //Death(); just for proto
                 FindObjectOfType<SaveAndLoad>().SavePlayer();
                 _firstCardScriptable = originalCard;

@@ -80,6 +80,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayRandomPitch(string name,float pitchMin,float pitchMax)
+    {
+        if (_volumeToggle == 1)
+        {
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+          
+            if (s == null)
+                return;
+
+            s.source.pitch = UnityEngine.Random.Range(pitchMin, pitchMax);
+            s.source.Play();
+            
+        }
+    }
+
     public void PlaySoundClick()
     {
         FindObjectOfType<AudioManager>().Play("Click");
