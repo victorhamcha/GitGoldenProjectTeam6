@@ -20,19 +20,19 @@ public class MusiqueManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            Toggle[] toggles =Resources.FindObjectsOfTypeAll<Toggle>();
-            
+            Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
+
             Debug.Log(toggles.Length);
-            for (int i=0;i<toggles.Length;i++)
+            for (int i = 0; i < toggles.Length; i++)
             {
-                if(toggles[i].name== "ToggleMusic")
+                if (toggles[i].name == "ToggleMusic")
                 {
                     Instance._toggleWhichChanges = toggles[i];
                     Debug.Log("qmlkdfjqmlsdkf");
                     break;
                 }
             }
-            
+
             ChangeToggle();
             //Instance = this;
             //DontDestroyOnLoad(this);
@@ -65,7 +65,7 @@ public class MusiqueManager : MonoBehaviour
         {
             if (musics[i].playOnAwake)
             {
-                Play(musics[i].name);
+               Instance.Play(musics[i].name);
             }
         }
     }
@@ -92,7 +92,7 @@ public class MusiqueManager : MonoBehaviour
         {
             _volumeToggle = 0;
         }
-        SetVolume();
+        Instance.SetVolume();
     }
 
     public void SetVolume()

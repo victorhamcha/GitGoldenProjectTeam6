@@ -8,34 +8,34 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
-    public static AudioManager Instance { get; private set; }
+    //public static AudioManager Instance { get; private set; }
    
 
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
-            Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //    DontDestroyOnLoad(this);
+        //}
+        //else
+        //{
+        //    Destroy(Instance.gameObject);
+        //    //Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
 
-            Debug.Log(toggles.Length);
-            for (int i = 0; i < toggles.Length; i++)
-            {
-                if (toggles[i].name == "ToggleAudio")
-                {
-                    Instance._toggleWhichChanges = toggles[i];
-                    break;
-                }
-            }
+        //    //Debug.Log(toggles.Length);
+        //    //for (int i = 0; i < toggles.Length; i++)
+        //    //{
+        //    //    if (toggles[i].name == "ToggleAudio")
+        //    //    {
+        //    //        Instance._toggleWhichChanges = toggles[i];
+        //    //        break;
+        //    //    }
+        //    //}
 
-            ChangeToggle();
-        }
+        //    //ChangeToggle();
+        //}
 
         foreach (Sound s in sounds)
         {

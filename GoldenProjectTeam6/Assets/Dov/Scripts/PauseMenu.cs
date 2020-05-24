@@ -16,7 +16,8 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        music.isOn = options[0];
+        MusiqueManager.Instance._toggleWhichChanges.isOn= options[0];
+        
         sound.isOn = options[1];
         censure.isOn = options[2];
         
@@ -32,7 +33,7 @@ public class PauseMenu : MonoBehaviour
         options[togglesID] = toggle.isOn;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         MusiqueManager.Instance.ChangeToggle();
-        AudioManager.Instance.ChangeToggle();
+       // AudioManager.Instance.ChangeToggle();
     }
 
     public void Resume()
