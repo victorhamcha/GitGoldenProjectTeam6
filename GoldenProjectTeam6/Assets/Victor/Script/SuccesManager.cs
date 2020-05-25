@@ -59,106 +59,8 @@ public class SuccesManager : MonoBehaviour
         //easiest succes
         if (inGame)
         {
-            while (easiestSucces.Count < 3 && lvl <= 4)
-            {
-
-                for (int i = 0; i < allTheSucces.Count; i++)
-                {
-
-
-
-                    if (allTheSucces[i].locked)
-                    {
-                        if (lvl == 0)
-                        {
-                            if (allTheSucces[i]._difficulté.ToString() == "Friendly" && easiestSucces.Count < 3)
-                            {
-
-                                easiestSucces.Add(allTheSucces[i]);
-                                continue;
-                            }
-
-                        }
-                        if (lvl == 1)
-                        {
-
-                            if (allTheSucces[i]._difficulté.ToString() == "Easy" && easiestSucces.Count < 3)
-                            {
-                                Debug.Log("yo");
-                                easiestSucces.Add(allTheSucces[i]);
-                                continue;
-                            }
-
-                        }
-                        if (lvl == 2)
-                        {
-                            Debug.Log("hihi");
-                            if (allTheSucces[i]._difficulté.ToString() == "Normal" && easiestSucces.Count < 3)
-                            {
-                                easiestSucces.Add(allTheSucces[i]);
-                                continue;
-                            }
-
-                        }
-                        if (lvl == 3)
-                        {
-                            if (allTheSucces[i]._difficulté.ToString() == "Hard" && easiestSucces.Count < 3)
-                            {
-                                easiestSucces.Add(allTheSucces[i]);
-                                continue;
-                            }
-
-                        }
-                        if (lvl == 4)
-                        {
-
-                            if (allTheSucces[i]._difficulté.ToString() == "Impossible" && easiestSucces.Count < 3)
-                            {
-                                easiestSucces.Add(allTheSucces[i]);
-                                continue;
-                            }
-
-                        }
-
-
-
-                    }
-
-                }
-                lvl++;
-            }
-
-            if (easiestSucces.Count>0)
-            {
-                titre1.text = "Difficulty : "+easiestSucces[0]._difficulté.ToString();
-                des1.text = easiestSucces[0].txtTitre;
-            }
-            else
-            {
-                titre1.text = "No Succes";
-                des1.text = "Succes Done";
-            }
-
-            if (easiestSucces.Count > 1)
-            {
-                titre2.text = "Difficulty : " + easiestSucces[1]._difficulté.ToString();
-                des2.text = easiestSucces[1].txtTitre;
-            }
-            else
-            {
-                titre2.text = "No Succes";
-                des2.text = "Succes Done";
-            }
-            if (easiestSucces.Count > 2)
-            {
-                titre3.text = "Difficulty : " + easiestSucces[2]._difficulté.ToString();
-                des3.text = easiestSucces[2].txtTitre;
-            }
-            else
-            {
-                titre3.text = "No Succes";
-                des3.text = "Succes Done";
-            }
+            LoadEasisestSucces();
+            lvl = 0;
         }
 
 
@@ -216,7 +118,9 @@ public class SuccesManager : MonoBehaviour
                             SuccesAnim(allTheSucces[i].txtTitre);
                         }
 
-                      
+                        LoadEasisestSucces();
+                        lvl = 0;
+
 
                         break;
                     }
@@ -254,9 +158,120 @@ public class SuccesManager : MonoBehaviour
        
     }
 
+
+    public void LoadEasisestSucces()
+    {
+        easiestSucces.Clear();
+        int succes = 0;
+        while (succes < 3 && lvl <= 4)
+        {
+
+            for (int i = 0; i < allTheSucces.Count; i++)
+            {
+
+
+
+                if (allTheSucces[i].locked)
+                {
+                    if (lvl == 0)
+                    {
+                        if (allTheSucces[i]._difficulté.ToString() == "Friendly" && easiestSucces.Count < 3)
+                        {
+
+                            easiestSucces.Add(allTheSucces[i]);
+                            succes++;
+                            continue;
+                        }
+
+                    }
+                    if (lvl == 1)
+                    {
+
+                        if (allTheSucces[i]._difficulté.ToString() == "Easy" && easiestSucces.Count < 3)
+                        {
+
+                            easiestSucces.Add(allTheSucces[i]);
+                            succes++;
+                            continue;
+                        }
+
+                    }
+                    if (lvl == 2)
+                    {
+
+                        if (allTheSucces[i]._difficulté.ToString() == "Normal" && easiestSucces.Count < 3)
+                        {
+                            easiestSucces.Add(allTheSucces[i]);
+                            succes++;
+                            continue;
+                        }
+
+                    }
+                    if (lvl == 3)
+                    {
+                        if (allTheSucces[i]._difficulté.ToString() == "Hard" && easiestSucces.Count < 3)
+                        {
+                            easiestSucces.Add(allTheSucces[i]);
+                            succes++;
+                            continue;
+                        }
+
+                    }
+                    if (lvl == 4)
+                    {
+
+                        if (allTheSucces[i]._difficulté.ToString() == "Impossible" && easiestSucces.Count < 3)
+                        {
+                            easiestSucces.Add(allTheSucces[i]);
+                            succes++;
+                            continue;
+                        }
+
+                    }
+
+
+
+                }
+
+            }
+            lvl++;
+        }
+
+        if (easiestSucces.Count > 0)
+        {
+            titre1.text = "Difficulty : " + easiestSucces[0]._difficulté.ToString();
+            des1.text = easiestSucces[0].txtTitre;
+        }
+        else
+        {
+            titre1.text = "No Succes";
+            des1.text = "Succes Done";
+        }
+
+        if (easiestSucces.Count > 1)
+        {
+            titre2.text = "Difficulty : " + easiestSucces[1]._difficulté.ToString();
+            des2.text = easiestSucces[1].txtTitre;
+        }
+        else
+        {
+            titre2.text = "No Succes";
+            des2.text = "Succes Done";
+        }
+        if (easiestSucces.Count > 2)
+        {
+            titre3.text = "Difficulty : " + easiestSucces[2]._difficulté.ToString();
+            des3.text = easiestSucces[2].txtTitre;
+        }
+        else
+        {
+            titre3.text = "No Succes";
+            des3.text = "Succes Done";
+        }
+    }
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(4.3f);
         Debug.Log("Mput bool false");
         succesAnim.SetBool("UNLOCK", false);
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AnimaleriePlace
   m_EditorClassIdentifier: 
   _title: The Zoo
-  _image: {fileID: 21300000, guid: 182c92719b75bf146a1dd3bad9eefdcc, type: 3}
+  _image: {fileID: 21300000, guid: a09b106c4febd5b44b8e319e89bb2aab, type: 3}
   _description: You are in front of the Pet Shop
   _cardID: 0
   _cardAlreadyDraw: 0
