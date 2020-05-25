@@ -24,6 +24,8 @@ public class OngletArboManager : MonoBehaviour
 
     [HideInInspector] public bool _canMoveToPosAtStart;
 
+    public Color _buttonColor;
+
 
     int _soustraction;
     int _actualPos;
@@ -50,11 +52,19 @@ public class OngletArboManager : MonoBehaviour
         {
             if (_actualdId == child.GetComponent<OngletArbo>()._id)
             {
-                child.GetComponent<Image>().enabled = false;
+                var colors = child.GetComponent<Button>().colors;
+                colors.normalColor = _buttonColor;
+                child.GetComponent<Button>().colors = colors;
+                child.GetComponent<Button>().enabled = false;
+                child.GetComponent<Button>().enabled = true;
             }
             else
             {
-                child.GetComponent<Image>().enabled = true;
+                var colors = child.GetComponent<Button>().colors;
+                colors.normalColor = new Vector4(255, 255, 255, 1);
+                child.GetComponent<Button>().colors = colors;
+                child.GetComponent<Button>().enabled = false;
+                child.GetComponent<Button>().enabled = true;
             }
         }
 
@@ -152,6 +162,7 @@ public class OngletArboManager : MonoBehaviour
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
 
         FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
+        FindObjectOfType<ContainAllObjectTree>().LoadChild(this);
     }
 
     public void FindOngletToActive(int i)

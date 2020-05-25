@@ -14,12 +14,13 @@ public class ContainAllObjectTree : MonoBehaviour
     public List<bool> _allCardUnlock;
 
 
-
     void Start()
     {
         Attribution();
         if(SceneManager.GetActiveScene().name== "BaptisteTestArbo")
-        StartCoroutine(VerifyingSuccess());
+        {
+            StartCoroutine(VerifyingSuccess());
+        }
     }
 
     void Update()
@@ -101,19 +102,30 @@ public class ContainAllObjectTree : MonoBehaviour
             }
         }
 
-        if(verifierFinish == _allCardFinishEvent.Count)
+        if(verifierFinish == _allCardFinishEvent.Count && verifierFinish >0)
         {
-            SuccesManager succesManager;
-            succesManager = FindObjectOfType<SuccesManager>();
-            //if (succesManager.allTheSucces[10].locked)
-                //succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
+            SuccesManager succesManager  = FindObjectOfType<SuccesManager>();
+            if (succesManager.allTheSucces[10].locked)
+                succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
         }
-        if (verifierUnlock == _allCardUnlock.Count)
+        if (verifierUnlock == _allCardUnlock.Count && verifierUnlock > 0)
         {
-            SuccesManager succesManager;
-            succesManager = FindObjectOfType<SuccesManager>();
+            SuccesManager succesManager = FindObjectOfType<SuccesManager>();
             if (succesManager.allTheSucces[2].locked)
                 succesManager.UnlockSuccess(succesManager.allTheSucces[2].enumSucces);
+        }
+    }
+
+    public void LoadChild(OngletArboManager ongletArboManager)
+    {
+        for (int i = 0; i < _imageTreeChilds.Count; i++)
+        {
+            if (ongletArboManager._listEvents[_imageTreeChilds[i].GetComponent<ImageArborescence>()._idInList] == ongletArboManager._text.text)
+            {
+                ImageArborescence child = _imageTreeChilds[i].GetComponent<ImageArborescence>();
+                if (!child._canSpawn)
+                    _imageTreeChilds[i].GetComponent<ImageArborescence>().LoadCard();
+            }
         }
     }
 }
