@@ -88,7 +88,7 @@ public class ContratsPanel : MonoBehaviour
            }
            case 0:
           {
-            txtPanel.text = "Passeport";
+            txtPanel.text = "Passport";
                     locked.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(true);
@@ -97,7 +97,7 @@ public class ContratsPanel : MonoBehaviour
 
             case 1:
            {
-              txtPanel.text = "Lock Contract";
+              txtPanel.text = "Locked Contracts";
                     locked.gameObject.SetActive(true);
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(false);
@@ -106,7 +106,7 @@ public class ContratsPanel : MonoBehaviour
 
             case 2:
            {
-            txtPanel.text = "Succed Contract";
+            txtPanel.text = "Unlocked Contracts";
 
                     locked.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(false);
