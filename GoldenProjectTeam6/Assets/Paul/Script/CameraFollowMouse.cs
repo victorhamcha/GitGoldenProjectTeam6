@@ -47,18 +47,18 @@ public class CameraFollowMouse : MonoBehaviour
     {
         _sizeCamAtStart = _cam.orthographicSize;
         StartPosition = transform.position;
-        _positivValue = _positivLim.transform.position;
-        foreach (Transform child in _positivLim.transform)
-        {
-            child.GetComponent<SpriteRenderer>().enabled = false;
-        }
-        _negativValue = _negativLim.transform.position;
+        //_positivValue = _positivLim.transform.position;
+        //foreach (Transform child in _positivLim.transform)
+        //{
+        //    child.GetComponent<SpriteRenderer>().enabled = false;
+        //}
+        //_negativValue = _negativLim.transform.position;
 
-        foreach (Transform child in _negativLim.transform)
-        {
-            child.GetComponent<SpriteRenderer>().enabled = false;
+        //foreach (Transform child in _negativLim.transform)
+        //{
+        //    child.GetComponent<SpriteRenderer>().enabled = false;
 
-        }
+        //}
 
 
 
