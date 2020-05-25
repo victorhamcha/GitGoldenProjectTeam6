@@ -162,11 +162,20 @@ public class ContratsPanel : MonoBehaviour
         LevelTXT.text = "Level : " + (lvl + 1);
         bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
         //character UI
-        statusTMP.text = "status : " + statuttxt[lvl];
+        statusTMP.text = statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
         //LoadPassport
         SuccesManager.cardSkin = skinLvl[changeMat];
+       
         FindObjectOfType<SaveAndLoad>().LoadPassport();
+        if(countryText=="")
+        {
+            countryText = "Insert Country";
+        }
+        if(nameText=="")
+        {
+           nameText = "Insert Name";
+        }
         CountryTXT.text = countryText;
         nameTXT.text = nameText;
         SuccesManager.cardSkin = skinLvl[changeMat];
