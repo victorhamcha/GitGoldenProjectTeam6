@@ -271,7 +271,7 @@ public class SuccesManager : MonoBehaviour
     }
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(4.3f);
         Debug.Log("Mput bool false");
         succesAnim.SetBool("UNLOCK", false);
     }
