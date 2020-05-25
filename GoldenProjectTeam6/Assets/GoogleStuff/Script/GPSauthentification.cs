@@ -40,4 +40,19 @@ public class GPSauthentification : MonoBehaviour
     {
         
     }
+
+    public void Authentificate()
+    {
+        Social.Active.localUser.Authenticate(succes =>
+        {
+            if (succes)
+            {
+                Debug.Log("Looged in succesfully");
+            }
+            else
+            {
+                Debug.Log("Looged Failed");
+            }
+        });
+    }
 }

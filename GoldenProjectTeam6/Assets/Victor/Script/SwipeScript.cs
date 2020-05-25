@@ -50,6 +50,12 @@ public class SwipeScript : MonoBehaviour
     public RectTransform descriptionTransform;
     private Vector2 originalDescriptionPosition;
 
+    //BackGround
+    public Image BG;
+    public Sprite[] bgTexture;
+   
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -162,7 +168,7 @@ public class SwipeScript : MonoBehaviour
                     animCard.enabled = false;
                     card.audioManager.Play("SFX_Click");
 
-                    Debug.Log("go in touch began");
+
                     ArrowSlideUp.SetActive(false);
                     touchRef = touch.position.x;
                     distance = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0)) - transform.position;
@@ -195,7 +201,7 @@ public class SwipeScript : MonoBehaviour
 
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
-                    Debug.Log("go in touch end");
+                   
                     if (canslidup)
                     {
                         ArrowSlideUp.SetActive(true);
@@ -232,6 +238,7 @@ public class SwipeScript : MonoBehaviour
 
             if(fade<=0f)
             {
+                string place = card._titleCard.text;
                 if ((transform.eulerAngles.z >= maxRotation - 0.1f && transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x) >= maxX))
                 {
                     card.GoLeft();
@@ -252,7 +259,26 @@ public class SwipeScript : MonoBehaviour
                 disolve = false;
                 undisolve = true;
                 descriptionTransform.anchoredPosition = originalDescriptionPosition;
-
+                if(place!= card._firstCardScriptable._title)
+                {
+                    if (card._firstCardScriptable._title == "The Zoo")
+                    {
+                        SwitchBG(bgTexture[3]);
+                    }
+                    else if (card._firstCardScriptable._title == "The Circus")
+                    {
+                        SwitchBG(bgTexture[1]);
+                    }
+                    else if (card._firstCardScriptable._title == "The Food Courts")
+                    {
+                        SwitchBG(bgTexture[2]);
+                    }
+                    else
+                    {
+                        SwitchBG(bgTexture[0]);
+                    }
+                }
+              
 
             }
 
@@ -395,6 +421,17 @@ public class SwipeScript : MonoBehaviour
         return angle;
     }
 
+    public void SwitchBG(Sprite newBG)
+    {
+        Debug.Log(BG.GetComponent<Material>().name);
+        Material _mtrl = BG.GetComponent<Material>();
+        _mtrl.SetTexture("_NewBG", newBG.texture);
+        _mtrl.SetFloat("_opacity", 1);
+        BG.sprite = newBG;
+        
+       
 
+
+    }
 
 }

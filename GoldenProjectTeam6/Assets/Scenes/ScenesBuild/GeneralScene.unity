@@ -4001,7 +4001,6 @@ RectTransform:
   - {fileID: 1832956027}
   - {fileID: 1944642714}
   - {fileID: 1135548824}
-  - {fileID: 1026666121}
   - {fileID: 989702414}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4045,7 +4044,7 @@ RectTransform:
   - {fileID: 1268997783}
   - {fileID: 923274745}
   m_Father: {fileID: 988353939}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4339,14 +4338,14 @@ RectTransform:
   m_GameObject: {fileID: 1026666120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61687404, y: 0.6577666, z: 0.38892335}
+  m_LocalScale: {x: 0.13705085, y: 0.14613593, z: 0.08640706}
   m_Children: []
-  m_Father: {fileID: 988353939}
-  m_RootOrder: 4
+  m_Father: {fileID: 1944642714}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.140971, y: -138.83856}
+  m_AnchoredPosition: {x: 0.9199989, y: -36.399986}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1026666122
@@ -9933,7 +9932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 29e4359439d6c964daad360df6f7231f, type: 2}
+  m_Material: {fileID: 2100000, guid: 5f6ad3413d80ef743b1dae4a995715b0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -12849,6 +12848,7 @@ RectTransform:
   m_LocalScale: {x: 4.50106, y: 4.50106, z: 4.50106}
   m_Children:
   - {fileID: 2116424770}
+  - {fileID: 1026666121}
   m_Father: {fileID: 988353939}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12889,6 +12889,12 @@ MonoBehaviour:
   undisolve: 0
   canslidup: 0
   descriptionTransform: {fileID: 1441191978}
+  BG: {fileID: 1270188097}
+  bgTexture:
+  - {fileID: 21300000, guid: cd5436981a4e0af448c0b30d8f60ddba, type: 3}
+  - {fileID: 21300000, guid: 7900cd23f7e325d47a249f9be3ab52d8, type: 3}
+  - {fileID: 21300000, guid: 6252f4e47bb0b174183688bda897eecf, type: 3}
+  - {fileID: 21300000, guid: b6ece3de890eb7043beaa03115a82913, type: 3}
 --- !u!114 &1944642716
 MonoBehaviour:
   m_ObjectHideFlags: 0
