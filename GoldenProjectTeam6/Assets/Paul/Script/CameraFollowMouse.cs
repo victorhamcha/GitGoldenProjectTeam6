@@ -7,6 +7,7 @@ public class CameraFollowMouse : MonoBehaviour
 {
     Camera _cam;
 
+    [HideInInspector] public GameObject _positivLim, _negativLim;
 
     Vector2 StartPosition;
     Vector2 DragStartPosition;
@@ -30,7 +31,6 @@ public class CameraFollowMouse : MonoBehaviour
 
     [HideInInspector] public List<GameObject> _positionLim;
     [HideInInspector] public GameObject _positionLimMaster;
-    [HideInInspector] public int _numberInArray =0;
 
     void Start()
     {
@@ -46,25 +46,41 @@ public class CameraFollowMouse : MonoBehaviour
     public void CalculateNewCamera()
     {
         _sizeCamAtStart = _cam.orthographicSize;
+        StartPosition = transform.position;
+        _positivValue = _positivLim.transform.position;
+        foreach (Transform child in _positivLim.transform)
+        {
+            child.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        _negativValue = _negativLim.transform.position;
 
-        foreach (Transform child in _positionLim[_numberInArray].transform)
+        foreach (Transform child in _negativLim.transform)
         {
-            if (child.name == "PostitivValueZoom")
-            {
-                _positivValue = child.transform.position;
-            }
-            else
-            {
-                _negativValue = child.transform.position;
-            }
+            child.GetComponent<SpriteRenderer>().enabled = false;
+
         }
-        foreach (Transform child in _positionLim[_numberInArray].transform)
-        {
-            foreach (Transform childOfChild in child)
-            {
-                childOfChild.GetComponent<SpriteRenderer>().enabled = false;
-            }
-        }
+
+
+
+
+        //foreach (Transform child in _positionLim[numberArray].transform)
+        //{
+        //    if (child.name == "PostitivValueZoom")
+        //    {
+        //        _positivValue = child.transform.position;
+        //    }
+        //    else
+        //    {
+        //        _negativValue = child.transform.position;
+        //    }
+        //}
+        //foreach (Transform child in _positionLim[numberArray].transform)
+        //{
+        //    foreach (Transform childOfChild in child)
+        //    {
+        //        childOfChild.GetComponent<SpriteRenderer>().enabled = false;
+        //    }
+        //}
     }
 
     void DrawLine()
@@ -85,49 +101,50 @@ public class CameraFollowMouse : MonoBehaviour
             isZooming = false;
         }
         #region Drag
-        //if (Input.touchCount == 1)
-        //{
-        //    if (!isZooming)
-        //    {
-        //        #region NE PAS REGARDER (VRAIMENT)
-        //        if (transform.position.x > _negativValue.x)
-        //        {
-        //            if (transform.position.x < _positivValue.x)
-        //            {
-        //                if (transform.position.y > _negativValue.y)
-        //                {
-        //                    if (transform.position.y < _positivValue.y)
-        //                    {
-        //                        if (Input.GetTouch(0).phase == TouchPhase.Moved)
-        //                        {
-        //                            Vector2 NewPosition = GetWorldPosition();
-        //                            Vector2 PositionDifference = NewPosition - StartPosition;
-        //                            _cam.transform.Translate(-PositionDifference);
-        //                        }
-        //                        StartPosition = GetWorldPosition();
-        //                    }
-        //                    else
-        //                    {
-        //                        transform.position = new Vector3(transform.position.x, transform.position.y - _boucinessByTouchingBorder, -10);
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder, -10);
-        //                }
-        //            }
-        //            else
-        //            {
-        //                transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y, -10);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            transform.position = new Vector3(transform.position.x + _boucinessByTouchingBorder, transform.position.y, -10);
-        //        }
-        //        #endregion
-        //    }
-        //}
+        if (Input.touchCount == 1)
+        {
+            if (!isZooming)
+            {
+                if (Input.GetTouch(0).phase == TouchPhase.Moved)
+                {
+                    Vector2 NewPosition = GetWorldPosition();
+                    Vector2 PositionDifference = NewPosition - StartPosition;
+                    _cam.transform.Translate(-PositionDifference);
+                }
+                StartPosition = GetWorldPosition();
+
+                //#region NE PAS REGARDER (VRAIMENT)
+                //if (transform.position.x > _negativValue.x)
+                //{
+                //    if (transform.position.x < _positivValue.x)
+                //    {
+                //        if (transform.position.y > _negativValue.y)
+                //        {
+                //            if (transform.position.y < _positivValue.y)
+                //            {
+                //            }
+                //            else
+                //            {
+                //                transform.position = new Vector3(transform.position.x, transform.position.y - _boucinessByTouchingBorder, -10);
+                //            }
+                //        }
+                //        else
+                //        {
+                //            transform.position = new Vector3(transform.position.x, transform.position.y + _boucinessByTouchingBorder, -10);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        transform.position = new Vector3(transform.position.x - _boucinessByTouchingBorder, transform.position.y, -10);
+                //    }
+                //}
+                //else
+                //{
+                //    transform.position = new Vector3(transform.position.x + _boucinessByTouchingBorder, transform.position.y, -10);
+                //}
+                //#endregion
+            }
+        }
         #endregion
         #region Zoom
         else if (Input.touchCount == 2)

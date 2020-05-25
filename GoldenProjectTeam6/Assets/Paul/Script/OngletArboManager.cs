@@ -26,6 +26,7 @@ public class OngletArboManager : MonoBehaviour
 
 
     int _soustraction;
+    int _actualPos;
 
     void Start()
     {
@@ -94,7 +95,7 @@ public class OngletArboManager : MonoBehaviour
         {
             _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
         }
-
+        _actualPos = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos;
         float zoomInList = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._zoomChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
         ActualiseCamera(zoomInList);
     }
@@ -110,6 +111,8 @@ public class OngletArboManager : MonoBehaviour
             _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._positionChild.Count-1;
     
         }
+        _actualPos = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos;
+
         float zoomInList = _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._zoomChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
         ActualiseCamera(zoomInList);
     }
@@ -123,7 +126,9 @@ public class OngletArboManager : MonoBehaviour
         }
         else
         {
-            _cam.transform.position = new Vector3(_positionListOnglet[_actualdId -1 ].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[_actualdId - 1].transform.position.y, -10);
+   
+               _cam.transform.position = new Vector3(_positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[1].transform.position.y, -10);
+            Debug.Log("PositionList " + _positionListOnglet[1] + "Actual Pos = " + _positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos]);
             _cam.orthographicSize = zoom;
 
         }
@@ -146,7 +151,6 @@ public class OngletArboManager : MonoBehaviour
         }
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
 
-        FindObjectOfType<CameraFollowMouse>()._numberInArray = _addition;
         FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
     }
 
