@@ -53,7 +53,8 @@ public class SwipeScript : MonoBehaviour
     //BackGround
     public Image BG;
     public Sprite[] bgTexture;
-   
+    public Material _mtrl;
+
 
 
     // Start is called before the first frame update
@@ -423,8 +424,8 @@ public class SwipeScript : MonoBehaviour
 
     public void SwitchBG(Sprite newBG)
     {
-        Debug.Log(BG.GetComponent<Material>().name);
-        Material _mtrl = BG.GetComponent<Material>();
+        
+      
         _mtrl.SetTexture("_NewBG", newBG.texture);
         _mtrl.SetFloat("_opacity", 1);
         BG.sprite = newBG;
