@@ -1499,7 +1499,6 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -1511,6 +1510,7 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
+  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -5419,6 +5419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea16d02013ed8374184499fbe3501a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animCard: {fileID: 0}
   maxRotation: 7
   rotateSpeed: 1.4
   zRotation: 0
@@ -5432,10 +5433,15 @@ MonoBehaviour:
   rightText: {fileID: 637314403}
   upText: {fileID: 1799342422}
   ArrowSlideUp: {fileID: 0}
+  material: {fileID: 0}
   fade: 1
   disolve: 0
   undisolve: 0
   canslidup: 0
+  descriptionTransform: {fileID: 0}
+  BG: {fileID: 0}
+  bgTexture: []
+  _mtrl: {fileID: 0}
 --- !u!114 &1169474635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5467,6 +5473,7 @@ MonoBehaviour:
   allScriptableObjects: []
   _conditionNumberList: 
   _enumConditionListObject: 
+  audioManager: {fileID: 0}
 --- !u!1 &1211758394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5479,7 +5486,7 @@ GameObject:
   - component: {fileID: 1211758396}
   - component: {fileID: 1211758397}
   - component: {fileID: 1211758398}
-  - component: {fileID: 1211758399}
+  - component: {fileID: 1211758400}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -5639,16 +5646,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &1211758399
+--- !u!114 &1211758400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211758394}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bcf8faac0486134b859618d2407ccfa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d961857075e06e4c9d304b6c89fad14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1272142165
@@ -7726,6 +7733,8 @@ MonoBehaviour:
   _imageTreeChilds: []
   _imageTreeChildAlreadyInTree: []
   _imageTreeUnlockSinceLastTime: []
+  _allCardFinishEvent: 
+  _allCardUnlock: 
 --- !u!4 &1850001912
 Transform:
   m_ObjectHideFlags: 0
