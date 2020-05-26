@@ -358,7 +358,7 @@ public class SwipeScript : MonoBehaviour
 
         if(animGO)
         {
-            rotateShader += 0.01f;
+            rotateShader += 0.05f;
             if(rotateShader>=0)
             {
                 rotateShader = 0;
