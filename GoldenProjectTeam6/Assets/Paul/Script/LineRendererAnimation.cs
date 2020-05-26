@@ -15,6 +15,8 @@ public class LineRendererAnimation : MonoBehaviour
 
     LineRenderer _line;
 
+    public Color _color;
+
     public void SpawnImage(Transform pos)
     {
         _line = GetComponent<LineRenderer>();

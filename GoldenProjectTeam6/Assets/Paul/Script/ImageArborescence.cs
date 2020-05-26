@@ -38,11 +38,14 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public TextMeshProUGUI _textSlideRight;
     [HideInInspector] public TextMeshProUGUI _textSlideLeft;
     [HideInInspector] public TextMeshProUGUI _textSlideUp;
+    [HideInInspector] public TextMeshProUGUI _textDeathCard;
     [HideInInspector] public GameObject _cardZoom;
     [HideInInspector] public int _ordreList = 1;
     float _ordreInListTempo = 0.3f;
 
     [HideInInspector] public Material _lineMove;
+
+    [HideInInspector] public GameObject _lightDeadCard;
 
 
     public int _idInList;
@@ -204,13 +207,15 @@ public class ImageArborescence : MonoBehaviour
 
         for (int i = 0; i < _lineRendererGO.Count; i++)
         {
+            Color _color = _lineRendererGO[i].GetComponent<LineRendererAnimation>()._color;
             _lineRendererGO[i].gameObject.transform.parent = this.gameObject.transform;
             _lineRendererGO[i].GetComponent<LineRenderer>().useWorldSpace = true;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(_lineSize, _lineSize);
-            //_lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.gray, Color.white);
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(_color, _color);
             _lineRendererGO[i].GetComponent<LineRenderer>().material = _lineMove;
             _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(0, this.transform.position);
             _lineRendererGO[i].GetComponent<LineRenderer>().sortingOrder = -1;
+            _lineRendererGO[i].GetComponent<LineRenderer>().sortingLayerName = "Card";
             if (i == 0)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
@@ -218,8 +223,6 @@ public class ImageArborescence : MonoBehaviour
             else if (i == 1)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionRight.position);
-
-
             }
             else
             {
@@ -252,6 +255,11 @@ public class ImageArborescence : MonoBehaviour
         _imageBackground.enabled = true;
         _button.enabled = true;
         _image.sprite = _cardID._image;
+        if (_cardID._isDeadCard)
+        {
+            GameObject light = Instantiate(_lightDeadCard, transform.position, transform.rotation);
+            light.gameObject.transform.parent = gameObject.transform;
+        }
         //_titleText.material = null;
     }
 
@@ -404,49 +412,58 @@ public class ImageArborescence : MonoBehaviour
         _imageZoomCard.sprite = _cardID._image;
         //_titleZoomCard.text = _cardID._title;
 
-        //SLIDE RIGHT DESCRIPTION
 
-        if (_cardID._canSlideRight)
+        if (!_cardID._isDeadCard)
         {
-            if(_cardID._isNextCardRight != null)
+            _textDeathCard.text = "";
+
+            //SLIDE RIGHT DESCRIPTION
+            if (_cardID._canSlideRight)
             {
-                _textSlideRight.text = _cardID._isSwipingRightDescription;
+                if (_cardID._isNextCardRight != null)
+                {
+                    _textSlideRight.text = _cardID._isSwipingRightDescription;
+                }
+                else
+                {
+                    _textSlideRight.text = "";
+                }
             }
             else
             {
                 _textSlideRight.text = "";
             }
-        }
-        else
-        {
-            _textSlideRight.text = "";
-        }
 
-        //SLIDE LEFT DESCRIPTION
+            //SLIDE LEFT DESCRIPTION
 
-        if (_cardID._canSlideLeft)
-        {
-            if (_cardID._isNextCardLeft != null)
+            if (_cardID._canSlideLeft)
             {
-                _textSlideLeft.text = _cardID._isSwipingLeftDescription;
+                if (_cardID._isNextCardLeft != null)
+                {
+                    _textSlideLeft.text = _cardID._isSwipingLeftDescription;
+                }
+                else
+                {
+                    _textSlideLeft.text = "";
+                }
             }
             else
             {
                 _textSlideLeft.text = "";
             }
-        }
-        else
-        {
-            _textSlideLeft.text = "";
-        }
 
-        //SLIDE UP DESCRIPTION
+            //SLIDE UP DESCRIPTION
 
-        if (_cardID._canSlideUp)
-        {
-            if (_cardID._isNextCardRight != null)
+            if (_cardID._canSlideUp)
             {
-                _textSlideUp.text = _cardID._isSwipingUpDescription;
+                if (_cardID._isNextCardRight != null)
+                {
+                    _textSlideUp.text = _cardID._isSwipingUpDescription;
+                }
+                else
+                {
+                    _textSlideUp.text = "";
+                }
             }
             else
             {
@@ -455,6 +472,9 @@ public class ImageArborescence : MonoBehaviour
         }
         else
         {
+            _textDeathCard.text = _cardID._description;
+            _textSlideRight.text = "";
+            _textSlideLeft.text = "";
             _textSlideUp.text = "";
         }
     }

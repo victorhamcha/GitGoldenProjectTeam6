@@ -940,9 +940,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &14479161
@@ -2171,9 +2174,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &30197160
@@ -3555,7 +3561,7 @@ RectTransform:
   - {fileID: 1484927647}
   - {fileID: 1563071388}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3619,7 +3625,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 110705401
   m_SortingOrder: 9999
   m_TargetDisplay: 0
 --- !u!1 &57362016
@@ -4434,9 +4440,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &73114187
@@ -5586,6 +5595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 0
+  _backgroundImage: {fileID: 0}
+  _imageToChange: {fileID: 2144721377}
 --- !u!114 &88464021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6839,7 +6850,7 @@ RectTransform:
   m_Children:
   - {fileID: 1173721571}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7834,9 +7845,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &117326649
@@ -8092,9 +8106,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &124219746
@@ -11186,9 +11203,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &180843986
@@ -11561,9 +11581,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &182029749
@@ -13156,9 +13179,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &219515323
@@ -13440,9 +13466,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &222956400
@@ -15829,9 +15858,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &305096788
@@ -15929,7 +15961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305726988
 GameObject:
@@ -16902,9 +16934,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &319631418
@@ -17031,9 +17066,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 6
   _canSpawn: 0
 --- !u!114 &320092045
@@ -17465,9 +17503,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &322204604
@@ -18302,9 +18343,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &334461322
@@ -19334,9 +19378,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &354513469
@@ -19463,9 +19510,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &356074041
@@ -19592,9 +19642,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &357506401
@@ -21017,9 +21070,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &390765943
@@ -21477,9 +21533,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &398413534
@@ -22397,9 +22456,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &406408261
@@ -23125,9 +23187,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &415143829
@@ -23688,9 +23753,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &421515504
@@ -24199,9 +24267,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &432006877
@@ -25676,9 +25747,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &461897403
@@ -26669,9 +26743,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &474827679
@@ -27784,9 +27861,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &490416138
@@ -28416,9 +28496,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &506917363
@@ -30910,9 +30993,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &561155047
@@ -31783,9 +31869,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &581030092
@@ -33852,9 +33941,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &602648652
@@ -35432,9 +35524,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &626990937
@@ -36174,9 +36269,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &646815011
@@ -36922,9 +37020,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &655738140
@@ -37051,9 +37152,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &655774219
@@ -37365,6 +37469,7 @@ RectTransform:
   - {fileID: 321773217}
   - {fileID: 410155611}
   - {fileID: 1489858502}
+  - {fileID: 1318078560}
   m_Father: {fileID: 56229590}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37598,9 +37703,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &665105024
@@ -37872,6 +37980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 4
+  _backgroundImage: {fileID: 21300000, guid: 6252f4e47bb0b174183688bda897eecf, type: 3}
+  _imageToChange: {fileID: 2144721377}
 --- !u!1 &670702096
 GameObject:
   m_ObjectHideFlags: 0
@@ -39719,9 +39829,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &697062774
@@ -41767,7 +41880,7 @@ Transform:
   - {fileID: 1558290073}
   - {fileID: 480494316}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &739169255
 GameObject:
@@ -42561,9 +42674,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &751797333
@@ -42922,9 +43038,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &755899965
@@ -43468,9 +43587,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &764907245
@@ -44139,9 +44261,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &773437748
@@ -44397,9 +44522,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &779826969
@@ -44599,9 +44727,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &780990762
@@ -45587,9 +45718,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &798928027
@@ -46299,9 +46433,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &804246029
@@ -46733,9 +46870,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &812016499
@@ -47406,7 +47546,7 @@ RectTransform:
   m_Children:
   - {fileID: 1499602984}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -47832,9 +47972,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &842204458
@@ -48379,9 +48522,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &856485979
@@ -48710,9 +48856,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &859468955
@@ -49638,9 +49787,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &889462749
@@ -49767,9 +49919,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &891455946
@@ -50598,9 +50753,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &905269189
@@ -51168,6 +51326,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 99}
   m_SizeDelta: {x: 340.4, y: 85.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &919575541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919575542}
+  - component: {fileID: 919575544}
+  - component: {fileID: 919575543}
+  m_Layer: 0
+  m_Name: BackgroundTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &919575542
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919575541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1087105170}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &919575543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919575541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &919575544
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919575541}
+  m_CullTransparentMesh: 0
 --- !u!1 &919988700
 GameObject:
   m_ObjectHideFlags: 0
@@ -51581,7 +51812,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -875397399
   m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &923078001
@@ -51599,7 +51830,7 @@ RectTransform:
   - {fileID: 477750134}
   - {fileID: 1044436432}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -51681,9 +51912,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &926270862
@@ -51810,9 +52044,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &927503504
@@ -52430,7 +52667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &944759643
 MonoBehaviour:
@@ -52976,9 +53213,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &955494204
@@ -55263,9 +55503,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &996046469
@@ -55611,9 +55854,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1007915454
@@ -56045,9 +56291,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &1018794413
@@ -56209,9 +56458,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &1028686500
@@ -57270,9 +57522,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &1047008637
@@ -59206,9 +59461,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &1078534950
@@ -59847,6 +60105,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086174565}
   m_CullTransparentMesh: 0
+--- !u!1 &1087105169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087105170}
+  - component: {fileID: 1087105173}
+  - component: {fileID: 1087105172}
+  - component: {fileID: 1087105171}
+  m_Layer: 5
+  m_Name: CanvasBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1087105170
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087105169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2144721376}
+  - {fileID: 919575542}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1087105171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087105169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1087105172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087105169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1087105173
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087105169}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 1564637229}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 1704493983
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1088892896
 GameObject:
   m_ObjectHideFlags: 0
@@ -60620,7 +60978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100650282
 GameObject:
@@ -60852,9 +61210,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1100955775
@@ -61277,9 +61638,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &1108694576
@@ -61716,9 +62080,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1124003949
@@ -62444,7 +62811,7 @@ RectTransform:
   m_Children:
   - {fileID: 52968487}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.3550005}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -62690,9 +63057,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 6
   _canSpawn: 0
 --- !u!114 &1144485029
@@ -62819,9 +63189,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1149051725
@@ -63228,7 +63601,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152706771
 GameObject:
@@ -63638,9 +64011,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &1158177416
@@ -63973,9 +64349,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1161437505
@@ -64780,9 +65159,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1175794825
@@ -64909,9 +65291,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &1175841678
@@ -65277,9 +65662,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1178317327
@@ -66885,9 +67273,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1197356771
@@ -68142,9 +68533,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1214058501
@@ -68618,6 +69012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 3
+  _backgroundImage: {fileID: 21300000, guid: 7900cd23f7e325d47a249f9be3ab52d8, type: 3}
+  _imageToChange: {fileID: 2144721377}
 --- !u!1 &1219614457
 GameObject:
   m_ObjectHideFlags: 0
@@ -68693,9 +69089,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &1219614460
@@ -69640,9 +70039,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1237699478
@@ -69842,9 +70244,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1240979774
@@ -70269,9 +70674,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1244061309
@@ -70776,9 +71184,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1252494961
@@ -71220,9 +71631,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &1258199194
@@ -71551,9 +71965,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1264982511
@@ -74033,6 +74450,161 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315234179}
   m_CullTransparentMesh: 0
+--- !u!1 &1318078559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318078560}
+  - component: {fileID: 1318078561}
+  - component: {fileID: 1318078562}
+  m_Layer: 5
+  m_Name: TextDeadCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1318078560
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318078559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662079837}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 280.7, y: 134.5}
+  m_SizeDelta: {x: 434.6, y: 381.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1318078561
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318078559}
+  m_CullTransparentMesh: 0
+--- !u!114 &1318078562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318078559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 257
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 1318078562}
+    characterCount: 8
+    spriteCount: 0
+    spaceCount: 1
+    wordCount: 2
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1321025696
 GameObject:
   m_ObjectHideFlags: 0
@@ -74781,9 +75353,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1337550524
@@ -75680,9 +76255,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1352623236
@@ -76032,6 +76610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 2
+  _backgroundImage: {fileID: 21300000, guid: e36f86f27526bf144bf25e22599ea492, type: 3}
+  _imageToChange: {fileID: 2144721377}
 --- !u!1 &1359164547
 GameObject:
   m_ObjectHideFlags: 0
@@ -76262,9 +76842,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &1364643378
@@ -77962,9 +78545,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1403103541
@@ -78278,9 +78864,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1410615474
@@ -80132,9 +80721,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &1456052062
@@ -84891,9 +85483,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1501792548
@@ -85708,9 +86303,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &1512160552
@@ -85992,9 +86590,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 4
   _canSpawn: 0
 --- !u!114 &1515987902
@@ -86121,9 +86722,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1517590432
@@ -87017,7 +87621,7 @@ Transform:
   m_Children:
   - {fileID: 1168767166}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530434068
 GameObject:
@@ -87069,7 +87673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1531067696
 GameObject:
@@ -87301,9 +87905,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &1531808959
@@ -89780,9 +90387,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &1567665182
@@ -89870,7 +90480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.841797, y: 185.23193}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 115.45, y: 115.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1574001843
@@ -90800,9 +91410,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &1587446103
@@ -91858,7 +92471,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1596713000
 GameObject:
@@ -91935,9 +92548,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &1596713003
@@ -92248,6 +92864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 1
+  _backgroundImage: {fileID: 21300000, guid: b6ece3de890eb7043beaa03115a82913, type: 3}
+  _imageToChange: {fileID: 2144721377}
 --- !u!1 &1607595694
 GameObject:
   m_ObjectHideFlags: 0
@@ -93084,9 +93702,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &1620873720
@@ -93797,9 +94418,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &1639218772
@@ -95111,9 +95735,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &1669482821
@@ -96446,9 +97073,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1704150397
@@ -98275,9 +98905,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1746243874
@@ -99106,9 +99739,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &1763770558
@@ -100623,9 +101259,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &1790722906
@@ -101793,9 +102432,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &1805439921
@@ -101922,9 +102564,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1808001359
@@ -102882,9 +103527,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1816376324
@@ -103084,9 +103732,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &1825385447
@@ -103797,9 +104448,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &1842908076
@@ -104390,9 +105044,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 1
   _canSpawn: 0
 --- !u!114 &1849542983
@@ -104751,9 +105408,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &1855666228
@@ -104880,9 +105540,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &1857888059
@@ -105658,9 +106321,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1870538621
@@ -106554,9 +107220,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 9
   _canSpawn: 0
 --- !u!114 &1881367483
@@ -106833,9 +107502,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &1883816423
@@ -107521,9 +108193,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &1894833903
@@ -107929,9 +108604,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 12
   _canSpawn: 0
 --- !u!114 &1907018799
@@ -108213,9 +108891,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 8
   _canSpawn: 0
 --- !u!114 &1915976796
@@ -109985,7 +110666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942796199
 GameObject:
@@ -112685,9 +113366,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 6
   _canSpawn: 0
 --- !u!114 &1987505717
@@ -113357,9 +114041,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 7
   _canSpawn: 0
 --- !u!114 &2002627337
@@ -113883,9 +114570,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &2010799001
@@ -114509,9 +115199,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &2022596496
@@ -114670,9 +115363,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 2
   _canSpawn: 0
 --- !u!114 &2022953117
@@ -114872,9 +115568,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 0
   _canSpawn: 0
 --- !u!114 &2024032890
@@ -115711,9 +116410,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 5
   _canSpawn: 0
 --- !u!114 &2042308460
@@ -115986,9 +116688,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 10
   _canSpawn: 0
 --- !u!114 &2044725110
@@ -118021,9 +118726,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 11
   _canSpawn: 0
 --- !u!114 &2084059303
@@ -118367,7 +119075,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2087018600
 GameObject:
@@ -119033,9 +119741,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &2100473236
@@ -120318,9 +121029,12 @@ MonoBehaviour:
   _textSlideRight: {fileID: 321773219}
   _textSlideLeft: {fileID: 410155613}
   _textSlideUp: {fileID: 1489858504}
+  _textDeathCard: {fileID: 1318078562}
   _cardZoom: {fileID: 662079836}
   _ordreList: 1
   _lineMove: {fileID: 2100000, guid: 5bdaa39f0455c1f40ac57f98733950e7, type: 2}
+  _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
+    type: 3}
   _idInList: 3
   _canSpawn: 0
 --- !u!114 &2133881933
@@ -121033,4 +121747,77 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141533010}
+  m_CullTransparentMesh: 0
+--- !u!1 &2144721375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144721376}
+  - component: {fileID: 2144721378}
+  - component: {fileID: 2144721377}
+  m_Layer: 0
+  m_Name: BackgroundImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2144721376
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144721375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1087105170}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2144721377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144721375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2144721378
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144721375}
   m_CullTransparentMesh: 0
