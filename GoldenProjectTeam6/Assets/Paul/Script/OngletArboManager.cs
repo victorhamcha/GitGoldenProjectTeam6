@@ -57,6 +57,7 @@ public class OngletArboManager : MonoBehaviour
                 child.GetComponent<Button>().colors = colors;
                 child.GetComponent<Button>().enabled = false;
                 child.GetComponent<Button>().enabled = true;
+                child.GetComponent<OngletArbo>().ChangeBackground();
             }
             else
             {
@@ -136,8 +137,7 @@ public class OngletArboManager : MonoBehaviour
         }
         else
         {
-   
-               _cam.transform.position = new Vector3(_positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[1].transform.position.y, -10);
+            _cam.transform.position = new Vector3(_positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[1].transform.position.y, -10);
             Debug.Log("PositionList " + _positionListOnglet[1] + "Actual Pos = " + _positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos]);
             _cam.orthographicSize = zoom;
 

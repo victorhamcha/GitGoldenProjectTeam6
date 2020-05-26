@@ -48,7 +48,7 @@ Material:
     - Boolean_B50936DD: 1
     - _EnableExternalAlpha: 0
     - _Fade: 1
-    - _Mouvement: -20
+    - _Mouvement: 3.9092438
     - _Saturation: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
