@@ -21,18 +21,19 @@ public class GPSauthentification : MonoBehaviour
 
 
         }
-
-        Social.Active.localUser.Authenticate(succes =>
+        if(PlayerPrefs.HasKey("aut"))
         {
-            if (succes)
+            if(PlayerPrefs.GetInt("aut")==1)
             {
-                Debug.Log("Looged in succesfully");
+                Authentificate();
             }
-            else
-            {
-                Debug.Log("Looged Failed");
-            }
-        });
+        }
+        else
+        {
+            Authentificate();
+        }
+        
+        
     }
 
     // Update is called once per frame
@@ -47,12 +48,13 @@ public class GPSauthentification : MonoBehaviour
         {
             if (succes)
             {
-                Debug.Log("Looged in succesfully");
+                PlayerPrefs.SetInt("aut", 1);
             }
             else
             {
-                Debug.Log("Looged Failed");
+                PlayerPrefs.SetInt("aut", 0);
             }
+            PlayerPrefs.Save();
         });
     }
 }
