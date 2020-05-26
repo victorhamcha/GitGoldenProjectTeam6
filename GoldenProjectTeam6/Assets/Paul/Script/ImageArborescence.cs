@@ -44,10 +44,10 @@ public class ImageArborescence : MonoBehaviour
 
     [HideInInspector] public Material _lineMove;
 
-    public int _idInList;
 
-     bool _alreadyInTree;
-     bool _alreadyDraw;
+    public int _idInList;
+    bool _alreadyInTree;
+    bool _alreadyDraw;
 
     Button _button;
     float _lineSize = 5;
@@ -214,12 +214,10 @@ public class ImageArborescence : MonoBehaviour
             if (i == 0)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionLeft.position);
-                _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionLeft.transform);
             }
             else if (i == 1)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionRight.position);
-                _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionRight.transform);
 
 
             }
@@ -228,20 +226,21 @@ public class ImageArborescence : MonoBehaviour
                 if(_positionUp != null)
                 {
                     _lineRendererGO[i].GetComponent<LineRenderer>().SetPosition(1, _positionUp.position);
-                    _lineRendererGO[i].GetComponent<LineRendererAnimation>().DistanceIsAttribuate(transform, _positionUp.transform);
                     
                 }
-
-
             }
 
-            Vector2 _position = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
+            Vector2 _positionStart = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(0);
+            Vector2 _positionEnd = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
 
-            if (_position.x == 0 || _position.y == 0)
+            Debug.Log("Start : " + _positionStart + " End : " + _positionEnd +" Mid : " + new Vector2(_positionEnd.x - _positionStart.x, _positionEnd.y - _positionStart.y));
+
+            if (_positionEnd.x == 0 || _positionEnd.y == 0)
             {
                 _lineRendererGO[i].GetComponent<LineRenderer>().SetWidth(0, 0);
             }
 
+            StartCoroutine(DrawCardOnLine());
         }
     }
 
@@ -293,6 +292,49 @@ public class ImageArborescence : MonoBehaviour
                 StartCoroutine(ShowUp());
             }
         }
+    }
+
+    IEnumerator DrawCardOnLine()
+    {
+        yield return new WaitForSeconds(_ordreInListTempo /*_ordreList*/);
+        for (int i = 0; i < _lineRendererGO.Count; i++)
+        {
+            CardOnLine(i);
+        }
+
+
+    }
+
+    void CardOnLine(int i)
+    {
+            Vector2 _positionStart = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(0);
+            Vector2 _positionEnd = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
+
+            if (_positionEnd.x != 0 && _positionEnd.y != 0)
+            {
+            if(_positionLeft != null)
+            {
+                if (i == 0 && !_positionLeft.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
+                {
+                    _lineRendererGO[i].GetComponent<LineRendererAnimation>().SpawnImage(_positionLeft.transform);
+                }
+            }
+            if(_positionRight != null)
+            {
+                if (i == 1 && !_positionRight.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
+                {
+                    _lineRendererGO[i].GetComponent<LineRendererAnimation>().SpawnImage(_positionRight.transform);
+                }
+            }
+            if(_positionUp != null)
+            {
+                if (i == 2 && !_positionUp.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
+                {
+                    _lineRendererGO[i].GetComponent<LineRendererAnimation>().SpawnImage(_positionUp.transform);
+                }
+            }
+        }
+        
     }
 
     IEnumerator ShowUp()

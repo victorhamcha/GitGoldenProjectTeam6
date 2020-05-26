@@ -16,7 +16,10 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        MusiqueManager.Instance._toggleWhichChanges.isOn= options[0];
+        if (MusiqueManager.Instance != null)
+            MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
+        else
+            music.isOn = options[0];
         
         sound.isOn = options[1];
         censure.isOn = options[2];

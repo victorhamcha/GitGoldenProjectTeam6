@@ -32,4 +32,9 @@ public class GPSAchievements : MonoBehaviour
         Social.ReportProgress(id, 100f, null);
         Debug.Log("Unlock");
     }
+
+    public void VerifyConnection()
+    {
+
+    }
 }
