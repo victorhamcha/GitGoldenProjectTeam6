@@ -10,6 +10,7 @@ public class ContratsPanel : MonoBehaviour
     public Swiping androidControl;
     public int page = 0;
     public TextMeshProUGUI txtPanel;
+    public TextMeshProUGUI txtPage;
 
     [Header("Succes Settings")]
     public List<Succes> lockSucces = new List<Succes>();
@@ -135,7 +136,10 @@ public class ContratsPanel : MonoBehaviour
 
                     break;
                 }
+
         }
+
+        txtPage.text = "Page " + (page + 1) + "/3";
     }
     public void SaveModif()
     {

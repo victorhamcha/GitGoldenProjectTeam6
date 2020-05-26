@@ -47,8 +47,8 @@ Material:
     m_Floats:
     - Boolean_B50936DD: 0
     - _EnableExternalAlpha: 0
-    - _Fade: -0.019317582
-    - _Mouvement: -20
+    - _Fade: 1
+    - _Mouvement: 3.014627
     - _Saturation: 59.52
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
