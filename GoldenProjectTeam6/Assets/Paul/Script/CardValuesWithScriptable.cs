@@ -86,6 +86,10 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             _titleCard.text = _firstCardScriptable._title;
             _descriptionCard.text = _firstCardScriptable._description;
+            if (FindObjectOfType<TextControl>())
+            {
+                FindObjectOfType<TextControl>().ChangeFont();
+            }
 
             FindObjectOfType<SaveAndLoad>().firstCard = _firstCardScriptable.name;
 
