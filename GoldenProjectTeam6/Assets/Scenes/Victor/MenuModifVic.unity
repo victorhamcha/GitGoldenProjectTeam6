@@ -708,8 +708,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Louan Costa
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -735,13 +735,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2682,7 +2682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -24.000008}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &387438710
@@ -2705,8 +2705,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game Artist :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2732,13 +2732,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2839,7 +2839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 152.00586, y: -236.1499}
+  m_AnchoredPosition: {x: 185, y: -236.1499}
   m_SizeDelta: {x: 127.17, y: 25.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388712802
@@ -3483,8 +3483,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Baptiste Barreyre
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3510,13 +3510,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3940,8 +3940,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dov Benzaquen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3967,13 +3967,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4698,8 +4698,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Victor Hamcha
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4725,13 +4725,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4990,7 +4990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -24.000008}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571699879
@@ -5013,8 +5013,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game Designers :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5040,13 +5040,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5496,7 +5496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117, y: 1}
+  m_AnchoredPosition: {x: 85.8, y: 1}
   m_SizeDelta: {x: 60.48, y: 59.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &718619653
@@ -7348,7 +7348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117, y: -1}
+  m_AnchoredPosition: {x: 85.79999, y: -1}
   m_SizeDelta: {x: 59.76, y: 59.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1058170044
@@ -11755,8 +11755,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Paul Leduc
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11782,13 +11782,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -14612,7 +14612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 152.00586, y: -366}
+  m_AnchoredPosition: {x: 185, y: -366}
   m_SizeDelta: {x: 154.25, y: 22.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681073281
@@ -15605,7 +15605,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f0696c342c82e7440afd561bc6904c6e, type: 3}
+    m_Font: {fileID: 12800000, guid: 9fee74089f474cf4797caec4e7017be4, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -15893,7 +15893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -24}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899355881
@@ -15916,8 +15916,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game Programmers :'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -15943,13 +15943,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -16279,8 +16279,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Julien Dor
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -16306,13 +16306,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17647,8 +17647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sebastien Rioux
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 993b36842464b9a47b1f36ed4dd8e789, type: 2}
-  m_sharedMaterial: {fileID: 8381065730131435985, guid: 993b36842464b9a47b1f36ed4dd8e789,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17674,13 +17674,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 55.4
-  m_fontSizeBase: 36
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55.4
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17715,10 +17715,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2141095768}
-    characterCount: 9
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
