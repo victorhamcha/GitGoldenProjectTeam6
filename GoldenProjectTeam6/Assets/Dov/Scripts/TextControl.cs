@@ -5,33 +5,35 @@
 
 //public class TextControl : MonoBehaviour
 //{
-//    public SpriteRenderer top;
-//    public SpriteRenderer down;
-//    public TextMeshProUGUI text;
+//    private TextMeshPro _textMeshPro;
 
-//    public int haut;
-//    public int bas;
-    
-
-//    void Update()
+//    private void Start()
 //    {
+//        StartCoroutine(TextReveal());
+//    }
 
-//        text.rectTransform.rect.position.y 
-//        if (text.rectTransform.rect.height < 900)
+
+//    IEnumerator TextReveal()
+//    {
+//        _textMeshPro = gameObject.GetComponent<TextMeshPro>();
+
+//        int totalVisibleCharacters = _textMeshPro.textInfo.characterCount;
+//        int counter = 0;
+
+//        while (true)
 //        {
-//            top.enabled = true;
-//        }
-//        else
-//        {
-//            top.enabled = false;
-//        }
-//        if (text.rectTransform.rect.height < 1400 )
-//        {
-//            down.enabled = true;
-//        }
-//        else
-//        {
-//            down.enabled = false;
+//            int visibleCount = counter % (totalVisibleCharacters + 1);
+//            _textMeshPro.maxVisibleCharacters = visibleCount;
+
+//            if (visibleCount >= totalVisibleCharacters)
+//            {
+//                yield return new WaitForSeconds(1.0f);
+//            }
+
+//            counter += 1;
+
+//            yield return new WaitForSeconds(0.05f);
 //        }
 //    }
+
 //}
