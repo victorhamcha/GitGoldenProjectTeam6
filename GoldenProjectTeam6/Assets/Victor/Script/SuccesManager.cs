@@ -74,7 +74,7 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 120)
+                if (timer >= 25)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)
@@ -271,7 +271,7 @@ public class SuccesManager : MonoBehaviour
     }
     IEnumerator WaitEndAnim()
     {
-        yield return new WaitForSeconds(4.3f);
+        yield return new WaitForSeconds(4.6f);
         Debug.Log("Mput bool false");
         succesAnim.SetBool("UNLOCK", false);
     }
