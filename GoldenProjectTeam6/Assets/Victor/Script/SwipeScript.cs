@@ -54,8 +54,9 @@ public class SwipeScript : MonoBehaviour
     public Image BG;
     public Sprite[] bgTexture;
     public Material _mtrl;
-
-
+    private float rotateShader = -1;
+    private bool animGO=false;
+    private Sprite _newBG;
 
     // Start is called before the first frame update
     void Start()
@@ -353,6 +354,21 @@ public class SwipeScript : MonoBehaviour
             }
             material.SetFloat("_Fade", fade);
         }
+
+        if(animGO)
+        {
+            rotateShader += 0.01f;
+            if(rotateShader>=0)
+            {
+                rotateShader = 0;
+                _mtrl.SetFloat("_opacity", rotateShader);
+                animGO = false;
+                BG.sprite = _newBG;
+                rotateShader = -1f;
+            }
+            _mtrl.SetFloat("_opacity", rotateShader);
+           
+        }
     }
   
        
@@ -425,11 +441,10 @@ public class SwipeScript : MonoBehaviour
     public void SwitchBG(Sprite newBG)
     {
         
-      
-        _mtrl.SetTexture("_NewBG", newBG.texture);
-        _mtrl.SetFloat("_opacity", 1);
-        BG.sprite = newBG;
         
+        _mtrl.SetTexture("_NewBG", newBG.texture);
+        animGO = true;
+        _newBG = newBG;
        
 
 
