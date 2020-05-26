@@ -14,11 +14,12 @@ public class ContratsPanel : MonoBehaviour
     [Header("Succes Settings")]
     public List<Succes> lockSucces = new List<Succes>();
     public List<Succes> unlockSucces = new List<Succes>();
-    public Transform startPosition;
+    public RectTransform startPosition;
     public Transform unlock;
     public Transform locked;
     public Transform passeport;
     public float space;
+    public ScrollRect scroller;
 
     //BAR//
     [Header("Bar Settings")]
@@ -54,6 +55,7 @@ public class ContratsPanel : MonoBehaviour
     void Start()
     {
         StartCoroutine(waitSucces());
+        SwipeModif();
     }
 
     // Update is called once per frame
@@ -64,64 +66,77 @@ public class ContratsPanel : MonoBehaviour
         if (androidControl.SwipeLeft)
         {
             page--;
+            scroller.enabled = false;
             if(page==-1)
             {
                 page = 2;
             }
+            SwipeModif();
         }
         else if (androidControl.SwipeRight)
         {
             page++;
-            if(page==3)
+            scroller.enabled = false;
+            if (page==3)
             {
                 page = 0;
             }
+            SwipeModif();
         }
 
-        switch(page)
-        {
-           case -1:
-           {
-             page = 2;
+       
+    }
 
-             break;
-           }
-           case 0:
-          {
-            txtPanel.text = "Passport";
+
+    public void SwipeModif()
+    {
+        switch (page)
+        {
+            case -1:
+                {
+                    page = 2;
+
+                    break;
+                }
+            case 0:
+                {
+                    txtPanel.text = "Passport";
                     locked.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(true);
+                    scroller.content = null;
                     break;
-          }
+                }
 
             case 1:
-           {
-              txtPanel.text = "Locked Contracts";
+                {
+                    txtPanel.text = "Locked Contracts";
+                    scroller.enabled = true;
                     locked.gameObject.SetActive(true);
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(false);
+                    scroller.content = locked.GetComponent<RectTransform>();
                     break;
-           }
+                }
 
             case 2:
-           {
-            txtPanel.text = "Unlocked Contracts";
-
+                {
+                    txtPanel.text = "Unlocked Contracts";
+                    scroller.enabled = true;
                     locked.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(true);
+                    scroller.content = unlock.GetComponent<RectTransform>();
                     break;
-           }
+                }
             case 3:
-          {
-            page = 0;
+                {
+                    page = 0;
 
-            break;
-          }
+                    break;
+                }
         }
     }
-
     public void SaveModif()
     {
         FindObjectOfType<SaveAndLoad>().SavePassport();
@@ -131,17 +146,23 @@ public class ContratsPanel : MonoBehaviour
     IEnumerator waitSucces()
     {
         yield return new WaitForSeconds(0.015f);
+       
+        float height = lockSucces.Count * (space)+400;
+        Debug.Log(height);
+        float height2 = unlockSucces.Count * (space)+400;
+        Debug.Log(height2);
         unlockSucces.Reverse();
         lockSucces.Reverse();
         for (int i = 0; i < unlockSucces.Count; i++)
         {
             unlockSucces[i].transform.SetParent(unlock);
-            unlockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+ 475 - space * (i));
+            unlockSucces[i].GetComponent<RectTransform>().anchoredPosition= new Vector2(0, startPosition.offsetMax.y - (space * (i))  - (80.9f * 7.5f));
+            
         }
         for (int i = 0; i < lockSucces.Count; i++)
         {
             lockSucces[i].transform.SetParent(locked);
-            lockSucces[i].transform.localPosition = new Vector2(0, startPosition.position.y+ 475 - space * (i));
+            lockSucces[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, startPosition.offsetMax.y - (space * (i)) -(80.9f*7.5f));
         }
 
         //parameters

@@ -16,12 +16,10 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: cf72d6b748c91ef499a9acc4509740e4, type: 3}
   _description: 'The lion takes a bite.
 
-
     "Humm what a delight! Thank you, my
     friend."
 
-
-    The lion generously offers you a [dead mouse].'
+    The lion generously offers you a <b>dead mouse</b>..'
   _cardID: 117
   _cardAlreadyDraw: 0
   _canSlideUp: 0

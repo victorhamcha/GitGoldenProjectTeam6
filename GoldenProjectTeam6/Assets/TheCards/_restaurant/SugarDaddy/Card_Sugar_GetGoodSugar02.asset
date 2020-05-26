@@ -16,8 +16,8 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: 7a428fb02fc7b9b4bbf66ac6819d0959, type: 3}
   _description: '"Here you go! A good treat for you! Good luck!"
 
-    You get a [cotton
-    candy].'
+    You get a <b>Poisoned
+    Cotton Candy</b>.'
   _cardID: 91
   _cardAlreadyDraw: 0
   _canSlideUp: 0

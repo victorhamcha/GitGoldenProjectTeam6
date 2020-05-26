@@ -16,8 +16,8 @@ MonoBehaviour:
   _image: {fileID: 21300000, guid: 82931d21bea6c054c86274d992370ed3, type: 3}
   _description: "Ouch... it's actually well cooked.\nYou lose two teeth on this egg...\n[You
     gain two teeth]\nYou're going to the dish.\nRoast chicken.\nThat's just disgusting!
-    \nYou are leaving this disgusting restaurant, all you've earned are two of your
-    broken teeth!"
+    \nYou are leaving this disgusting restaurant, all you've earned are <b>two of
+    your broken teeth</b>!"
   _cardID: 70
   _cardAlreadyDraw: 0
   _canSlideUp: 0

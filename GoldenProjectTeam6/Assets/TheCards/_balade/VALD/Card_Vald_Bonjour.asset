@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Broadwalk
   _image: {fileID: 21300000, guid: c000138235625cb48b9731370dc940b3, type: 3}
-  _description: The man gives you a tomato and leaves.
+  _description: The man gives you a <b>tomato</b> and leaves.
   _cardID: 28
   _cardAlreadyDraw: 0
   _canSlideUp: 0
