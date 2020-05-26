@@ -239,7 +239,7 @@ public class SuccesManager : MonoBehaviour
 
         if (easiestSucces.Count > 0)
         {
-            titre1.text = "Difficulty : " + easiestSucces[0]._difficulté.ToString();
+            titre1.text = easiestSucces[0]._difficulté.ToString();
             des1.text = easiestSucces[0].txtTitre;
         }
         else
@@ -250,7 +250,7 @@ public class SuccesManager : MonoBehaviour
 
         if (easiestSucces.Count > 1)
         {
-            titre2.text = "Difficulty : " + easiestSucces[1]._difficulté.ToString();
+            titre2.text = easiestSucces[1]._difficulté.ToString();
             des2.text = easiestSucces[1].txtTitre;
         }
         else
@@ -260,7 +260,7 @@ public class SuccesManager : MonoBehaviour
         }
         if (easiestSucces.Count > 2)
         {
-            titre3.text = "Difficulty : " + easiestSucces[2]._difficulté.ToString();
+            titre3.text =easiestSucces[2]._difficulté.ToString();
             des3.text = easiestSucces[2].txtTitre;
         }
         else

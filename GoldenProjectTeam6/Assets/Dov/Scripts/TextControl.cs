@@ -1,39 +1,37 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using TMPro;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
 
-//public class TextControl : MonoBehaviour
-//{
-//    private TextMeshPro _textMeshPro;
+public class TextControl : MonoBehaviour
+{
+    private TextMeshProUGUI _textMeshPro;
+    public List<char> list;
 
-//    private void Start()
-//    {
-//        StartCoroutine(TextReveal());
-//    }
+    private void Start()
+    {
+        _textMeshPro = GetComponent<TextMeshProUGUI>();
+    }
+
+    public void ChangeFont()
+    {
+        char test = _textMeshPro.text[0];
 
 
-//    IEnumerator TextReveal()
-//    {
-//        _textMeshPro = gameObject.GetComponent<TextMeshPro>();
+        for (int i = 0; i < _textMeshPro.text.Length; i++)
+        {
+            list.Add(_textMeshPro.text[i]);
+        }
 
-//        int totalVisibleCharacters = _textMeshPro.textInfo.characterCount;
-//        int counter = 0;
+        list.RemoveAt(0);
+        _textMeshPro.text = "<b>" + test + "</b>" ;
 
-//        while (true)
-//        {
-//            int visibleCount = counter % (totalVisibleCharacters + 1);
-//            _textMeshPro.maxVisibleCharacters = visibleCount;
+        for (int i = 0; i < list.Count; i++)
+        {
+            _textMeshPro.text += list[i];
+        }
 
-//            if (visibleCount >= totalVisibleCharacters)
-//            {
-//                yield return new WaitForSeconds(1.0f);
-//            }
+    }
 
-//            counter += 1;
 
-//            yield return new WaitForSeconds(0.05f);
-//        }
-//    }
-
-//}
+}

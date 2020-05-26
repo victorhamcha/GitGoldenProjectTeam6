@@ -17,6 +17,7 @@ public class GPSAchievements : MonoBehaviour
 
     public void ShowAchievemnts()
     {
+        VerifyConnection();
         Social.ShowAchievementsUI();
        
     }
@@ -31,5 +32,24 @@ public class GPSAchievements : MonoBehaviour
     {
         Social.ReportProgress(id, 100f, null);
         Debug.Log("Unlock");
+    }
+
+    public void VerifyConnection()
+    {
+        if(PlayerPrefs.GetInt("aut")==0)
+        {
+            Social.Active.localUser.Authenticate(succes =>
+            {
+                if (succes)
+                {
+                    PlayerPrefs.SetInt("aut", 1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("aut", 0);
+                }
+                PlayerPrefs.Save();
+            });
+        }
     }
 }
