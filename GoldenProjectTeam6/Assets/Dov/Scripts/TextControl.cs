@@ -20,41 +20,44 @@ public class TextControl : MonoBehaviour
         for (int i = 0; i < card._description.Length; i++)
         {
             char test = card._description[i];
-            string s1 = test.ToString();
 
-
-            if (test == Regex.Replace(s1, "[a-z] [A-Z]", " ")[i])
+            Debug.Log(char.IsLetter(test));
+            if (char.IsLetter(test))
             {
                 Checkpoint(card, test, i);
                 break;
             }
-            Debug.Log("text commence par " + test);
+            else
+            {
+                continue;
+            }
+            
         }
     }
 
     void Checkpoint(CardScriptableObject card, char test, int number)
     {
-
         for (int i = 0; i < card._description.Length; i++)
         {
             list.Add(card._description[i]);
         }
 
-
         list[number] = test;
+        _textMeshPro.text = "";
 
-
-        _textMeshPro.text = "<font=\"gothic_ultra_ot_SDF\">" + "<size=200%>" + "<b>" + test + "</b>" + "</size>" + "</font>";
 
         for (int i = 0; i < list.Count; i++)
         {
-            if (i != 0)
+            if (i != number)
             {
                 _textMeshPro.text += list[i];
+            }
+            else
+            {
+                _textMeshPro.text += "<font=\"gothic_ultra_ot_SDF\">" + "<size=200%>" + "<b>" + test + "</b>" + "</size>" + "</font>";
             }
         }
         list.Clear();
     }
-
 
 }
