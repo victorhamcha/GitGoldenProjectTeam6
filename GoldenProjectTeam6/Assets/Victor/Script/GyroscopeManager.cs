@@ -32,15 +32,25 @@ public class GyroscopeManager : MonoBehaviour
             lastAcc = acceleration;
         }
 
-        accX = Mathf.Clamp(accX, -20, 20);
+        
         if(collector.name!= "DistordMirror"&& collector.name != "LitThanosEffect")
-        collector.SetFloat("_Mouvement", accX);
+        {
+            accX = Mathf.Clamp(accX, -20, 20);
+           
+            collector.SetFloat("_Mouvement", accX);
+            if (accX == 20)
+            {
+                accX = -20;
+            }
+            else if (accX==-20)
+            {
+                accX = 20;
+            }
+        }
+      
         else if (collector.name == "LitThanosEffect")
         {
-
-            
-            accX = Mathf.Clamp(accX,-1f, 11f);
-            collector.SetVector("_Mouvement", new Vector2(accX,0.5f));
+            collector.SetVector("_Mouvement", new Vector2(-accX,0.5f));
         }
     }
 

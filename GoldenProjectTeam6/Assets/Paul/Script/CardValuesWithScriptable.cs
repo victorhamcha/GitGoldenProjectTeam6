@@ -198,13 +198,14 @@ public class CardValuesWithScriptable : MonoBehaviour
             }
 
             canSlideUp = false;
+
         }
         else
         {
             AfterContrat();
         }
-        
 
+      
     }
 
 
@@ -258,6 +259,11 @@ public class CardValuesWithScriptable : MonoBehaviour
                 FindObjectOfType<SaveAndLoad>().SavePlayer();
                 _firstCardScriptable = originalCard;
                 LoadValueFromScriptableObject();
+                InventoryList inventory = FindObjectOfType<InventoryList>();
+                for (int i =0;i< inventory._inventory.Count;i++)
+                {
+                    inventory._inventory[i]._hasThisObject = false;
+                }
                 
             }
 
@@ -267,10 +273,12 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             AfterContrat();
         }
+      
     }
 
     public void VerifyIfCanSlideUp()
     {
+      
         foreach (EnumListObject._objectList objectToVerify in _enumConditionListObject)
         {
             for (int i = 0; i < FindObjectOfType<InventoryList>()._inventory.Count; i++)
@@ -280,14 +288,16 @@ public class CardValuesWithScriptable : MonoBehaviour
                     if (FindObjectOfType<InventoryList>()._inventory[i]._hasThisObject)
                     {
                         _unlockSlideUpInt++;
+                        
                     }
                 }
             }
         }
-        if (_unlockSlideUpInt == _enumConditionListObject.Count)
+        if (_unlockSlideUpInt >= _enumConditionListObject.Count)
         {
             canSlideUp = true;
-            
+         
+
         }
         
 
@@ -320,6 +330,10 @@ public class CardValuesWithScriptable : MonoBehaviour
                
         }
 
+        if(_firstCardScriptable.name== "Card_Trapezist_NetCut")
+        {
+            FindObjectOfType<InventoryList>()._inventory[2]._hasThisObject = false;
+        }
         _firstCardScriptable = _nextCardUp;
 
         if (!_isADeadCard)
@@ -334,9 +348,9 @@ public class CardValuesWithScriptable : MonoBehaviour
             //Death(); for the proto
         }
         canSlideUp = false;
-          
-        
-       
+
+
+     
     }
 
     void AfterContrat()

@@ -85,6 +85,7 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.LogError("canslideup : " + card.canSlideUp);
         
         if(!touched)
         {
@@ -105,7 +106,8 @@ public class SwipeScript : MonoBehaviour
         
 
         canslidup=card.canSlideUp;
-        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y)-1.5f / (maxY/1.5f));
+       
+        upText.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, (transform.position.y-0.5f) / (maxY/1.5f));
         if (transform.eulerAngles.z-180>0)
         {
             imgColor.color = new Color(0 / 255f, 0 / 255f, 0 / 255f, ((Mathf.Abs(transform.eulerAngles.z-360) / (maxRotation/2)) * 40) / 255f);
@@ -205,10 +207,7 @@ public class SwipeScript : MonoBehaviour
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
                    
-                    if (canslidup)
-                    {
-                        ArrowSlideUp.SetActive(true);
-                    }
+                  
                     img.SetActive(false);
                     touched = false;
                     if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
@@ -336,6 +335,10 @@ public class SwipeScript : MonoBehaviour
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.position = originalPos;
+                if (canslidup)
+                {
+                    ArrowSlideUp.SetActive(true);
+                }
                 reRotate = false;
                 smooth = false;
                 step1 = false;
@@ -383,10 +386,8 @@ public class SwipeScript : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-               if(card._unlockSlideUp)
-               {
-                    card.VerifyIfCanSlideUp();
-               }
+                if(card._firstCardScriptable._canSlideUp)
+                card.VerifyIfCanSlideUp();
               if(!disolve)
               {
                     img.SetActive(true);
