@@ -315,26 +315,26 @@ public class ImageArborescence : MonoBehaviour
 
     void CardOnLine(int i)
     {
-            Vector2 _positionStart = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(0);
-            Vector2 _positionEnd = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
+        Vector2 _positionStart = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(0);
+        Vector2 _positionEnd = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
 
-            if (_positionEnd.x != 0 && _positionEnd.y != 0)
-            {
-            if(_positionLeft != null)
+        if (_positionEnd.x != 0 && _positionEnd.y != 0)
+        {
+            if (_positionLeft != null)
             {
                 if (i == 0 && !_positionLeft.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
                 {
                     _lineRendererGO[i].GetComponent<LineRendererAnimation>().SpawnImage(_positionLeft.transform);
                 }
             }
-            if(_positionRight != null)
+            if (_positionRight != null)
             {
                 if (i == 1 && !_positionRight.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
                 {
                     _lineRendererGO[i].GetComponent<LineRendererAnimation>().SpawnImage(_positionRight.transform);
                 }
             }
-            if(_positionUp != null)
+            if (_positionUp != null)
             {
                 if (i == 2 && !_positionUp.gameObject.GetComponent<ImageArborescence>()._alreadyDraw)
                 {
@@ -342,7 +342,7 @@ public class ImageArborescence : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
     IEnumerator ShowUp()
