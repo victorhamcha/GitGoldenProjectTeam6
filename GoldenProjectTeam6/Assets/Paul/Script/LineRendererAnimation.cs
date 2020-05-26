@@ -2,63 +2,38 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LineRendererAnimation : MonoBehaviour
 {
-    LineRenderer _lineRenderer;
-    float _counter;
-    float _dist;
 
-    [HideInInspector] public Transform _origin;
-    [HideInInspector] public Transform _destination;
+    public Image _imageMystere;
+    Image _imageMystereIns;
 
-    public float _lineSpeed = 6f;
-    public float _timerBeforeRestart = 6f;
+    public Image _imageLock;
+    Image _imageLockIns;
 
-    bool _startAnimate;
-    void Start()
+    LineRenderer _line;
+
+    public void SpawnImage(Transform pos)
     {
-        _lineRenderer = GetComponent<LineRenderer>();
+        _line = GetComponent<LineRenderer>();
+        Vector2 _startPos = _line.GetPosition(0);
+        Vector2 _endPos = _line.GetPosition(1);
+        Vector2 _positionImageMystere = (_startPos + _endPos) / 2;
+
+        _imageMystereIns = Instantiate(_imageMystere, _positionImageMystere, transform.rotation);
+        _imageMystereIns.gameObject.transform.parent = gameObject.transform;
+        _imageMystereIns.transform.position = _positionImageMystere;
+        _imageMystereIns.rectTransform.sizeDelta = new Vector2(25, 25);
+        _imageMystereIns.rectTransform.localScale = new Vector2(1, 1);
+
+
+        _imageLockIns = Instantiate(_imageLock, pos.position, transform.rotation);
+        _imageLockIns.gameObject.transform.parent = gameObject.transform;
+        _imageLockIns.transform.position = pos.position;
+        _imageLockIns.rectTransform.sizeDelta = new Vector2(25, 25);
+        _imageLockIns.rectTransform.localScale = new Vector2(1, 1);
     }
 
-    void Update()
-    {
-        if (_startAnimate)
-        {
-            if (_counter<_dist)
-            {
-                _counter += .1f / _lineSpeed;
-
-                float x = Mathf.Lerp(0, _dist, _counter);
-                Vector3 pointA = _origin.position;
-                Vector3 pointB = _destination.position;
-
-                Vector3 pointAlongLine = x * Vector3.Normalize(pointB - pointA) + pointA;
-                _lineRenderer.SetPosition(1, pointAlongLine);
-            }
-            else
-            {
-                _startAnimate = false;
-                _counter = 0;
-                StartCoroutine(WaitBeforeReplayAnim());
-            }
-        }
-    }
-
-    public void DistanceIsAttribuate(Transform origin, Transform destination)
-    {
-        _destination = destination;
-        _origin = origin;
-        _dist = Vector3.Distance(_origin.position, _destination.position);
-        _startAnimate = true;
-    }
-
-
-    IEnumerator WaitBeforeReplayAnim()
-    {
-        yield return new WaitForSeconds(_timerBeforeRestart);
-        _lineRenderer.SetPosition(0, _origin.position);
-        _lineRenderer.SetPosition(1, _origin.position);
-        DistanceIsAttribuate(_origin, _destination);
-    }
 }

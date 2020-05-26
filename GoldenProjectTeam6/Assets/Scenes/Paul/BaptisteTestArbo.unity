@@ -6729,6 +6729,9 @@ MonoBehaviour:
   undisolve: 0
   canslidup: 0
   descriptionTransform: {fileID: 0}
+  BG: {fileID: 0}
+  bgTexture: []
+  _mtrl: {fileID: 0}
 --- !u!114 &106551257
 MonoBehaviour:
   m_ObjectHideFlags: 0
