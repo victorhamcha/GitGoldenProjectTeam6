@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Julien 4
   m_EditorClassIdentifier: 
-  _title: 
+  _title: Dov
   _image: {fileID: 0}
   _description: 
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 0}
+  _isNextCardRight: {fileID: 11400000, guid: 8c9a3226ef586a740b460c2f33b3f0c7, type: 2}
   _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 0}
+  _isNextCardLeft: {fileID: 11400000, guid: 7f2c55a60aac6c040b0e48d64bd50ea7, type: 2}
   _isSwipingLeftDescription: 
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
