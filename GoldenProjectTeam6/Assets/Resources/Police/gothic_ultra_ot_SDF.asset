@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: gothic_ultra_ot SDF
+  m_Name: gothic_ultra_ot_SDF
   m_EditorClassIdentifier: 
   hashCode: -487069654
   material: {fileID: 8211445053002847370}
