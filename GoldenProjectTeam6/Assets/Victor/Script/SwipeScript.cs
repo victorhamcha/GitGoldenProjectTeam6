@@ -61,8 +61,8 @@ public class SwipeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        if(descriptionTransform!=null)
+       
+        if (descriptionTransform!=null)
         {
             originalDescriptionPosition = descriptionTransform.anchoredPosition;
         }
@@ -79,6 +79,7 @@ public class SwipeScript : MonoBehaviour
         imgColor = img.GetComponent<Image>();
         originalPos = transform.position;
         material.SetFloat("_Fade", 1f);
+        _mtrl.SetFloat("_opacity", rotateShader);
     }
 
     // Update is called once per frame
