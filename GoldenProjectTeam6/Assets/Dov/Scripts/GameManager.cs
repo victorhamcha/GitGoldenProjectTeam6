@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int scene)
     {
+        MusiqueManager.Instance.Stop("RainSound");
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         SceneManager.LoadScene(scene);
         FindObjectOfType<SaveAndLoad>().LoadPlayer();

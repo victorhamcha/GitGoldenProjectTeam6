@@ -40,7 +40,7 @@ public class MusiqueManager : MonoBehaviour
     }
     void Start()
     {
-        foreach (Sound s in musics)
+        foreach (Sound s in Instance.musics)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -61,9 +61,9 @@ public class MusiqueManager : MonoBehaviour
 
     void PlayOnAwake()
     {
-        for (int i = 0; i < musics.Length; i++)
+        for (int i = 0; i < Instance.musics.Length; i++)
         {
-            if (musics[i].playOnAwake)
+            if (Instance.musics[i].playOnAwake)
             {
                Instance.Play(musics[i].name);
             }
@@ -72,34 +72,47 @@ public class MusiqueManager : MonoBehaviour
 
     public void Play(string name)
     {
-        if(_volumeToggle == 1)
+        if(Instance._volumeToggle == 1)
         {
-            Sound s = Array.Find(musics, sound => sound.name == name);
+            Sound s = Array.Find(Instance.musics, sound => sound.name == name);
             if (s == null)
                 return;
             s.source.Play();
         }
     }
-    
+
+    public void Stop(string name)
+    {
+       
+            Sound s = Array.Find(Instance.musics, sound => sound.name == name);
+            if (s == null)
+                return;
+            s.source.Stop();
+        
+    }
+
 
     public void ChangeToggle()
     {
-        if (_toggleWhichChanges.isOn)
+        if (Instance._toggleWhichChanges.isOn)
         {
-            _volumeToggle = 1;
+            Instance._volumeToggle = 1;
         }
         else
         {
-            _volumeToggle = 0;
+            Instance._volumeToggle = 0;
         }
         Instance.SetVolume();
     }
 
     public void SetVolume()
     {
-        foreach (Sound s in musics)
+        foreach (Sound s in Instance.musics)
         {
-            s.source.volume = _volumeToggle;
+            if(Instance._volumeToggle==0)
+            s.source.volume = Instance._volumeToggle;
+            else
+                s.source.volume = s.volume;
         }
     }
 }
