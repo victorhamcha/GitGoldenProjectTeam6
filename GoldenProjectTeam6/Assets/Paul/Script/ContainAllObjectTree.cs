@@ -89,7 +89,7 @@ public class ContainAllObjectTree : MonoBehaviour
         {
             _allCardUnlock.Add(false);
 
-            if (_imageTreeChilds[i].gameObject.activeInHierarchy)
+            if (_imageTreeChilds[i].GetComponent<ImageArborescence>()._alreadyDraw)
             {
                 _allCardUnlock[i] = true;
                 verifierUnlock++;
@@ -101,15 +101,17 @@ public class ContainAllObjectTree : MonoBehaviour
                 }
             }
         }
-
-        if(verifierFinish == _allCardFinishEvent.Count && verifierFinish >0)
+        Debug.LogError("The Count of the list is :" + _imageTreeChilds.Count);
+        Debug.LogError("The Count of the verifier is :" + verifierUnlock);
+        if (verifierFinish == _allCardFinishEvent.Count && verifierFinish >0)
         {
             SuccesManager succesManager  = FindObjectOfType<SuccesManager>();
             if (succesManager.allTheSucces[10].locked)
                 succesManager.UnlockSuccess(succesManager.allTheSucces[10].enumSucces);
         }
-        if (verifierUnlock == _allCardUnlock.Count && verifierUnlock > 0)
+        if (verifierUnlock == _imageTreeChilds.Count && verifierUnlock > 0)
         {
+           
             SuccesManager succesManager = FindObjectOfType<SuccesManager>();
             if (succesManager.allTheSucces[2].locked)
                 succesManager.UnlockSuccess(succesManager.allTheSucces[2].enumSucces);

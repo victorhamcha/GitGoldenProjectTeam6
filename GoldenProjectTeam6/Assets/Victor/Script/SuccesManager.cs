@@ -117,9 +117,12 @@ public class SuccesManager : MonoBehaviour
                             Debug.Log("Basic");
                             SuccesAnim(allTheSucces[i].txtTitre);
                         }
-
-                        LoadEasisestSucces();
-                        lvl = 0;
+                        if(inGame)
+                        {
+                            LoadEasisestSucces();
+                            lvl = 0;
+                        }
+                       
 
 
                         break;

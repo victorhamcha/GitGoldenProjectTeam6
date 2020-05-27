@@ -50,7 +50,7 @@ public class ImageArborescence : MonoBehaviour
 
     public int _idInList;
     bool _alreadyInTree;
-    bool _alreadyDraw;
+    [HideInInspector] public bool _alreadyDraw;
 
     Button _button;
     float _lineSize = 5;
