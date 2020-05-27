@@ -99,7 +99,14 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawCards = data.savingDrawCardCardData;
         apparitionOrder = data.apparationOrderData;
 
+        if (data!=null)
         saveOptions = data.optionsData;
+        else
+        {
+            saveOptions[0] = true;
+            saveOptions[1] = true;
+            saveOptions[2] = true;
+        }
 
         LoadCard();
 

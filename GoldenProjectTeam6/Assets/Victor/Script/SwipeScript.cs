@@ -361,14 +361,14 @@ public class SwipeScript : MonoBehaviour
 
         if(animGO)
         {
-            rotateShader += 0.05f;
-            if(rotateShader>=0)
+            rotateShader -= 0.05f;
+            if(rotateShader<=-1.2f)
             {
-                rotateShader = 0;
+                rotateShader = -1.2f;
                 _mtrl.SetFloat("_opacity", rotateShader);
                 animGO = false;
                 BG.sprite = _newBG;
-                rotateShader = -1f;
+                
             }
             _mtrl.SetFloat("_opacity", rotateShader);
            
@@ -442,8 +442,8 @@ public class SwipeScript : MonoBehaviour
 
     public void SwitchBG(Sprite newBG)
     {
-        
-        
+
+        rotateShader = 0f;
         _mtrl.SetTexture("_NewBG", newBG.texture);
         animGO = true;
         _newBG = newBG;

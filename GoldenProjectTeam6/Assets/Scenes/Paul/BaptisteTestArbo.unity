@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -947,6 +947,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &14479161
 MonoBehaviour:
@@ -2181,6 +2182,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &30197160
 MonoBehaviour:
@@ -3252,9 +3254,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.000336, y: 1.000336, z: 1.000336}
   m_Children:
-  - {fileID: 894434834}
   - {fileID: 1152084303}
   - {fileID: 1503623485}
+  - {fileID: 1924142211}
   m_Father: {fileID: 1135590945}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4447,6 +4449,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &73114187
 MonoBehaviour:
@@ -7852,6 +7855,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &117326649
 MonoBehaviour:
@@ -8113,6 +8117,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &124219746
 MonoBehaviour:
@@ -11210,6 +11215,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &180843986
 MonoBehaviour:
@@ -11588,6 +11594,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &182029749
 MonoBehaviour:
@@ -13186,6 +13193,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &219515323
 MonoBehaviour:
@@ -13473,6 +13481,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &222956400
 MonoBehaviour:
@@ -15865,6 +15874,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &305096788
 MonoBehaviour:
@@ -16941,6 +16951,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &319631418
 MonoBehaviour:
@@ -17073,6 +17084,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 6
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &320092045
 MonoBehaviour:
@@ -17510,6 +17522,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &322204604
 MonoBehaviour:
@@ -18350,6 +18363,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &334461322
 MonoBehaviour:
@@ -19385,6 +19399,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &354513469
 MonoBehaviour:
@@ -19517,6 +19532,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &356074041
 MonoBehaviour:
@@ -19649,6 +19665,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &357506401
 MonoBehaviour:
@@ -21077,6 +21094,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &390765943
 MonoBehaviour:
@@ -21540,6 +21558,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &398413534
 MonoBehaviour:
@@ -22463,6 +22482,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &406408261
 MonoBehaviour:
@@ -23194,6 +23214,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &415143829
 MonoBehaviour:
@@ -23760,6 +23781,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &421515504
 MonoBehaviour:
@@ -24274,6 +24296,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &432006877
 MonoBehaviour:
@@ -25754,6 +25777,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &461897403
 MonoBehaviour:
@@ -26750,6 +26774,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &474827679
 MonoBehaviour:
@@ -27868,6 +27893,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &490416138
 MonoBehaviour:
@@ -28503,6 +28529,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &506917363
 MonoBehaviour:
@@ -31000,6 +31027,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &561155047
 MonoBehaviour:
@@ -31876,6 +31904,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &581030092
 MonoBehaviour:
@@ -33948,6 +33977,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &602648652
 MonoBehaviour:
@@ -35531,6 +35561,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &626990937
 MonoBehaviour:
@@ -36276,6 +36307,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &646815011
 MonoBehaviour:
@@ -37027,6 +37059,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &655738140
 MonoBehaviour:
@@ -37159,6 +37192,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &655774219
 MonoBehaviour:
@@ -37710,6 +37744,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &665105024
 MonoBehaviour:
@@ -39836,6 +39871,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &697062774
 MonoBehaviour:
@@ -42681,6 +42717,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &751797333
 MonoBehaviour:
@@ -43045,6 +43082,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &755899965
 MonoBehaviour:
@@ -43594,6 +43632,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &764907245
 MonoBehaviour:
@@ -44268,6 +44307,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &773437748
 MonoBehaviour:
@@ -44529,6 +44569,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &779826969
 MonoBehaviour:
@@ -44734,6 +44775,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &780990762
 MonoBehaviour:
@@ -45725,6 +45767,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &798928027
 MonoBehaviour:
@@ -46440,6 +46483,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &804246029
 MonoBehaviour:
@@ -46877,6 +46921,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &812016499
 MonoBehaviour:
@@ -47979,6 +48024,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &842204458
 MonoBehaviour:
@@ -48529,6 +48575,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &856485979
 MonoBehaviour:
@@ -48863,6 +48910,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &859468955
 MonoBehaviour:
@@ -49794,6 +49842,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &889462749
 MonoBehaviour:
@@ -49926,6 +49975,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &891455946
 MonoBehaviour:
@@ -50373,79 +50423,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893206938}
   m_CullTransparentMesh: 0
---- !u!1 &894434833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 894434834}
-  - component: {fileID: 894434836}
-  - component: {fileID: 894434835}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &894434834
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894434833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 52968487}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 73, y: -67}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &894434835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894434833}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 84ce81c3e64753b40b92d44a2a38c88b, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &894434836
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894434833}
-  m_CullTransparentMesh: 0
 --- !u!1 &896157540
 GameObject:
   m_ObjectHideFlags: 0
@@ -50760,6 +50737,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &905269189
 MonoBehaviour:
@@ -51919,6 +51897,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &926270862
 MonoBehaviour:
@@ -52051,6 +52030,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &927503504
 MonoBehaviour:
@@ -53220,6 +53200,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &955494204
 MonoBehaviour:
@@ -55510,6 +55491,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &996046469
 MonoBehaviour:
@@ -55861,6 +55843,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1007915454
 MonoBehaviour:
@@ -56298,6 +56281,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1018794413
 MonoBehaviour:
@@ -56465,6 +56449,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1028686500
 MonoBehaviour:
@@ -57529,6 +57514,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1047008637
 MonoBehaviour:
@@ -59468,6 +59454,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1078534950
 MonoBehaviour:
@@ -61217,6 +61204,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1100955775
 MonoBehaviour:
@@ -61645,6 +61633,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1108694576
 MonoBehaviour:
@@ -62087,6 +62076,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1124003949
 MonoBehaviour:
@@ -63064,6 +63054,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 6
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1144485029
 MonoBehaviour:
@@ -63196,6 +63187,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1149051725
 MonoBehaviour:
@@ -63431,7 +63423,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 52968487}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -64018,6 +64010,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1158177416
 MonoBehaviour:
@@ -64356,6 +64349,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1161437505
 MonoBehaviour:
@@ -65166,6 +65160,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1175794825
 MonoBehaviour:
@@ -65298,6 +65293,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1175841678
 MonoBehaviour:
@@ -65669,6 +65665,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1178317327
 MonoBehaviour:
@@ -67280,6 +67277,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1197356771
 MonoBehaviour:
@@ -68540,6 +68538,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1214058501
 MonoBehaviour:
@@ -69096,6 +69095,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1219614460
 MonoBehaviour:
@@ -70046,6 +70046,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1237699478
 MonoBehaviour:
@@ -70251,6 +70252,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1240979774
 MonoBehaviour:
@@ -70681,6 +70683,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1244061309
 MonoBehaviour:
@@ -71191,6 +71194,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1252494961
 MonoBehaviour:
@@ -71638,6 +71642,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1258199194
 MonoBehaviour:
@@ -71972,6 +71977,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1264982511
 MonoBehaviour:
@@ -75360,6 +75366,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1337550524
 MonoBehaviour:
@@ -76262,6 +76269,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1352623236
 MonoBehaviour:
@@ -76849,6 +76857,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1364643378
 MonoBehaviour:
@@ -78552,6 +78561,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1403103541
 MonoBehaviour:
@@ -78871,6 +78881,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1410615474
 MonoBehaviour:
@@ -80728,6 +80739,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1456052062
 MonoBehaviour:
@@ -85490,6 +85502,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1501792548
 MonoBehaviour:
@@ -85643,7 +85656,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 52968487}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -85670,8 +85683,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Succes Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -85696,7 +85710,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.5
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -86310,6 +86324,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1512160552
 MonoBehaviour:
@@ -86597,6 +86612,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 4
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1515987902
 MonoBehaviour:
@@ -86729,6 +86745,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1517590432
 MonoBehaviour:
@@ -87912,6 +87929,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1531808959
 MonoBehaviour:
@@ -90394,6 +90412,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1567665182
 MonoBehaviour:
@@ -91417,6 +91436,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1587446103
 MonoBehaviour:
@@ -92555,6 +92575,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1596713003
 MonoBehaviour:
@@ -93709,6 +93730,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1620873720
 MonoBehaviour:
@@ -94425,6 +94447,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1639218772
 MonoBehaviour:
@@ -95742,6 +95765,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1669482821
 MonoBehaviour:
@@ -97080,6 +97104,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1704150397
 MonoBehaviour:
@@ -98912,6 +98937,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1746243874
 MonoBehaviour:
@@ -99746,6 +99772,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1763770558
 MonoBehaviour:
@@ -101266,6 +101293,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1790722906
 MonoBehaviour:
@@ -102439,6 +102467,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1805439921
 MonoBehaviour:
@@ -102571,6 +102600,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1808001359
 MonoBehaviour:
@@ -103534,6 +103564,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1816376324
 MonoBehaviour:
@@ -103739,6 +103770,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1825385447
 MonoBehaviour:
@@ -104455,6 +104487,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1842908076
 MonoBehaviour:
@@ -105051,6 +105084,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 1
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1849542983
 MonoBehaviour:
@@ -105415,6 +105449,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1855666228
 MonoBehaviour:
@@ -105547,6 +105582,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1857888059
 MonoBehaviour:
@@ -106328,6 +106364,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1870538621
 MonoBehaviour:
@@ -107227,6 +107264,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 9
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1881367483
 MonoBehaviour:
@@ -107509,6 +107547,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1883816423
 MonoBehaviour:
@@ -108200,6 +108239,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1894833903
 MonoBehaviour:
@@ -108611,6 +108651,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 12
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1907018799
 MonoBehaviour:
@@ -108898,6 +108939,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 8
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1915976796
 MonoBehaviour:
@@ -109650,6 +109692,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 99}
   m_SizeDelta: {x: 340.4, y: 85.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1924142210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924142211}
+  - component: {fileID: 1924142213}
+  - component: {fileID: 1924142212}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1924142211
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924142210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 52968487}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -233, y: 21.82}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1924142212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924142210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 84ce81c3e64753b40b92d44a2a38c88b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1924142213
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924142210}
+  m_CullTransparentMesh: 0
 --- !u!1 &1926026065
 GameObject:
   m_ObjectHideFlags: 0
@@ -113373,6 +113488,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 6
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &1987505717
 MonoBehaviour:
@@ -114048,6 +114164,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 7
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2002627337
 MonoBehaviour:
@@ -114577,6 +114694,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2010799001
 MonoBehaviour:
@@ -115206,6 +115324,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2022596496
 MonoBehaviour:
@@ -115370,6 +115489,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 2
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2022953117
 MonoBehaviour:
@@ -115575,6 +115695,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 0
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2024032890
 MonoBehaviour:
@@ -116417,6 +116538,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 5
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2042308460
 MonoBehaviour:
@@ -116695,6 +116817,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 10
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2044725110
 MonoBehaviour:
@@ -118733,6 +118856,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 11
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2084059303
 MonoBehaviour:
@@ -119748,6 +119872,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2100473236
 MonoBehaviour:
@@ -121036,6 +121161,7 @@ MonoBehaviour:
   _lightDeadCard: {fileID: 4871764309532697699, guid: de4d1b515c3bf7144a7778b10c942c3a,
     type: 3}
   _idInList: 3
+  _alreadyDraw: 0
   _canSpawn: 0
 --- !u!114 &2133881933
 MonoBehaviour:
