@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CirquePlace
   m_EditorClassIdentifier: 
   _title: The Circus
-  _image: {fileID: 21300000, guid: f02730ade8e4d54489a6ff2cb9677b8a, type: 3}
+  _image: {fileID: 21300000, guid: e4fea1ac86f042448a57e909f3da85ed, type: 3}
   _description: You are in front of the circus
   _cardID: 0
   _cardAlreadyDraw: 0

@@ -12836,7 +12836,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092003664}
   m_HandleRect: {fileID: 1092003663}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -13278,7 +13278,7 @@ MonoBehaviour:
   bgTexture:
   - {fileID: 21300000, guid: e36f86f27526bf144bf25e22599ea492, type: 3}
   - {fileID: 21300000, guid: 7900cd23f7e325d47a249f9be3ab52d8, type: 3}
-  - {fileID: 21300000, guid: 6252f4e47bb0b174183688bda897eecf, type: 3}
+  - {fileID: 21300000, guid: cd802f1131ec9994ba026e5acf6e9499, type: 3}
   - {fileID: 21300000, guid: b6ece3de890eb7043beaa03115a82913, type: 3}
   _mtrl: {fileID: 2100000, guid: 5f6ad3413d80ef743b1dae4a995715b0, type: 2}
 --- !u!114 &1944642716
