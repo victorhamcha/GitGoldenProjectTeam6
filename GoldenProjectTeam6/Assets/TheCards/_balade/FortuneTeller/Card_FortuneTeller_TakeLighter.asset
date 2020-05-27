@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_FortuneTeller_TakeLighter
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: 5a21a8dbb8dc58542aac0c73ec543acd, type: 3}
+  _image: {fileID: 21300000, guid: 27ed2b713deca7245b97ef7ea84a9721, type: 3}
   _description: You take the <b>lighter</b> and walk away
   _cardID: 2
   _cardAlreadyDraw: 0

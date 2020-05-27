@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Vald_Death
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: c000138235625cb48b9731370dc940b3, type: 3}
+  _image: {fileID: 21300000, guid: e9a1da2824439254398a6b93d2cbd9bc, type: 3}
   _description: 'He''s screwing your mother.
 
 

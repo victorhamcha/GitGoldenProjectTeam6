@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Vald_See
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: c000138235625cb48b9731370dc940b3, type: 3}
+  _image: {fileID: 21300000, guid: 90651c15e04643b49a55f95d5f004fb6, type: 3}
   _description: You are walking and at a moment, you bump into a man.
   _cardID: 27
   _cardAlreadyDraw: 0

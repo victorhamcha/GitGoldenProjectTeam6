@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: The Circus
   _image: {fileID: 21300000, guid: ccbaf87bc5b3d4541afc734c8fd91b83, type: 3}
-  _description: 'You knock him out and get a bag of popcorn. '
+  _description: 'You approach the popcorn vendor and knock him out to get a bag of
+    popcorn. '
   _cardID: 55
   _cardAlreadyDraw: 0
   _canSlideUp: 0

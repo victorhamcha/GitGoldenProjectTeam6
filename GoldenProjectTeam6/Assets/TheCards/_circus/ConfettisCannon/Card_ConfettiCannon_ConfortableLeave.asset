@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Card_ConfettiCannon_ConfortableLeave
   m_EditorClassIdentifier: 
   _title: The Circus
-  _image: {fileID: 21300000, guid: b76422b698a4d664f84a8f61ee12b2da, type: 3}
+  _image: {fileID: 21300000, guid: 27ed2b713deca7245b97ef7ea84a9721, type: 3}
   _description: 'It''s so comfortable inside! It''s so much fun! But nothing''s happening...
 
-    You''re
-    coming out of the cannon.'
+    You
+    get out of the cannon and leave the tent.'
   _cardID: 32
   _cardAlreadyDraw: 0
   _canSlideUp: 0
