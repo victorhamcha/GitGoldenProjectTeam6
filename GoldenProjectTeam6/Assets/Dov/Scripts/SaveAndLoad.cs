@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SaveAndLoad : MonoBehaviour
 {
     public List<string> objectInTree;
@@ -37,10 +38,9 @@ public class SaveAndLoad : MonoBehaviour
 
     public void SaveCards()
     {
-        if (manage.inGame)
-        {
+        
             SaveSystem.SaveCards(card, succes);
-        }
+        
     }
 
     public void SavePlayer()

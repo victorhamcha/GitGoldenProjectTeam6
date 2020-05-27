@@ -185,6 +185,7 @@ public class MainMenu : MonoBehaviour
     public void Load_Menu()
     {
         SceneManager.LoadScene("MenuModifVic");
+        FindObjectOfType<SaveAndLoad>().SavePlayer();
     }
 
     IEnumerator LoadYourAsyncScene(string scene)
