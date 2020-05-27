@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GyroscopeManager : MonoBehaviour
 {
@@ -18,8 +19,21 @@ public class GyroscopeManager : MonoBehaviour
 
     void Start()
     {
-        if(SuccesManager.cardSkin!=null)
-        collector = SuccesManager.cardSkin;      
+        if (SuccesManager.cardSkin != null)
+            collector = SuccesManager.cardSkin;
+        if (SceneManager.GetActiveScene().name=="MenuModifVic")
+        {
+            Debug.LogError("JEPASSELA");
+            collector.SetFloat("Menu", 1);
+            collector.SetFloat("_Fade", 1);
+        }
+        else
+        {
+            
+            collector.SetFloat("Menu", 0);
+        }
+        
+      
     }
 
   

@@ -204,7 +204,7 @@ public class ContratsPanel : MonoBehaviour
         CountryTXT.text = countryText;
         nameTXT.text = nameText;
         SuccesManager.cardSkin = skinLvl[changeMat];
-
+        imgCharacter.material = skinLvl[changeMat];
 
 
     }
@@ -224,6 +224,7 @@ public class ContratsPanel : MonoBehaviour
         }
         skinTXT.text = skinName[changeMat];
         SuccesManager.cardSkin = skinLvl[changeMat];
+        imgCharacter.material= skinLvl[changeMat];
 
     }
 

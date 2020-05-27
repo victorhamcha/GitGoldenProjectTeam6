@@ -44,11 +44,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 6f290355c6924ba498262e8e16f3e2b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5B9C23CE_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_B50936DD: 1
+    - Menu: 0
     - _EnableExternalAlpha: 0
     - _Fade: 1
-    - _Mouvement: 9.11484
+    - _Mouvement: 0
     - _Saturation: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
