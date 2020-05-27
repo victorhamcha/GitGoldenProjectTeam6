@@ -225,7 +225,8 @@ public class ContratsPanel : MonoBehaviour
         skinTXT.text = skinName[changeMat];
         SuccesManager.cardSkin = skinLvl[changeMat];
         imgCharacter.material= skinLvl[changeMat];
-
+        imgCharacter.material.SetFloat("Menu", 1);
+        FindObjectOfType<GyroscopeManager>().collector= skinLvl[changeMat];
     }
 
     private void OnApplicationQuit()
