@@ -145,4 +145,4 @@ MonoBehaviour:
     type: 3}
   _imageLock: {fileID: 1388486708857310466, guid: eb002ccc487a01043a271bb6db23c3e0,
     type: 3}
-  _color: {r: 0.5849056, g: 0.40784314, b: 0.20140618, a: 1}
+  _color: {r: 0.58431375, g: 0.40784314, b: 0.2, a: 1}

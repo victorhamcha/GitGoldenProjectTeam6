@@ -87,5 +87,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _light: {fileID: 3730662265966931959}
   _minIntensity: 1.556
-  _speedMin: 0.05
-  _speedMax: 0.1
+  _speedMin: 0.02
+  _speedMax: 0.05

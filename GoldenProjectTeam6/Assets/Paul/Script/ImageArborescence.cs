@@ -57,6 +57,8 @@ public class ImageArborescence : MonoBehaviour
 
     [HideInInspector] public bool _canSpawn;
 
+    bool _spawnLight=true;
+
 
     void Awake()
     {
@@ -257,8 +259,17 @@ public class ImageArborescence : MonoBehaviour
         _image.sprite = _cardID._image;
         if (_cardID._isDeadCard)
         {
-            GameObject light = Instantiate(_lightDeadCard, transform.position, transform.rotation);
-            light.gameObject.transform.parent = gameObject.transform;
+            if (_spawnLight)
+            {
+                GameObject light = Instantiate(_lightDeadCard, transform.position, transform.rotation);
+                light.gameObject.transform.parent = gameObject.transform;
+                _spawnLight = false;
+            }
+        }
+
+        for (int i = 0; i < _lineRendererGO.Count; i++)
+        {
+            _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.white, Color.white);
         }
         //_titleText.material = null;
     }
@@ -354,11 +365,12 @@ public class ImageArborescence : MonoBehaviour
         //_titleText.gameObject.SetActive(true);
         //_titleText.material.SetFloat("_Dissolve", 0);
         DragCamHere();
+        yield return new WaitForSeconds(_ordreInListTempo /*_ordreList*/);
+
         _image.enabled = true;
         _imageBackground.enabled = true;
         _image.material.SetFloat("_Dissolve", 0);
         _imageBackground.material.SetFloat("_Dissolve", 0);
-        yield return new WaitForSeconds(_ordreInListTempo /*_ordreList*/);
         //_titleText.material.SetFloat("_Dissolve", 0);
         _image.sprite = _cardID._image;
         //_image.material.SetTexture("_MainTexture", _image.sprite.texture);
@@ -413,7 +425,7 @@ public class ImageArborescence : MonoBehaviour
         //_titleZoomCard.text = _cardID._title;
 
 
-        if (!_cardID._isDeadCard)
+        if (!_cardID._isDeadCard && !_cardID._isEndingEvent)
         {
             _textDeathCard.text = "";
 

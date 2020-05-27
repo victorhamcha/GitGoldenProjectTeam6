@@ -20,27 +20,27 @@ public class AnimationLight : MonoBehaviour
 
     void Update()
     {
-        //if (_goDown)
-        //{
-        //    if (_light.intensity > _minIntensity)
-        //    {
-        //        _light.intensity -= _speed;
-        //    }
-        //    else
-        //    {
-        //        _goDown = false;
-        //    }
-        //}
-        //else
-        //{
-        //    if (_light.intensity < _maxIntensity)
-        //    {
-        //        _light.intensity += _speed;
-        //    }
-        //    else
-        //    {
-        //        _goDown = true;
-        //    }
-        //}
+        if (_goDown)
+        {
+            if (_light.intensity > _minIntensity)
+            {
+                _light.intensity -= _speed;
+            }
+            else
+            {
+                _goDown = false;
+            }
+        }
+        else
+        {
+            if (_light.intensity < _maxIntensity)
+            {
+                _light.intensity += _speed;
+            }
+            else
+            {
+                _goDown = true;
+            }
+        }
     }
 }

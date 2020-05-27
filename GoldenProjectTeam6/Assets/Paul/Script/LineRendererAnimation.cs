@@ -34,7 +34,7 @@ public class LineRendererAnimation : MonoBehaviour
         _imageLockIns = Instantiate(_imageLock, pos.position, transform.rotation);
         _imageLockIns.gameObject.transform.parent = gameObject.transform;
         _imageLockIns.transform.position = pos.position;
-        _imageLockIns.rectTransform.sizeDelta = new Vector2(25, 25);
+        _imageLockIns.rectTransform.sizeDelta = new Vector2(50, 50);
         _imageLockIns.rectTransform.localScale = new Vector2(1, 1);
     }
 
