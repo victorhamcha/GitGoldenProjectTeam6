@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SwipeScript : MonoBehaviour
 {
@@ -63,13 +64,21 @@ public class SwipeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animCard = GetComponent<Animator>();
+        if(SceneManager.GetActiveScene().name == "TestCardJulien")
+        {
+            animCard.SetBool("IsCredit", true);
+        }
+        else
+        {
+            animCard.SetBool("IsCredit", false);
+        }
        
         if (descriptionTransform!=null)
         {
             originalDescriptionPosition = descriptionTransform.anchoredPosition;
         }
 
-        animCard = GetComponent<Animator>();
 
         //img.SetActive(false);
         card = GetComponent<CardValuesWithScriptable>();

@@ -17,7 +17,7 @@ MonoBehaviour:
   _description: Julien Dor
   _cardID: 0
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
+  _canSlideUp: 1
   _canSlideRight: 1
   _canSlideLeft: 0
   _enumSuccessRight: 0
@@ -25,13 +25,16 @@ MonoBehaviour:
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
+  _isSwipingUpDescription: LinkedIn
   _isNextCardRight: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1, type: 2}
-  _isNextCardLinkedIn: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1,
+  _isNextCardLinkedIn: {fileID: 11400000, guid: 99835d100a60e3649aaecb2c776b117d,
     type: 2}
-  _isSwipingRightDescription: LinkedIn
+  _isPreviousCardLinkedIn: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1,
+    type: 2}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
+  _isSwipingRightDescription: Next person
   _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: Next Person
+  _isSwipingLeftDescription: Previous person
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0

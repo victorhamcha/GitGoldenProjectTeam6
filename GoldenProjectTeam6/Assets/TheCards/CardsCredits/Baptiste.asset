@@ -17,7 +17,7 @@ MonoBehaviour:
   _description: Baptiste Barreyre
   _cardID: 0
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
+  _canSlideUp: 1
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
@@ -25,14 +25,16 @@ MonoBehaviour:
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
+  _isSwipingUpDescription: LinkedIn
   _isNextCardRight: {fileID: 11400000, guid: e1b684e5624d6b94e9b5a1d2b18630b1, type: 2}
-  _isNextCardLinkedIn: {fileID: 0}
-  _isPreviousCardLinkedIn: {fileID: 0}
+  _isNextCardLinkedIn: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1,
+    type: 2}
+  _isPreviousCardLinkedIn: {fileID: 11400000, guid: e1b684e5624d6b94e9b5a1d2b18630b1,
+    type: 2}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Next person
   _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: LinkedIn
+  _isSwipingLeftDescription: Previous person
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -49,7 +51,7 @@ MonoBehaviour:
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
   isLinkedIn: 1
-  url: https://www.google.fr/imghp?hl=fr
+  url: https://www.linkedin.com/in/baptiste-barreyre-6a09aa19b/
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 
