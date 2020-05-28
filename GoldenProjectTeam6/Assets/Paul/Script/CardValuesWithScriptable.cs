@@ -199,12 +199,9 @@ public class CardValuesWithScriptable : MonoBehaviour
                     }
                     _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
                     //Debug.Log(_firstCardScriptable._placeEnum.ToString());
-                    if (!_isADeadCard)
-                    {
-                        audioManager.Play("SFX_FinEventSansMort");
-                    }
+                    
                 }
-                audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+                
 
                 _firstCardScriptable = _nextCardLeft;
                 if (!_isADeadCard)
@@ -267,10 +264,10 @@ public class CardValuesWithScriptable : MonoBehaviour
 
                     if (!_isADeadCard)
                     {
-                        audioManager.Play("SFX_FinEventSansMort");
+                       
                     }
                 }
-                audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+              
 
 
                 _firstCardScriptable = _nextCardRight;

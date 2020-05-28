@@ -226,6 +226,7 @@ public class SwipeScript : MonoBehaviour
                     if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
                     {
                         disolve = true;
+                        card.audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
                     }
                     else
                     {
