@@ -138,7 +138,7 @@ public class SwipeScript : MonoBehaviour
         else if(card._firstCardScriptable._canSlideUp &&!canslidup && touched)
         {
             ArrowSlideUp.SetActive(false);
-            upText.text = "You don't have the object needed";
+            upText.text = "You don't have the object required";
         }
         else if(card._firstCardScriptable._canSlideUp && canslidup && touched)
         {
