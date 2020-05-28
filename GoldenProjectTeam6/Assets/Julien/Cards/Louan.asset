@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: Julien 3
+  m_Name: Louan
   m_EditorClassIdentifier: 
-  _title: Julien
-  _image: {fileID: 21300000, guid: d1ca945b85d010143a7624cf587837f2, type: 3}
-  _description: 
+  _title: Game Designer
+  _image: {fileID: 21300000, guid: 733b79e65cbe87d4392c00c6123fd2af, type: 3}
+  _description: Louan Costa
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1
-  _canSlideLeft: 1
+  _canSlideLeft: 0
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: c7a21ecf8f5e77d4d9f7167aa04c51dd, type: 2}
-  _isSwipingRightDescription: 
-  _isNextCardLeft: {fileID: 11400000, guid: 7b19667dc5c4f3e4bbd0a5d4a5fb53f5, type: 2}
-  _isSwipingLeftDescription: 
+  _isNextCardRight: {fileID: 11400000, guid: 7b19667dc5c4f3e4bbd0a5d4a5fb53f5, type: 2}
+  _isSwipingRightDescription: Next person
+  _isNextCardLeft: {fileID: 0}
+  _isSwipingLeftDescription: LinkedIn
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -45,6 +45,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 1
+  url: https://www.linkedin.com/in/louan-costa-20b208173/
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

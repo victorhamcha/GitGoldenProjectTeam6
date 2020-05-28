@@ -86,6 +86,18 @@ public class CardValuesWithScriptable : MonoBehaviour
         {
             _titleCard.text = _firstCardScriptable._title;
             _descriptionCard.text = _firstCardScriptable._description;
+
+            if(_firstCardScriptable.isLinkedIn)
+            {
+                _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
+                _descriptionCard.fontSize = 190;
+                _descriptionCard.enableAutoSizing = true;
+                _descriptionCard.fontSizeMin = 140;
+                _descriptionCard.fontSizeMax = 240;
+                _descriptionCard.alignment = TMPro.TextAlignmentOptions.Center;
+
+            }
+
             if (FindObjectOfType<TextControl>())
             {
                 FindObjectOfType<TextControl>().ChangeFont(_firstCardScriptable);
@@ -152,127 +164,145 @@ public class CardValuesWithScriptable : MonoBehaviour
     // When player swipes left
     public void GoLeft()
     {
-        if (!_isAContrat)
+        if(_firstCardScriptable.isLinkedIn == false)
         {
-            if (_firstCardScriptable._canSlideLeft)
+
+            if (!_isAContrat)
             {
-                if (_firstCardScriptable._enumObjectToUnlockLeft.ToString() != "none")
+                if (_firstCardScriptable._canSlideLeft)
                 {
-                    UnlockObject(_firstCardScriptable._enumObjectToUnlockLeft);
+                    if (_firstCardScriptable._enumObjectToUnlockLeft.ToString() != "none")
+                    {
+                        UnlockObject(_firstCardScriptable._enumObjectToUnlockLeft);
+                    }
+                    if (_firstCardScriptable._enumSuccessLeft.ToString() != "none")
+                    {
+                        succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
+                    }
                 }
-                if (_firstCardScriptable._enumSuccessLeft.ToString() != "none")
-                {
-                  succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessLeft);
-                }
-            }
-          
 
 
-            if (_firstCardScriptable._isEndingEvent)// && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == ""))
-            {
-                
-                //Debug.Log("enterTheWay");
-                if (_firstCardScriptable._eventCanBePlayOne)
+
+                if (_firstCardScriptable._isEndingEvent)// && (_firstCardScriptable._enumDirectpionSwipeString == "_swipeLeft"|| _firstCardScriptable._enumDirectpionSwipeString == ""))
                 {
-                    eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+
+                    //Debug.Log("enterTheWay");
+                    if (_firstCardScriptable._eventCanBePlayOne)
+                    {
+                        eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+                    }
+                    _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
+                    //Debug.Log(_firstCardScriptable._placeEnum.ToString());
+                    if (!_isADeadCard)
+                    {
+                        audioManager.Play("SFX_FinEventSansMort");
+                    }
                 }
-                _nextCardLeft = eventManager.LoadNewEvent(_firstCardScriptable._placeEnum.ToString());
-                //Debug.Log(_firstCardScriptable._placeEnum.ToString());
+                audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+
+                _firstCardScriptable = _nextCardLeft;
                 if (!_isADeadCard)
-                {
-                    audioManager.Play("SFX_FinEventSansMort");
-                }
-            }
-            audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
-            
-            _firstCardScriptable = _nextCardLeft;
-            if (!_isADeadCard)
-                LoadValueFromScriptableObject();
+                    LoadValueFromScriptableObject();
 
+                else
+                {
+                    // Death(); just for proto
+                    FindObjectOfType<SaveAndLoad>().SavePlayer();
+                    SceneManager.LoadScene("MenuModifVic");
+                    FindObjectOfType<SaveAndLoad>().LoadPlayer();
+                }
+
+                canSlideUp = false;
+
+            }
             else
             {
-                // Death(); just for proto
-                FindObjectOfType<SaveAndLoad>().SavePlayer();
-                SceneManager.LoadScene("MenuModifVic");
-                FindObjectOfType<SaveAndLoad>().LoadPlayer();
+                AfterContrat();
             }
-
-            canSlideUp = false;
-
         }
         else
         {
-            AfterContrat();
+            _firstCardScriptable = _firstCardScriptable._isPreviousCardLinkedIn;
+            LoadValueFromScriptableObject();
+            
         }
-
-      
     }
 
 
     // When player swipes right
     public void GoRight()
     {
-        if (!_isAContrat)
+        if (_firstCardScriptable.isLinkedIn == false)
         {
-            if (_firstCardScriptable._canSlideLeft)
+            if (!_isAContrat)
             {
-                if (_firstCardScriptable._enumObjectToUnlockRight.ToString() != "none")
+                if (_firstCardScriptable._canSlideLeft)
                 {
-                    UnlockObject(_firstCardScriptable._enumObjectToUnlockRight);
+                    if (_firstCardScriptable._enumObjectToUnlockRight.ToString() != "none")
+                    {
+                        UnlockObject(_firstCardScriptable._enumObjectToUnlockRight);
+                    }
+                    if (_firstCardScriptable._enumSuccessRight.ToString() != "none")
+                    {
+                        succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessRight);
+                    }
                 }
-                if (_firstCardScriptable._enumSuccessRight.ToString() != "none")
-                {
-                    succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessRight);
-                }
-            }
 
 
-            // Debug.Log(_isADeadCard);
-            if (_firstCardScriptable._isEndingEvent) //&& (_firstCardScriptable._enumDirectpionSwipeString == "_swipeRight" || _firstCardScriptable._enumDirectpionSwipeString == ""))
-            {
-               
-                if (_firstCardScriptable._eventCanBePlayOne)
+                // Debug.Log(_isADeadCard);
+                if (_firstCardScriptable._isEndingEvent) //&& (_firstCardScriptable._enumDirectpionSwipeString == "_swipeRight" || _firstCardScriptable._enumDirectpionSwipeString == ""))
                 {
-                    eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+
+                    if (_firstCardScriptable._eventCanBePlayOne)
+                    {
+                        eventManager.RemoveCard(_firstCardScriptable, _firstCardScriptable._placeEnum.ToString());
+                    }
+                    _nextCardRight = eventManager.LoadNewEvent("_balade");
+
+                    if (!_isADeadCard)
+                    {
+                        audioManager.Play("SFX_FinEventSansMort");
+                    }
                 }
-                _nextCardRight = eventManager.LoadNewEvent("_balade");
+                audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
+
+
+                _firstCardScriptable = _nextCardRight;
 
                 if (!_isADeadCard)
                 {
-                    audioManager.Play("SFX_FinEventSansMort");
+                    LoadValueFromScriptableObject();
+                    // Debug.Log("gotRight");
                 }
-            }
-            audioManager.PlayRandomPitch("SFX_Swipe", 1f, 2.5f);
-            
+                else
+                {
 
-            _firstCardScriptable = _nextCardRight;
+                    //Death(); just for proto
+                    FindObjectOfType<SaveAndLoad>().SavePlayer();
+                    _firstCardScriptable = originalCard;
+                    LoadValueFromScriptableObject();
+                    InventoryList inventory = FindObjectOfType<InventoryList>();
+                    for (int i = 0; i < inventory._inventory.Count; i++)
+                    {
+                        inventory._inventory[i]._hasThisObject = false;
+                    }
 
-            if (!_isADeadCard)
-            {
-                LoadValueFromScriptableObject();
-                // Debug.Log("gotRight");
+                }
+
+                canSlideUp = false;
             }
             else
             {
-                
-                //Death(); just for proto
-                FindObjectOfType<SaveAndLoad>().SavePlayer();
-                _firstCardScriptable = originalCard;
-                LoadValueFromScriptableObject();
-                InventoryList inventory = FindObjectOfType<InventoryList>();
-                for (int i =0;i< inventory._inventory.Count;i++)
-                {
-                    inventory._inventory[i]._hasThisObject = false;
-                }
-                
+                AfterContrat();
             }
-
-            canSlideUp = false;
         }
         else
         {
-            AfterContrat();
-        }
+
+            _firstCardScriptable = _firstCardScriptable._isNextCardLinkedIn;
+            LoadValueFromScriptableObject();
+
+        }  
       
     }
 
@@ -306,19 +336,21 @@ public class CardValuesWithScriptable : MonoBehaviour
     public void GoUp()
     {
         
-        if (_firstCardScriptable._canSlideUp)
+        if(_firstCardScriptable.isLinkedIn == false)
         {
-            if (_firstCardScriptable._enumObjectToUnlockUp.ToString() != "none")
+            if (_firstCardScriptable._canSlideUp)
             {
-                UnlockObject(_firstCardScriptable._enumObjectToUnlockUp);
+                if (_firstCardScriptable._enumObjectToUnlockUp.ToString() != "none")
+                {
+                    UnlockObject(_firstCardScriptable._enumObjectToUnlockUp);
+                }
+                if (_firstCardScriptable._enumSuccessUp.ToString() != "none")
+                {
+                    succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
+                }
             }
-            if (_firstCardScriptable._enumSuccessUp.ToString() != "none")
+            if (_firstCardScriptable._isEndingEvent)
             {
-                succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
-            }
-        }
-        if (_firstCardScriptable._isEndingEvent)
-        {
 
                 if (_firstCardScriptable._eventCanBePlayOne)
                 {
@@ -326,30 +358,33 @@ public class CardValuesWithScriptable : MonoBehaviour
                 }
                 _nextCardUp = eventManager.LoadNewEvent("_balade");
 
-              
-               
+
+
+            }
+
+            if (_firstCardScriptable.name == "Card_Trapezist_NetCut")
+            {
+                FindObjectOfType<InventoryList>()._inventory[2]._hasThisObject = false;
+            }
+            _firstCardScriptable = _nextCardUp;
+
+            if (!_isADeadCard)
+                LoadValueFromScriptableObject();
+
+            else
+            {
+                if (_firstCardScriptable._enumSuccessDeath.ToString() != "none")
+                {
+                    succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
+                }
+                //Death(); for the proto
+            }
+            canSlideUp = false;
         }
-
-        if(_firstCardScriptable.name== "Card_Trapezist_NetCut")
-        {
-            FindObjectOfType<InventoryList>()._inventory[2]._hasThisObject = false;
-        }
-        _firstCardScriptable = _nextCardUp;
-
-        if (!_isADeadCard)
-            LoadValueFromScriptableObject();
-
         else
         {
-            if (_firstCardScriptable._enumSuccessDeath.ToString() != "none")
-            {
-                succesManager.UnlockSuccess(_firstCardScriptable._enumSuccessUp);
-            }
-            //Death(); for the proto
+            Application.OpenURL(_firstCardScriptable.url);
         }
-        canSlideUp = false;
-
-
      
     }
 

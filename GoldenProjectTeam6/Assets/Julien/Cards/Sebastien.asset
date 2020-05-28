@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: Julien 2
+  m_Name: Sebastien
   m_EditorClassIdentifier: 
-  _title: Victor
-  _image: {fileID: 21300000, guid: d1ca945b85d010143a7624cf587837f2, type: 3}
-  _description: 
+  _title: Game Artist
+  _image: {fileID: 21300000, guid: c39fb20ca6c53584dbe361399cdf0c24, type: 3}
+  _description: Sebastien Rioux
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -26,10 +26,12 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 7f2c55a60aac6c040b0e48d64bd50ea7, type: 2}
-  _isSwipingRightDescription: 
+  _isNextCardRight: {fileID: 11400000, guid: 8c9a3226ef586a740b460c2f33b3f0c7, type: 2}
+  _isNextCardLinkedIn: {fileID: 11400000, guid: 8c9a3226ef586a740b460c2f33b3f0c7,
+    type: 2}
+  _isSwipingRightDescription: LinkedIn
   _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: 
+  _isSwipingLeftDescription: Next Person
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -45,6 +47,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 1
+  url: https://www.linkedin.com/in/rioux-s%C3%A9bastien-2b5434183/
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

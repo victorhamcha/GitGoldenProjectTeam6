@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: Julien
+  m_Name: Dov
   m_EditorClassIdentifier: 
   _title: Game Programmer
-  _image: {fileID: 21300000, guid: a940fcb291ccd084a926c00d59be1cad, type: 3}
-  _description: Julien Dor
+  _image: {fileID: 21300000, guid: 49be1214dbe6fab43bc67ded86e90f82, type: 3}
+  _description: Dov Benzaquen
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -26,12 +26,10 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1, type: 2}
-  _isNextCardLinkedIn: {fileID: 11400000, guid: 4bc187d57813f894ca5be35b442516c1,
-    type: 2}
-  _isSwipingRightDescription: LinkedIn
+  _isNextCardRight: {fileID: 11400000, guid: 4b9af7d81240c4c47b0abe4b63ee6f11, type: 2}
+  _isSwipingRightDescription: Next person
   _isNextCardLeft: {fileID: 0}
-  _isSwipingLeftDescription: Next Person
+  _isSwipingLeftDescription: LinkedIn
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -48,7 +46,7 @@ MonoBehaviour:
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
   isLinkedIn: 1
-  url: https://www.linkedin.com/in/julien-dor-910421153/
+  url: https://www.linkedin.com/in/dov-benzaquen-bb9b50181/
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

@@ -125,6 +125,7 @@ public class SwipeScript : MonoBehaviour
      
 
         
+
         if(!card._firstCardScriptable._canSlideUp)
         {
            
@@ -143,6 +144,11 @@ public class SwipeScript : MonoBehaviour
         else if(card._firstCardScriptable._canSlideUp && canslidup && touched)
         {
             ArrowSlideUp.SetActive(false);
+        }
+
+        if(card._firstCardScriptable.isLinkedIn)
+        {
+            ArrowSlideUp.SetActive(true);
         }
         
         if (card._isADeadCard)
