@@ -8,34 +8,34 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public Toggle _toggleWhichChanges;
     int _volumeToggle = 1;
-    //public static AudioManager Instance { get; private set; }
+    public static AudioManager Instance { get; private set; }
    
 
 
     void Awake()
     {
-        //if (Instance == null)
-        //{
-        //    Instance = this;
-        //    DontDestroyOnLoad(this);
-        //}
-        //else
-        //{
-        //    Destroy(Instance.gameObject);
-        //    //Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(Instance.gameObject);
+            Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
 
-        //    //Debug.Log(toggles.Length);
-        //    //for (int i = 0; i < toggles.Length; i++)
-        //    //{
-        //    //    if (toggles[i].name == "ToggleAudio")
-        //    //    {
-        //    //        Instance._toggleWhichChanges = toggles[i];
-        //    //        break;
-        //    //    }
-        //    //}
+            Debug.Log(toggles.Length);
+            for (int i = 0; i < toggles.Length; i++)
+            {
+                if (toggles[i].name == "ToggleAudio")
+                {
+                    Instance._toggleWhichChanges = toggles[i];
+                    break;
+                  }
+            }
 
-        //    //ChangeToggle();
-        //}
+            ChangeToggle();
+        }
 
         foreach (Sound s in sounds)
         {
@@ -67,9 +67,11 @@ public class AudioManager : MonoBehaviour
         if (_toggleWhichChanges.isOn)
         {
             _volumeToggle = 1;
+            FindObjectOfType<AudioManager>().Play("SFX_Toggle01");
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("SFX_Toggle02");
             _volumeToggle = 0;
         }
         SetAudio();
@@ -124,5 +126,30 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundClick()
     {
         FindObjectOfType<AudioManager>().Play("Click");
+    }
+
+    public void PlaySoundToggleUp()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_Toggle01");
+    }
+
+    public void PlaySoundToggleDown()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_Toggle02");
+    }
+
+    public void PlaySoundClickUp()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_Click01");
+    }
+
+    public void PlaySoundClickDown()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_Click02");
+    }
+
+    public void PlaySoundSlide()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_Slide");
     }
 }
