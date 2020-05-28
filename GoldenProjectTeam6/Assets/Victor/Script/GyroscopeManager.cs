@@ -23,7 +23,7 @@ public class GyroscopeManager : MonoBehaviour
             collector = SuccesManager.cardSkin;
         if (SceneManager.GetActiveScene().name=="MenuModifVic")
         {
-            Debug.LogError("JEPASSELA");
+           
             collector.SetFloat("Menu", 1);
             collector.SetFloat("_Fade", 1);
         }

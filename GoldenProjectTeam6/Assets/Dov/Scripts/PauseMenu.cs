@@ -13,20 +13,29 @@ public class PauseMenu : MonoBehaviour
     public GameObject card;
     private int togglesID;
 
-    [HideInInspector] public AudioManager audioManager;
-
 
     private void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
 
-        if (MusiqueManager.Instance != null)
-            MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
+        if(PlayerPrefs.HasKey("firstTime"))
+        {
+            if (MusiqueManager.Instance != null)
+                MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
+            else
+                music.isOn = options[0];
+
+            sound.isOn = options[1];
+            censure.isOn = options[2];
+        }
         else
-            music.isOn = options[0];
-        
-        sound.isOn = options[1];
-        censure.isOn = options[2];
+        {
+            music.isOn = true;
+            sound.isOn = true;
+            censure.isOn = true;
+            PlayerPrefs.SetFloat("firstTime", 1f);
+            PlayerPrefs.Save();
+        }
+       
         
     }
 
@@ -37,17 +46,6 @@ public class PauseMenu : MonoBehaviour
 
     public void ChangeToggles(Toggle toggle)
     {
-        if(toggle.isOn)
-        {
-            audioManager.Play("SFX_Toggle01");
-            Debug.Log("go 1");
-        }
-        else
-        {
-            Debug.Log("go 2");
-            audioManager.Play("SFX_Toggle02");
-        }
-
         options[togglesID] = toggle.isOn;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         MusiqueManager.Instance.ChangeToggle();
@@ -65,7 +63,6 @@ public class PauseMenu : MonoBehaviour
     {
         if(!GameIsPaused)
         {
-            audioManager.Play("SFX_Button01");
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             card.SetActive(false);
@@ -73,7 +70,6 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
-            audioManager.Play("SFX_Button01");
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             card.SetActive(true);

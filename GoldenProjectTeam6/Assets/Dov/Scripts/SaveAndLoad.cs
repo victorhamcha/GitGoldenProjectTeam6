@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SaveAndLoad : MonoBehaviour
 {
     public List<string> objectInTree;
@@ -37,10 +38,14 @@ public class SaveAndLoad : MonoBehaviour
 
     public void SaveCards()
     {
-        if (manage.inGame)
-        {
+        
+            
             SaveSystem.SaveCards(card, succes);
-        }
+            if(!PlayerPrefs.HasKey("firstsucces"))
+            {
+            PlayerPrefs.SetFloat("firstsucces", 1f);
+            }
+                
     }
 
     public void SavePlayer()
@@ -71,11 +76,7 @@ public class SaveAndLoad : MonoBehaviour
     {
         CardsData data = SaveSystem.LoadCards();
 
-        if (data.firstCardData != null)
-        {
-            //card._firstCardScriptable = Resources.Load<CardScriptableObject>("Resources/" + data.firstCardData + "/.asset");
-            Debug.Log(data.firstCardData);
-        }
+    
 
 
         if (succes == null)
@@ -99,8 +100,10 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawCards = data.savingDrawCardCardData;
         apparitionOrder = data.apparationOrderData;
 
+        
         saveOptions = data.optionsData;
-
+       
+        if(PlayerPrefs.HasKey("firstsucces"))
         LoadCard();
 
     }

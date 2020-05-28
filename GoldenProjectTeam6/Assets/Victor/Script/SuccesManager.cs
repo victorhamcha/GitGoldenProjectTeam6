@@ -74,7 +74,7 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 25)
+                if (timer >= 120)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)

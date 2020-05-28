@@ -191,15 +191,29 @@ public class ContratsPanel : MonoBehaviour
         imgCharacter.sprite = imgLvl[lvl];
         //LoadPassport
         SuccesManager.cardSkin = skinLvl[changeMat];
-       
+
+        if (countryText == "")
+        {
+            countryText = "Insert Country";
+            CountryTXT.text = "Insert Name";
+        }
+        if (nameText == "")
+        {
+            nameText = "Insert Name";
+            nameTXT.text = "Insert Name";
+        }
+        CountryTXT.text = countryText;
+        nameTXT.text = nameText;
         FindObjectOfType<SaveAndLoad>().LoadPassport();
         if(countryText=="")
         {
             countryText = "Insert Country";
+            CountryTXT.text = "Insert Name";
         }
         if(nameText=="")
         {
            nameText = "Insert Name";
+            nameTXT.text = "Insert Name";
         }
         CountryTXT.text = countryText;
         nameTXT.text = nameText;
@@ -225,7 +239,8 @@ public class ContratsPanel : MonoBehaviour
         skinTXT.text = skinName[changeMat];
         SuccesManager.cardSkin = skinLvl[changeMat];
         imgCharacter.material= skinLvl[changeMat];
-
+        imgCharacter.material.SetFloat("Menu", 1);
+        FindObjectOfType<GyroscopeManager>().collector= skinLvl[changeMat];
     }
 
     private void OnApplicationQuit()

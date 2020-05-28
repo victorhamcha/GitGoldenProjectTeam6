@@ -16,6 +16,7 @@ public class SwipeScript : MonoBehaviour
     public float rotateSpeed;
     public float zRotation;
     
+
     private float touchOffSet;
     private float touchRef;
     private Vector2 originalPos;
@@ -23,6 +24,7 @@ public class SwipeScript : MonoBehaviour
     private Vector3 distance;
     private bool smooth = false;
     private bool step1 = false;
+    private bool canTurn=true;
     public bool reRotate = false;
     public bool canGoUp;
     public float maxX = 265;
@@ -160,7 +162,7 @@ public class SwipeScript : MonoBehaviour
 
         img.transform.eulerAngles = new Vector3(0, 0, 0);
        
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0&&canTurn)
         {
             Touch touch = Input.GetTouch(0);
           
@@ -233,7 +235,7 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-           
+            canTurn = false;
             img.SetActive(false);
           
             fade -= Time.deltaTime*2;
@@ -350,7 +352,7 @@ public class SwipeScript : MonoBehaviour
             {
                 fade = 1f;
                 undisolve = false;
-                
+                canTurn = true;
             }
             else
             {
@@ -361,14 +363,14 @@ public class SwipeScript : MonoBehaviour
 
         if(animGO)
         {
-            rotateShader += 0.05f;
-            if(rotateShader>=0)
+            rotateShader -= 0.05f;
+            if(rotateShader<=-1.2f)
             {
-                rotateShader = 0;
+                rotateShader = -1.2f;
                 _mtrl.SetFloat("_opacity", rotateShader);
                 animGO = false;
                 BG.sprite = _newBG;
-                rotateShader = -1f;
+                
             }
             _mtrl.SetFloat("_opacity", rotateShader);
            
@@ -442,8 +444,8 @@ public class SwipeScript : MonoBehaviour
 
     public void SwitchBG(Sprite newBG)
     {
-        
-        
+
+        rotateShader = 0f;
         _mtrl.SetTexture("_NewBG", newBG.texture);
         animGO = true;
         _newBG = newBG;
