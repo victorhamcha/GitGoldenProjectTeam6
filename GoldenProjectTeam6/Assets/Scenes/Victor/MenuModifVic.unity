@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3860,15 +3860,15 @@ RectTransform:
   m_GameObject: {fileID: 449006333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3064.3647}
-  m_LocalScale: {x: 0.44402686, y: 0.50972897, z: 0.44402686}
+  m_LocalScale: {x: 0.4440268, y: 0.509729, z: 0.4440268}
   m_Children: []
   m_Father: {fileID: 1896683051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 777, y: -706}
-  m_SizeDelta: {x: 4961.5913, y: 3508}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 776.9558, y: -705.8572}
+  m_SizeDelta: {x: 4961.538, y: 3508.1711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449006335
 MonoBehaviour:
@@ -4063,7 +4063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &454210338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4768,7 +4768,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtTitre
-      value: Routine of the restaurant
+      value: Routine
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -6659,12 +6659,12 @@ PrefabInstance:
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtTitre
-      value: None respect
+      value: Massive Disrespect
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtDescription
-      value: Rise your hand and spit at the face of the magician
+      value: Raise your hand and spit at the magician's face
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -8734,7 +8734,7 @@ PrefabInstance:
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtDescription
-      value: Say shut up to the clown after his second joke
+      value: Say "Shut up" to the clown after his second joke
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -11190,13 +11190,12 @@ PrefabInstance:
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtTitre
-      value: Alcohol is dangerous to health
+      value: Alcohol is dangerous
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
       propertyPath: txtDescription
-      value: Demand to the knife thrower to stop drinking after demanded him to do
-        his show with you
+      value: Ask the knife thrower to stop drinking after going on his wheel
       objectReference: {fileID: 0}
     - target: {fileID: 4995051547563859919, guid: 6f6cf9c4a72c1da4990231e019861c02,
         type: 3}
@@ -11505,7 +11504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1339411591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13919,16 +13918,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528771120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3064.365}
-  m_LocalScale: {x: 1.6682264, y: 1.6682264, z: 1.6682264}
+  m_LocalPosition: {x: 0, y: 0, z: 3064.3647}
+  m_LocalScale: {x: 1.858571, y: 1.858571, z: 1.858571}
   m_Children: []
   m_Father: {fileID: 1896683051}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 292.9739, y: -633.1921}
-  m_SizeDelta: {x: 519.94696, y: 923.17114}
+  m_AnchoredPosition: {x: 292.9738, y: -633.1922}
+  m_SizeDelta: {x: 519.94696, y: 923.1711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528771122
 MonoBehaviour:

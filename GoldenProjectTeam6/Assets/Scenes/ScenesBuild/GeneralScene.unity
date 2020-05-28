@@ -573,7 +573,7 @@ MonoBehaviour:
   enumSucces: 5
   locked: 1
   txtTitre: Insulting
-  txtDescription: Say shut up to the clown after his second joke
+  txtDescription: Say "Shut up" to the clown after his second joke
 --- !u!114 &177905939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,8 +894,8 @@ MonoBehaviour:
   "_difficult\xE9": 1
   enumSucces: 6
   locked: 1
-  txtTitre: None respect
-  txtDescription: Rise your hand and spit at the face of the magician
+  txtTitre: Massive Disrespect
+  txtDescription: Raise your hand and spit at the magician's face
 --- !u!114 &275622680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,8 +3964,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Succes Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3990,7 +3991,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.5
+  m_fontSize: 50
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12088,9 +12089,8 @@ MonoBehaviour:
   "_difficult\xE9": 1
   enumSucces: 4
   locked: 1
-  txtTitre: Alcohol is dangerous to health
-  txtDescription: Demand to the knife thrower to stop drinking after demanded him
-    to do his show with you
+  txtTitre: Alcohol is dangerous
+  txtDescription: Ask the knife thrower to stop drinking after going on his wheel
 --- !u!114 &1569331654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13516,7 +13516,7 @@ MonoBehaviour:
   "_difficult\xE9": 2
   enumSucces: 8
   locked: 1
-  txtTitre: Routine of the restaurant
+  txtTitre: Routine
   txtDescription: Order a soft-boiled egg, add pepper in it and go to the toilets
 --- !u!114 &1865673458
 MonoBehaviour:
