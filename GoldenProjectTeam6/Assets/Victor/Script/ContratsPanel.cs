@@ -64,7 +64,7 @@ public class ContratsPanel : MonoBehaviour
     {
        
         
-        if (androidControl.SwipeLeft)
+        if (androidControl.SwipeRight)
         {
             page--;
             scroller.enabled = false;
@@ -74,7 +74,7 @@ public class ContratsPanel : MonoBehaviour
             }
             SwipeModif();
         }
-        else if (androidControl.SwipeRight)
+        else if (androidControl.SwipeLeft)
         {
             page++;
             scroller.enabled = false;
