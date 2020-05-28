@@ -53,7 +53,7 @@ Material:
     - Menu: 1
     - _EnableExternalAlpha: 0
     - _Fade: 1
-    - _Mouvement: 10.181599
+    - _Mouvement: -18.187551
     - _Saturation: 59.52
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

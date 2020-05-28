@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6142,7 +6142,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: RainSound
     clip: {fileID: 8300000, guid: 7b09d7c85a9b19e4997a25543603aa61, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 1
     playOnAwake: 0
