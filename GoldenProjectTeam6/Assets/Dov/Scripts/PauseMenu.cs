@@ -63,6 +63,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(!GameIsPaused)
         {
+            FindObjectOfType<AudioManager>().Play("SFX_Click01");
             PauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             card.SetActive(false);
@@ -70,6 +71,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("SFX_Click01");
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
             card.SetActive(true);
