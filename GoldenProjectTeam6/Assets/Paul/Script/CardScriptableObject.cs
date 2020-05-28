@@ -19,13 +19,13 @@ public class CardScriptableObject : ScriptableObject
     [TextArea(5, 1)] public string _description;
 
 
-    [HideInInspector] public int  _cardID;
+    [HideInInspector] public int _cardID;
 
     [HideInInspector] public bool _cardAlreadyDraw;
     [HideInInspector] public bool _canSlideUp;
     [HideInInspector] public bool _canSlideRight;
     [HideInInspector] public bool _canSlideLeft;
-    
+
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessRight;
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessLeft;
     [HideInInspector] public EnumSuccess._enumSuccess _enumSuccessUp;
@@ -63,11 +63,11 @@ public class CardScriptableObject : ScriptableObject
 
 
     [HideInInspector] public List<EnumListObject._objectList> _conditionsObjectList = new List<EnumListObject._objectList>();
-    
+
     [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockRight;
     [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockLeft;
     [HideInInspector] public EnumListObject._objectList _enumObjectToUnlockUp;
-    
+
 
     public EnumPlaceGame._enumPlace _placeEnum;
 
@@ -83,11 +83,16 @@ public class CardScriptableObject : ScriptableObject
 
     [HideInInspector] public GameObject _specialVFX;
 
-
+    void ForceSerialization()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorUtility.SetDirty(this);
+#endif
+    }
 }
 
 #if UNITY_EDITOR
-[CustomEditor(typeof(CardScriptableObject))]
+    [CustomEditor(typeof(CardScriptableObject))]
 public class CardScriptableObject_Editor : Editor
 {
     [HideInInspector] public EnumDirectionSwipeCard._swipeDirection _swipeDirectionObject;
@@ -249,7 +254,15 @@ public class CardScriptableObject_Editor : Editor
             script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
             script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
             script.url = EditorGUILayout.TextField("URL LinkedIn", script.url);
-            script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);          
+            script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
+
+
+            if (GUILayout.Button("Update Valeurs"))
+            {
+#if UNITY_EDITOR
+                EditorUtility.SetDirty(script);
+#endif
+            }
         }
        
 
