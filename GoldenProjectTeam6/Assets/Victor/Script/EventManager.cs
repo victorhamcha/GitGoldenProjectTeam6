@@ -55,10 +55,10 @@ public class EventManager : MonoBehaviour
         CardScriptableObject theNextCard=null;
         int x = Random.Range(0, placeEvents.Count);
         theNextCard = placeEvents[x];
-        //Debug.Log(placeEvents.Count);
-        //Debug.Log(place);
-        //Debug.Log(theNextCard.name);
-        //Debug.Log(card._firstCardScriptable._firstCardOfEvent.name);
+        Debug.Log(placeEvents.Count);
+        Debug.Log(place);
+        Debug.Log(theNextCard.name);
+        Debug.Log(card._firstCardScriptable._firstCardOfEvent.name);
         while (theNextCard==card._firstCardScriptable._firstCardOfEvent&&placeEvents.Count>1)
         {
             

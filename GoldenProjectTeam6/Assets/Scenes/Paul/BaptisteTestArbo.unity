@@ -38015,7 +38015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 4
-  _backgroundImage: {fileID: 21300000, guid: 6252f4e47bb0b174183688bda897eecf, type: 3}
+  _backgroundImage: {fileID: 21300000, guid: cd802f1131ec9994ba026e5acf6e9499, type: 3}
   _imageToChange: {fileID: 2144721377}
 --- !u!1 &670702096
 GameObject:

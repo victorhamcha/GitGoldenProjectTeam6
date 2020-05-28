@@ -16,13 +16,26 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        if (MusiqueManager.Instance != null)
-            MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
+
+        if(PlayerPrefs.HasKey("firstTime"))
+        {
+            if (MusiqueManager.Instance != null)
+                MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
+            else
+                music.isOn = options[0];
+
+            sound.isOn = options[1];
+            censure.isOn = options[2];
+        }
         else
-            music.isOn = options[0];
-        
-        sound.isOn = options[1];
-        censure.isOn = options[2];
+        {
+            music.isOn = true;
+            sound.isOn = true;
+            censure.isOn = true;
+            PlayerPrefs.SetFloat("firstTime", 1f);
+            PlayerPrefs.Save();
+        }
+       
         
     }
 

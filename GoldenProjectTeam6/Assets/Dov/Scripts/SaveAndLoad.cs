@@ -39,8 +39,13 @@ public class SaveAndLoad : MonoBehaviour
     public void SaveCards()
     {
         
+            
             SaveSystem.SaveCards(card, succes);
-        
+            if(!PlayerPrefs.HasKey("firstsucces"))
+            {
+            PlayerPrefs.SetFloat("firstsucces", 1f);
+            }
+                
     }
 
     public void SavePlayer()
@@ -71,11 +76,7 @@ public class SaveAndLoad : MonoBehaviour
     {
         CardsData data = SaveSystem.LoadCards();
 
-        if (data.firstCardData != null)
-        {
-            //card._firstCardScriptable = Resources.Load<CardScriptableObject>("Resources/" + data.firstCardData + "/.asset");
-            Debug.Log(data.firstCardData);
-        }
+    
 
 
         if (succes == null)
@@ -99,15 +100,10 @@ public class SaveAndLoad : MonoBehaviour
         alreadyDrawCards = data.savingDrawCardCardData;
         apparitionOrder = data.apparationOrderData;
 
-        if (data!=null)
+        
         saveOptions = data.optionsData;
-        else
-        {
-            saveOptions[0] = true;
-            saveOptions[1] = true;
-            saveOptions[2] = true;
-        }
-
+       
+        if(PlayerPrefs.HasKey("firstsucces"))
         LoadCard();
 
     }

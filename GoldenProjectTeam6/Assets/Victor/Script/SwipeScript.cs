@@ -16,6 +16,7 @@ public class SwipeScript : MonoBehaviour
     public float rotateSpeed;
     public float zRotation;
     
+
     private float touchOffSet;
     private float touchRef;
     private Vector2 originalPos;
@@ -23,6 +24,7 @@ public class SwipeScript : MonoBehaviour
     private Vector3 distance;
     private bool smooth = false;
     private bool step1 = false;
+    private bool canTurn=true;
     public bool reRotate = false;
     public bool canGoUp;
     public float maxX = 265;
@@ -160,7 +162,7 @@ public class SwipeScript : MonoBehaviour
 
         img.transform.eulerAngles = new Vector3(0, 0, 0);
        
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0&&canTurn)
         {
             Touch touch = Input.GetTouch(0);
           
@@ -233,7 +235,7 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-           
+            canTurn = false;
             img.SetActive(false);
           
             fade -= Time.deltaTime*2;
@@ -350,7 +352,7 @@ public class SwipeScript : MonoBehaviour
             {
                 fade = 1f;
                 undisolve = false;
-                
+                canTurn = true;
             }
             else
             {
