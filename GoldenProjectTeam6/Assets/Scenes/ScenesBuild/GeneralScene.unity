@@ -2803,7 +2803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 373940509}
-  _animTime: 0.5
+  _animTime: 0.45
 --- !u!114 &681894919
 MonoBehaviour:
   m_ObjectHideFlags: 0
