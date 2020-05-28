@@ -97,9 +97,11 @@ public class MusiqueManager : MonoBehaviour
         if (Instance._toggleWhichChanges.isOn)
         {
             Instance._volumeToggle = 1;
+            FindObjectOfType<AudioManager>().Play("SFX_Toggle01");
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("SFX_Toggle01");
             Instance._volumeToggle = 0;
         }
         Instance.SetVolume();

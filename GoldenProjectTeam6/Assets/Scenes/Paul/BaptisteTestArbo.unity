@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -25921,6 +25921,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClickDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464971273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37957,6 +37968,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 669173026}
         m_MethodName: ClickOnThisButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClickUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -68962,6 +68984,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1219102702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76569,6 +76602,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1358615925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83583,6 +83627,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1484927649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89817,6 +89872,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundSlide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1563071390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92827,6 +92893,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1605709193}
         m_MethodName: ClickOnThisButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClickUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -119167,21 +119244,42 @@ MonoBehaviour:
   sounds:
   - name: SFX_UnlockSuccess
     clip: {fileID: 8300000, guid: a14c6477d920aa74d9a79c46a32da464, type: 3}
-    volume: 0.073
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: SFX_DeathSound
     clip: {fileID: 8300000, guid: 01b9c1567fc132344a95e04bacb89774, type: 3}
-    volume: 0.061
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: SFX_FinEventSansMort
     clip: {fileID: 8300000, guid: 73930011d591c7a489ea491b1fb09359, type: 3}
-    volume: 0.255
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_Click01
+    clip: {fileID: 8300000, guid: c031efa7f1c987c47b034b9ae552ac1c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_Click02
+    clip: {fileID: 8300000, guid: e46180d052b02fd49bd53f9b3e2c2360, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_Slide
+    clip: {fileID: 8300000, guid: cd54ecece8f93c4408fe260a651f3f02, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0

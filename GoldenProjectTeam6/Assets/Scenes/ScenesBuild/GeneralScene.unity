@@ -1804,6 +1804,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 544111576}
+        m_MethodName: PlaySoundClickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480618601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,43 +1956,57 @@ MonoBehaviour:
   sounds:
   - name: SFX_UnlockSuccess
     clip: {fileID: 8300000, guid: a14c6477d920aa74d9a79c46a32da464, type: 3}
-    volume: 0.073
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: SFX_DeathSound
     clip: {fileID: 8300000, guid: 01b9c1567fc132344a95e04bacb89774, type: 3}
-    volume: 0.124
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: SFX_FinEventSansMort
     clip: {fileID: 8300000, guid: 73930011d591c7a489ea491b1fb09359, type: 3}
-    volume: 0.153
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: SFX_Swipe
     clip: {fileID: 8300000, guid: 2a38bccbf1a981440bf8d28a654d4941, type: 3}
-    volume: 0.325
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: SFX_Click
-    clip: {fileID: 8300000, guid: b9d05487891d06549aee3363e6a18cfd, type: 3}
-    volume: 0.001
-    pitch: 3
+  - name: SFX_Click01
+    clip: {fileID: 8300000, guid: c031efa7f1c987c47b034b9ae552ac1c, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: SFX_Button01
-    clip: {fileID: 8300000, guid: c031efa7f1c987c47b034b9ae552ac1c, type: 3}
+  - name: SFX_Click02
+    clip: {fileID: 8300000, guid: e46180d052b02fd49bd53f9b3e2c2360, type: 3}
     volume: 1
-    pitch: 3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_Toggle01
+    clip: {fileID: 8300000, guid: cedcc6af21b28b748917e963c6d9e9f4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_Toggle02
+    clip: {fileID: 8300000, guid: 6b307a596de645d4783c040a21d697a9, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
@@ -10543,7 +10568,6 @@ MonoBehaviour:
   sound: {fileID: 1253095763}
   censure: {fileID: 1967055390}
   card: {fileID: 1944642713}
-  audioManager: {fileID: 0}
 --- !u!114 &1419286921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13600,6 +13624,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 544111576}
+        m_MethodName: PlaySoundClickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 0
 --- !u!114 &1998967792
 MonoBehaviour:
   m_ObjectHideFlags: 0

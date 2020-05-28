@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+       /* if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(this);
@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
             }
 
             ChangeToggle();
-        }
+        }*/
 
         foreach (Sound s in sounds)
         {
