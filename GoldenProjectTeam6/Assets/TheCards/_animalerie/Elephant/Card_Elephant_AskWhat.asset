@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 69b81bcb04f7c4c41ac4dbd8bd9bfd28, type: 2}
   _isSwipingUpDescription: Throw the dead mouse to the elephant
   _isNextCardRight: {fileID: 11400000, guid: 217c2be5a9e27294c861b74ef7a8a747, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Piss off, fuck face
   _isNextCardLeft: {fileID: 11400000, guid: 217c2be5a9e27294c861b74ef7a8a747, type: 2}
   _isSwipingLeftDescription: Your mother is so cheap, ducks throw her bread
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 3
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 08000000

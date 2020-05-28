@@ -89,11 +89,17 @@ public class CardValuesWithScriptable : MonoBehaviour
 
             if(_firstCardScriptable.isLinkedIn)
             {
+                
+                
+
+                _descriptionUpSwipe.color = _firstCardScriptable.colorTextUp;
+                _descriptionRightSwipe.color = _firstCardScriptable.colorTextUp;
+                _descriptionLeftSwipe.color = _firstCardScriptable.colorTextUp;
                 _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
-                _descriptionCard.fontSize = 190;
+                _descriptionCard.fontSize = 180;
                 _descriptionCard.enableAutoSizing = true;
                 _descriptionCard.fontSizeMin = 140;
-                _descriptionCard.fontSizeMax = 240;
+                _descriptionCard.fontSizeMax = 230;
                 _descriptionCard.alignment = TMPro.TextAlignmentOptions.Center;
 
             }
@@ -222,7 +228,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         }
         else
         {
-            _firstCardScriptable = _firstCardScriptable._isPreviousCardLinkedIn;
+            _firstCardScriptable = _firstCardScriptable._isNextCardLinkedIn;
             LoadValueFromScriptableObject();
             
         }
@@ -299,7 +305,7 @@ public class CardValuesWithScriptable : MonoBehaviour
         else
         {
 
-            _firstCardScriptable = _firstCardScriptable._isNextCardLinkedIn;
+            _firstCardScriptable = _firstCardScriptable._isPreviousCardLinkedIn;
             LoadValueFromScriptableObject();
 
         }  

@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 02cb89497f117544d898563d075fe9b7, type: 2}
   _isSwipingUpDescription: Discreetly put two broken teeth in the machine
   _isNextCardRight: {fileID: 11400000, guid: 9c29b75d7bc8da6419e0887c81d4637d, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Wait for the cotton candy
   _isNextCardLeft: {fileID: 11400000, guid: c27e6d5763e76ae43b33c39b55a7a4a5, type: 2}
   _isSwipingLeftDescription: Look at the waiting line like a jerk
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 2
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 05000000

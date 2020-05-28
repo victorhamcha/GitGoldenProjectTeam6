@@ -37,7 +37,7 @@ public class CardScriptableObject : ScriptableObject
     [HideInInspector] public CardScriptableObject _isNextCardRight;
     [HideInInspector] public CardScriptableObject _isNextCardLinkedIn;
     [HideInInspector] public CardScriptableObject _isPreviousCardLinkedIn;
-
+    [HideInInspector] public Color colorTextUp;
 
     [HideInInspector] public string _isSwipingRightDescription;
     [HideInInspector] public CardScriptableObject _isNextCardLeft;
@@ -238,8 +238,14 @@ public class CardScriptableObject_Editor : Editor
         else
         {
 
-            script._isNextCardLinkedIn = EditorGUILayout.ObjectField("Next Card By Sliding", script._isNextCardLinkedIn, typeof(CardScriptableObject), true) as CardScriptableObject;
-            script._isPreviousCardLinkedIn = EditorGUILayout.ObjectField("Previous Card By Sliding", script._isPreviousCardLinkedIn, typeof(CardScriptableObject), true) as CardScriptableObject;
+            script.colorTextUp = EditorGUILayout.ColorField("Color Text", script.colorTextUp);
+
+            GUI.backgroundColor = script._colorInspector;
+            script._canSlideUp = EditorGUILayout.Toggle("Can Slide Up", script._canSlideUp);
+            GUI.backgroundColor = Color.white;
+
+            script._isNextCardLinkedIn = EditorGUILayout.ObjectField("Previous Card By Sliding", script._isNextCardLinkedIn, typeof(CardScriptableObject), true) as CardScriptableObject;
+            script._isPreviousCardLinkedIn = EditorGUILayout.ObjectField("Next Card By Sliding", script._isPreviousCardLinkedIn, typeof(CardScriptableObject), true) as CardScriptableObject;
             script._isSwipingLeftDescription = EditorGUILayout.TextField("Description when player slide LEFT", script._isSwipingLeftDescription);
             script._isSwipingRightDescription = EditorGUILayout.TextField("Description when player slide RIGHT", script._isSwipingRightDescription);
             script.url = EditorGUILayout.TextField("URL LinkedIn", script.url);

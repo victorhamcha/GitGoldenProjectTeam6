@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenesBuild/GeneralScene.unity
     guid: 8c2a7044a0b18a348a5976ec98177901
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScenesBuild/TestCardJulien.unity
     guid: a95f11a6fcf335047be329240d1b530c
   - enabled: 1

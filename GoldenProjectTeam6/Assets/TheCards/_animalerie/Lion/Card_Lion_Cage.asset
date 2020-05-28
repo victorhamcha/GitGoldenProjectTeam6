@@ -28,6 +28,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 941582193af69fb42939787d20137fba, type: 2}
   _isSwipingUpDescription: Throw some Cotton Candy to him
   _isNextCardRight: {fileID: 11400000, guid: 54ca869b9dd44804e98b19909afcefa6, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Try to enter the cage
   _isNextCardLeft: {fileID: 11400000, guid: db23651bca03cfa4489173d009e97d17, type: 2}
   _isSwipingLeftDescription: Ask the Lion what's up
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 8
   _placeEnum: 3
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 06000000

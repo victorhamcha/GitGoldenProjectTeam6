@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 0d6811b00fab4e2428759cb5f6e76009, type: 2}
   _isSwipingUpDescription: Wait a tiny bit more
   _isNextCardRight: {fileID: 11400000, guid: 487577982b36c21459037ad2f74acaa0, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: '"Politely" ask the one in front of you to leave'
   _isNextCardLeft: {fileID: 11400000, guid: 23269e6a631837445991c3dac40f6820, type: 2}
   _isSwipingLeftDescription: Sneak to the front of the row
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 2
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

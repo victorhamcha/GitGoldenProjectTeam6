@@ -38,6 +38,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 0}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 0}
   _isSwipingLeftDescription: 
@@ -56,6 +59,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 3
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 1
   _isContratCard: 0
   _enumObjectConditionList: 

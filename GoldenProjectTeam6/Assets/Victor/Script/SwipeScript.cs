@@ -126,30 +126,26 @@ public class SwipeScript : MonoBehaviour
 
         
 
-        if(!card._firstCardScriptable._canSlideUp)
-        {
+            if(!card._firstCardScriptable._canSlideUp && card._firstCardScriptable.isLinkedIn == false)
+            {
            
-            upText.text= "";
-            ArrowSlideUp.SetActive(false);
-        }
-        else if(card._firstCardScriptable._canSlideUp && !touched)
-        {
-            ArrowSlideUp.SetActive(true);
-        }
-        else if(card._firstCardScriptable._canSlideUp &&!canslidup && touched)
-        {
-            ArrowSlideUp.SetActive(false);
-            upText.text = "You don't have the object required";
-        }
-        else if(card._firstCardScriptable._canSlideUp && canslidup && touched)
-        {
-            ArrowSlideUp.SetActive(false);
-        }
+                upText.text= "";
+                ArrowSlideUp.SetActive(false);
+            }
+            else if(card._firstCardScriptable._canSlideUp && !touched)
+            {
+                ArrowSlideUp.SetActive(true);
+            }
+            else if(card._firstCardScriptable._canSlideUp &&!canslidup && touched)
+            {
+                ArrowSlideUp.SetActive(false);
+                upText.text = "You don't have the object required";
+            }
+            else if(card._firstCardScriptable._canSlideUp && canslidup && touched)
+            {
+                ArrowSlideUp.SetActive(false);
+            }
 
-        if(card._firstCardScriptable.isLinkedIn)
-        {
-            ArrowSlideUp.SetActive(true);
-        }
         
         if (card._isADeadCard)
         {

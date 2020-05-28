@@ -31,6 +31,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 6c11f11253b02854794cdda495bbf048, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Enter, legs deep, in the fish tank
   _isNextCardLeft: {fileID: 11400000, guid: 5760ca0d0f4700c4eb1d6825f9e0f254, type: 2}
   _isSwipingLeftDescription: Go and talk to him
@@ -49,6 +52,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 3
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 3b3afd234c898a448b52849c3d7a16c2, type: 2}
   _isSwipingUpDescription: Throw some Poisonned Cotton Candy to him
   _isNextCardRight: {fileID: 11400000, guid: 21d224652c382ed4f88289639885be89, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: I can release you if you want
   _isNextCardLeft: {fileID: 11400000, guid: 8960897fdca0d4b4994691adbc1952f8, type: 2}
   _isSwipingLeftDescription: I hope you stay in this cage forever!
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 3
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 07000000

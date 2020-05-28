@@ -89,8 +89,9 @@ public class MainMenu : MonoBehaviour
         TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
         _animMaster.EndAnim();
         yield return new WaitForSeconds(_animMaster._animTime);
-        UI_Credits.SetActive(true);
-        UI_MainMenu.SetActive(false);
+        //UI_Credits.SetActive(true);
+        //UI_MainMenu.SetActive(false);
+        SceneManager.LoadScene("TestCardJulien");
         yield return new WaitForSeconds(_animMaster._animTime);
         _animMaster.StartAnim();
     }
@@ -100,8 +101,9 @@ public class MainMenu : MonoBehaviour
         TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
         _animMaster.EndAnim();
         yield return new WaitForSeconds(_animMaster._animTime);
-        UI_Credits.SetActive(false);
-        UI_MainMenu.SetActive(true);
+        //UI_Credits.SetActive(false);
+        //UI_MainMenu.SetActive(true);
+        SceneManager.LoadScene("MenuModifVic");
         yield return new WaitForSeconds(_animMaster._animTime);
         _animMaster.StartAnim();
     }
