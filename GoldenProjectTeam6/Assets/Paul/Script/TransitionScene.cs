@@ -13,7 +13,9 @@ public class TransitionScene : MonoBehaviour
 
     public void StartAnim()
     {
+        Debug.Log("I start");
         _animator.gameObject.SetActive(true);
+        _animator.enabled = true;
         _animator.SetBool("IStartAnim", true);
         StartCoroutine(WaitForMask());
     }
@@ -26,6 +28,8 @@ public class TransitionScene : MonoBehaviour
 
     public void EndAnim()
     {
+        Debug.Log("I end");
+
         _animator.gameObject.SetActive(true);
         _animator.SetBool("IStartAnim", false);
     }

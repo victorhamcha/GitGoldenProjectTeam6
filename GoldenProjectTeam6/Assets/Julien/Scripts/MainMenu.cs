@@ -215,6 +215,10 @@ public class MainMenu : MonoBehaviour
     IEnumerator LoadYourAsyncScene(string scene)
     {
         loadingScene = true;
+
+        TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
+        _animMaster.EndAnim();
+        yield return new WaitForSeconds(_animMaster._animTime);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
 
         // Wait until the asynchronous scene fully loads
