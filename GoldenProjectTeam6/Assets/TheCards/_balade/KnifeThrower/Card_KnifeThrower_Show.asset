@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_KnifeThrower_Show
   m_EditorClassIdentifier: 
   _title: The Broadwalk
-  _image: {fileID: 21300000, guid: 89e5906d48839bc4da681210edb68a33, type: 3}
+  _image: {fileID: 21300000, guid: e8358389f0f49284cb4fb3b4ab5474ec, type: 3}
   _description: "\"Ooooh, all right, come here. \nLie down on that wheel... let me
     tie you up...\" \nYou're strapped vertically on a wheel that slowly spins. \nThe
     pitcher sharpens his knives before throwing them while drinking."

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_Piranhas_CleanerQuestion
   m_EditorClassIdentifier: 
   _title: The Zoo
-  _image: {fileID: 21300000, guid: cf043778b12a05d49975e19573ff759f, type: 3}
+  _image: {fileID: 21300000, guid: f29b08d88b1b3b444bf45aab8b0eed0a, type: 3}
   _description: '"What do you want, sir ?"'
   _cardID: 103
   _cardAlreadyDraw: 0
@@ -26,10 +26,10 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 71e24be01414ea543ac215ed6a99b01f, type: 2}
-  _isSwipingRightDescription: Shove him and try to take a fish
-  _isNextCardLeft: {fileID: 11400000, guid: 439faf7fd73e41348916f41283be0262, type: 2}
-  _isSwipingLeftDescription: Give me one of those fish
+  _isNextCardRight: {fileID: 11400000, guid: 439faf7fd73e41348916f41283be0262, type: 2}
+  _isSwipingRightDescription: Give me one of those fish
+  _isNextCardLeft: {fileID: 11400000, guid: 71e24be01414ea543ac215ed6a99b01f, type: 2}
+  _isSwipingLeftDescription: Shove him and try to take a fish
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
