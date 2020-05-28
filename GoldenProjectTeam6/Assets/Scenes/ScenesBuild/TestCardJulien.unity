@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11656,7 +11656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.76001, y: -478}
+  m_AnchoredPosition: {x: 4.76001, y: -477.99997}
   m_SizeDelta: {x: -78.02, y: -910.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473398305
@@ -14456,7 +14456,7 @@ Animator:
   m_GameObject: {fileID: 1985465792}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9f9657c45d81a924e9970be54cde75d8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60c5c452f2219874baf61a9877ed44b3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
