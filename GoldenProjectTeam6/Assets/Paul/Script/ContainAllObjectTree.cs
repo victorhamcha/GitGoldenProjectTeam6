@@ -101,8 +101,7 @@ public class ContainAllObjectTree : MonoBehaviour
                 }
             }
         }
-        Debug.LogError("The Count of the list is :" + _imageTreeChilds.Count);
-        Debug.LogError("The Count of the verifier is :" + verifierUnlock);
+      
         if (verifierFinish == _allCardFinishEvent.Count && verifierFinish >0)
         {
             SuccesManager succesManager  = FindObjectOfType<SuccesManager>();

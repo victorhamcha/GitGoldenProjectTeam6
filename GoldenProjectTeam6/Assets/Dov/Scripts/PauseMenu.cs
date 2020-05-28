@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         options[togglesID] = toggle.isOn;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         MusiqueManager.Instance.ChangeToggle();
+       FindObjectOfType<AudioManager>().ChangeToggle();
        // AudioManager.Instance.ChangeToggle();
     }
 
