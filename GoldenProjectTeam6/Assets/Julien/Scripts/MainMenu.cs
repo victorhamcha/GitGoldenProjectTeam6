@@ -70,122 +70,146 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        if(menu)
+        if (menu)
         {
-            UI_Credits.SetActive(true);
-            UI_MainMenu.SetActive(false);
             menu = false;
+            StartCoroutine(WaitAnimCreditOn());
         }
         else
         {
-            UI_Credits.SetActive(false);
-            UI_MainMenu.SetActive(true);
             menu = true;
+            StartCoroutine(WaitAnimCreditOff());
+
         }
-       
+
     }
 
-
-//    public void Achievements_EasyOnes()
-//    {
-//        achiev_EasyOnes.SetActive(true);
-//        achiev_Locked.SetActive(false);
-//        achiev_Unlocked.SetActive(false);
-
-//        button_Locked.SetActive(true);
-//        button_Unlocked.SetActive(true);
-
-//        button_LockedPressed.SetActive(false);
-//        button_UnlockedPressed.SetActive(false);
-
-//        if (easyOnes_pressed)
-//        {
-//            easyOnes_pressed = !easyOnes_pressed;
-//            button_EasyOnes.SetActive(false);
-//            button_EasyOnesPressed.SetActive(true);
-//            locked_pressed = true;
-//            unlocked_pressed = true;
-//}
-//        else
-//        {
-//            easyOnes_pressed = !easyOnes_pressed;
-//            button_EasyOnes.SetActive(true);
-//            button_EasyOnesPressed.SetActive(false);
-//        }
-        
-//    }
-//    public void Achievements_Locked()
-//    {
-//        achiev_EasyOnes.SetActive(false);
-//        achiev_Locked.SetActive(true);
-//        achiev_Unlocked.SetActive(false);
-
-//        button_Unlocked.SetActive(true);
-//        button_EasyOnes.SetActive(true);
-
-//        button_EasyOnesPressed.SetActive(false);
-//        button_UnlockedPressed.SetActive(false);
-
-//        if (locked_pressed)
-//        {
-//            locked_pressed = !locked_pressed;
-//            button_Locked.SetActive(false);
-//            button_LockedPressed.SetActive(true);
-//            easyOnes_pressed = true;
-//            unlocked_pressed = true;
-//        }
-//        else
-//        {
-//            locked_pressed = !locked_pressed;
-//            button_Locked.SetActive(true);
-//            button_LockedPressed.SetActive(false);
-            
-//        }
-//    }
-
-//    public void Achievements_Unlocked()
-//    {
-//        achiev_EasyOnes.SetActive(false);
-//        achiev_Locked.SetActive(false);
-//        achiev_Unlocked.SetActive(true);
-
-//        button_Locked.SetActive(true);
-//        button_EasyOnes.SetActive(true);
-
-//        button_EasyOnesPressed.SetActive(false);
-//        button_LockedPressed.SetActive(false);
-
-//        if (unlocked_pressed)
-//        {
-//            unlocked_pressed = !unlocked_pressed;
-//            button_Unlocked.SetActive(false);
-//            button_UnlockedPressed.SetActive(true);
-//            easyOnes_pressed = true;
-//            locked_pressed = true;
-//        }
-//        else
-//        {
-//            unlocked_pressed = !unlocked_pressed;
-//            button_Unlocked.SetActive(true);
-//            button_UnlockedPressed.SetActive(false);
-//        }
-//    }
-
-//    public void Achievements_Quit()
-//    {
-//        UI_Achiev.SetActive(false);
-//        UI_MainMenu.SetActive(true);
-//    }
-
-    public void Main_Menu()
+    IEnumerator WaitAnimCreditOn()
     {
-        UI_MainMenu.SetActive(true);
+        TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
+        _animMaster.EndAnim();
+        yield return new WaitForSeconds(_animMaster._animTime);
+        UI_Credits.SetActive(true);
+        UI_MainMenu.SetActive(false);
+        yield return new WaitForSeconds(_animMaster._animTime);
+        _animMaster.StartAnim();
     }
+
+    IEnumerator WaitAnimCreditOff()
+    {
+        TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
+        _animMaster.EndAnim();
+        yield return new WaitForSeconds(_animMaster._animTime);
+        UI_Credits.SetActive(false);
+        UI_MainMenu.SetActive(true);
+        yield return new WaitForSeconds(_animMaster._animTime);
+        _animMaster.StartAnim();
+    }
+
+
+    //    public void Achievements_EasyOnes()
+    //    {
+    //        achiev_EasyOnes.SetActive(true);
+    //        achiev_Locked.SetActive(false);
+    //        achiev_Unlocked.SetActive(false);
+
+    //        button_Locked.SetActive(true);
+    //        button_Unlocked.SetActive(true);
+
+    //        button_LockedPressed.SetActive(false);
+    //        button_UnlockedPressed.SetActive(false);
+
+    //        if (easyOnes_pressed)
+    //        {
+    //            easyOnes_pressed = !easyOnes_pressed;
+    //            button_EasyOnes.SetActive(false);
+    //            button_EasyOnesPressed.SetActive(true);
+    //            locked_pressed = true;
+    //            unlocked_pressed = true;
+    //}
+    //        else
+    //        {
+    //            easyOnes_pressed = !easyOnes_pressed;
+    //            button_EasyOnes.SetActive(true);
+    //            button_EasyOnesPressed.SetActive(false);
+    //        }
+
+    //    }
+    //    public void Achievements_Locked()
+    //    {
+    //        achiev_EasyOnes.SetActive(false);
+    //        achiev_Locked.SetActive(true);
+    //        achiev_Unlocked.SetActive(false);
+
+    //        button_Unlocked.SetActive(true);
+    //        button_EasyOnes.SetActive(true);
+
+    //        button_EasyOnesPressed.SetActive(false);
+    //        button_UnlockedPressed.SetActive(false);
+
+    //        if (locked_pressed)
+    //        {
+    //            locked_pressed = !locked_pressed;
+    //            button_Locked.SetActive(false);
+    //            button_LockedPressed.SetActive(true);
+    //            easyOnes_pressed = true;
+    //            unlocked_pressed = true;
+    //        }
+    //        else
+    //        {
+    //            locked_pressed = !locked_pressed;
+    //            button_Locked.SetActive(true);
+    //            button_LockedPressed.SetActive(false);
+
+    //        }
+    //    }
+
+    //    public void Achievements_Unlocked()
+    //    {
+    //        achiev_EasyOnes.SetActive(false);
+    //        achiev_Locked.SetActive(false);
+    //        achiev_Unlocked.SetActive(true);
+
+    //        button_Locked.SetActive(true);
+    //        button_EasyOnes.SetActive(true);
+
+    //        button_EasyOnesPressed.SetActive(false);
+    //        button_LockedPressed.SetActive(false);
+
+    //        if (unlocked_pressed)
+    //        {
+    //            unlocked_pressed = !unlocked_pressed;
+    //            button_Unlocked.SetActive(false);
+    //            button_UnlockedPressed.SetActive(true);
+    //            easyOnes_pressed = true;
+    //            locked_pressed = true;
+    //        }
+    //        else
+    //        {
+    //            unlocked_pressed = !unlocked_pressed;
+    //            button_Unlocked.SetActive(true);
+    //            button_UnlockedPressed.SetActive(false);
+    //        }
+    //    }
+
+    //    public void Achievements_Quit()
+    //    {
+    //        UI_Achiev.SetActive(false);
+    //        UI_MainMenu.SetActive(true);
+    //    }
 
     public void Load_Menu()
     {
-        SceneManager.LoadScene("MenuModifVic");
-        FindObjectOfType<SaveAndLoad>().SavePlayer();
+        string loadScene = "MenuModifVic";
+        StartCoroutine(WaitForAnim(loadScene));
+    }
+
+    IEnumerator WaitForAnim(string loadScene)
+    {
+        TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
+        _animMaster.EndAnim();
+        yield return new WaitForSeconds(_animMaster._animTime);
+        SceneManager.LoadScene(loadScene);
     }
 
     IEnumerator LoadYourAsyncScene(string scene)

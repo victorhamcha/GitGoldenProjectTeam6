@@ -80,9 +80,20 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+
         Time.timeScale = 1f;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
-        SceneManager.LoadScene("MenuModifVic");
         FindObjectOfType<SaveAndLoad>().LoadPlayer();
+        string loadScene = "MenuModifVic";
+        StartCoroutine(WaitForAnim(loadScene));
+
+    }
+
+    IEnumerator WaitForAnim(string loadScene)
+    {
+        TransitionScene _animMaster = FindObjectOfType<TransitionScene>();
+        _animMaster.EndAnim();
+        yield return new WaitForSeconds(_animMaster._animTime);
+        SceneManager.LoadScene(loadScene);
     }
 }
