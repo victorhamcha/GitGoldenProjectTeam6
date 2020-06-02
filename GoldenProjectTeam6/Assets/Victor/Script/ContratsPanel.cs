@@ -186,9 +186,11 @@ public class ContratsPanel : MonoBehaviour
         prctBar.text = progressLVL.ToString() + "%";
         LevelTXT.text = "Level : " + (lvl + 1);
         bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
+
         //character UI
         statusTMP.text = statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
+        
         //LoadPassport
         SuccesManager.cardSkin = skinLvl[changeMat];
 
