@@ -50,6 +50,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Menu: 1
+    - Mouv: 0.1
     - Mouvement: 1
     - _EnableExternalAlpha: 0
     - _Fade: 1

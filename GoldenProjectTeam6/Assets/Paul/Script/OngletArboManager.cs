@@ -14,6 +14,7 @@ public class OngletArboManager : MonoBehaviour
     public List <Transform> _positionListOnglet;
 
     public List<string> _listEvents;
+    public List<ImageArborescence> _listEventsFirstCardEvent;
 
     [HideInInspector] public GameObject _goRight, _goLeft;
 
@@ -29,6 +30,10 @@ public class OngletArboManager : MonoBehaviour
 
     int _soustraction;
     int _actualPos;
+
+    public GameObject _cardZoom;
+
+    public GameObject _listManager;
 
     void Start()
     {
@@ -138,7 +143,7 @@ public class OngletArboManager : MonoBehaviour
         else
         {
             _cam.transform.position = new Vector3(_positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos].transform.position.x, _positionListOnglet[1].transform.position.y, -10);
-            Debug.Log("PositionList " + _positionListOnglet[1] + "Actual Pos = " + _positionListOnglet[1].GetComponent<PositionChildArbo>()._positionChild[_positionListOnglet[1].GetComponent<PositionChildArbo>()._actualPos]);
+
             _cam.orthographicSize = zoom;
 
         }
@@ -160,9 +165,39 @@ public class OngletArboManager : MonoBehaviour
             _addition = 11;
         }
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+        StartCoroutine(WaiToCheck());
 
         FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
         FindObjectOfType<ContainAllObjectTree>().LoadChild(this);
+    }
+
+    IEnumerator WaiToCheck()
+    {
+        yield return new WaitForSeconds(0.3f);
+        for (int i = 0; i < _listEvents.Count; i++)
+        {
+            if (_text.text == _listEvents[i])
+            {
+                foreach (Transform child in _listManager.transform)
+                {
+                    if (child.GetComponent<ListEventStockTree>()._id == i)
+                    {
+                        Debug.Log(child.name);
+                        child.GetComponent<ListEventStockTree>().Check();
+                    }
+                }
+                ImageArborescence image = _listEventsFirstCardEvent[i];
+                ContainAllObjectTree parent = FindObjectOfType<ContainAllObjectTree>();
+                if (parent._imageTreeUnlockSinceLastTime.Contains(image.name))
+                {
+                    image.IClick();
+                }
+                else
+                {
+                    _cardZoom.SetActive(false);
+                }
+            }
+        }
     }
 
     public void FindOngletToActive(int i)
