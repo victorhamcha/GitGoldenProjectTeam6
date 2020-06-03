@@ -47633,9 +47633,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positionChild: []
   _zoomChild:
-  - 600
-  - 550
-  - 600
+  - 500
+  - 500
+  - 500
   _actualPos: 0
 --- !u!1 &810920509
 GameObject:
@@ -70343,8 +70343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positionChild: []
   _zoomChild:
-  - 400
-  - 550
+  - 500
+  - 500
   - 500
   _actualPos: 0
 --- !u!1 &1224037775
@@ -91090,7 +91090,7 @@ MonoBehaviour:
   _zoomChild:
   - 500
   - 500
-  - 1100
+  - 500
   _actualPos: 0
 --- !u!1 &1563071387
 GameObject:
@@ -91443,8 +91443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positivLim: {fileID: 0}
   _negativLim: {fileID: 1867104670}
-  _minZoom: 0
-  _maxZoom: 500
+  _minZoom: 10000
+  _maxZoom: 10000
   _boucinessByTouchingBorder: 10
   _line: {fileID: 1099908316}
   _positionLim: []
@@ -122357,10 +122357,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _positionChild: []
   _zoomChild:
-  - 900
-  - 450
-  - 600
-  - 300
+  - 500
+  - 500
+  - 500
+  - 500
   _actualPos: 0
 --- !u!1 &2123241924
 GameObject:

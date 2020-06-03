@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
 
 public class CameraFollowMouse : MonoBehaviour
 {
@@ -16,8 +15,8 @@ public class CameraFollowMouse : MonoBehaviour
     float DistanceBetweenFingers;
     bool isZooming;
 
-    [Header("Card Small")][Range(0, 1000)] public float _minZoom = 100;
-    [Header("Card Grow")] [Range(0, 1000)] public float _maxZoom = 100;
+    [Header("Card Small")][Range(0, 10000)] public float _minZoom = 100;
+    [Header("Card Grow")] [Range(0, 10000)] public float _maxZoom = 100;
     float _sizeCamAtStart;
 
     [Range(1,100)] public int _boucinessByTouchingBorder = 10;

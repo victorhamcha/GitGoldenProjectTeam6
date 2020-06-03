@@ -165,11 +165,18 @@ public class OngletArboManager : MonoBehaviour
             _addition = 11;
         }
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+        StartCoroutine(WaiToCheck());
 
+        FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
+        FindObjectOfType<ContainAllObjectTree>().LoadChild(this);
+    }
+
+    IEnumerator WaiToCheck()
+    {
+        yield return new WaitForSeconds(0.3f);
         for (int i = 0; i < _listEvents.Count; i++)
         {
-
-            if(_text.text == _listEvents[i])
+            if (_text.text == _listEvents[i])
             {
                 foreach (Transform child in _listManager.transform)
                 {
@@ -180,7 +187,7 @@ public class OngletArboManager : MonoBehaviour
                     }
                 }
                 ImageArborescence image = _listEventsFirstCardEvent[i];
-                ContainAllObjectTree parent =  FindObjectOfType<ContainAllObjectTree>();
+                ContainAllObjectTree parent = FindObjectOfType<ContainAllObjectTree>();
                 if (parent._imageTreeUnlockSinceLastTime.Contains(image.name))
                 {
                     image.IClick();
@@ -191,12 +198,6 @@ public class OngletArboManager : MonoBehaviour
                 }
             }
         }
-
-
-
-
-        FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();
-        FindObjectOfType<ContainAllObjectTree>().LoadChild(this);
     }
 
     public void FindOngletToActive(int i)
