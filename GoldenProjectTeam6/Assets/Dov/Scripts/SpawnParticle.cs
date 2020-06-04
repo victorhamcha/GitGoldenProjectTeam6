@@ -18,6 +18,12 @@ public class SpawnParticle : MonoBehaviour
     [Header("Sugar")]
     public GameObject sugarFx;
 
+    [Header("Electric")]
+    public GameObject electricFx;
+
+    [Header("Popcorn")]
+    public GameObject popcornFx;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -27,6 +33,18 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(sugarFx);
         Destroy(ob, 5.0f);
+    }
+
+    public void ClickPopcorn()
+    {
+        GameObject ob = Instantiate(popcornFx);
+        Destroy(ob, 5.0f);
+    }
+
+    public void ClickElectric()
+    {
+        GameObject ob = Instantiate(electricFx);
+        Destroy(ob, 4.0f);
     }
 
     public void ClickBlood()
