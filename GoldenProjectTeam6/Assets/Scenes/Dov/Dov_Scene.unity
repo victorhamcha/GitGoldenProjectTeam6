@@ -808,6 +808,8 @@ MonoBehaviour:
   confettiFx: {fileID: 8589746629786136637, guid: 154221021a3e73d41994710b6e1a6811,
     type: 3}
   bloodFx: {fileID: 2431851345389789480, guid: 956cc8e67b7dd0f49a20ca734ec796d2, type: 3}
+  bloodFx2: {fileID: 9048843659514806149, guid: c7fefa81442beb64da1f1f14da778c3d,
+    type: 3}
   bloodImage: {fileID: 77850556}
   speed: 0.037
   sugarFx: {fileID: 8284574690407208201, guid: d2676bd0612e7e04fa8589805286b8c2, type: 3}
