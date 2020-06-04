@@ -41,7 +41,7 @@ public class SpawnParticle : MonoBehaviour
     public void ClickPopcorn()
     {
         GameObject ob = Instantiate(popcornFx);
-        Destroy(ob, 5.0f);
+        Destroy(ob, 7.0f);
     }
 
     public void ClickVomi()
