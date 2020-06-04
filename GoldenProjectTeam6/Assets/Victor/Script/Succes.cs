@@ -58,7 +58,6 @@ public class Succes : MonoBehaviour
             titre.text = txtTitre;
             ////////////////////////////////////////////////////////////
 
-            succesImg.sprite = succesSprite;
 
             manager = GetComponentInParent<ContratsPanel>();
             StartCoroutine(waitForLoading());
