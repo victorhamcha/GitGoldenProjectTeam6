@@ -36,7 +36,9 @@ public class SuccesManager : MonoBehaviour
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
     public Image animImg;
-   
+    private bool animGoing=false;
+    private bool nextAnimWaiting=false;
+    private List<string> succesID=new List<string>();
 
     [Header("Succes 12 Stuff")]
     public float timer = 0f;
@@ -76,7 +78,7 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 12)
+                if (timer >= 120)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)
@@ -105,7 +107,7 @@ public class SuccesManager : MonoBehaviour
                         
                         allTheSucces[i].locked = false;
                         lockInfo[i] = allTheSucces[i].locked;
-                        GPSAchievements.UnlockSucces(allTheSucces[i].id);
+                        succesID.Add(allTheSucces[i].id);
                         FindObjectOfType<SaveAndLoad>().SaveCards();
                         //saveSucces
                         if (succesAnim.GetBool("UNLOCK"))
@@ -138,11 +140,14 @@ public class SuccesManager : MonoBehaviour
 
     IEnumerator WaitAnim(string succesname, Sprite succesSprite)
     {
-        Debug.Log("enter couroutine");
+        
         while (succesAnim.GetBool("UNLOCK"))
         {
+            nextAnimWaiting = true;
             yield return null;
         }
+        animGoing = true;
+        nextAnimWaiting = false;
         audioManager.Play("SFX_UnlockSuccess");
         animImg.sprite = succesSprite;
         Vibration.Vibrate(200);
@@ -155,6 +160,7 @@ public class SuccesManager : MonoBehaviour
     }
     public void SuccesAnim(string succesname, Sprite succesSprite)
     {
+        animGoing = true;
         audioManager.Play("SFX_UnlockSuccess");
         animImg.sprite = succesSprite;
         Vibration.Vibrate(200);
@@ -276,9 +282,27 @@ public class SuccesManager : MonoBehaviour
             des3.text = "Succes are done";
         }
     }
+
+    public void UnlockSucces()
+    {
+        if(succesID.Count>0)
+        {
+            for (int i = 0; i < succesID.Count; i++)
+            {
+                GPSAchievements.UnlockSucces(succesID[i]);
+            }
+            succesID.Clear();
+        }
+       
+    }
     IEnumerator WaitEndAnim()
     {
         yield return new WaitForSeconds(4.6f);
+        animGoing = false;
         succesAnim.SetBool("UNLOCK", false);
+        if(!animGoing&&!nextAnimWaiting)
+        {
+            UnlockSucces();
+        }
     }
 }
