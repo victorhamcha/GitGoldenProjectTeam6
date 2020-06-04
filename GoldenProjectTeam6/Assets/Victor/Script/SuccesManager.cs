@@ -251,8 +251,8 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre1.text = "No Succes";
-            des1.text = "Succes Done";
+            titre1.text = "No more Succes";
+            des1.text = "Succes are done";
         }
 
         if (easiestSucces.Count > 1)
@@ -262,8 +262,8 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre2.text = "No Succes";
-            des2.text = "Succes Done";
+            titre2.text = "No more Succes";
+            des2.text = "Succes are done";
         }
         if (easiestSucces.Count > 2)
         {
@@ -272,14 +272,13 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre3.text = "No Succes";
-            des3.text = "Succes Done";
+            titre3.text = "No more Succes";
+            des3.text = "Succes are done";
         }
     }
     IEnumerator WaitEndAnim()
     {
         yield return new WaitForSeconds(4.6f);
-        Debug.Log("Mput bool false");
         succesAnim.SetBool("UNLOCK", false);
     }
 }
