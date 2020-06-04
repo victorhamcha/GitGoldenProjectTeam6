@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3910,6 +3910,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Speedrun
   txtDescription: Die in less than 5 cards
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &61939261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,6 +5918,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Tourist
   txtDescription: Die once in every event
+  succesSprite: {fileID: 21300000, guid: 42641da254dd1534197f7b7083bcd736, type: 3}
+  succesImg: {fileID: 0}
 --- !u!1 &90822333
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,6 +6214,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: We don't insult mothers !
   txtDescription: Insult the mother of the elephant
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &93424524
 GameObject:
   m_ObjectHideFlags: 0
@@ -29008,8 +29014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10.932098}
+  m_SizeDelta: {x: 36.9, y: 36.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509674768
 MonoBehaviour:
@@ -29031,8 +29037,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: <
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
-  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -29058,12 +29064,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 136.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 150
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -29106,7 +29112,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -31218,6 +31224,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Patience
   txtDescription: Wait to death
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &559467620
 GameObject:
   m_ObjectHideFlags: 0
@@ -36453,6 +36461,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: First!
   txtDescription: Die for the first time
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &640275663
 GameObject:
   m_ObjectHideFlags: 0
@@ -60709,7 +60719,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 65.3, y: 65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1082407071
 MonoBehaviour:
@@ -60731,8 +60741,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
-  m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
+  m_fontAsset: {fileID: 11400000, guid: 566f5f9320c7e2441b805c23415ccd7e, type: 2}
+  m_sharedMaterial: {fileID: 8211445053002847370, guid: 566f5f9320c7e2441b805c23415ccd7e,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -60758,12 +60768,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 150
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 150
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
@@ -60796,7 +60806,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -29.829828, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1082407071}
     characterCount: 1
@@ -60806,7 +60816,7 @@ MonoBehaviour:
     linkCount: 0
     lineCount: 1
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -63804,6 +63814,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Insulting
   txtDescription: Say shut up to the clown after his second joke
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1135590941
 GameObject:
   m_ObjectHideFlags: 0
@@ -70439,6 +70451,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Bastard
   txtDescription: Eat popcorn in front of the stressed acrobats
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1228191339
 GameObject:
   m_ObjectHideFlags: 0
@@ -78775,6 +78789,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Poison of patience
   txtDescription: Leave with your poisoned cotton candy after waiting in the line
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1380047800
 GameObject:
   m_ObjectHideFlags: 0
@@ -83124,6 +83140,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Routine of the restaurant
   txtDescription: Order a soft-boiled egg, add pepper in it and go to the toilets
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1470391766
 GameObject:
   m_ObjectHideFlags: 0
@@ -88989,7 +89007,7 @@ MonoBehaviour:
   des3: {fileID: 0}
   succesAnim: {fileID: 52968488}
   sucesName: {fileID: 1503623486}
-  anim: {fileID: 0}
+  animImg: {fileID: 1924142212}
   timer: 0
   boredomCard: {fileID: 0}
   audioManager: {fileID: 2086188461}
@@ -92652,6 +92670,8 @@ MonoBehaviour:
   txtTitre: Alcohol is dangerous to health
   txtDescription: Demand to the knife thrower to stop drinking after demanded him
     to do his show with you
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1585820599
 GameObject:
   m_ObjectHideFlags: 0
@@ -93806,6 +93826,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Hitman
   txtDescription: Kill someone else !
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1596259314
 GameObject:
   m_ObjectHideFlags: 0
@@ -100106,6 +100128,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Promotion
   txtDescription: Explore all the events and all of their choices
+  succesSprite: {fileID: 21300000, guid: 82f2ff72158f8804ca5dc4522cf8f516, type: 3}
+  succesImg: {fileID: 0}
 --- !u!1 &1745523626
 GameObject:
   m_ObjectHideFlags: 0
@@ -108588,6 +108612,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: None respect
   txtDescription: Rise your hand and spit at the face of the magician
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!1 &1881367480
 GameObject:
   m_ObjectHideFlags: 0

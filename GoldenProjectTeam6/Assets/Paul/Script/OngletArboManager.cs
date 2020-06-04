@@ -27,6 +27,9 @@ public class OngletArboManager : MonoBehaviour
 
     public Color _buttonColor;
 
+    bool _activeOnlyOne = true;
+
+    int _addition;
 
     int _soustraction;
     int _actualPos;
@@ -34,6 +37,7 @@ public class OngletArboManager : MonoBehaviour
     public GameObject _cardZoom;
 
     public GameObject _listManager;
+
 
     void Start()
     {
@@ -44,11 +48,75 @@ public class OngletArboManager : MonoBehaviour
         {
             _positionListOnglet.Add(positionListChild);
         }
-        _actualdId = 1;
+
+        ContainAllObjectTree _parent = FindObjectOfType<ContainAllObjectTree>();
+
+        if (_parent._imageTreeUnlockSinceLastTime.Count > 0)
+        {            
+            foreach (Transform child in _listManager.transform)
+            {
+                if (_parent._imageTreeUnlockSinceLastTime[_parent._imageTreeUnlockSinceLastTime.Count - 1].Contains(child.GetComponent<ListEventStockTree>()._imageNameRef))
+                {
+                    _addition = child.GetComponent<ListEventStockTree>()._id;
+
+                    if (_addition >= 10)
+                    {
+                        _actualdId = 4;
+                        if (_addition == 12)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+                        else if (_addition == 11)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+                        else
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+
+                    }
+                    else if (_addition >= 7)
+                    {
+                        _actualdId = 3;
+                        if (_addition == 9)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+                        else if (_addition == 8)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+                        else
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+                    }
+                    else if (_addition >= 3)
+                    {
+                        _actualdId = 2;
+                        if (_addition == 6)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 3;
+                        else if (_addition == 5)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+                        else if (_addition == 4)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+                        else
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+                    }
+                    else
+                    {
+                        _actualdId = 1;
+                        if (_addition == 2)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 2;
+                        else if (_addition == 1)
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 1;
+                        else
+                            _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
+                    }
+
+
+                }
+            }
+        }
+        else
+        {
+            _actualdId = 1;
+        }
+        
         Actualise(_actualdId);
 
         StartCoroutine(DeleteList());
     }
+
 
     public void Actualise(int childID)
     {
@@ -147,24 +215,40 @@ public class OngletArboManager : MonoBehaviour
             _cam.orthographicSize = zoom;
 
         }
-        int _addition;
-        if (_actualdId == 1)
+
+        if (_activeOnlyOne)
         {
-            _addition = 1;
-        }
-        else if(_actualdId == 2)
-        {
-            _addition = 4;
-        }
-        else if (_actualdId == 3)
-        {
-            _addition = 8;
+            _activeOnlyOne = false;
+            _addition++;
+
+            Debug.Log(_addition);
+            _text.text = _listEvents[_addition-1];
+
+
         }
         else
         {
-            _addition = 11;
+            if (_actualdId == 1)
+            {
+                _addition = 0;
+            }
+            else if (_actualdId == 2)
+            {
+                _addition = 3;
+            }
+            else if (_actualdId == 3)
+            {
+                _addition = 7;
+            }
+            else
+            {
+                _addition = 10;
+            }
+            _text.text = _listEvents[_addition + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+            Debug.Log(_addition);
+
         }
-        _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
+        Debug.Log("addition : " + _addition);
         StartCoroutine(WaiToCheck());
 
         FindObjectOfType<CameraFollowMouse>().CalculateNewCamera();

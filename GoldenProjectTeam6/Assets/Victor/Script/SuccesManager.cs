@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -34,7 +35,8 @@ public class SuccesManager : MonoBehaviour
     [Header("SuccesUnlockAnim")]
     public Animator succesAnim;
     public TextMeshProUGUI sucesName;
-    public Animation anim;
+    public Image animImg;
+   
 
     [Header("Succes 12 Stuff")]
     public float timer = 0f;
@@ -74,7 +76,7 @@ public class SuccesManager : MonoBehaviour
             if (lockInfo[11])
             {
                 timer += Time.deltaTime;
-                if (timer >= 120)
+                if (timer >= 12)
                 {
                     UnlockSuccess(allTheSucces[11].enumSucces);
                     if (allTheSucces[0].locked)
@@ -109,13 +111,13 @@ public class SuccesManager : MonoBehaviour
                         if (succesAnim.GetBool("UNLOCK"))
                         {
                             Debug.Log("Different");
-                            StartCoroutine(WaitAnim(allTheSucces[i].txtTitre));
+                            StartCoroutine(WaitAnim(allTheSucces[i].txtTitre,allTheSucces[i].succesSprite));
                            
                         }
                         else
                         {
                             Debug.Log("Basic");
-                            SuccesAnim(allTheSucces[i].txtTitre);
+                            SuccesAnim(allTheSucces[i].txtTitre, allTheSucces[i].succesSprite);
                         }
                         if(inGame)
                         {
@@ -134,7 +136,7 @@ public class SuccesManager : MonoBehaviour
 
  
 
-    IEnumerator WaitAnim(string succesname)
+    IEnumerator WaitAnim(string succesname, Sprite succesSprite)
     {
         Debug.Log("enter couroutine");
         while (succesAnim.GetBool("UNLOCK"))
@@ -142,6 +144,7 @@ public class SuccesManager : MonoBehaviour
             yield return null;
         }
         audioManager.Play("SFX_UnlockSuccess");
+        animImg.sprite = succesSprite;
         Vibration.Vibrate(200);
         Debug.Log("exit couroutine");
         succesAnim.SetTrigger("Unlock");
@@ -150,9 +153,10 @@ public class SuccesManager : MonoBehaviour
         sucesName.text = succesname;
        
     }
-    public void SuccesAnim(string succesname)
+    public void SuccesAnim(string succesname, Sprite succesSprite)
     {
         audioManager.Play("SFX_UnlockSuccess");
+        animImg.sprite = succesSprite;
         Vibration.Vibrate(200);
         succesAnim.SetTrigger("Unlock");
         succesAnim.SetBool("UNLOCK", true);
@@ -247,8 +251,8 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre1.text = "No Succes";
-            des1.text = "Succes Done";
+            titre1.text = "No more Succes";
+            des1.text = "Succes are done";
         }
 
         if (easiestSucces.Count > 1)
@@ -258,8 +262,8 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre2.text = "No Succes";
-            des2.text = "Succes Done";
+            titre2.text = "No more Succes";
+            des2.text = "Succes are done";
         }
         if (easiestSucces.Count > 2)
         {
@@ -268,14 +272,13 @@ public class SuccesManager : MonoBehaviour
         }
         else
         {
-            titre3.text = "No Succes";
-            des3.text = "Succes Done";
+            titre3.text = "No more Succes";
+            des3.text = "Succes are done";
         }
     }
     IEnumerator WaitEndAnim()
     {
         yield return new WaitForSeconds(4.6f);
-        Debug.Log("Mput bool false");
         succesAnim.SetBool("UNLOCK", false);
     }
 }
