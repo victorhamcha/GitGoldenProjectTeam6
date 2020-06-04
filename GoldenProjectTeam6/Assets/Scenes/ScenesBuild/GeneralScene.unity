@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -574,6 +574,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Insulting
   txtDescription: Say "Shut up" to the clown after his second joke
+  succesSprite: {fileID: 21300000, guid: 62c131de033a5a044a6fd2fe96486bf7, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &177905939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +898,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Massive Disrespect
   txtDescription: Raise your hand and spit at the magician's face
+  succesSprite: {fileID: 21300000, guid: 0cd9683f272b3994b9771efe1c71f6ea, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &275622680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,6 +1294,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Poison of patience
   txtDescription: Leave with your poisoned cotton candy after waiting in the line
+  succesSprite: {fileID: 21300000, guid: a3a16396cbf9248458d99aac9f65fe93, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &358247962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1775,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Patience
   txtDescription: Wait to death
+  succesSprite: {fileID: 21300000, guid: 2eda3dd3a495b3549a3552745cc62926, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &439318909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2022,7 @@ MonoBehaviour:
   des3: {fileID: 1506584244}
   succesAnim: {fileID: 989702415}
   sucesName: {fileID: 923274746}
-  anim: {fileID: 0}
+  animImg: {fileID: 1834686594}
   timer: 0
   boredomCard: {fileID: 11400000, guid: ddb6d80a90752294f870500091275f32, type: 2}
   audioManager: {fileID: 544111576}
@@ -2634,6 +2642,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: We don't insult mothers !
   txtDescription: Insult the mother of the elephant
+  succesSprite: {fileID: 21300000, guid: c8136a55ed4a9124c947418dc69a9ed2, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &619144966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,6 +3806,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Bastard
   txtDescription: Eat popcorn in front of the stressed acrobats
+  succesSprite: {fileID: 21300000, guid: 04c9eafca4c816b46a2c5e12621f657b, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &829373415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10744,6 +10756,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Promotion
   txtDescription: Explore all the events and all of their choices
+  succesSprite: {fileID: 21300000, guid: 82f2ff72158f8804ca5dc4522cf8f516, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1348619554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11595,6 +11609,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Speedrun
   txtDescription: Die in less than 5 cards
+  succesSprite: {fileID: 21300000, guid: 5291fe6dc79de9448a0a4e69a23a1241, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1503410347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11999,6 +12015,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Tourist
   txtDescription: Die once in every event
+  succesSprite: {fileID: 21300000, guid: 42641da254dd1534197f7b7083bcd736, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1531804675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12091,6 +12109,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Alcohol is dangerous
   txtDescription: Ask the knife thrower to stop drinking after going on his wheel
+  succesSprite: {fileID: 21300000, guid: c2bc9726ab4baab4286dbafe18298e62, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1569331654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12303,6 +12323,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: First!
   txtDescription: Die for the first time
+  succesSprite: {fileID: 21300000, guid: 50255b7dd63d4f84f961eeb6b295bd2c, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1592727223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13000,6 +13022,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Hitman
   txtDescription: Kill someone else !
+  succesSprite: {fileID: 21300000, guid: 414807759a7bd47409a4f107d4c58850, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1820774889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13518,6 +13542,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Routine
   txtDescription: Order a soft-boiled egg, add pepper in it and go to the toilets
+  succesSprite: {fileID: 21300000, guid: ef6b7b64599cfcc44b57351b4d4f3f7b, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1865673458
 MonoBehaviour:
   m_ObjectHideFlags: 0

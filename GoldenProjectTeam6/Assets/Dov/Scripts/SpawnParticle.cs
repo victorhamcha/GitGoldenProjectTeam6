@@ -24,6 +24,9 @@ public class SpawnParticle : MonoBehaviour
     [Header("Popcorn")]
     public GameObject popcornFx;
 
+    [Header("Vomi")]
+    public GameObject vomiFx;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -39,6 +42,12 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(popcornFx);
         Destroy(ob, 5.0f);
+    }
+
+    public void ClickVomi()
+    {
+        GameObject ob = Instantiate(vomiFx);
+        Destroy(ob, 4.0f);
     }
 
     public void ClickElectric()
