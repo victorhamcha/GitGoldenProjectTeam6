@@ -13,11 +13,20 @@ public class PauseMenu : MonoBehaviour
     public GameObject card;
     private int togglesID;
 
+    public Button achievButton;
+    public Button androidButton;
+    public GameObject optionMenu;
+    private bool isOnOption = false;
+
+    public Button topButton;
+    public Button botButton;
+    public Button leftButton;
+    public Button rightButton;
 
     private void Start()
     {
 
-        if(PlayerPrefs.HasKey("firstTime"))
+        if (PlayerPrefs.HasKey("firstTime"))
         {
             if (MusiqueManager.Instance != null)
                 MusiqueManager.Instance._toggleWhichChanges.isOn = options[0];
@@ -35,8 +44,8 @@ public class PauseMenu : MonoBehaviour
             PlayerPrefs.SetFloat("firstTime", 1f);
             PlayerPrefs.Save();
         }
-       
-        
+
+
     }
 
     public void TogglesID(int id)
@@ -49,8 +58,8 @@ public class PauseMenu : MonoBehaviour
         options[togglesID] = toggle.isOn;
         FindObjectOfType<SaveAndLoad>().SavePlayer();
         MusiqueManager.Instance.ChangeToggle();
-       FindObjectOfType<AudioManager>().ChangeToggle();
-       // AudioManager.Instance.ChangeToggle();
+        FindObjectOfType<AudioManager>().ChangeToggle();
+        // AudioManager.Instance.ChangeToggle();
     }
 
     public void Resume()
@@ -62,7 +71,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        if(!GameIsPaused)
+        if (!GameIsPaused)
         {
             FindObjectOfType<AudioManager>().Play("SFX_Click01");
             PauseMenuUI.SetActive(true);
@@ -78,7 +87,7 @@ public class PauseMenu : MonoBehaviour
             card.SetActive(true);
             GameIsPaused = false;
         }
-       
+
     }
 
     public void LoadMenu()
@@ -98,5 +107,34 @@ public class PauseMenu : MonoBehaviour
         _animMaster.EndAnim();
         yield return new WaitForSeconds(_animMaster._animTime);
         SceneManager.LoadScene(loadScene);
+    }
+
+    public void OptionLocker()
+    {
+        if(isOnOption)
+        {
+            achievButton.interactable = false;
+            androidButton.interactable = false;
+            optionMenu.SetActive(true);
+            topButton.gameObject.SetActive(true);
+            botButton.gameObject.SetActive(true);
+            leftButton.gameObject.SetActive(true);
+            rightButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            achievButton.interactable = true;
+            androidButton.interactable = true;
+            optionMenu.SetActive(false);
+            topButton.gameObject.SetActive(false);
+            botButton.gameObject.SetActive(false);
+            leftButton.gameObject.SetActive(false);
+            rightButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void OptionBoolSwitch()
+    {
+        isOnOption = !isOnOption;
     }
 }
