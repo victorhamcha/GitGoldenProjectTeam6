@@ -15,11 +15,17 @@ public class CameraFollowMouse : MonoBehaviour
     float DistanceBetweenFingers;
     bool isZooming;
 
-    [Header("Card Small")][Range(0, 10000)] public float _minZoom = 100;
-    [Header("Card Grow")] [Range(0, 10000)] public float _maxZoom = 100;
+    Vector3 touchStart;
+    [Header("New Zoom")]
+    public float zoomOutMin = 1;
+    public float zoomOutMax = 999999;
+    public float zoomSpeed = 999999;
+
+    [HideInInspector] [Header("Card Small")][Range(0, 10000)] public float _minZoom = 100;
+    [HideInInspector] [Header("Card Grow")] [Range(0, 10000)] public float _maxZoom = 100;
     float _sizeCamAtStart;
 
-    [Range(1,100)] public int _boucinessByTouchingBorder = 10;
+    [HideInInspector] [Range(1,100)] public int _boucinessByTouchingBorder = 10;
 
 
     Vector2 _positivValue;
@@ -30,6 +36,7 @@ public class CameraFollowMouse : MonoBehaviour
 
     [HideInInspector] public List<GameObject> _positionLim;
     [HideInInspector] public GameObject _positionLimMaster;
+
 
     void Start()
     {
@@ -100,7 +107,7 @@ public class CameraFollowMouse : MonoBehaviour
             isZooming = false;
         }
         #region Drag
-        if (Input.touchCount == 1)
+        if (Input.touchCount >= 1)
         {
             if (!isZooming)
             {
@@ -145,34 +152,67 @@ public class CameraFollowMouse : MonoBehaviour
             }
         }
         #endregion
-        #region Zoom
-        else if (Input.touchCount == 2)
-        {
-            if (Input.GetTouch(1).phase == TouchPhase.Moved)
-            {
-                isZooming = true;
+        #region ZoomAncien
+        //else if (Input.touchCount == 2)
+        //{
+        //    if (Input.GetTouch(1).phase == TouchPhase.Moved)
+        //    {
+        //        isZooming = true;
 
-                DragNewPosition = GetWorldPositionOfFinger(1);
-                Vector2 PositionDifference = DragNewPosition - DragStartPosition;
+        //        DragNewPosition = GetWorldPositionOfFinger(1);
+        //        Vector2 PositionDifference = DragNewPosition - DragStartPosition;
 
-                if (_cam.orthographicSize <_sizeCamAtStart + _minZoom)
-                {
-                    if (Vector2.Distance(DragNewPosition, Finger0Position) < DistanceBetweenFingers)
-                        _cam.GetComponent<Camera>().orthographicSize += (PositionDifference.magnitude);
-                }
-                if (_cam.orthographicSize > _sizeCamAtStart - _maxZoom)
-                {
-                    if (Vector2.Distance(DragNewPosition, Finger0Position) >= DistanceBetweenFingers)
-                        _cam.GetComponent<Camera>().orthographicSize -= (PositionDifference.magnitude);
-                }
+        //        if (_cam.orthographicSize <_sizeCamAtStart + _minZoom)
+        //        {
+        //            if (Vector2.Distance(DragNewPosition, Finger0Position) < DistanceBetweenFingers)
+        //                _cam.GetComponent<Camera>().orthographicSize += (PositionDifference.magnitude);
+        //        }
+        //        if (_cam.orthographicSize > _sizeCamAtStart - _maxZoom)
+        //        {
+        //            if (Vector2.Distance(DragNewPosition, Finger0Position) >= DistanceBetweenFingers)
+        //                _cam.GetComponent<Camera>().orthographicSize -= (PositionDifference.magnitude);
+        //        }
 
 
-                DistanceBetweenFingers = Vector2.Distance(DragNewPosition, Finger0Position);
-            }
-            DragStartPosition = GetWorldPositionOfFinger(1);
-            Finger0Position = GetWorldPositionOfFinger(0);
-        }
+        //        DistanceBetweenFingers = Vector2.Distance(DragNewPosition, Finger0Position);
+        //    }
+        //    DragStartPosition = GetWorldPositionOfFinger(1);
+        //    Finger0Position = GetWorldPositionOfFinger(0);
+        //}
         #endregion
+        #region NouveauZoom
+
+        if (Input.touchCount == 2)
+        {
+            //TP CAM MOYENNE DOIGTS
+
+
+
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 _moyenneFingers = new Vector2((touchZero.position.x + touchOne.position.x) / 2, (touchZero.position.y + touchOne.position.y) / 2);
+
+            //transform.localPosition = _moyenneFingers;
+            transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+            float difference = currentMagnitude - prevMagnitude;
+
+            Zoom(difference * zoomSpeed);
+        }
+
+        #endregion
+    }
+
+    void Zoom(float increment)
+    {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
     }
 
     Vector2 GetWorldPosition()
