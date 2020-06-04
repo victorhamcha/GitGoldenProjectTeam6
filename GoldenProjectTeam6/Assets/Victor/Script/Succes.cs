@@ -10,20 +10,29 @@ public class Succes : MonoBehaviour
 
     public string id;
     //DIffiuclité
+
+    
     public enum difficulté { Friendly, Easy, Normal,Hard, Impossible};
+    [Header("Difficulté")]
     public difficulté _difficulté;
     public EnumSuccess._enumSuccess enumSucces;
     public bool locked=true;
    
     //TXT
+    [Header("Text")]
     public string txtTitre;
     public string txtDescription;
+
+    [Header("Img")]
+    public Sprite succesSprite;
+    public Image succesImg;
+    
 
     //UI in menu scene
     private ContratsPanel manager;
     private TextMeshProUGUI description;
     private TextMeshProUGUI titre;
-    private Image img;
+
    //public Sprite succesIMG;
     //verify scene
     private bool inMenu=false;
@@ -48,8 +57,8 @@ public class Succes : MonoBehaviour
 
             titre.text = txtTitre;
             ////////////////////////////////////////////////////////////
-            img = GetComponentInChildren<Image>();
 
+            succesImg.sprite = succesSprite;
 
             manager = GetComponentInParent<ContratsPanel>();
             StartCoroutine(waitForLoading());
