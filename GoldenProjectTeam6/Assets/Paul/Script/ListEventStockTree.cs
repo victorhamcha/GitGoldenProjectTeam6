@@ -20,7 +20,7 @@ public class ListEventStockTree : MonoBehaviour
 
     IEnumerator WaitToCheck()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         Check();
     }
     public void Check()

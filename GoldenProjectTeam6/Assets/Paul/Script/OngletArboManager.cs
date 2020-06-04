@@ -27,6 +27,9 @@ public class OngletArboManager : MonoBehaviour
 
     public Color _buttonColor;
 
+    bool _activeOnlyOne = true;
+
+    int _addition;
 
     int _soustraction;
     int _actualPos;
@@ -34,6 +37,7 @@ public class OngletArboManager : MonoBehaviour
     public GameObject _cardZoom;
 
     public GameObject _listManager;
+
 
     void Start()
     {
@@ -44,7 +48,41 @@ public class OngletArboManager : MonoBehaviour
         {
             _positionListOnglet.Add(positionListChild);
         }
-        _actualdId = 1;
+
+        ContainAllObjectTree _parent = FindObjectOfType<ContainAllObjectTree>();
+
+        if (_parent._imageTreeUnlockSinceLastTime.Count > 0)
+        {            
+            foreach (Transform child in _listManager.transform)
+            {
+                if(_parent._imageTreeUnlockSinceLastTime[_parent._imageTreeUnlockSinceLastTime.Count - 1].Contains(child.GetComponent<ListEventStockTree>()._imageNameRef))
+                {
+                    _addition = child.GetComponent<ListEventStockTree>()._id;
+
+                    if (_addition >= 10)
+                    {
+                        _actualdId = 4;
+                    }
+                    else if (_addition >= 7)
+                    {
+                        _actualdId = 3;
+                    }
+                    else if (_addition >= 3)
+                    {
+                        _actualdId = 2;
+                    }
+                    else
+                    {
+                        _actualdId = 1;
+                    }
+                }
+            }
+        }
+        else
+        {
+            _actualdId = 1;
+        }
+        
         Actualise(_actualdId);
 
         StartCoroutine(DeleteList());
@@ -147,23 +185,32 @@ public class OngletArboManager : MonoBehaviour
             _cam.orthographicSize = zoom;
 
         }
-        int _addition;
-        if (_actualdId == 1)
+
+        if (_activeOnlyOne)
         {
-            _addition = 1;
-        }
-        else if(_actualdId == 2)
-        {
-            _addition = 4;
-        }
-        else if (_actualdId == 3)
-        {
-            _addition = 8;
+            _activeOnlyOne = false;
+            _addition++;
         }
         else
         {
-            _addition = 11;
+            if (_actualdId == 1)
+            {
+                _addition = 1;
+            }
+            else if (_actualdId == 2)
+            {
+                _addition = 4;
+            }
+            else if (_actualdId == 3)
+            {
+                _addition = 8;
+            }
+            else
+            {
+                _addition = 11;
+            }
         }
+        
         _text.text = _listEvents[_addition-1 + _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos];
         StartCoroutine(WaiToCheck());
 
