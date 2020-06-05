@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class SwipeScript : MonoBehaviour
 {
     //Anim related variables
-    public Animator animCard;
-    private float inactivity = 0.0f;
+    //public Animator animCard;
+    //private float inactivity = 0.0f;
 
     bool touched = false;
     //ROTATION//
@@ -31,6 +31,7 @@ public class SwipeScript : MonoBehaviour
     public float maxX = 265;
     public float maxY = 425;
     public float offSetsmooth = 0.4f;
+    private int nbCardTuto = 0;
     //Canvas//
     public GameObject img;
     private Image imgColor;
@@ -38,6 +39,9 @@ public class SwipeScript : MonoBehaviour
     public TextMeshProUGUI rightText;
     public TextMeshProUGUI upText;
     public GameObject ArrowSlideUp;
+    public GameObject FingerRight;
+    public GameObject FingerLeft;
+    public GameObject FingerUp;
 
     //EFFECT//
     public Material material;
@@ -64,15 +68,16 @@ public class SwipeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animCard = GetComponent<Animator>();
-        if(SceneManager.GetActiveScene().name == "TestCardJulien")
+       // animCard = GetComponent<Animator>();
+        
+        /*if(SceneManager.GetActiveScene().name == "TestCardJulien")
         {
             animCard.SetBool("IsCredit", true);
         }
         else
         {
             animCard.SetBool("IsCredit", false);
-        }
+        }*/
        
         if (descriptionTransform!=null)
         {
@@ -100,20 +105,20 @@ public class SwipeScript : MonoBehaviour
         
         if(!touched)
         {
-            inactivity += Time.deltaTime;
+            //inactivity += Time.deltaTime;
             //Debug.Log(inactivity);
         }
         else
         {
-            inactivity = 0.0f;
+            //inactivity = 0.0f;
         }
 
-        if(inactivity > 30.0f && animCard.enabled == false)
+        /*if(inactivity > 30.0f && animCard.enabled == false && SceneManager.GetActiveScene().name == "GeneralScene")
         {
             animCard.enabled = true;
             img.SetActive(true);
             
-        }
+        }*/
         
 
         canslidup=card.canSlideUp;
@@ -133,7 +138,43 @@ public class SwipeScript : MonoBehaviour
         }
      
 
-        
+        if(touched)
+        {
+            FingerRight.SetActive(false);
+            FingerLeft.SetActive(false);
+            FingerUp.SetActive(false);
+        }
+        else
+        {
+            if (SceneManager.GetActiveScene().name == "Tuto")
+            {
+                switch (nbCardTuto)
+                {
+                    case 0:
+                        FingerLeft.SetActive(false);
+                        FingerUp.SetActive(false);
+                        FingerRight.SetActive(true);
+                        break;
+                    case 1:
+                        FingerRight.SetActive(false);
+                        FingerUp.SetActive(false);
+                        FingerLeft.SetActive(true);
+                        break;
+                    case 2:
+                        FingerRight.SetActive(false);
+                        FingerLeft.SetActive(false);
+                        FingerUp.SetActive(true);
+                        break;
+                    case 3:
+                        FingerRight.SetActive(false);
+                        FingerLeft.SetActive(false);
+                        FingerUp.SetActive(false);
+                        break;
+
+                }
+            }
+        }
+        Debug.Log(nbCardTuto);
 
             if(!card._firstCardScriptable._canSlideUp && card._firstCardScriptable.isLinkedIn == false)
             {
@@ -183,7 +224,7 @@ public class SwipeScript : MonoBehaviour
                
                 if (touch.phase == TouchPhase.Began)
                 {
-                    animCard.enabled = false;
+                    //animCard.enabled = false;
                     card.audioManager.Play("SFX_Click");
 
 
@@ -219,8 +260,8 @@ public class SwipeScript : MonoBehaviour
 
                 else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
                 {
-                   
-                  
+                    
+
                     img.SetActive(false);
                     touched = false;
                     if((transform.eulerAngles.z>=maxRotation-0.1f&& transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x)>= maxX) || (transform.eulerAngles.z-360 >=-maxRotation-0.1f&& transform.eulerAngles.z - 360 <= -maxRotation+0.1f && transform.position.x >= maxX) ||(transform.position.y>= maxY && card.canSlideUp))
@@ -247,6 +288,10 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
+            FingerRight.SetActive(false);
+            FingerLeft.SetActive(false);
+            FingerUp.SetActive(false);
+            ArrowSlideUp.SetActive(false);
             canTurn = false;
             img.SetActive(false);
           
@@ -254,6 +299,8 @@ public class SwipeScript : MonoBehaviour
 
             if(fade<=0f)
             {
+                
+                nbCardTuto++;
                 string place = card._titleCard.text;
                 if ((transform.eulerAngles.z >= maxRotation - 0.1f && transform.eulerAngles.z <= maxRotation + 0.1f && Mathf.Abs(transform.position.x) >= maxX))
                 {
@@ -263,11 +310,14 @@ public class SwipeScript : MonoBehaviour
                 else if (transform.eulerAngles.z - 360 >= -maxRotation - 0.1f && transform.eulerAngles.z - 360 <= -maxRotation + 0.1f && transform.position.x >= maxX)
                 {
                     card.GoRight();
+                    Debug.Log("Go Right");
+                    // if (TutoSwipeRight) startcoroutine(waitfortransition); tutoswiperight = false; tutoswipeleft = true;
                    
                 }
                 else if (transform.position.y >= maxY && card.canSlideUp)
                 {
                     card.GoUp();
+                    ArrowSlideUp.SetActive(false);
                   
                 }
                 transform.eulerAngles = new Vector3(0, 0, 0);

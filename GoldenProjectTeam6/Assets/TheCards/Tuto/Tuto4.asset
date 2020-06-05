@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
-  m_Name: Tuto1
+  m_Name: Tuto4
   m_EditorClassIdentifier: 
   _title: Tutorial
   _image: {fileID: 21300000, guid: bb965c3117533d844bebd6d256967b80, type: 3}
-  _description: "Salut \xE0 tous, c'est le tuto. Swipe \xE0 droite stp"
+  _description: "Bravo ! Tu es enfin pr\xEAt pour mourir ! Swipe LEFT ou RIGHT pour
+    commencer la partie"
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -25,14 +26,14 @@ MonoBehaviour:
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: fd100b23045542e4a97911b7f1242ace, type: 2}
+  _isSwipingUpDescription: Swipe UP
+  _isNextCardRight: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
-  _isSwipingRightDescription: Swipe to the RIGHT
-  _isNextCardLeft: {fileID: 11400000}
-  _isSwipingLeftDescription: 
+  _isSwipingRightDescription: 'Let''s die ! '
+  _isNextCardLeft: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
+  _isSwipingLeftDescription: Let's die
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
   _hasSpecialVFX: 0

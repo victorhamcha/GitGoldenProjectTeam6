@@ -20,19 +20,19 @@ MonoBehaviour:
   _cardAlreadyDraw: 0
   _canSlideUp: 0
   _canSlideRight: 1
-  _canSlideLeft: 0
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: 58334284298aad44a91858c9db9c4d51, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
-  _isSwipingRightDescription: Swipe to the RIGHT
-  _isNextCardLeft: {fileID: 11400000, guid: b3ad4e9ce38d15c48a2a08e53f8d4ff0, type: 2}
+  _isSwipingRightDescription: 
+  _isNextCardLeft: {fileID: 11400000, guid: d44ebaf585eb66f439cc2adb086be422, type: 2}
   _isSwipingLeftDescription: Swipe to the LEFT
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0

@@ -14,25 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: Tutorial
   _image: {fileID: 21300000, guid: bb965c3117533d844bebd6d256967b80, type: 3}
-  _description: "L\xE0, tu as swipe LEFT. C'est bien, bravo."
+  _description: "Voici \"X\", un objet te permettant de d\xE9verouiller un troisi\xE8me
+    choix en swipant vers le haut. Si tu ne disposes pas de l'objet pr\xE9requis,
+    tu ne pourras pas swipe up."
   _cardID: 0
   _cardAlreadyDraw: 0
-  _canSlideUp: 0
+  _canSlideUp: 1
   _canSlideRight: 1
   _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
-  _isSwipingUpDescription: 
-  _isNextCardRight: {fileID: 11400000, guid: fd100b23045542e4a97911b7f1242ace, type: 2}
+  _isNextCardUp: {fileID: 11400000, guid: 3be39eae7b21c264783704beb7b12198, type: 2}
+  _isSwipingUpDescription: Swipe UP
+  _isNextCardRight: {fileID: 11400000}
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
-  _isSwipingRightDescription: Swipe to the RIGHT
+  _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
-  _isSwipingLeftDescription: Swipe to the LEFT
+  _isSwipingLeftDescription: 
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
   _hasSpecialVFX: 0
