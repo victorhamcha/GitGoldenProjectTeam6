@@ -257,17 +257,17 @@ public class CardScriptableObject_Editor : Editor
             script._isSwipingUpDescription = EditorGUILayout.TextField("Description when player slide UP", script._isSwipingUpDescription);
 
 
-            if (GUILayout.Button("Update Valeurs"))
-            {
-#if UNITY_EDITOR
-                EditorUtility.SetDirty(script);
-#endif
-            }
+            
         }
-       
+
+        if (GUILayout.Button("Update Valeurs"))
+        {
+#if UNITY_EDITOR
+            EditorUtility.SetDirty(script);
+#endif
+        }
 
 
-        
     }
 }
 #endif
