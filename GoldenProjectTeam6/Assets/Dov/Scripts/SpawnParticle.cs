@@ -10,6 +10,7 @@ public class SpawnParticle : MonoBehaviour
 
     [Header("Blood")]
     public GameObject bloodFx;
+    public GameObject bloodFx2;
     public GameObject bloodImage;
     private bool bloodCanDisapear;
     [Range(0, 0.1f)] public float speed;
@@ -60,6 +61,8 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(bloodFx);
         Destroy(ob, 4.0f);
+        GameObject ob2 = Instantiate(bloodFx2);
+        Destroy(ob2, 4.0f);
         bloodImage.SetActive(true);
         im = bloodImage.GetComponentInChildren<Image>();
         StartCoroutine(BloodDisapear());
@@ -82,7 +85,7 @@ public class SpawnParticle : MonoBehaviour
 
     IEnumerator BloodDisapear()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         bloodCanDisapear = true;
     }
 
