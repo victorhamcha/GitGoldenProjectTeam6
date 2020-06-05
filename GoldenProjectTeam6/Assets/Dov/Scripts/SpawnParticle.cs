@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SpawnParticle : MonoBehaviour
 {
+    public Animator animator;
+
     [Header ("Confetti")]
     public GameObject confettiFx;
 
@@ -28,6 +30,16 @@ public class SpawnParticle : MonoBehaviour
     [Header("Vomi")]
     public GameObject vomiFx;
 
+    [Header("Knife")]
+    public SpriteRenderer knife;
+
+    [Header("FootPrint")]
+    public SpriteRenderer footPrint;
+    public GameObject SmokeFx;
+
+    [Header("Canon Smoke")]
+    public GameObject canonSmokeFx;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -37,6 +49,19 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(sugarFx);
         Destroy(ob, 5.0f);
+    }
+
+    public void ClickFootPrint()
+    {
+        StartCoroutine(Appear());
+    }
+
+    public void ClickKnife()
+    {
+        knife.enabled = true;
+        animator.SetBool("DeathKnife", true);
+        StartCoroutine(KnifeAppear());
+        StartCoroutine(KnifeDisappear());
     }
 
     public void ClickPopcorn()
@@ -49,6 +74,12 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(vomiFx);
         Destroy(ob, 4.0f);
+    }
+
+    public void ClickCanonSmoke()
+    {
+        GameObject ob = Instantiate(canonSmokeFx);
+        Destroy(ob, 6.0f);
     }
 
     public void ClickElectric()
@@ -89,5 +120,35 @@ public class SpawnParticle : MonoBehaviour
         bloodCanDisapear = true;
     }
 
+    IEnumerator KnifeDisappear()
+    {
+        yield return new WaitForSeconds(3);
+        animator.SetBool("DeathKnife", false);
+        knife.enabled = false;
+    }
 
+    IEnumerator KnifeAppear()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameObject ob = Instantiate(bloodFx);
+        Destroy(ob, 5.0f);
+    }
+
+    IEnumerator Appear()
+    {
+        float time = 0;
+        for (int i = 0; i < 20; i++)
+        {
+            Quaternion footPrintRotation = new Quaternion(Random.Range(-1.7f, 1.7f), Random.Range(-2f, 2f), 0, 0);
+            Vector3 footPrintPosition = new Vector3(Random.Range(-2f, 2f), Random.Range(-4f, 3f), 0);
+            SpriteRenderer foot = Instantiate(footPrint, footPrintPosition, footPrintRotation);
+            Vector3 obPosition = new Vector3(foot.transform.position.x, foot.transform.position.y, -0.1f);
+            GameObject ob = Instantiate(SmokeFx, obPosition, footPrintRotation);
+            Destroy(ob, 3);
+            Destroy(foot, 5.0f - time);
+            yield return new WaitForSeconds(0.1f);
+            time += 0.106f;
+        }
+        
+    }
 }
