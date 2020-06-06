@@ -46,6 +46,12 @@ public class SpawnParticle : MonoBehaviour
     private bool clawCanAppear;
     private bool clawCanDisappear;
 
+    [Header("Bite")]
+    public GameObject obBite;
+    private SpriteRenderer spriteBite;
+    private bool biteCanAppear;
+    private bool biteCanDisappear;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -101,6 +107,13 @@ public class SpawnParticle : MonoBehaviour
         clawCanAppear = true;
     }
 
+    public void ClickBite()
+    {
+        spriteBite = obBite.GetComponent<SpriteRenderer>();
+        obBite.SetActive(true);
+        biteCanAppear = true;
+    }
+
     public void ClickBlood()
     {
         GameObject ob = Instantiate(bloodFx);
@@ -143,6 +156,26 @@ public class SpawnParticle : MonoBehaviour
             {
                 clawCanDisappear = false;
                 StartCoroutine(ClawDisappear());
+            }
+        }
+
+        if (biteCanAppear)
+        {
+            spriteBite.color = new Vector4(spriteBite.color.r, spriteBite.color.g, spriteBite.color.b, spriteBite.color.a + speed);
+            if (spriteBite.color.a > 0.95)
+            {
+                biteCanAppear = false;
+                StartCoroutine(BiteAppear());
+            }
+        }
+
+        if (biteCanDisappear)
+        {
+            spriteBite.color = new Vector4(spriteBite.color.r, spriteBite.color.g, spriteBite.color.b, spriteBite.color.a - speed);
+            if (spriteBite.color.a < 0.05)
+            {
+                biteCanDisappear = false;
+                StartCoroutine(BiteDisappear());
             }
         }
     }
@@ -196,5 +229,19 @@ public class SpawnParticle : MonoBehaviour
     {
         yield return new WaitForSeconds(2.5f);
         obClaw.SetActive(false);
+    }
+
+    IEnumerator BiteAppear()
+    {
+        GameObject ob = Instantiate(bloodFx);
+        Destroy(ob, 4.0f);
+        yield return new WaitForSeconds(1.5f);
+        biteCanDisappear = true;
+    }
+
+    IEnumerator BiteDisappear()
+    {
+        yield return new WaitForSeconds(2.5f);
+        obBite.SetActive(false);
     }
 }
