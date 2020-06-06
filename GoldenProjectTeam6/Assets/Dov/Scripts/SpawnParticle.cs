@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SpawnParticle : MonoBehaviour
 {
     public Animator animator;
+    public Animator animator2;
 
     [Header("Confetti")]
     public GameObject confettiFx;
@@ -52,15 +53,19 @@ public class SpawnParticle : MonoBehaviour
     private bool biteCanAppear;
     private bool biteCanDisappear;
 
+    [Header("Elephant Tusk")]
+    public SpriteRenderer tusk;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
         Destroy(ob, 6.0f);
     }
+
     public void ClickSugar()
     {
         GameObject ob = Instantiate(sugarFx);
-        Destroy(ob, 5.0f);
+        Destroy(ob, 6.0f);
     }
 
     public void ClickFootPrint()
@@ -74,6 +79,14 @@ public class SpawnParticle : MonoBehaviour
         animator.SetBool("DeathKnife", true);
         StartCoroutine(KnifeAppear());
         StartCoroutine(KnifeDisappear());
+    }
+
+    public void ClickTusk()
+    {
+        tusk.enabled = true;
+        animator2.SetBool("Elephant", true);
+        StartCoroutine(TuskAppear());
+        StartCoroutine(TuskDisappear());
     }
 
     public void ClickPopcorn()
@@ -118,8 +131,12 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(bloodFx);
         Destroy(ob, 4.0f);
-        GameObject ob2 = Instantiate(bloodFx2);
-        Destroy(ob2, 4.0f);
+        Vector3 pos1 = new Vector3(0.5f, 0);
+        Vector3 pos2 = new Vector3(-1.3f, 0);
+        GameObject ob2 = Instantiate(bloodFx2, pos1, Quaternion.identity);
+        Destroy(ob2, 6.0f);
+        GameObject ob3 = Instantiate(bloodFx2, pos2, Quaternion.identity);
+        Destroy(ob3, 6.0f);
         bloodImage.SetActive(true);
         im = bloodImage.GetComponentInChildren<Image>();
         StartCoroutine(BloodDisapear());
@@ -182,7 +199,7 @@ public class SpawnParticle : MonoBehaviour
 
     IEnumerator BloodDisapear()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         bloodCanDisapear = true;
     }
 
@@ -198,6 +215,20 @@ public class SpawnParticle : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         GameObject ob = Instantiate(bloodFx);
         Destroy(ob, 5.0f);
+    }
+
+    IEnumerator TuskAppear()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GameObject ob = Instantiate(bloodFx);
+        Destroy(ob, 5.0f);
+    }
+
+    IEnumerator TuskDisappear()
+    {
+        yield return new WaitForSeconds(3);
+        animator2.SetBool("Elephant", false);
+        tusk.enabled = false;
     }
 
     IEnumerator FootPrintAppear()
