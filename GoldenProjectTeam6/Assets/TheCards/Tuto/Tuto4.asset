@@ -26,7 +26,7 @@ MonoBehaviour:
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
-  _isNextCardUp: {fileID: 0}
+  _isNextCardUp: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
   _isSwipingUpDescription: Let's die!
   _isNextCardRight: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
   _isNextCardLinkedIn: {fileID: 0}
