@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Diagnostics.Tracing;
+using System.Security.Policy;
 
 public class ImageArborescence : MonoBehaviour
 {
@@ -58,6 +59,7 @@ public class ImageArborescence : MonoBehaviour
     [HideInInspector] public bool _canSpawn;
 
     bool _spawnLight=true;
+
 
 
     void Awake()
@@ -135,7 +137,6 @@ public class ImageArborescence : MonoBehaviour
             _timeToRevealCard = 1f;
 
             _disolve = false;
-            Assigner();
             _image.material = null;
             _imageBackground.material = null;
             //_titleText.material = null;
@@ -238,7 +239,6 @@ public class ImageArborescence : MonoBehaviour
             Vector2 _positionStart = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(0);
             Vector2 _positionEnd = _lineRendererGO[i].GetComponent<LineRenderer>().GetPosition(1);
 
-            Debug.Log("Start : " + _positionStart + " End : " + _positionEnd +" Mid : " + new Vector2(_positionEnd.x - _positionStart.x, _positionEnd.y - _positionStart.y));
 
             if (_positionEnd.x == 0 || _positionEnd.y == 0)
             {
@@ -272,6 +272,7 @@ public class ImageArborescence : MonoBehaviour
             _lineRendererGO[i].GetComponent<LineRenderer>().SetColors(Color.white, Color.white);
         }
         //_titleText.material = null;
+
     }
 
     void CheckIfAlreadyDraw()

@@ -489,13 +489,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111218764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.97647065, g: 0.8941177, b: 0.7607844, a: 1}
+  m_Color: {r: 0.20392159, g: 0.19215688, b: 0.121568635, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -574,6 +574,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Insulting
   txtDescription: Say "Shut up" to the clown after his second joke
+  succesSprite: {fileID: 21300000, guid: 62c131de033a5a044a6fd2fe96486bf7, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &177905939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,8 +751,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290962681
-  m_fontColor: {r: 0.97647065, g: 0.8941177, b: 0.7607844, a: 1}
+    rgba: 4281681998
+  m_fontColor: {r: 0.30588236, g: 0.28235295, b: 0.20784315, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -896,6 +898,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Massive Disrespect
   txtDescription: Raise your hand and spit at the magician's face
+  succesSprite: {fileID: 21300000, guid: 0cd9683f272b3994b9771efe1c71f6ea, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &275622680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,7 +993,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1290,6 +1294,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Poison of patience
   txtDescription: Leave with your poisoned cotton candy after waiting in the line
+  succesSprite: {fileID: 21300000, guid: a3a16396cbf9248458d99aac9f65fe93, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &358247962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1775,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Patience
   txtDescription: Wait to death
+  succesSprite: {fileID: 21300000, guid: 2eda3dd3a495b3549a3552745cc62926, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &439318909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2022,7 @@ MonoBehaviour:
   des3: {fileID: 1506584244}
   succesAnim: {fileID: 989702415}
   sucesName: {fileID: 923274746}
-  anim: {fileID: 0}
+  animImg: {fileID: 1834686594}
   timer: 0
   boredomCard: {fileID: 11400000, guid: ddb6d80a90752294f870500091275f32, type: 2}
   audioManager: {fileID: 544111576}
@@ -2482,7 +2490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.97647065, g: 0.8941177, b: 0.7607844, a: 1}
+  m_Color: {r: 0.20392159, g: 0.19215688, b: 0.121568635, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2634,6 +2642,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: We don't insult mothers !
   txtDescription: Insult the mother of the elephant
+  succesSprite: {fileID: 21300000, guid: c8136a55ed4a9124c947418dc69a9ed2, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &619144966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,8 +3503,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290962681
-  m_fontColor: {r: 0.97647065, g: 0.8941177, b: 0.7607844, a: 1}
+    rgba: 4280300085
+  m_fontColor: {r: 0.20784315, g: 0.19607845, b: 0.1254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3796,6 +3806,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Bastard
   txtDescription: Eat popcorn in front of the stressed acrobats
+  succesSprite: {fileID: 21300000, guid: 04c9eafca4c816b46a2c5e12621f657b, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &829373415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10142,7 +10154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24705884, g: 0.23529413, b: 0.14901961, a: 1}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 0.972549}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10215,7 +10227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20784315, g: 0.19607845, b: 0.1254902, a: 1}
+  m_Color: {r: 0.93725497, g: 0.8588236, b: 0.7294118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10366,7 +10378,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253095761}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -10744,6 +10756,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Promotion
   txtDescription: Explore all the events and all of their choices
+  succesSprite: {fileID: 21300000, guid: 82f2ff72158f8804ca5dc4522cf8f516, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1348619554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11121,6 +11135,13 @@ MonoBehaviour:
   sound: {fileID: 1253095763}
   censure: {fileID: 1967055390}
   card: {fileID: 1944642713}
+  achievButton: {fileID: 0}
+  androidButton: {fileID: 0}
+  optionMenu: {fileID: 0}
+  topButton: {fileID: 0}
+  botButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
 --- !u!114 &1419286921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11595,6 +11616,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Speedrun
   txtDescription: Die in less than 5 cards
+  succesSprite: {fileID: 21300000, guid: 5291fe6dc79de9448a0a4e69a23a1241, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1503410347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11999,6 +12022,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Tourist
   txtDescription: Die once in every event
+  succesSprite: {fileID: 21300000, guid: 42641da254dd1534197f7b7083bcd736, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1531804675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12091,6 +12116,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Alcohol is dangerous
   txtDescription: Ask the knife thrower to stop drinking after going on his wheel
+  succesSprite: {fileID: 21300000, guid: c2bc9726ab4baab4286dbafe18298e62, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1569331654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12303,6 +12330,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: First!
   txtDescription: Die for the first time
+  succesSprite: {fileID: 21300000, guid: 50255b7dd63d4f84f961eeb6b295bd2c, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1592727223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12571,7 +12600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20784315, g: 0.19607845, b: 0.1254902, a: 1}
+  m_Color: {r: 0.93725497, g: 0.8588236, b: 0.7294118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13000,6 +13029,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Hitman
   txtDescription: Kill someone else !
+  succesSprite: {fileID: 21300000, guid: 414807759a7bd47409a4f107d4c58850, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1820774889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13420,7 +13451,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092003664}
   m_HandleRect: {fileID: 1092003663}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -13518,6 +13549,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Routine
   txtDescription: Order a soft-boiled egg, add pepper in it and go to the toilets
+  succesSprite: {fileID: 21300000, guid: ef6b7b64599cfcc44b57351b4d4f3f7b, type: 3}
+  succesImg: {fileID: 0}
 --- !u!114 &1865673458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14293,7 +14326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9150943, g: 0.7815973, b: 0.56545925, a: 1}
+  m_Color: {r: 0.93725497, g: 0.8588236, b: 0.7294118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -14599,7 +14632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.97647065, g: 0.8941177, b: 0.7607844, a: 1}
+  m_Color: {r: 0.30588236, g: 0.28235295, b: 0.20784315, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

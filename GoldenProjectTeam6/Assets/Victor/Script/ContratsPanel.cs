@@ -11,6 +11,8 @@ public class ContratsPanel : MonoBehaviour
     public int page = 0;
     public TextMeshProUGUI txtPanel;
     public TextMeshProUGUI txtPage;
+    public Button left;
+    public Button right;
 
     [Header("Succes Settings")]
     public List<Succes> lockSucces = new List<Succes>();
@@ -88,6 +90,78 @@ public class ContratsPanel : MonoBehaviour
        
     }
 
+    
+    public void ChangingPageRight()
+    {
+        if(txtPanel.text == "Passport")
+        {
+            txtPanel.text = "Locked Contracts";
+            scroller.enabled = true;
+            locked.gameObject.SetActive(true);
+            unlock.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(false);
+            scroller.content = locked.GetComponent<RectTransform>();
+            //left.gameObject.SetActive(true);
+
+        }
+        else if (txtPanel.text == "Locked Contracts")
+        {
+            txtPanel.text = "Unlocked Contracts";
+            scroller.enabled = true;
+            locked.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(false);
+            unlock.gameObject.SetActive(true);
+            scroller.content = unlock.GetComponent<RectTransform>();
+            //right.gameObject.SetActive(false);
+            
+        }
+        else if (txtPanel.text == "Unlocked Contracts")
+        {
+            txtPanel.text = "Passport";
+            locked.gameObject.SetActive(false);
+            unlock.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(true);
+            scroller.content = null;
+
+        }
+    }
+
+
+
+    public void ChangingPageLeft()
+    {
+        if (txtPanel.text == "Unlocked Contracts")
+        {
+            txtPanel.text = "Locked Contracts";
+            scroller.enabled = true;
+            locked.gameObject.SetActive(true);
+            unlock.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(false);
+            scroller.content = locked.GetComponent<RectTransform>();
+            //right.gameObject.SetActive(true);
+
+        }
+        else if (txtPanel.text == "Locked Contracts")
+        {
+            txtPanel.text = "Passport";
+            locked.gameObject.SetActive(false);
+            unlock.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(true);
+            scroller.content = null;
+            //left.gameObject.SetActive(false);
+
+        }
+        else if (txtPanel.text == "Passport")
+        {
+            txtPanel.text = "Unlocked Contracts";
+            scroller.enabled = true;
+            locked.gameObject.SetActive(false);
+            passeport.gameObject.SetActive(false);
+            unlock.gameObject.SetActive(true);
+            scroller.content = unlock.GetComponent<RectTransform>();
+
+        }
+    }
 
     public void SwipeModif()
     {
@@ -106,6 +180,7 @@ public class ContratsPanel : MonoBehaviour
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(true);
                     scroller.content = null;
+                    //left.gameObject.SetActive(false);
                     break;
                 }
 
@@ -117,6 +192,8 @@ public class ContratsPanel : MonoBehaviour
                     unlock.gameObject.SetActive(false);
                     passeport.gameObject.SetActive(false);
                     scroller.content = locked.GetComponent<RectTransform>();
+                    //left.gameObject.SetActive(true);
+                    //right.gameObject.SetActive(true);
                     break;
                 }
 
@@ -128,6 +205,7 @@ public class ContratsPanel : MonoBehaviour
                     passeport.gameObject.SetActive(false);
                     unlock.gameObject.SetActive(true);
                     scroller.content = unlock.GetComponent<RectTransform>();
+                    //right.gameObject.SetActive(false);
                     break;
                 }
             case 3:
@@ -139,7 +217,7 @@ public class ContratsPanel : MonoBehaviour
 
         }
 
-        txtPage.text = "Page " + (page + 1) + "/3";
+        //txtPage.text = "Page " + (page + 1) + "/3";
     }
     public void SaveModif()
     {
@@ -186,9 +264,11 @@ public class ContratsPanel : MonoBehaviour
         prctBar.text = progressLVL.ToString() + "%";
         LevelTXT.text = "Level : " + (lvl + 1);
         bar.GetComponentInChildren<Image>().color = new Color(colorLvl[lvl].r, colorLvl[lvl].g, colorLvl[lvl].b, colorLvl[lvl].a);
+
         //character UI
         statusTMP.text = statuttxt[lvl];
         imgCharacter.sprite = imgLvl[lvl];
+        
         //LoadPassport
         SuccesManager.cardSkin = skinLvl[changeMat];
 
