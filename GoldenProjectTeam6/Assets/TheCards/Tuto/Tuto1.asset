@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: Tutorial
   _image: {fileID: 21300000, guid: bb965c3117533d844bebd6d256967b80, type: 3}
-  _description: "Salut \xE0 tous, c'est le tuto. Swipe \xE0 droite stp"
+  _description: 'So, newbie.
+
+    I''m gonna teach you the basics: move the cards
+    by swiping to the right.'
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 0
@@ -30,9 +33,9 @@ MonoBehaviour:
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
-  _isSwipingRightDescription: Swipe to the RIGHT
+  _isSwipingRightDescription: This one
   _isNextCardLeft: {fileID: 11400000}
-  _isSwipingLeftDescription: 
+  _isSwipingLeftDescription: The other right
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
   _hasSpecialVFX: 0
