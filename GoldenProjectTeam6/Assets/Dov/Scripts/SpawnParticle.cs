@@ -7,7 +7,7 @@ public class SpawnParticle : MonoBehaviour
 {
     public Animator animator;
 
-    [Header ("Confetti")]
+    [Header("Confetti")]
     public GameObject confettiFx;
 
     [Header("Blood")]
@@ -40,6 +40,12 @@ public class SpawnParticle : MonoBehaviour
     [Header("Canon Smoke")]
     public GameObject canonSmokeFx;
 
+    [Header("Claw")]
+    public GameObject obClaw;
+    private SpriteRenderer spriteClaw;
+    private bool clawCanAppear;
+    private bool clawCanDisappear;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -53,7 +59,7 @@ public class SpawnParticle : MonoBehaviour
 
     public void ClickFootPrint()
     {
-        StartCoroutine(Appear());
+        StartCoroutine(FootPrintAppear());
     }
 
     public void ClickKnife()
@@ -88,6 +94,13 @@ public class SpawnParticle : MonoBehaviour
         Destroy(ob, 4.0f);
     }
 
+    public void ClickClaw()
+    {
+        spriteClaw = obClaw.GetComponent<SpriteRenderer>();
+        obClaw.SetActive(true);
+        clawCanAppear = true;
+    }
+
     public void ClickBlood()
     {
         GameObject ob = Instantiate(bloodFx);
@@ -112,6 +125,26 @@ public class SpawnParticle : MonoBehaviour
                 bloodCanDisapear = false;
             }
         }
+
+        if (clawCanAppear)
+        {
+            spriteClaw.color = new Vector4(spriteClaw.color.r, spriteClaw.color.g, spriteClaw.color.b, spriteClaw.color.a + speed);
+            if (spriteClaw.color.a > 0.95)
+            {
+                clawCanAppear = false;
+                StartCoroutine(ClawAppear());
+            }
+        }
+
+        if (clawCanDisappear)
+        {
+            spriteClaw.color = new Vector4(spriteClaw.color.r, spriteClaw.color.g, spriteClaw.color.b, spriteClaw.color.a - speed);
+            if (spriteClaw.color.a < 0.05)
+            {
+                clawCanDisappear = false;
+                StartCoroutine(ClawDisappear());
+            }
+        }
     }
 
     IEnumerator BloodDisapear()
@@ -134,7 +167,7 @@ public class SpawnParticle : MonoBehaviour
         Destroy(ob, 5.0f);
     }
 
-    IEnumerator Appear()
+    IEnumerator FootPrintAppear()
     {
         float time = 0;
         for (int i = 0; i < 20; i++)
@@ -149,6 +182,19 @@ public class SpawnParticle : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             time += 0.106f;
         }
-        
+    }
+
+    IEnumerator ClawAppear()
+    {
+        GameObject ob = Instantiate(bloodFx);
+        Destroy(ob, 4.0f);
+        yield return new WaitForSeconds(1.5f);
+        clawCanDisappear = true;
+    }
+
+    IEnumerator ClawDisappear()
+    {
+        yield return new WaitForSeconds(2.5f);
+        obClaw.SetActive(false);
     }
 }
