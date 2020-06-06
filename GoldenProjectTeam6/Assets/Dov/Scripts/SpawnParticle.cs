@@ -7,6 +7,7 @@ public class SpawnParticle : MonoBehaviour
 {
     public Animator animator;
     public Animator animator2;
+    public Animator animator3;
 
     [Header("Confetti")]
     public GameObject confettiFx;
@@ -30,6 +31,9 @@ public class SpawnParticle : MonoBehaviour
 
     [Header("Vomi")]
     public GameObject vomiFx;
+
+    [Header("Fire")]
+    public GameObject fireFx;
 
     [Header("Knife")]
     public SpriteRenderer knife;
@@ -56,6 +60,10 @@ public class SpawnParticle : MonoBehaviour
     [Header("Elephant Tusk")]
     public SpriteRenderer tusk;
 
+    [Header("Magician Baguette")]
+    public SpriteRenderer baguette;
+    public GameObject baguetteSmokeFx;
+
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
@@ -65,6 +73,12 @@ public class SpawnParticle : MonoBehaviour
     public void ClickSugar()
     {
         GameObject ob = Instantiate(sugarFx);
+        Destroy(ob, 6.0f);
+    }
+
+    public void ClickFire()
+    {
+        GameObject ob = Instantiate(fireFx);
         Destroy(ob, 6.0f);
     }
 
@@ -87,6 +101,14 @@ public class SpawnParticle : MonoBehaviour
         animator2.SetBool("Elephant", true);
         StartCoroutine(TuskAppear());
         StartCoroutine(TuskDisappear());
+    }
+
+    public void ClickBaguette()
+    {
+        baguette.enabled = true;
+        animator3.SetBool("Pouf", true);
+        StartCoroutine(BaguetteAppear());
+        StartCoroutine(BaguetteDisappear());
     }
 
     public void ClickPopcorn()
@@ -231,6 +253,20 @@ public class SpawnParticle : MonoBehaviour
         tusk.enabled = false;
     }
 
+    IEnumerator BaguetteAppear()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GameObject ob = Instantiate(baguetteSmokeFx);
+        Destroy(ob, 5.0f);
+    }
+
+    IEnumerator BaguetteDisappear()
+    {
+        yield return new WaitForSeconds(2);
+        animator3.SetBool("Pouf", false);
+        baguette.enabled = false;
+    }
+
     IEnumerator FootPrintAppear()
     {
         float time = 0;
@@ -258,7 +294,7 @@ public class SpawnParticle : MonoBehaviour
 
     IEnumerator ClawDisappear()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
         obClaw.SetActive(false);
     }
 
