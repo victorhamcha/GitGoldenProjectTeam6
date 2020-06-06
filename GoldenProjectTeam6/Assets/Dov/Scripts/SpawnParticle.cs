@@ -31,6 +31,9 @@ public class SpawnParticle : MonoBehaviour
     [Header("Vomi")]
     public GameObject vomiFx;
 
+    [Header("Fire")]
+    public GameObject fireFx;
+
     [Header("Knife")]
     public SpriteRenderer knife;
 
@@ -65,6 +68,12 @@ public class SpawnParticle : MonoBehaviour
     public void ClickSugar()
     {
         GameObject ob = Instantiate(sugarFx);
+        Destroy(ob, 6.0f);
+    }
+
+    public void ClickFire()
+    {
+        GameObject ob = Instantiate(fireFx);
         Destroy(ob, 6.0f);
     }
 
@@ -258,7 +267,7 @@ public class SpawnParticle : MonoBehaviour
 
     IEnumerator ClawDisappear()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
         obClaw.SetActive(false);
     }
 
