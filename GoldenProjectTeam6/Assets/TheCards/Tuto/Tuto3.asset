@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tuto3
   m_EditorClassIdentifier: 
   _title: Tutorial
-  _image: {fileID: 21300000, guid: bb965c3117533d844bebd6d256967b80, type: 3}
+  _image: {fileID: 21300000, guid: feb91462a37a75743b54db66a44fdaba, type: 3}
   _description: "Here are the keys to the elevator. \nYou can swipe up on some cards,
     but sometimes you'll need an object to swipe up.\nUse the keys on the elevator
     to start a game."
@@ -28,12 +28,12 @@ MonoBehaviour:
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 11400000, guid: 3be39eae7b21c264783704beb7b12198, type: 2}
   _isSwipingUpDescription: Go to the elevator
-  _isNextCardRight: {fileID: 11400000}
+  _isNextCardRight: {fileID: 11400000, guid: 3be39eae7b21c264783704beb7b12198, type: 2}
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Go to the elevator
-  _isNextCardLeft: {fileID: 11400000}
+  _isNextCardLeft: {fileID: 11400000, guid: 3be39eae7b21c264783704beb7b12198, type: 2}
   _isSwipingLeftDescription: Go to the elevator
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
