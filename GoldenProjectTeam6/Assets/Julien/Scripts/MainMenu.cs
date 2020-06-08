@@ -50,6 +50,12 @@ public class MainMenu : MonoBehaviour
         if (!loadingScene)
             StartCoroutine(LoadYourAsyncScene("BaptisteTestArbo"));
     }
+    public void Tuto()
+    {
+        //SceneManager.LoadScene("BaptisteTestArbo");
+        if (!loadingScene)
+            StartCoroutine(LoadYourAsyncScene("Tuto"));
+    }
 
     public void Achievements()
     {

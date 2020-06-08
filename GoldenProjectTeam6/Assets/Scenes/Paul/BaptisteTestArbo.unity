@@ -6786,7 +6786,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea16d02013ed8374184499fbe3501a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animCard: {fileID: 0}
   maxRotation: 7
   rotateSpeed: 1.4
   zRotation: 0
@@ -6800,6 +6799,9 @@ MonoBehaviour:
   rightText: {fileID: 1591436034}
   upText: {fileID: 2032219542}
   ArrowSlideUp: {fileID: 0}
+  FingerRight: {fileID: 0}
+  FingerLeft: {fileID: 0}
+  FingerUp: {fileID: 0}
   material: {fileID: 0}
   fade: 1
   disolve: 0
@@ -24778,6 +24780,7 @@ GameObject:
   - component: {fileID: 442109947}
   - component: {fileID: 442109949}
   - component: {fileID: 442109948}
+  - component: {fileID: 442109950}
   m_Layer: 5
   m_Name: TMP SubMeshUI [Nightmare Before Christmas SDF Material + LiberationSans
     SDF Atlas]
@@ -24840,6 +24843,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442109946}
   m_CullTransparentMesh: 0
+--- !u!114 &442109950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442109946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcf8faac0486134b859618d2407ccfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: 
 --- !u!1 &442407472
 GameObject:
   m_ObjectHideFlags: 0
@@ -48515,6 +48531,13 @@ MonoBehaviour:
   sound: {fileID: 731900224}
   censure: {fileID: 556817540}
   card: {fileID: 0}
+  achievButton: {fileID: 0}
+  androidButton: {fileID: 0}
+  optionMenu: {fileID: 0}
+  topButton: {fileID: 0}
+  botButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
 --- !u!224 &835742551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59036,7 +59059,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Broadwalk
+  m_text: Boardwalk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6319c7971a28ce4280afdfdb03f807f, type: 2}
   m_sharedMaterial: {fileID: -944526544689794879, guid: e6319c7971a28ce4280afdfdb03f807f,
@@ -84928,12 +84951,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1484927649}
+  m_TargetGraphic: {fileID: 1563071390}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678832784}
-        m_MethodName: GoRight
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -84943,8 +84966,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2086188461}
-        m_MethodName: PlaySoundSlide
+      - m_Target: {fileID: 1678832784}
+        m_MethodName: GoRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -91192,8 +91215,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678832784}
-        m_MethodName: GoLeft
+      - m_Target: {fileID: 2086188461}
+        m_MethodName: PlaySoundClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -91203,8 +91226,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2086188461}
-        m_MethodName: PlaySoundSlide
+      - m_Target: {fileID: 1678832784}
+        m_MethodName: GoLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

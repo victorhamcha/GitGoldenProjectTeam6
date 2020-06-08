@@ -906,12 +906,23 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 75351450}
+  m_TargetGraphic: {fileID: 1544693279}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076953979}
-        m_MethodName: GotoTutorial
+      - m_Target: {fileID: 2050311431}
+        m_MethodName: Tuto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1300754228}
+        m_MethodName: PlaySoundClickUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
