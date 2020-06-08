@@ -11,7 +11,7 @@ public class ListEventStockTree : MonoBehaviour
     [HideInInspector] public ContainAllObjectTree _parent;
     [HideInInspector] public TextMeshProUGUI _textCalcul;
     [HideInInspector] public OngletArboManager _ongletArboManager;
-    int _checker;
+    public int _checker;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class ListEventStockTree : MonoBehaviour
     }
     public void Check()
     {
-        if(_image.Count == 0)
+        if (_image.Count == 0)
         {
             for (int i = 0; i < _parent._imageTreeChilds.Count; i++)
             {
@@ -34,6 +34,8 @@ public class ListEventStockTree : MonoBehaviour
                     _image.Add(_parent._imageTreeChilds[i].GetComponent<ImageArborescence>());
                 }
             }
+        }
+        if(_checker == 0) {
 
             for (int i = 0; i < _image.Count; i++)
             {
@@ -48,16 +50,14 @@ public class ListEventStockTree : MonoBehaviour
                 EventFinished();
             }
         }
-            
 
+        Debug.Log("Checker : " + _checker);
         _textCalcul.text = _checker + " / " + _image.Count;
-
     }
 
 
     void EventFinished()
     {
         Debug.Log("Event " + _imageNameRef + " Completed !");
-
     }
 }
