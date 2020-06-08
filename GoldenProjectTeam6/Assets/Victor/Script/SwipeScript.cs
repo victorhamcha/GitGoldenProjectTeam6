@@ -140,9 +140,12 @@ public class SwipeScript : MonoBehaviour
 
         if(touched)
         {
-            FingerRight.SetActive(false);
-            FingerLeft.SetActive(false);
-            FingerUp.SetActive(false);
+            if (SceneManager.GetActiveScene().name == "Tuto")
+            {
+                FingerRight.SetActive(false);
+                FingerLeft.SetActive(false);
+                FingerUp.SetActive(false);
+            }
         }
         else
         {
@@ -293,9 +296,13 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-            FingerRight.SetActive(false);
-            FingerLeft.SetActive(false);
-            FingerUp.SetActive(false);
+            if (SceneManager.GetActiveScene().name == "Tuto")
+            {
+                FingerRight.SetActive(false);
+                FingerLeft.SetActive(false);
+                FingerUp.SetActive(false);
+
+            }
             ArrowSlideUp.SetActive(false);
             canTurn = false;
             img.SetActive(false);
