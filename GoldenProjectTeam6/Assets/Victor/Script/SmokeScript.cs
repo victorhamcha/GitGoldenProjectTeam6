@@ -7,16 +7,16 @@ public class SmokeScript : MonoBehaviour
     public Transform card;
 
 
-    public float ellapsetime1 = 50;
-    public float ellapsetime2 = 800;
+    public float ellapsetime1 = 50/1000;
+    public float ellapsetime2 = 800/1000;
     public long vibrationTime = 200;
 
     bool firstV=false;
     bool secondV=false;
     bool timerD=false;
 
-    float ellapseBase1=50;
-    float ellapseBase2=800;
+    float ellapseBase1=50/1000;
+    float ellapseBase2=800/1000;
     void Start()
     {
         ellapseBase1 = ellapsetime1;

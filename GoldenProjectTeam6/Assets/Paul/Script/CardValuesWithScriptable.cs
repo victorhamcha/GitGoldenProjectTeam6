@@ -8,7 +8,8 @@ using System;
 
 public class CardValuesWithScriptable : MonoBehaviour
 {
-
+    [Header("animFire")]
+    public GameObject fire;
 
     //vibration
     private long[] paternVibrationDeath = new long[4];
@@ -38,6 +39,8 @@ public class CardValuesWithScriptable : MonoBehaviour
     int _unlockSlideUpInt;
    
     [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
+    [HideInInspector] public bool _hasVfx;
+    [HideInInspector] public GameObject _vfx;
 
     EventManager eventManager;
 
@@ -71,8 +74,19 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     public void LoadValueFromScriptableObject()
     {
+        fire.SetActive(false);
         _unlockSlideUpInt = 0;
         _imageCard.sprite = _firstCardScriptable._image;
+
+        _hasVfx = _firstCardScriptable._hasSpecialVFX;
+        if(_hasVfx)
+        {
+            _vfx = _firstCardScriptable._specialVFX;
+        }
+        else
+        {
+            _vfx = null;
+        }
 
 
         //SAVE
@@ -146,6 +160,8 @@ public class CardValuesWithScriptable : MonoBehaviour
                 _nextCardRight = _firstCardScriptable._isNextCardRight;
                 _nextCardUp = _firstCardScriptable._isNextCardUp;
 
+
+
                 _isUnlockingSuccessRight = _firstCardScriptable._isSuccess;
 
                 if (_isUnlockingSuccessRight)
@@ -162,6 +178,11 @@ public class CardValuesWithScriptable : MonoBehaviour
                     _descriptionUpSwipe.text = _firstCardScriptable._isSwipingUpDescription;
                     _enumConditionListObject = _firstCardScriptable._enumObjectConditionList;
                     VerifyIfCanSlideUp();
+                }
+
+                if((_nextCardUp!=null&& _nextCardUp._isDeadCard)||_nextCardRight._isDeadCard||_nextCardLeft._isDeadCard)
+                {
+                    fire.SetActive(true);
                 }
             }
             else

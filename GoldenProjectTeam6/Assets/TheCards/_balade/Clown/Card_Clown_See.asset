@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Clown_See
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: cb8e07d3c8e846a44a178f8163054797, type: 3}
   _description: You approach a clown who is blowing balloons to the shape of lions
     and elephants for children.
@@ -28,6 +28,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 33b0a644231d93643afecf3852a05aaa, type: 2}
   _isSwipingUpDescription: Pinch his big, appealing red nose
   _isNextCardRight: {fileID: 11400000, guid: 5d3d3f94d9c25634bbe5ee399e0ebed9, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Hey Clown, tell me a joke!
   _isNextCardLeft: {fileID: 11400000, guid: 955ce7899d8db7c4dbd56525c3003a48, type: 2}
   _isSwipingLeftDescription: Hey clown! I want a balloon
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

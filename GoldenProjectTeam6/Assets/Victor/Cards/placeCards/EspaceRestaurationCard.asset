@@ -33,7 +33,7 @@ MonoBehaviour:
   _isSwipingRightDescription: Continue on my way
   _isNextCardLeft: {fileID: 11400000, guid: b3ad4e9ce38d15c48a2a08e53f8d4ff0, type: 2}
   _isSwipingLeftDescription: Go inside the restaurant
-  _firstCardOfEvent: {fileID: 11400000, guid: b3ad4e9ce38d15c48a2a08e53f8d4ff0, type: 2}
+  _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
   _hasSpecialVFX: 0
   _isEndingEvent: 1

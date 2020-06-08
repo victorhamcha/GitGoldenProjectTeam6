@@ -30,6 +30,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: af244c26750dbb34ba30d9117ff0e584, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: He's so bad, boo him
   _isNextCardLeft: {fileID: 11400000, guid: 7936f3a16c6ba844fb953d1c7d2f6470, type: 2}
   _isSwipingLeftDescription: I volunteer as tribute!
@@ -48,6 +51,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 
