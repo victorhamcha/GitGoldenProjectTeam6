@@ -2205,6 +2205,83 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: SFX_DeathChiken
+    clip: {fileID: 8300000, guid: 651baa0666b2de84d8b5ad9fd8807a8e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathVomit
+    clip: {fileID: 8300000, guid: 6d276bb43b6f5484d84592c2c42f9e1b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathEclair
+    clip: {fileID: 8300000, guid: 6364d83b29544004487c2968d02ea244, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathFire
+    clip: {fileID: 8300000, guid: 9299d32856593a04f98cc73b5f260fec, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathCouteau
+    clip: {fileID: 8300000, guid: f0963f2875b305249b30480d5f5c5d55, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathConfetti
+    clip: {fileID: 8300000, guid: be5a964acbfc87e418ca46e75e885ee1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathBaguette
+    clip: {fileID: 8300000, guid: cdb52eec10350074ab0a6d6d0448eee9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathPopCorn
+    clip: {fileID: 8300000, guid: 2314723069f719e41a605ef7ef876fe4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathBlood
+    clip: {fileID: 8300000, guid: 2314723069f719e41a605ef7ef876fe4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathFoulePasContente
+    clip: {fileID: 8300000, guid: 2314723069f719e41a605ef7ef876fe4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: SFX_DeathMourirDeRire
+    clip: {fileID: 8300000, guid: 2314723069f719e41a605ef7ef876fe4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
   _toggleWhichChanges: {fileID: 1253095763}
 --- !u!4 &544111577
 Transform:
@@ -14786,6 +14863,8 @@ MonoBehaviour:
   allScriptableObjects: []
   _conditionNumberList: 
   _enumConditionListObject: 
+  _hasVfx: 0
+  _vfx: {fileID: 0}
   audioManager: {fileID: 0}
 --- !u!61 &1944642717
 BoxCollider2D:

@@ -433,10 +433,7 @@ public class SwipeScript : MonoBehaviour
                 canTurn = true;
                 if(card._hasVfx)
                 {
-                    
-                   
-                    
-                    
+                    Instantiate(card._vfx);
                 }
             }
             else
