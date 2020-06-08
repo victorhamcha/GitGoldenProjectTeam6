@@ -6,7 +6,7 @@ using System;
 public class TimeChecker : MonoBehaviour
 {
     static public TimeSpan interval;
-    DateTime previousDate;
+    
     DateTime todayDate;
     private int year = 2100;
     private int month = 06;
@@ -14,6 +14,7 @@ public class TimeChecker : MonoBehaviour
 
     void Start()
     {
+        
         // Cherche les variables si elles sont déjà stockées
         if (PlayerPrefs.HasKey("year") && PlayerPrefs.HasKey("month") && PlayerPrefs.HasKey("day"))
         {
@@ -23,7 +24,7 @@ public class TimeChecker : MonoBehaviour
             year = PlayerPrefs.GetInt("year");
         }
 
-        previousDate = new DateTime(year, month, day);
+        DateTime previousDate = new DateTime(year, month, day);
         todayDate = DateTime.Today;
 
         // Calcul de différence de temps
