@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class CardValuesWithScriptable : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     
     [Header("First Card To Play")]
     public CardScriptableObject _firstCardScriptable;
+    public CardScriptableObject tutoCard;
     private CardScriptableObject originalCard;
     [Header("Value to change")]
     public Image _imageCard;
@@ -34,7 +36,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     [HideInInspector] public List<int> _conditionNumberList;
 
     int _unlockSlideUpInt;
-
+   
     [HideInInspector] public List<EnumListObject._objectList> _enumConditionListObject;
 
     EventManager eventManager;
@@ -43,7 +45,19 @@ public class CardValuesWithScriptable : MonoBehaviour
 
     void Start()
     {
-        originalCard = _firstCardScriptable;
+        
+
+        if(SwipeScript.isTuto)
+        {
+            _firstCardScriptable = tutoCard;
+            
+            
+        }
+        else
+        {
+            originalCard = _firstCardScriptable;
+        }
+        
         paternVibrationDeath[3] = 200;
         paternVibrationDeath[2] = 100;
         paternVibrationDeath[1] = 75;

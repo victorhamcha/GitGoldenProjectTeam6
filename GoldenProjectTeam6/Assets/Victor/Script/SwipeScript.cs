@@ -42,6 +42,8 @@ public class SwipeScript : MonoBehaviour
     public GameObject FingerRight;
     public GameObject FingerLeft;
     public GameObject FingerUp;
+    [SerializeField]
+    static public bool isTuto = true;
 
     //EFFECT//
     public Material material;
@@ -101,6 +103,7 @@ public class SwipeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //Debug.LogError("canslideup : " + card.canSlideUp);
         
         if(!touched)
@@ -140,7 +143,7 @@ public class SwipeScript : MonoBehaviour
 
         if(touched)
         {
-            if (SceneManager.GetActiveScene().name == "Tuto")
+            if (isTuto && TimeChecker.interval.Days >= 7)
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
@@ -149,7 +152,7 @@ public class SwipeScript : MonoBehaviour
         }
         else
         {
-            if (SceneManager.GetActiveScene().name == "Tuto")
+            if (isTuto && TimeChecker.interval.Days >= 7)
             {
                 switch (nbCardTuto)
                 {
@@ -174,6 +177,7 @@ public class SwipeScript : MonoBehaviour
                         FingerUp.SetActive(true);
                         break;
                     case 4:
+                        isTuto = false;
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(false);
@@ -182,7 +186,7 @@ public class SwipeScript : MonoBehaviour
                 }
             }
         }
-        Debug.Log(nbCardTuto);
+
 
             if(!card._firstCardScriptable._canSlideUp && card._firstCardScriptable.isLinkedIn == false)
             {
@@ -296,7 +300,7 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-            if (SceneManager.GetActiveScene().name == "Tuto")
+            if (isTuto && TimeChecker.interval.Days >= 7)
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
