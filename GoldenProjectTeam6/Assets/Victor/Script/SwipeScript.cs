@@ -163,9 +163,14 @@ public class SwipeScript : MonoBehaviour
                     case 2:
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
-                        FingerUp.SetActive(true);
+                        FingerUp.SetActive(false);
                         break;
                     case 3:
+                        FingerRight.SetActive(false);
+                        FingerLeft.SetActive(false);
+                        FingerUp.SetActive(true);
+                        break;
+                    case 4:
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(false);

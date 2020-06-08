@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Victor/MenuModifVic.unity
     guid: 2028943748f4b834eb55ab6b48bfd835
   - enabled: 0
-    path: Assets/Scenes/Victor/TestCardJulien.unity
+    path: 
     guid: 481b27b1037265d4093f8cbf0f7e0c71
   - enabled: 1
     path: Assets/Scenes/ScenesBuild/GeneralScene.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Paul/BaptisteTestArbo.unity
     guid: 9f9c033b22756194589c4dea5ffdd0eb
+  - enabled: 1
+    path: Assets/Scenes/ScenesBuild/Tuto.unity
+    guid: f3ba5eb09aa868a4b9177d12c836d20e
   m_configObjects: {}

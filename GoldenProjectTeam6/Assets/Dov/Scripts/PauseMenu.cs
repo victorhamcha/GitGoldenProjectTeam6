@@ -137,4 +137,9 @@ public class PauseMenu : MonoBehaviour
     {
         isOnOption = !isOnOption;
     }
+
+    public void GotoTutorial()
+    {
+        SceneManager.LoadScene("Tuto");
+    }
 }
