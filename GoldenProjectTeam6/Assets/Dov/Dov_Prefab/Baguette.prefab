@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6248084322189814903}
   - component: {fileID: 6248084322189814902}
   - component: {fileID: 6248084322189814901}
+  - component: {fileID: 5542734482503241478}
   m_Layer: 0
   m_Name: Baguette
   m_TagString: Untagged
@@ -101,3 +102,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5542734482503241478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248084322189814900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a6cdd4f78620240832cbc6f97f24d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obBaguette: {fileID: 6248084322189814900}
+  baguetteSmokeFx: {fileID: 8471689703668850645, guid: c999bcb4c85c0a648ba3b4a5da685705,
+    type: 3}
+  speed: 0.037

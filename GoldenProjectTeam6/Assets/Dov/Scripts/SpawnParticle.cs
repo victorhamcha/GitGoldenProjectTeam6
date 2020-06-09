@@ -109,6 +109,11 @@ public class SpawnParticle : MonoBehaviour
         StartCoroutine(TuskAppear());
     }
 
+    public void ClickRire()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_DeathMourirDeRire");
+    }
+
     public void ClickBaguette()
     {
         GameObject ob = Instantiate(obBaguette);
@@ -178,10 +183,6 @@ public class SpawnParticle : MonoBehaviour
         bloodCanAppear = true;
     }
 
-    public void ClickRire()
-    {
-        FindObjectOfType<AudioManager>().Play("SFX_DeathMourirDeRire");
-    }
 
     private void Update()
     {
@@ -269,6 +270,7 @@ public class SpawnParticle : MonoBehaviour
                 tuskCanDisappear = false;
             }
         }
+
     }
 
     IEnumerator BloodAppear()
