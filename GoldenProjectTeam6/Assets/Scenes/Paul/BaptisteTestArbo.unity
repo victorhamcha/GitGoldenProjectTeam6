@@ -6834,6 +6834,9 @@ MonoBehaviour:
   _descriptionLeftSwipe: {fileID: 1778945880}
   _descriptionRightSwipe: {fileID: 1591436034}
   _descriptionUpSwipe: {fileID: 2032219542}
+  _nextCardLeft: {fileID: 0}
+  _nextCardRight: {fileID: 0}
+  _nextCardUp: {fileID: 0}
   canSlideUp: 0
   _isADeadCard: 0
   _unlockSlideUp: 0
@@ -53068,7 +53071,7 @@ GameObject:
   - component: {fileID: 927639613}
   - component: {fileID: 927639612}
   m_Layer: 5
-  m_Name: CanvasScene
+  m_Name: CanvaScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
