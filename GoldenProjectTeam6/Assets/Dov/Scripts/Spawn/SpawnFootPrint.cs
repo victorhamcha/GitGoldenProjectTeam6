@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SpawnFootPrint : MonoBehaviour
 {
-    public SpriteRenderer footPrint;
     public GameObject SmokeFx;
-
+    public GameObject spriteFootPrint;
     
     void Awake()
     {
@@ -21,7 +20,7 @@ public class SpawnFootPrint : MonoBehaviour
         {
             Quaternion footPrintRotation = new Quaternion(Random.Range(-1.7f, 1.7f), Random.Range(-2f, 2f), 0, 0);
             Vector3 footPrintPosition = new Vector3(Random.Range(-2f, 2f), Random.Range(-4f, 3f), 0);
-            SpriteRenderer foot = Instantiate(footPrint, footPrintPosition, footPrintRotation);
+            GameObject foot = Instantiate(spriteFootPrint, footPrintPosition, footPrintRotation);
             Vector3 obPosition = new Vector3(foot.transform.position.x, foot.transform.position.y, -0.1f);
             GameObject ob = Instantiate(SmokeFx, obPosition, footPrintRotation);
             Destroy(ob, 3);

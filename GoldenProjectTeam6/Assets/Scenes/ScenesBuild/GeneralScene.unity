@@ -10374,7 +10374,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.04
+  m_Intensity: 1.19
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 9f839865
   m_LightCookieSprite: {fileID: 0}
@@ -10412,9 +10412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _light: {fileID: 1135548825}
-  _minIntensity: 0.76
-  _speedMin: 0.001
-  _speedMax: 0.001
+  _minIntensity: 0.86
+  _speedMin: 0
+  _speedMax: 0.007
 --- !u!1 &1152181617
 GameObject:
   m_ObjectHideFlags: 0
@@ -13540,7 +13540,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1.23
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}

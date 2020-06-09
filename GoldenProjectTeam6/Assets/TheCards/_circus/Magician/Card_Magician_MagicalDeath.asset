@@ -40,7 +40,7 @@ MonoBehaviour:
   _isSwipingLeftDescription: 
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
-  _hasSpecialVFX: 0
+  _hasSpecialVFX: 1
   _isEndingEvent: 0
   _eventCanBePlayOne: 0
   _enumSuccessString: 
@@ -59,4 +59,5 @@ MonoBehaviour:
   _isContratCard: 0
   _enumObjectConditionList: 
   _swipeDirectionEnd: 0
-  _specialVFX: {fileID: 0}
+  _specialVFX: {fileID: 6248084322189814900, guid: 88bcbe1b6006667459277b3056aec003,
+    type: 3}
