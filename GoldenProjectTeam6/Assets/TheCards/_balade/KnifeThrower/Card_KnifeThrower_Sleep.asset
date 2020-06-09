@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_KnifeThrower_Sleep
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: 3b47397a98ba68d4aae0b98f1a518012, type: 3}
   _description: "\"Hummm...oooh...okkk hehehe...\" \nThe knife-thrower falls asleep.
     \nYou notice a pair of scissors stuck in a target..."
@@ -28,6 +28,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 30a6f495f4f9f2a42ac7b3c97bba2346, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Take the scissors
   _isNextCardLeft: {fileID: 11400000, guid: 75dc3261dae0c44438e9628eb207623a, type: 2}
   _isSwipingLeftDescription: Don't take the rusty scissors
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

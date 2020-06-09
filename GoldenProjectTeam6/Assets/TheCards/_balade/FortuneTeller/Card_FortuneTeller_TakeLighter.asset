@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_FortuneTeller_TakeLighter
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: 27ed2b713deca7245b97ef7ea84a9721, type: 3}
   _description: You take the <b>lighter</b> and walk away
   _cardID: 2
@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: 
   _isNextCardLeft: {fileID: 11400000}
   _isSwipingLeftDescription: 
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

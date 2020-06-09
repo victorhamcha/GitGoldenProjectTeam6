@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Clown_Joke03
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: bb965c3117533d844bebd6d256967b80, type: 3}
   _description: '"A little girl''s on a swing.
 
@@ -29,6 +29,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: e495d096dc5aa88409818a88c6271cc4, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: AHAHAHAHAHAHAHAHAHAHAHA
   _isNextCardLeft: {fileID: 11400000, guid: e495d096dc5aa88409818a88c6271cc4, type: 2}
   _isSwipingLeftDescription: ...
@@ -47,6 +50,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

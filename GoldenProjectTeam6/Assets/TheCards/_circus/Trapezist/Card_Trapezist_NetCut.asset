@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 1fbc86bfff7113244bc630757514dd97, type: 2}
   _isSwipingUpDescription: Cut the cables holding the poles
   _isNextCardRight: {fileID: 11400000, guid: 12410298b3665af4aac8b7cdffccca2e, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Get the crowd to attack the acrobats
   _isNextCardLeft: {fileID: 11400000, guid: dbbd2ef40b945204980a6c609c2bd60d, type: 2}
   _isSwipingLeftDescription: Stress the acrobats insulting their mothers
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 03000000

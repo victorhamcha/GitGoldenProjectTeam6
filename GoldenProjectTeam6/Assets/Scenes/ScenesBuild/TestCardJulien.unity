@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -574,6 +574,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Insulting
   txtDescription: Say shut up to the clown after his second joke
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &177905939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +898,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: None respect
   txtDescription: Rise your hand and spit at the face of the magician
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &275622680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,6 +1294,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Poison of patience
   txtDescription: Leave with your poisoned cotton candy after waiting in the line
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &358247962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1775,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Patience
   txtDescription: Wait to death
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &439318909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2022,7 @@ MonoBehaviour:
   des3: {fileID: 1506584244}
   succesAnim: {fileID: 989702415}
   sucesName: {fileID: 923274746}
-  anim: {fileID: 0}
+  animImg: {fileID: 0}
   timer: 0
   boredomCard: {fileID: 11400000, guid: ddb6d80a90752294f870500091275f32, type: 2}
   audioManager: {fileID: 544111576}
@@ -2634,6 +2642,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: We don't insult mothers !
   txtDescription: Insult the mother of the elephant
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &619144966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,6 +3806,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Bastard
   txtDescription: Eat popcorn in front of the stressed acrobats
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &829373415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10711,6 +10723,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Promotion
   txtDescription: Explore all the events and all of their choices
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1348619554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11088,6 +11102,13 @@ MonoBehaviour:
   sound: {fileID: 1253095763}
   censure: {fileID: 1967055390}
   card: {fileID: 1944642713}
+  achievButton: {fileID: 0}
+  androidButton: {fileID: 0}
+  optionMenu: {fileID: 0}
+  topButton: {fileID: 0}
+  botButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
 --- !u!114 &1419286921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11748,6 +11769,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Speedrun
   txtDescription: Die in less than 5 cards
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1503410347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12152,6 +12175,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Tourist
   txtDescription: Die once in every event
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1531804675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12245,6 +12270,8 @@ MonoBehaviour:
   txtTitre: Alcohol is dangerous to health
   txtDescription: Demand to the knife thrower to stop drinking after demanded him
     to do his show with you
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1569331654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12457,6 +12484,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: First!
   txtDescription: Die for the first time
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1592727223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13228,6 +13257,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Hitman
   txtDescription: Kill someone else !
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1820774889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13746,6 +13777,8 @@ MonoBehaviour:
   locked: 1
   txtTitre: Routine of the restaurant
   txtDescription: Order a soft-boiled egg, add pepper in it and go to the toilets
+  succesSprite: {fileID: 0}
+  succesImg: {fileID: 0}
 --- !u!114 &1865673458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14067,7 +14100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea16d02013ed8374184499fbe3501a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animCard: {fileID: 0}
   maxRotation: 2.3
   rotateSpeed: 1.33
   zRotation: 0
@@ -14081,6 +14113,9 @@ MonoBehaviour:
   rightText: {fileID: 1743702886}
   upText: {fileID: 1363243350}
   ArrowSlideUp: {fileID: 1026666120}
+  FingerRight: {fileID: 0}
+  FingerLeft: {fileID: 0}
+  FingerUp: {fileID: 0}
   material: {fileID: 0}
   fade: 1
   disolve: 0
@@ -14196,7 +14231,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944642713}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: df338451343237848aaf7e3ad13adf58, type: 2}
   m_CullingMode: 0

@@ -38,7 +38,6 @@ public class OngletArboManager : MonoBehaviour
 
     public GameObject _listManager;
 
-
     void Start()
     {
         _canMoveToPosAtStart = true;
@@ -102,8 +101,6 @@ public class OngletArboManager : MonoBehaviour
                         else
                             _positionListOnglet[_actualdId - 1].GetComponent<PositionChildArbo>()._actualPos = 0;
                     }
-
-
                 }
             }
         }
@@ -266,7 +263,7 @@ public class OngletArboManager : MonoBehaviour
                 {
                     if (child.GetComponent<ListEventStockTree>()._id == i)
                     {
-                        Debug.Log(child.name);
+                        Debug.Log("child name : " + child.name);
                         child.GetComponent<ListEventStockTree>().Check();
                     }
                 }

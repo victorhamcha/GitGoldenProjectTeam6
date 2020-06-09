@@ -47,8 +47,8 @@ MonoBehaviour:
   _enumObjectString: []
   _colorInspector: {r: 1, g: 0, b: 0, a: 1}
   _conditionsObjectList: 
-  _enumObjectToUnlockRight: 0
-  _enumObjectToUnlockLeft: 0
+  _enumObjectToUnlockRight: 6
+  _enumObjectToUnlockLeft: 6
   _enumObjectToUnlockUp: 0
   _placeEnum: 2
   isLinkedIn: 0
