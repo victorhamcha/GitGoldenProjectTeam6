@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 2523051037278684208}
   - component: {fileID: 589492336282752692}
   - component: {fileID: 3108458233295973339}
+  - component: {fileID: 4972464426546671363}
   m_Layer: 0
   m_Name: Popcorn_Particle
   m_TagString: Untagged
@@ -4812,3 +4813,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4972464426546671363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318489928293106371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e65318b493c840b89dc03b61f2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popcornFx: {fileID: 1318489928293106371}

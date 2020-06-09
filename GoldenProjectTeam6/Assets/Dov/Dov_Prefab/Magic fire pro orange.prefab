@@ -14273,6 +14273,7 @@ GameObject:
   - component: {fileID: 4274653050354540}
   - component: {fileID: 198533276141313876}
   - component: {fileID: 199176809758892682}
+  - component: {fileID: 8851492146322254270}
   m_Layer: 0
   m_Name: Magic fire pro orange
   m_TagString: Untagged
@@ -19019,3 +19020,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8851492146322254270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725317912486240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171eaeb4857010448e5f8d92613de8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireFx: {fileID: 1725317912486240}
