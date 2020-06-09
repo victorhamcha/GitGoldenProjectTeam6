@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class SpawnKnife : MonoBehaviour
 {
-    public GameObject obKnife;
     public GameObject bloodFx;
 
     void Awake()
     {
-        GameObject ob = Instantiate(obKnife);
-        Destroy(ob, 8);
+        Destroy(gameObject, 8);
         FindObjectOfType<AudioManager>().Play("SFX_DeathCouteau");
         StartCoroutine(KnifeAppear());
     }

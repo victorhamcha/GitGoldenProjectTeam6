@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnBaguette : MonoBehaviour
 {
-    public GameObject obBaguette;
     public GameObject baguetteSmokeFx;
     private SpriteRenderer spriteBaguette;
     private bool baguetteCanAppear;
@@ -13,10 +12,9 @@ public class SpawnBaguette : MonoBehaviour
 
     void Awake()
     {
-        GameObject ob = Instantiate(obBaguette);
-        Destroy(ob, 6);
+        Destroy(gameObject, 6);
         FindObjectOfType<AudioManager>().Play("SFX_DeathBaguette");
-        spriteBaguette = ob.GetComponent<SpriteRenderer>();
+        spriteBaguette = gameObject.GetComponent<SpriteRenderer>();
         baguetteCanAppear = true;
     }
 

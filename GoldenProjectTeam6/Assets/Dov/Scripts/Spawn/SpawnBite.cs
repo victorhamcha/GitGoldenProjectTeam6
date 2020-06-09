@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnBite : MonoBehaviour
 {
     public GameObject bloodFx;
-    public GameObject obBite;
     private SpriteRenderer spriteBite;
     private bool biteCanAppear;
     private bool biteCanDisappear;
@@ -14,9 +13,8 @@ public class SpawnBite : MonoBehaviour
 
     void Awake()
     {
-        GameObject ob2 = Instantiate(obBite);
-        Destroy(ob2, 6);
-        spriteBite = ob2.GetComponent<SpriteRenderer>();
+        Destroy(gameObject, 6);
+        spriteBite = gameObject.GetComponent<SpriteRenderer>();
         biteCanAppear = true;
     }
 

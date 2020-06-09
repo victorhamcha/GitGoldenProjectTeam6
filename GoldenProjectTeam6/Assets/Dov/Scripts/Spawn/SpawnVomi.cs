@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class SpawnVomi : MonoBehaviour
 {
-    public GameObject vomiFx;
-
     void Awake()
     {
-        GameObject ob = Instantiate(vomiFx);
-        Destroy(ob, 4.0f);
+        Destroy(gameObject, 4.0f);
         FindObjectOfType<AudioManager>().Play("SFX_DeathVomit");
     }
 }
