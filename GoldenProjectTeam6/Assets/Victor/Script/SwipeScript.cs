@@ -431,9 +431,15 @@ public class SwipeScript : MonoBehaviour
                 fade = 1f;
                 undisolve = false;
                 canTurn = true;
-                if(card._hasVfx)
+                if (((card._nextCardUp != null && card._nextCardUp._isDeadCard) || card._nextCardRight._isDeadCard || card._nextCardLeft._isDeadCard)&&!card._isADeadCard)
                 {
-                    Instantiate(card._vfx);
+                    
+                    card.fire.SetActive(true);
+                }
+                if (card._hasVfx)
+                {
+                    //Instantiate(card._vfx);
+                    Debug.Log("once");
                 }
             }
             else

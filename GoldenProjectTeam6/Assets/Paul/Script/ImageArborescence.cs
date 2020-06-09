@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Diagnostics.Tracing;
-using System.Security.Policy;
+//using System.Security.Policy;
 
 public class ImageArborescence : MonoBehaviour
 {
