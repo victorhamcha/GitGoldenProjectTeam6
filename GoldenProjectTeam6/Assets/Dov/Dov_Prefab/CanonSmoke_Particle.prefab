@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8811666210364423212}
   - component: {fileID: 5281182097769182439}
   - component: {fileID: 2543242562919499259}
+  - component: {fileID: 1211560351153067248}
   m_Layer: 0
   m_Name: CanonSmoke_Particle
   m_TagString: Untagged
@@ -4754,3 +4755,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1211560351153067248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8167986017652983272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408ec3cdd3e401b4f8ba33522760902e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canonSmokeFx: {fileID: 8167986017652983272}
