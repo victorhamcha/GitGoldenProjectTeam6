@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -14394,9 +14394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1944642714}
-  ellapsetime1: 0.05
-  ellapsetime2: 0.8
-  vibrationTime: 200
+  ellapsetime1: 0.125
+  ellapsetime2: 0.6
+  vibrationTime: 75
 --- !u!1 &1932834924
 GameObject:
   m_ObjectHideFlags: 0
