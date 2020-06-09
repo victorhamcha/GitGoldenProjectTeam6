@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class SpawnParticle : MonoBehaviour
 {
-    public Animator animator;
-    public Animator animator2;
-    public Animator animator3;
 
     [Header("Confetti")]
     public GameObject confettiFx;
@@ -15,10 +12,11 @@ public class SpawnParticle : MonoBehaviour
     [Header("Blood")]
     public GameObject bloodFx;
     public GameObject bloodFx2;
-    public GameObject bloodImage;
+    public GameObject obBlood;
+    private SpriteRenderer spriteBlood;
+    private bool bloodCanAppear;
     private bool bloodCanDisapear;
     [Range(0, 0.1f)] public float speed;
-    private Image im;
 
     [Header("Sugar")]
     public GameObject sugarFx;
@@ -36,7 +34,7 @@ public class SpawnParticle : MonoBehaviour
     public GameObject fireFx;
 
     [Header("Knife")]
-    public SpriteRenderer knife;
+    public GameObject obKnife;
 
     [Header("FootPrint")]
     public SpriteRenderer footPrint;
@@ -58,16 +56,22 @@ public class SpawnParticle : MonoBehaviour
     private bool biteCanDisappear;
 
     [Header("Elephant Tusk")]
-    public SpriteRenderer tusk;
+    public GameObject obTusk;
+    private SpriteRenderer spriteTusk;
+    private bool tuskCanDisappear;
 
     [Header("Magician Baguette")]
-    public SpriteRenderer baguette;
+    public GameObject obBaguette;
     public GameObject baguetteSmokeFx;
+    private SpriteRenderer spriteBaguette;
+    private bool baguetteCanAppear;
+    private bool baguetteCanDisappear;
 
     public void ClickConfetti()
     {
         GameObject ob = Instantiate(confettiFx);
         Destroy(ob, 6.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathConfetti");
     }
 
     public void ClickSugar()
@@ -80,47 +84,52 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(fireFx);
         Destroy(ob, 6.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathFire");
     }
 
     public void ClickFootPrint()
     {
+        FindObjectOfType<AudioManager>().Play("SFX_DeathFoulePasContente");
         StartCoroutine(FootPrintAppear());
     }
 
     public void ClickKnife()
     {
-        knife.enabled = true;
-        animator.SetBool("DeathKnife", true);
+        GameObject ob = Instantiate(obKnife);
+        Destroy(ob, 8);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathCouteau");
         StartCoroutine(KnifeAppear());
-        StartCoroutine(KnifeDisappear());
     }
 
     public void ClickTusk()
     {
-        tusk.enabled = true;
-        animator2.SetBool("Elephant", true);
+        GameObject ob = Instantiate(obTusk);
+        Destroy(ob, 6);
+        spriteTusk = ob.GetComponent<SpriteRenderer>();
         StartCoroutine(TuskAppear());
-        StartCoroutine(TuskDisappear());
     }
 
     public void ClickBaguette()
     {
-        baguette.enabled = true;
-        animator3.SetBool("Pouf", true);
-        StartCoroutine(BaguetteAppear());
-        StartCoroutine(BaguetteDisappear());
+        GameObject ob = Instantiate(obBaguette);
+        Destroy(ob, 6);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathBaguette");
+        spriteBaguette = ob.GetComponent<SpriteRenderer>();
+        baguetteCanAppear = true;
     }
 
     public void ClickPopcorn()
     {
         GameObject ob = Instantiate(popcornFx);
         Destroy(ob, 7.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathPopCorn");
     }
 
     public void ClickVomi()
     {
         GameObject ob = Instantiate(vomiFx);
         Destroy(ob, 4.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathVomit");
     }
 
     public void ClickCanonSmoke()
@@ -133,19 +142,22 @@ public class SpawnParticle : MonoBehaviour
     {
         GameObject ob = Instantiate(electricFx);
         Destroy(ob, 4.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathEclair");
     }
 
     public void ClickClaw()
     {
-        spriteClaw = obClaw.GetComponent<SpriteRenderer>();
-        obClaw.SetActive(true);
+        GameObject ob2 = Instantiate(obClaw);
+        Destroy(ob2, 6);
+        spriteClaw = ob2.GetComponent<SpriteRenderer>();
         clawCanAppear = true;
     }
 
     public void ClickBite()
     {
-        spriteBite = obBite.GetComponent<SpriteRenderer>();
-        obBite.SetActive(true);
+        GameObject ob2 = Instantiate(obBite);
+        Destroy(ob2, 6);
+        spriteBite = ob2.GetComponent<SpriteRenderer>();
         biteCanAppear = true;
     }
 
@@ -159,21 +171,35 @@ public class SpawnParticle : MonoBehaviour
         Destroy(ob2, 6.0f);
         GameObject ob3 = Instantiate(bloodFx2, pos2, Quaternion.identity);
         Destroy(ob3, 6.0f);
-        bloodImage.SetActive(true);
-        im = bloodImage.GetComponentInChildren<Image>();
-        StartCoroutine(BloodDisapear());
+        GameObject ob4 = Instantiate(obBlood);
+        Destroy(ob4, 6.0f);
+        FindObjectOfType<AudioManager>().Play("SFX_DeathBlood");
+        spriteBlood = ob4.GetComponent<SpriteRenderer>();
+        bloodCanAppear = true;
+    }
 
+    public void ClickRire()
+    {
+        FindObjectOfType<AudioManager>().Play("SFX_DeathMourirDeRire");
     }
 
     private void Update()
     {
+        if (bloodCanAppear)
+        {
+            spriteBlood.color = new Vector4(spriteBlood.color.r, spriteBlood.color.g, spriteBlood.color.b, spriteBlood.color.a + speed);
+            if (spriteBlood.color.a > 0.95)
+            {
+                bloodCanAppear = false;
+                StartCoroutine(BloodAppear());
+            }
+        }
+
         if (bloodCanDisapear)
         {
-            im.color = new Vector4(im.color.r, im.color.g, im.color.b, im.color.a - speed);
-            if (im.color.a < 0.05)
+            spriteBlood.color = new Vector4(spriteBlood.color.r, spriteBlood.color.g, spriteBlood.color.b, spriteBlood.color.a - speed);
+            if (spriteBlood.color.a < 0.02)
             {
-                im.color = new Vector4(im.color.r, im.color.g, im.color.b, 1);
-                bloodImage.SetActive(false);
                 bloodCanDisapear = false;
             }
         }
@@ -191,10 +217,9 @@ public class SpawnParticle : MonoBehaviour
         if (clawCanDisappear)
         {
             spriteClaw.color = new Vector4(spriteClaw.color.r, spriteClaw.color.g, spriteClaw.color.b, spriteClaw.color.a - speed);
-            if (spriteClaw.color.a < 0.05)
+            if (spriteClaw.color.a < 0.02)
             {
                 clawCanDisappear = false;
-                StartCoroutine(ClawDisappear());
             }
         }
 
@@ -211,25 +236,45 @@ public class SpawnParticle : MonoBehaviour
         if (biteCanDisappear)
         {
             spriteBite.color = new Vector4(spriteBite.color.r, spriteBite.color.g, spriteBite.color.b, spriteBite.color.a - speed);
-            if (spriteBite.color.a < 0.05)
+            if (spriteBite.color.a < 0.02)
             {
                 biteCanDisappear = false;
-                StartCoroutine(BiteDisappear());
+            }
+        }
+
+        if (baguetteCanAppear)
+        {
+            spriteBaguette.color = new Vector4(spriteBaguette.color.r, spriteBaguette.color.g, spriteBaguette.color.b, spriteBaguette.color.a + speed);
+            if (spriteBaguette.color.a > 0.95)
+            {
+                baguetteCanAppear = false;
+                StartCoroutine(BaguetteAppear());
+            }
+        }
+
+        if (baguetteCanDisappear)
+        {
+            spriteBaguette.color = new Vector4(spriteBaguette.color.r, spriteBaguette.color.g, spriteBaguette.color.b, spriteBaguette.color.a - speed);
+            if (spriteBaguette.color.a < 0.02)
+            {
+                baguetteCanDisappear = false;
+            }
+        }
+
+        if (tuskCanDisappear)
+        {
+            spriteTusk.color = new Vector4(spriteTusk.color.r, spriteTusk.color.g, spriteTusk.color.b, spriteTusk.color.a - speed);
+            if (spriteTusk.color.a < 0.02)
+            {
+                tuskCanDisappear = false;
             }
         }
     }
 
-    IEnumerator BloodDisapear()
+    IEnumerator BloodAppear()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4f);
         bloodCanDisapear = true;
-    }
-
-    IEnumerator KnifeDisappear()
-    {
-        yield return new WaitForSeconds(3);
-        animator.SetBool("DeathKnife", false);
-        knife.enabled = false;
     }
 
     IEnumerator KnifeAppear()
@@ -241,30 +286,18 @@ public class SpawnParticle : MonoBehaviour
 
     IEnumerator TuskAppear()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.2f);
         GameObject ob = Instantiate(bloodFx);
         Destroy(ob, 5.0f);
-    }
-
-    IEnumerator TuskDisappear()
-    {
-        yield return new WaitForSeconds(3);
-        animator2.SetBool("Elephant", false);
-        tusk.enabled = false;
+        tuskCanDisappear = true;
     }
 
     IEnumerator BaguetteAppear()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(1.2f);
         GameObject ob = Instantiate(baguetteSmokeFx);
         Destroy(ob, 5.0f);
-    }
-
-    IEnumerator BaguetteDisappear()
-    {
-        yield return new WaitForSeconds(2);
-        animator3.SetBool("Pouf", false);
-        baguette.enabled = false;
+        baguetteCanDisappear = true;
     }
 
     IEnumerator FootPrintAppear()
@@ -292,12 +325,6 @@ public class SpawnParticle : MonoBehaviour
         clawCanDisappear = true;
     }
 
-    IEnumerator ClawDisappear()
-    {
-        yield return new WaitForSeconds(1f);
-        obClaw.SetActive(false);
-    }
-
     IEnumerator BiteAppear()
     {
         GameObject ob = Instantiate(bloodFx);
@@ -306,9 +333,4 @@ public class SpawnParticle : MonoBehaviour
         biteCanDisappear = true;
     }
 
-    IEnumerator BiteDisappear()
-    {
-        yield return new WaitForSeconds(2.5f);
-        obBite.SetActive(false);
-    }
 }
