@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: c6fc8ba9008b88941a94bb5703e37b46, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Add even more confettis
   _isNextCardLeft: {fileID: 11400000, guid: c1a554667d30a5b4c8c561b1f301c788, type: 2}
   _isSwipingLeftDescription: Get inside that cannon
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

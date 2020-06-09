@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_Clown_TakeBalloon
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: 2b35ecce177c1834e8ac1ccf93b84484, type: 3}
   _description: '"There you have it ! It''s a shark, I don''t care what you ask"'
   _cardID: 16
@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 8a492313fe1d8ae4eb2611b73382a826, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Explode the balloon
   _isNextCardLeft: {fileID: 11400000, guid: 8a492313fe1d8ae4eb2611b73382a826, type: 2}
   _isSwipingLeftDescription: '"This balloon looks like shit"'
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

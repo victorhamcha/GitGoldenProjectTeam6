@@ -28,9 +28,12 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 543ea62c854451f4db7b86fca9d6213b, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Throw some popcorn on the acrobats
   _isNextCardLeft: {fileID: 11400000, guid: f7cc2ad074368e24c8a6b9b49deefb68, type: 2}
-  _isSwipingLeftDescription: Be a jerk to the acrobats
+  _isSwipingLeftDescription: Make fun of the acrobats
   _firstCardOfEvent: {fileID: 0}
   _isSuccess: 0
   _hasSpecialVFX: 0
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

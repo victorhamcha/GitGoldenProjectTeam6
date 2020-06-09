@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8a881180d704a9aa4c167de258e9, type: 3}
   m_Name: Card_FortuneTeller_Tent
   m_EditorClassIdentifier: 
-  _title: The Broadwalk
+  _title: The Boardwalk
   _image: {fileID: 21300000, guid: f02730ade8e4d54489a6ff2cb9677b8a, type: 3}
   _description: As you walk through the funfair, you come across a fortune-teller
     and she invites you to follow her in her tent for a prediction.
@@ -28,6 +28,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: a2097c62996f8744086a7f1fa02a81a0, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Follow her inside
   _isNextCardLeft: {fileID: 11400000, guid: 674d67ff0f676f848ac24ff73136117e, type: 2}
   _isSwipingLeftDescription: Get on your way
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 1
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

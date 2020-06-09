@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: fe49dacdf46410e40946751940c8b386, type: 2}
   _isSwipingUpDescription: Cut the safety net
   _isNextCardRight: {fileID: 11400000, guid: 1749bf4d76f9a1b4b9cf92983b1381a8, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Wave your middle finger at the acrobats
   _isNextCardLeft: {fileID: 11400000, guid: 3d383cdcf313afd47969ef244d413c33, type: 2}
   _isSwipingLeftDescription: Rest under the net
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 03000000

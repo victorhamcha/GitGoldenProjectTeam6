@@ -27,6 +27,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 0}
   _isSwipingUpDescription: 
   _isNextCardRight: {fileID: 11400000, guid: 8843286bc09777443a589b42bb97815f, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Look back inside
   _isNextCardLeft: {fileID: 11400000, guid: 1ea5f56fd3dd8a64e834d7cc99f9fce8, type: 2}
   _isSwipingLeftDescription: Realize it's disgusting
@@ -45,6 +48,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 2
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 

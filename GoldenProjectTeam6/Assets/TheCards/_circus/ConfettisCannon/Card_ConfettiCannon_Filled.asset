@@ -30,6 +30,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 8e96c01d3320fbf4c86b90fedc4959a5, type: 2}
   _isSwipingUpDescription: Ligh the fuse
   _isNextCardRight: {fileID: 11400000, guid: b8c9a0a035c57ec46974be1d74a21666, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Leave
   _isNextCardLeft: {fileID: 11400000, guid: d2857eaa9bbc03f43b3cedae9d9a71b5, type: 2}
   _isSwipingLeftDescription: Get in the cannon
@@ -48,6 +51,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 0
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 01000000

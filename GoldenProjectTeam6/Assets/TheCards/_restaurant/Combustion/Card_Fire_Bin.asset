@@ -28,6 +28,9 @@ MonoBehaviour:
   _isNextCardUp: {fileID: 11400000, guid: 905c76170f9ed0b4ca178f8a97a7b1df, type: 2}
   _isSwipingUpDescription: Take the cig
   _isNextCardRight: {fileID: 11400000, guid: c6d512ef97fc0ae43a4a2f2cb1bc816a, type: 2}
+  _isNextCardLinkedIn: {fileID: 0}
+  _isPreviousCardLinkedIn: {fileID: 0}
+  colorTextUp: {r: 0, g: 0, b: 0, a: 0}
   _isSwipingRightDescription: Take the tissue
   _isNextCardLeft: {fileID: 11400000, guid: 36d0ec8eddf03cc4abea4078e9d0300e, type: 2}
   _isSwipingLeftDescription: Take the Spicy Sauce
@@ -46,6 +49,8 @@ MonoBehaviour:
   _enumObjectToUnlockLeft: 0
   _enumObjectToUnlockUp: 0
   _placeEnum: 2
+  isLinkedIn: 0
+  url: 
   _isDeadCard: 0
   _isContratCard: 0
   _enumObjectConditionList: 
