@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3027,7 +3027,6 @@ Transform:
   - {fileID: 24142057}
   - {fileID: 544111577}
   - {fileID: 1948606267}
-  - {fileID: 1788832035}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13429,76 +13428,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780081415}
   m_CullTransparentMesh: 0
---- !u!1 &1788832034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1788832035}
-  - component: {fileID: 1788832036}
-  m_Layer: 0
-  m_Name: ParticleMangers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1788832035
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788832034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 686122272}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1788832036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788832034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f81c4f1a8a12c45bd81c55ab27e1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confettiFx: {fileID: 8589746629786136637, guid: 154221021a3e73d41994710b6e1a6811,
-    type: 3}
-  bloodFx: {fileID: 2431851345389789480, guid: 956cc8e67b7dd0f49a20ca734ec796d2, type: 3}
-  bloodFx2: {fileID: 9048843659514806149, guid: c7fefa81442beb64da1f1f14da778c3d,
-    type: 3}
-  obBlood: {fileID: 7103612612457337107, guid: e4795d17e2e1beb4aa8e0e633f018291, type: 3}
-  speed: 0.037
-  sugarFx: {fileID: 8284574690407208201, guid: d2676bd0612e7e04fa8589805286b8c2, type: 3}
-  electricFx: {fileID: 3311108279882499910, guid: b6bf8a7ef3c86ef40a8105d7e7986939,
-    type: 3}
-  popcornFx: {fileID: 1318489928293106371, guid: 61d54c7d9bb75e34a90fbdab85fc3b93,
-    type: 3}
-  vomiFx: {fileID: 4797034641241214434, guid: d5dd76bf96ed2fd46a6cfda76696834f, type: 3}
-  fireFx: {fileID: 1725317912486240, guid: e55149ba6f4d00741984987e258c3378, type: 3}
-  obKnife: {fileID: 4859152567061408051, guid: 7b972bc127e3d6946bf8d43c2fefac84, type: 3}
-  footPrint: {fileID: 3930032260899055834, guid: 143bb12502968e541b06fbe7058a6467,
-    type: 3}
-  SmokeFx: {fileID: 888786907169793921, guid: adb05d28a2a449b498e6d08e1c03cc06, type: 3}
-  canonSmokeFx: {fileID: 8167986017652983272, guid: 80133194d0ab7c443949b81a7b4b5afb,
-    type: 3}
-  obClaw: {fileID: 8349000222567458037, guid: 0b5ca52d413cb8d4e8fbcebff904d726, type: 3}
-  obBite: {fileID: 7822587218730286194, guid: 2b5928121b93ccf4d95f30cbf103c5c9, type: 3}
-  obTusk: {fileID: 441910632089525206, guid: caaa5f8c5316e5949aa557b0b82ea4cc, type: 3}
-  obBaguette: {fileID: 6248084322189814900, guid: 88bcbe1b6006667459277b3056aec003,
-    type: 3}
-  baguetteSmokeFx: {fileID: 8471689703668850645, guid: c999bcb4c85c0a648ba3b4a5da685705,
-    type: 3}
 --- !u!1 &1797815424
 GameObject:
   m_ObjectHideFlags: 0
@@ -14360,7 +14289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1913410459
 RectTransform:
   m_ObjectHideFlags: 0
