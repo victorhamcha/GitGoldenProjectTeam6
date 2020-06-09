@@ -49,6 +49,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 
         if(SwipeScript.isTuto)
         {
+            originalCard = _firstCardScriptable;
             _firstCardScriptable = tutoCard;
             
             
