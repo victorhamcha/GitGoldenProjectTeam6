@@ -10,7 +10,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 {
     [Header("animFire")]
     public GameObject fire;
-
+    public GameObject particulesSlot;
     //vibration
     private long[] paternVibrationDeath = new long[4];
    
@@ -316,6 +316,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     //Death(); just for proto
                     FindObjectOfType<SaveAndLoad>().SavePlayer();
                     _firstCardScriptable = originalCard;
+                    particulesSlot.SetActive(false);
                     LoadValueFromScriptableObject();
                     InventoryList inventory = FindObjectOfType<InventoryList>();
                     for (int i = 0; i < inventory._inventory.Count; i++)

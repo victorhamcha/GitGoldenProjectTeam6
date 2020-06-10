@@ -441,7 +441,8 @@ public class SwipeScript : MonoBehaviour
                 }
                 if (card._hasVfx)
                 {
-                    Instantiate(card._vfx);
+                    card.particulesSlot.SetActive(true);
+                    Instantiate(card._vfx,card.particulesSlot.transform);
                     if(card._firstCardScriptable.name== "Card_Clown_AnswerLaughDeath")
                     {
                         card.audioManager.Play("SFX_DeathMourirDeRire");
