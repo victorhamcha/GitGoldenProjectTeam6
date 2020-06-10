@@ -20,21 +20,21 @@ MonoBehaviour:
   _cardID: 0
   _cardAlreadyDraw: 0
   _canSlideUp: 1
-  _canSlideRight: 0
-  _canSlideLeft: 0
+  _canSlideRight: 1
+  _canSlideLeft: 1
   _enumSuccessRight: 0
   _enumSuccessLeft: 0
   _enumSuccessUp: 0
   _enumSuccessDeath: 0
   _isNextCardUp: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
   _isSwipingUpDescription: Let's die!
-  _isNextCardRight: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
+  _isNextCardRight: {fileID: 11400000}
   _isNextCardLinkedIn: {fileID: 0}
   _isPreviousCardLinkedIn: {fileID: 0}
   colorTextUp: {r: 0, g: 0, b: 0, a: 0}
-  _isSwipingRightDescription: 'Let''s die ! '
-  _isNextCardLeft: {fileID: 11400000, guid: 0401f5b953633904687afd8cacb09f45, type: 2}
-  _isSwipingLeftDescription: Let's die
+  _isSwipingRightDescription: Do a three-sixty
+  _isNextCardLeft: {fileID: 11400000}
+  _isSwipingLeftDescription: Do a three-sixty
   _firstCardOfEvent: {fileID: 11400000}
   _isSuccess: 0
   _hasSpecialVFX: 0
