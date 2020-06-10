@@ -42,8 +42,7 @@ public class SwipeScript : MonoBehaviour
     public GameObject FingerRight;
     public GameObject FingerLeft;
     public GameObject FingerUp;
-    [SerializeField]
-    static public bool isTuto = true;
+   
 
     //EFFECT//
     public Material material;
@@ -104,10 +103,9 @@ public class SwipeScript : MonoBehaviour
     void Update()
     {
         
-        Debug.Log("istuto : " + SwipeScript.isTuto);
-        Debug.Log("days : " + TimeChecker.intervalDay);
-        Debug.Log("months : " + TimeChecker.intervalMonth);
-        Debug.Log("years : " + TimeChecker.intervalYear);
+        
+        
+        
         
         if(!touched)
         {
@@ -146,7 +144,7 @@ public class SwipeScript : MonoBehaviour
 
         if(touched)
         {
-            if (isTuto || (TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0)))
+            if (TimeChecker.isTuto)
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
@@ -155,7 +153,7 @@ public class SwipeScript : MonoBehaviour
         }
         else
         {
-            if (isTuto || (TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0)))
+            if (TimeChecker.isTuto)
             {
                 switch (nbCardTuto)
                 {
@@ -180,7 +178,7 @@ public class SwipeScript : MonoBehaviour
                         FingerUp.SetActive(true);
                         break;
                     case 4:
-                        isTuto = false;
+                        TimeChecker.isTuto = false;
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(false);
@@ -303,7 +301,7 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
+            if (TimeChecker.isTuto)
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
@@ -372,34 +370,14 @@ public class SwipeScript : MonoBehaviour
         else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 2f||(Vector2.Distance(transform.position,originalPos)>0.05||!smooth))
+            if (Vector3.Distance(transform.eulerAngles, to) > 5f||(Vector2.Distance(transform.position,originalPos)>0.05))
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-               if(offSetsmooth>0.05f)
-                {
-                    if (step1)
-                    {
-                        if (!smooth)
-                            smooth = Vector2.Distance(transform.position, originalPos) >= offSetsmooth;
-                    }
-                    else
-                    {
-
-                        step1 = Vector2.Distance(transform.position, originalPos) <= offSetsmooth - 0.05f;
-
-                    }
-
-                    if (!smooth)
-                        transform.position += (Vector3)originalPosPlus * 10 * Time.deltaTime;
-                    else
-                        transform.position = Vector2.MoveTowards(transform.position, originalPos, 5 * Time.deltaTime);
-                }
-               else
-                {
-                    smooth = true;
-                    transform.position = Vector2.MoveTowards(transform.position, originalPos, 10 * Time.deltaTime);
-                }
+              
+               
+               transform.position = Vector2.MoveTowards(transform.position, originalPos, 10 * Time.deltaTime);
+               
                
 
 
