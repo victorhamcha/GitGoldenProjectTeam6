@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fc08c7b14fef2b94da1122d61db74f26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,6 +114,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3790c11cb2b038142b21906393654bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obTusk: {fileID: 441910632089525206}
   bloodFx: {fileID: 2431851345389789480, guid: 956cc8e67b7dd0f49a20ca734ec796d2, type: 3}
   speed: 0.037
