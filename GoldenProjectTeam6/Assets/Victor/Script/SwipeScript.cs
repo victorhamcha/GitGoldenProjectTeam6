@@ -104,7 +104,10 @@ public class SwipeScript : MonoBehaviour
     void Update()
     {
         
-        //Debug.LogError("canslideup : " + card.canSlideUp);
+        Debug.Log("istuto : " + SwipeScript.isTuto);
+        Debug.Log("days : " + TimeChecker.intervalDay);
+        Debug.Log("months : " + TimeChecker.intervalMonth);
+        Debug.Log("years : " + TimeChecker.intervalYear);
         
         if(!touched)
         {
@@ -143,7 +146,7 @@ public class SwipeScript : MonoBehaviour
 
         if(touched)
         {
-            if (isTuto && TimeChecker.interval.Days >= 7)
+            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
@@ -152,7 +155,7 @@ public class SwipeScript : MonoBehaviour
         }
         else
         {
-            if (isTuto && TimeChecker.interval.Days >= 7)
+            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
             {
                 switch (nbCardTuto)
                 {
@@ -300,7 +303,7 @@ public class SwipeScript : MonoBehaviour
 
         if(disolve)
         {
-            if (isTuto && TimeChecker.interval.Days >= 7)
+            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);

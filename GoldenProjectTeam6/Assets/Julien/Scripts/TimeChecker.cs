@@ -5,10 +5,12 @@ using System;
 
 public class TimeChecker : MonoBehaviour
 {
-    static public TimeSpan interval;
+    static public int intervalYear;
+    static public int intervalMonth;
+    static public int intervalDay;
     
-    DateTime todayDate;
-    private int year = 2100;
+    
+    private int year = 2018;
     private int month = 06;
     private int day = 05;
 
@@ -21,14 +23,16 @@ public class TimeChecker : MonoBehaviour
             // Prend les variables
             year = PlayerPrefs.GetInt("year");
             month = PlayerPrefs.GetInt("month");
-            year = PlayerPrefs.GetInt("year");
+            day = PlayerPrefs.GetInt("day");
         }
 
         DateTime previousDate = new DateTime(year, month, day);
-        todayDate = DateTime.Today;
+        DateTime todayDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day);
 
         // Calcul de différence de temps
-        interval = todayDate - previousDate;
+        intervalYear = todayDate.Year - previousDate.Year;
+        intervalMonth = todayDate.Month - previousDate.Month;
+        intervalDay = todayDate.Day - previousDate.Day;
 
         year = todayDate.Year;
         month = todayDate.Month;
