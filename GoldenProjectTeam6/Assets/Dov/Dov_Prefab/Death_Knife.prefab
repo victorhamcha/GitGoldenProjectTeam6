@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7f10bbd361a05e8428e9be7f04f93cb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,5 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d776e53a9ad4d4b8abe8ccd026f335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obKnife: {fileID: 4859152567061408051}
   bloodFx: {fileID: 2431851345389789480, guid: 956cc8e67b7dd0f49a20ca734ec796d2, type: 3}

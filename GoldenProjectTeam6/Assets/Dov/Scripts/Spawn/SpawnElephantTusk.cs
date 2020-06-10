@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnElephantTusk : MonoBehaviour
 {
-    public GameObject obTusk;
     private SpriteRenderer spriteTusk;
     private bool tuskCanDisappear;
     public GameObject bloodFx;
@@ -13,9 +12,8 @@ public class SpawnElephantTusk : MonoBehaviour
     
     void Awake()
     {
-        GameObject ob = Instantiate(obTusk);
-        Destroy(ob, 6);
-        spriteTusk = ob.GetComponent<SpriteRenderer>();
+        Destroy(gameObject, 6);
+        spriteTusk = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(TuskAppear());
     }
 

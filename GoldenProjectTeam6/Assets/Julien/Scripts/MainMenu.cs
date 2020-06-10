@@ -52,7 +52,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Tuto()
     {
-        SwipeScript.isTuto = true;
+        TimeChecker.isTuto = true;
         //SceneManager.LoadScene("BaptisteTestArbo");
         if (!loadingScene)
             StartCoroutine(LoadYourAsyncScene("GeneralScene"));

@@ -6,7 +6,6 @@ public class SpawnBlood : MonoBehaviour
 {
     public GameObject bloodFx;
     public GameObject bloodFx2;
-    public GameObject obBlood;
     private SpriteRenderer spriteBlood;
     private bool bloodCanAppear;
     private bool bloodCanDisapear;
@@ -23,10 +22,9 @@ public class SpawnBlood : MonoBehaviour
         Destroy(ob2, 6.0f);
         GameObject ob3 = Instantiate(bloodFx2, pos2, Quaternion.identity);
         Destroy(ob3, 6.0f);
-        GameObject ob4 = Instantiate(obBlood);
-        Destroy(ob4, 6.0f);
+        Destroy(gameObject, 6.0f);
         FindObjectOfType<AudioManager>().Play("SFX_DeathBlood");
-        spriteBlood = ob4.GetComponent<SpriteRenderer>();
+        spriteBlood = gameObject.GetComponent<SpriteRenderer>();
         bloodCanAppear = true;
     }
 

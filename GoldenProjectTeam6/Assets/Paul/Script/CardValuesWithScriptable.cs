@@ -10,7 +10,7 @@ public class CardValuesWithScriptable : MonoBehaviour
 {
     [Header("animFire")]
     public GameObject fire;
-
+    public GameObject particulesSlot;
     //vibration
     private long[] paternVibrationDeath = new long[4];
    
@@ -25,7 +25,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     public Image _imageCard;
     public TextMeshProUGUI _titleCard, _descriptionCard, _descriptionLeftSwipe, _descriptionRightSwipe, _descriptionUpSwipe;
 
-    CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
+   [HideInInspector] public CardScriptableObject _nextCardLeft, _nextCardRight, _nextCardUp;
 
     bool _isUnlockingSuccessRight;
     
@@ -50,7 +50,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         
 
-        if(SwipeScript.isTuto)
+        if(TimeChecker.isTuto)
         {
             originalCard = _firstCardScriptable;
             _firstCardScriptable = tutoCard;
@@ -181,10 +181,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     VerifyIfCanSlideUp();
                 }
 
-                if((_nextCardUp!=null&& _nextCardUp._isDeadCard)||_nextCardRight._isDeadCard||_nextCardLeft._isDeadCard)
-                {
-                    fire.SetActive(true);
-                }
+               
             }
             else
             {
@@ -319,6 +316,7 @@ public class CardValuesWithScriptable : MonoBehaviour
                     //Death(); just for proto
                     FindObjectOfType<SaveAndLoad>().SavePlayer();
                     _firstCardScriptable = originalCard;
+                    particulesSlot.SetActive(false);
                     LoadValueFromScriptableObject();
                     InventoryList inventory = FindObjectOfType<InventoryList>();
                     for (int i = 0; i < inventory._inventory.Count; i++)

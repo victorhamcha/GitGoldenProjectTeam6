@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnClaw : MonoBehaviour
 {
-    public GameObject obClaw;
     private SpriteRenderer spriteClaw;
     public GameObject bloodFx;
     private bool clawCanAppear;
@@ -14,9 +13,8 @@ public class SpawnClaw : MonoBehaviour
 
     void Awake()
     {
-        GameObject ob2 = Instantiate(obClaw);
-        Destroy(ob2, 6);
-        spriteClaw = ob2.GetComponent<SpriteRenderer>();
+        Destroy(gameObject, 6);
+        spriteClaw = gameObject.GetComponent<SpriteRenderer>();
         clawCanAppear = true;
     }
 
