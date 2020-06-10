@@ -153,31 +153,32 @@ public class SwipeScript : MonoBehaviour
         }
         else
         {
+            Debug.Log(card._firstCardScriptable.name);
             if (TimeChecker.isTuto)
-            {
-                switch (nbCardTuto)
+            {          
+                switch (card._firstCardScriptable.name)
                 {
-                    case 0:
+                    case "Tuto1":
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(false);
                         FingerRight.SetActive(true);
                         break;
-                    case 1:
+                    case "Tuto2":
                         FingerRight.SetActive(false);
                         FingerUp.SetActive(false);
                         FingerLeft.SetActive(true);
                         break;
-                    case 2:
+                    case "Tuto3":
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(false);
                         break;
-                    case 3:
+                    case "Tuto4":
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
                         FingerUp.SetActive(true);
                         break;
-                    case 4:
+                    default:
                         TimeChecker.isTuto = false;
                         FingerRight.SetActive(false);
                         FingerLeft.SetActive(false);
