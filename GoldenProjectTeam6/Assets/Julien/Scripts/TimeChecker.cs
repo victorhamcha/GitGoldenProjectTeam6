@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 
 public class TimeChecker : MonoBehaviour
 {
-    static public int intervalYear;
-    static public int intervalMonth;
-    static public int intervalDay;
     
-    
+    static public double intervalDay;
+    [SerializeField]
+    static public bool isTuto = true;
+
     private int year = 2018;
     private int month = 06;
     private int day = 05;
@@ -25,14 +26,19 @@ public class TimeChecker : MonoBehaviour
             month = PlayerPrefs.GetInt("month");
             day = PlayerPrefs.GetInt("day");
         }
+        else
+        {
+            isTuto = true;
+        }
 
         DateTime previousDate = new DateTime(year, month, day);
         DateTime todayDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day);
 
+       intervalDay = (todayDate - previousDate).TotalDays;
+        if(SceneManager.GetActiveScene().name.ToString()=="MenuModifVic")
+       isTuto = intervalDay > 7;
         // Calcul de différence de temps
-        intervalYear = todayDate.Year - previousDate.Year;
-        intervalMonth = todayDate.Month - previousDate.Month;
-        intervalDay = todayDate.Day - previousDate.Day;
+       
 
         year = todayDate.Year;
         month = todayDate.Month;
