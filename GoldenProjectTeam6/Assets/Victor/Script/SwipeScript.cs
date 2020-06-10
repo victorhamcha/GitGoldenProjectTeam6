@@ -372,34 +372,14 @@ public class SwipeScript : MonoBehaviour
         else if (reRotate)
         {
             Vector3 to = new Vector3(0, 0, 0);
-            if (Vector3.Distance(transform.eulerAngles, to) > 2f||(Vector2.Distance(transform.position,originalPos)>0.05||!smooth))
+            if (Vector3.Distance(transform.eulerAngles, to) > 5f||(Vector2.Distance(transform.position,originalPos)>0.05))
             {
                 float lastZ = transform.eulerAngles.z - 180;
 
-               if(offSetsmooth>0.05f)
-                {
-                    if (step1)
-                    {
-                        if (!smooth)
-                            smooth = Vector2.Distance(transform.position, originalPos) >= offSetsmooth;
-                    }
-                    else
-                    {
-
-                        step1 = Vector2.Distance(transform.position, originalPos) <= offSetsmooth - 0.05f;
-
-                    }
-
-                    if (!smooth)
-                        transform.position += (Vector3)originalPosPlus * 10 * Time.deltaTime;
-                    else
-                        transform.position = Vector2.MoveTowards(transform.position, originalPos, 5 * Time.deltaTime);
-                }
-               else
-                {
-                    smooth = true;
-                    transform.position = Vector2.MoveTowards(transform.position, originalPos, 10 * Time.deltaTime);
-                }
+              
+               
+               transform.position = Vector2.MoveTowards(transform.position, originalPos, 10 * Time.deltaTime);
+               
                
 
 
