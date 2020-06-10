@@ -50,7 +50,7 @@ public class CardValuesWithScriptable : MonoBehaviour
     {
         
 
-        if(SwipeScript.isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
+        if(SwipeScript.isTuto || (TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0)))
         {
             originalCard = _firstCardScriptable;
             _firstCardScriptable = tutoCard;

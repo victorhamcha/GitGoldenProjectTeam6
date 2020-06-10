@@ -146,7 +146,7 @@ public class SwipeScript : MonoBehaviour
 
         if(touched)
         {
-            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
+            if (isTuto || (TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0)))
             {
                 FingerRight.SetActive(false);
                 FingerLeft.SetActive(false);
@@ -155,7 +155,7 @@ public class SwipeScript : MonoBehaviour
         }
         else
         {
-            if (isTuto && TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0))
+            if (isTuto || (TimeChecker.intervalDay >= 7 || (TimeChecker.intervalMonth > 0 || TimeChecker.intervalYear > 0)))
             {
                 switch (nbCardTuto)
                 {
