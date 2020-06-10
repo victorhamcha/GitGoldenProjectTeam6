@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public List<bool> options;
-    public Toggle music, sound, censure;
+    public Toggle music , sound, censure;
     public GameObject card;
     private int togglesID;
 
@@ -25,6 +25,8 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+        //music.isOn = true;
+        //sound.isOn = true;
 
         if (PlayerPrefs.HasKey("firstTime"))
         {
