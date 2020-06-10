@@ -3001,6 +3001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686122272}
+  - component: {fileID: 686122273}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3030,6 +3031,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686122273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686122271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205ab7d5685e671419fcd3ba8e030264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &727492952
 GameObject:
   m_ObjectHideFlags: 0
@@ -11509,7 +11522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 1169646251}
-  options: 000000
+  options: 010100
   music: {fileID: 111218766}
   sound: {fileID: 1253095763}
   censure: {fileID: 1967055390}
@@ -13980,7 +13993,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092003664}
   m_HandleRect: {fileID: 1092003663}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
