@@ -8,8 +8,8 @@ public class AllCardUnlockNumber : MonoBehaviour
     TextMeshProUGUI _text;
 
     public ContainAllObjectTree _parent;
-    int _numberCardMax;
-    int _numberCardActual;
+    public int _numberCardMax;
+    public int _numberCardActual;
     void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();

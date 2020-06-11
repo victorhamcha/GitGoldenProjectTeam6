@@ -390,10 +390,6 @@ public class ImageArborescence : MonoBehaviour
         DrawLineAuto();
         ChangeLineMaterial();
 
-        foreach (Transform child in _listEventManager.transform)
-        {
-            child.GetComponent<ListEventStockTree>().Check();
-        }
     }
 
     void ChangeLineMaterial()
