@@ -60,6 +60,8 @@ public class ImageArborescence : MonoBehaviour
 
     bool _spawnLight=true;
 
+    public GameObject _listEventManager;
+
 
 
     void Awake()
@@ -387,6 +389,11 @@ public class ImageArborescence : MonoBehaviour
         //_title.gameObject.SetActive(true);
         DrawLineAuto();
         ChangeLineMaterial();
+
+        foreach (Transform child in _listEventManager.transform)
+        {
+            child.GetComponent<ListEventStockTree>().Check();
+        }
     }
 
     void ChangeLineMaterial()

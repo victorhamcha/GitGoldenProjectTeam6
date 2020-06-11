@@ -17,15 +17,19 @@ public class LineRendererAnimation : MonoBehaviour
 
     public Color _color;
 
+    Vector2 _startPos;
+    public Vector2 _endPos;
+
     void Start()
     {
         _line = GetComponent<LineRenderer>();
+
+        _startPos = _line.GetPosition(0);
+        _endPos = _line.GetPosition(1);
     }
     public void SpawnImage(Transform pos)
     {
         _line = GetComponent<LineRenderer>();
-        Vector2 _startPos = _line.GetPosition(0);
-        Vector2 _endPos = _line.GetPosition(1);
         Vector2 _positionImageMystere = (_startPos + _endPos) / 2;
 
         _imageMystereIns = Instantiate(_imageMystere, _positionImageMystere, transform.rotation);
@@ -47,6 +51,13 @@ public class LineRendererAnimation : MonoBehaviour
         if (_line.startWidth == 0 || _line.endWidth == 0)
         {
             _line.SetWidth(5, 5);
+        }
+        if(_line.startWidth>0 || _line.endWidth > 0)
+        {
+            if (_endPos.y == 1)
+            {
+                _line.SetWidth(0, 0);
+            }
         }
     }
 

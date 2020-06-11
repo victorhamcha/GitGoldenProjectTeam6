@@ -47,17 +47,15 @@ public class ListEventStockTree : MonoBehaviour
 
             if (_checker == _image.Count)
             {
-                EventFinished();
+                _textCalcul.color = Color.red;
+
+            }
+            else
+            {
+                _textCalcul.color = Color.white;
             }
         }
 
-        Debug.Log("Checker : " + _checker);
         _textCalcul.text = _checker + " / " + _image.Count;
-    }
-
-
-    void EventFinished()
-    {
-        Debug.Log("Event " + _imageNameRef + " Completed !");
     }
 }
