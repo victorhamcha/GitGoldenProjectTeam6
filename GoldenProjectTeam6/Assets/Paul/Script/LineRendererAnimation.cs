@@ -17,6 +17,10 @@ public class LineRendererAnimation : MonoBehaviour
 
     public Color _color;
 
+    void Start()
+    {
+        _line = GetComponent<LineRenderer>();
+    }
     public void SpawnImage(Transform pos)
     {
         _line = GetComponent<LineRenderer>();
@@ -36,6 +40,14 @@ public class LineRendererAnimation : MonoBehaviour
         _imageLockIns.transform.position = pos.position;
         _imageLockIns.rectTransform.sizeDelta = new Vector2(50, 50);
         _imageLockIns.rectTransform.localScale = new Vector2(1, 1);
+    }
+
+    private void Update()
+    {
+        if (_line.startWidth == 0 || _line.endWidth == 0)
+        {
+            _line.SetWidth(5, 5);
+        }
     }
 
 }

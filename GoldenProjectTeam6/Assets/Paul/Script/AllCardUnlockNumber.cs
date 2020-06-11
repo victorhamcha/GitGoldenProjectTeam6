@@ -17,8 +17,8 @@ public class AllCardUnlockNumber : MonoBehaviour
 
     void Update()
     {
-            _numberCardMax = _parent._imageTreeChilds.Count;
-            _numberCardActual = _parent._imageTreeUnlockSinceLastTime.Count;
-            _text.text = _numberCardActual + " / " + _numberCardMax;
+        _numberCardMax = _parent._imageTreeChilds.Count;
+        _numberCardActual = _parent._imageTreeUnlockSinceLastTime.Count;
+        _text.text = _numberCardActual + " / " + _numberCardMax;
     }
 }
